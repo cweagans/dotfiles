@@ -1,0 +1,70 @@
+[general]
+ui = ttyui
+accounts = Personal,Propeople
+pythonfile=~/dotfiles/offlineimap.py
+fsync = False
+
+[Account Personal]
+localrepository = Personal-Local
+remoterepository = Personal-Remote
+status_backend = sqlite
+
+[Repository Personal-Local]
+type = Maildir
+localfolders = ~/.mail/cweagans-gmail.com
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail',
+                            }.get(folder, folder)
+
+[Repository Personal-Remote]
+maxconnections = 1
+type = Gmail
+cert_fingerprint = 1248d871434152ce9896daac13a31b0e1d66a473
+remoteuser = cweagans@gmail.com
+remotepasseval = get_keychain_pass(account="cweagans@gmail.com", server="imap.gmail.com")
+realdelete = no
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'flagged',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive',
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in ['[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             ]
+
+[Account Propeople]
+localrepository = Propeople-Local
+remoterepository = Propeople-Remote
+status_backend = sqlite
+
+[Repository Propeople-Local]
+type = Maildir
+localfolders = ~/.mail/cameron-wearepropeople.com
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail',
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in ['[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             ]
+
+[Repository Propeople-Remote]
+maxconnections = 1
+type = Gmail
+cert_fingerprint = 1248d871434152ce9896daac13a31b0e1d66a473
+remoteuser = cameron@wearepropeople.com
+remotepasseval = get_keychain_pass(account="cameron@wearepropeople.com", server="imap.gmail.com")
+realdelete = no
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'flagged',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive',
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in ['[Gmail]/Spam']

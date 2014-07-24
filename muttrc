@@ -1,0 +1,144 @@
+# Paths ----------------------------------------------
+set folder           = ~/.mail               # mailbox location
+set alias_file       = ~/.mutt/alias         # where to store aliases
+set header_cache     = ~/.mutt/cache/headers # where to store headers
+set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
+set certificate_file = ~/.mutt/certificates  # where to store certs
+set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+set tmpdir           = ~/.mutt/temp          # where to keep temp files
+set signature        = ~/.mutt/sig           # my signature file
+
+# Basic Options --------------------------------------
+set wait_key = no        # shut up, mutt
+set mbox_type = Maildir  # mailbox type
+set timeout = 3          # idle time before scanning
+set mail_check = 0       # minimum time between scans
+unset move               # gmail does that
+set delete               # don't ask, just do
+unset confirmappend      # don't ask, just do!
+set quit                 # don't ask, just do!!
+unset mark_old           # read/new is good enough for me
+set beep_new             # bell on new mails
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+
+# Account Settings -----------------------------------
+
+# Default inbox.
+set spoolfile = "+cweagans-gmail.com/INBOX"
+
+# Alternate email addresses.
+alternates me@cweagans.net
+
+# Mailboxes to show.
+mailboxes +cweagans-gmail.com/INBOX \
+          +cweagans-gmail.com/Drupal \
+          +cweagans-gmail.com/archive \
+          +cweagans-gmail.com/sent \
+          +cweagans-gmail.com/drafts \
+          +cameron-wearepropeople.com/INBOX \
+          +cameron-wearepropeople.com/Drupal \
+          +cameron-wearepropeople.com/archive \
+          +cameron-wearepropeople.com/sent \
+          +cameron-wearepropeople.com/drafts \
+
+# Other special folders.
+set mbox      = "+cweagans-gmail.com/archive"
+set postponed = "+cweagans-gmail.com/drafts"
+
+# Set up macros to set the from address
+macro generic "1" ":set from=cweagans@gmail.com"
+macro generic "2" ":set from=cameron@wearepropeople.com"
+
+
+folder-hook cweagans-gmail.com/* set from = "cweagans@gmail.com"
+folder-hook cweagans-gmail.com/* set sendmail = "/usr/local/bin/msmtp -a personal"
+folder-hook cweagans-gmail.com/* set postponed = "+cweagans-gmail.com/drafts"
+folder-hook cweagans-gmail.com/* set mbox = "+cweagans-gmail.com/archive"
+folder-hook cweagans-gmail.com/* set trash = "+cweagans-gmail.com/Trash"
+folder-hook cweagans-gmail.com/* set signature = "~/dotfiles/personal-sig"
+send-hook '~f ^cweagans@gmail.com$' 'set signature="~/dotfiles/personal-sig"'
+folder-hook cameron-wearepropeople.com/* set from = "cameron@wearepropeople.com"
+folder-hook cameron-wearepropeople.com/* set sendmail = "/usr/local/bin/msmtp -a propeople"
+folder-hook cameron-wearepropeople.com/* set postponed = "+cameron-wearepropeople.com/drafts"
+folder-hook cameron-wearepropeople.com/* set mbox = "+cameron-wearepropeople.com/archive"
+folder-hook cameron-wearepropeople.com/* set trash = "+cameron-wearepropeople.com/Trash"
+folder-hook cameron-wearepropeople.com/* set signature = "~/dotfiles/propeople-sig"
+send-hook '~f ^cameron@wearepropeople.com$' 'set signature="~/dotfiles/propeople-sig"'
+
+set sendmail_wait = 0
+unset record
+
+# Index Key Bindings ---------------------------------
+bind index gg       first-entry
+bind index G        last-entry
+
+bind index R        group-reply
+bind index <tab>    sync-mailbox
+bind index <space>  collapse-thread
+
+# Sync email
+macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
+
+# Saner copy/move dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# Pager View Options ---------------------------------
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
+
+# Pager Key Bindings ---------------------------------
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager G  bottom
+
+bind pager R  group-reply
+
+# View attachments properly.
+bind attach <return> view-mailcap
+
+# Compose View Options -------------------------------
+set realname = "Cameron Eagans"      # who am i?
+set envelope_from                    # which from?
+set sig_dashes                       # dashes before sig
+unset edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+unset mime_forward                   # forward attachments as part of body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set forward_quote                    # include message in forwards
+set editor = "mvim -f"               # use macbim to compose emails
+
+set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
+set sort=threads
+set sort_browser=reverse-date
+set sort_aux=reverse-last-date-received
