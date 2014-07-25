@@ -133,7 +133,9 @@ set reply_to                         # reply to Reply to: field
 set reverse_name                     # reply as whomever it was to
 set include                          # include message in replies
 set forward_quote                    # include message in forwards
-set editor = "mvim -f"               # use macbim to compose emails
+
+# edit emails using macvim and when we're done, return to the terminal.
+set editor = '/usr/local/bin/mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
 
 set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
 bind editor <Tab> complete-query
