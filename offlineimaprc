@@ -22,7 +22,7 @@ nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
 [Repository Personal-Remote]
 maxconnections = 1
 type = Gmail
-cert_fingerprint = 1248d871434152ce9896daac13a31b0e1d66a473
+sslcacertfile = /Users/cweagans/dotfiles/Equifax_Secure_CA.cert
 remoteuser = cweagans@gmail.com
 remotepasseval = get_keychain_pass(account="cweagans@gmail.com", server="imap.gmail.com")
 realdelete = no
@@ -57,7 +57,7 @@ folderfilter = lambda folder: folder not in ['[Gmail]/Important',
 [Repository Propeople-Remote]
 maxconnections = 1
 type = Gmail
-cert_fingerprint = 1248d871434152ce9896daac13a31b0e1d66a473
+sslcacertfile = /Users/cweagans/dotfiles/Equifax_Secure_CA.cert
 remoteuser = cameron@wearepropeople.com
 remotepasseval = get_keychain_pass(account="cameron@wearepropeople.com", server="imap.gmail.com")
 realdelete = no
