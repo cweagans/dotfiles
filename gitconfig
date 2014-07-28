@@ -1,0 +1,17 @@
+[user]
+	name = Cameron Eagans
+	email = cweagans@gmail.com
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/cweagans/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.9.4.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[github]
+	user = cweagans
+[branch]
+	autosetuprebase = always
