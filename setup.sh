@@ -12,5 +12,6 @@ cd ~
 [ -e ~/.gitconfig ] || ln -s ~/dotfiles/gitconfig ~/.gitconfig
 [ -e ~/.gitignore_global ] || ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
 [ -e ~/.bash_profile ] || ln -s ~/dotfiles/bash_profile ~/.bash_profile
+[ -e ~/.drushrc.php ] || ln -s ~/dotfiles/drushrc.php ~/.drushrc.php
 [ -e ~/Library/LaunchAgents/offlineimap-quickfetch.plist ] || ln -s ~/dotfiles/offlineimap-quickfetch.plist ~/Library/LaunchAgents/offlineimap-quickfetch.plist
 
