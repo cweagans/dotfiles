@@ -12,7 +12,7 @@ image/gif; /usr/bin/open %s
 application/pdf; /usr/bin/open %s
 
 # HTML
-text/html; /usr/bin/open %s
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
 
 # Unidentified files
 application/octet-stream; /usr/bin/open %s
