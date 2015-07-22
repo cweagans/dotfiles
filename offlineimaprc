@@ -1,7 +1,7 @@
 [general]
 ui = ttyui
-accounts = Personal,Propeople
-pythonfile=~/dotfiles/offlineimap.py
+accounts = Personal,NBC
+pythonfile = ~/.dotfiles/offlineimap.py
 fsync = False
 
 [Account Personal]
@@ -11,60 +11,34 @@ status_backend = sqlite
 
 [Repository Personal-Local]
 type = Maildir
-localfolders = ~/.mail/cweagans-gmail.com
-nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
-                            'sent':    '[Gmail]/Sent Mail',
-                            'flagged': '[Gmail]/Starred',
-                            'trash':   '[Gmail]/Trash',
-                            'archive': '[Gmail]/All Mail',
-                            }.get(folder, folder)
+localfolders = ~/Mail/Personal
 
 [Repository Personal-Remote]
-maxconnections = 1
-type = Gmail
-sslcacertfile = /Users/cweagans/dotfiles/Equifax_Secure_CA.cert
-remoteuser = cweagans@gmail.com
-remotepasseval = get_keychain_pass(account="cweagans@gmail.com", server="imap.gmail.com")
-realdelete = no
-nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
-                            '[Gmail]/Sent Mail': 'sent',
-                            '[Gmail]/Starred':   'flagged',
-                            '[Gmail]/Trash':     'trash',
-                            '[Gmail]/All Mail':  'archive',
-                            }.get(folder, folder)
-folderfilter = lambda folder: folder not in ['[Gmail]/Important',
-                                             '[Gmail]/Spam',
-                                             ]
+type = IMAP
+remotehost = mail.messagingengine.com
+remoteport = 993
+ssl = yes
+cert_fingerprint = 958b1601563aef92607a41eb5bad22e3cace8431
+holdconnectionopen = yes
+remoteuser = cweagans@fastmail.com
+remotepasseval = get_keychain_pass(account="cweagans@fastmail.com", server="mail.messagingengine.com")
+folderfilter = lambda folder: folder not in ['INBOX.Trash', 'INBOX.Junk Mail']
 
-[Account Propeople]
-localrepository = Propeople-Local
-remoterepository = Propeople-Remote
+[Account NBC]
+localrepository = NBC-Local
+remoterepository = NBC-Remote
 status_backend = sqlite
 
-[Repository Propeople-Local]
+[Repository NBC-Local]
 type = Maildir
-localfolders = ~/.mail/cameron-wearepropeople.com
-nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
-                            'sent':    '[Gmail]/Sent Mail',
-                            'flagged': '[Gmail]/Starred',
-                            'trash':   '[Gmail]/Trash',
-                            'archive': '[Gmail]/All Mail',
-                            }.get(folder, folder)
-folderfilter = lambda folder: folder not in ['[Gmail]/Important',
-                                             '[Gmail]/Spam',
-                                             ]
+localfolders = ~/Mail/NBC
 
-[Repository Propeople-Remote]
-maxconnections = 1
-type = Gmail
-sslcacertfile = /Users/cweagans/dotfiles/Equifax_Secure_CA.cert
-remoteuser = cameron@wearepropeople.com
-remotepasseval = get_keychain_pass(account="cameron@wearepropeople.com", server="imap.gmail.com")
-realdelete = no
-nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
-                            '[Gmail]/Sent Mail': 'sent',
-                            '[Gmail]/Starred':   'flagged',
-                            '[Gmail]/Trash':     'trash',
-                            '[Gmail]/All Mail':  'archive',
-                            }.get(folder, folder)
-folderfilter = lambda folder: folder not in ['[Gmail]/Spam']
+[Repository NBC-Remote]
+type = IMAP
+remotehost = localhost
+remoteport = 1143
+ssl = no
+holdconnectionopen = yes
+remoteuser = tfayd\206451874
+remotepasseval = get_keychain_pass(account="cameron.eagans@nbcuni.com", server="ecmail.inbcu.com")
+folderfilter = lambda folder: folder not in ['Calendar', 'Contacts', 'Deleted Items', 'Deleted Messages', 'Journal', 'Junk E-Mail', 'Notes', 'Outbox', 'Tasks']
