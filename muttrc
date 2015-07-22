@@ -105,9 +105,9 @@ set forward_quote                    # include message in forwards
 # edit emails using macvim and when we're done, return to the terminal.
 set editor = '/usr/local/bin/mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
 
-set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
-bind editor <Tab> complete-query
-bind editor ^T    complete
+# set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+# bind editor <Tab> complete-query
+# bind editor ^T    complete
 
 set sort=threads
 set sort_browser=reverse-date
