@@ -89,7 +89,7 @@ bind attach <return> view-mailcap
 set realname = "Cameron Eagans"      # who am i?
 set envelope_from                    # which from?
 set sig_dashes                       # dashes before sig
-unset edit_headers                     # show headers when composing
+unset edit_headers                   # show headers when composing
 set fast_reply                       # skip to compose when replying
 set askcc                            # ask for CC:
 set fcc_attach                       # save attachments with the body
