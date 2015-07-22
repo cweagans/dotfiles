@@ -1,0 +1,13 @@
+mailboxes +Personal/INBOX +Personal/INBOX.Archive Personal/INBOX.Sent\ Items +Personal/INBOX.Drafts
+
+set from = "me@cweagans.net"
+set sendmail = "/usr/local/bin/msmtp -a personal"
+set postponed = "+Personal/drafts"
+set mbox = "+Personal/INBOX.Archive"
+set trash = "+Personal/INBOX.Trash"
+set signature = "~/.dotfiles/personal-sig"
+
+macro index o "<shell-escape>offlineimap -q -a Personal<enter>"
+
+macro index,pager a "<save-message>=Personal/INBOX.Archive<enter>"
+macro index,pager A "<tag-prefix><save-message>=Personal/INBOX.Archive<enter>"

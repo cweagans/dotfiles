@@ -1,0 +1,13 @@
+mailboxes +NBC/INBOX +NBC/Archive +NBC/Sent\ Items +NBC/WORKING\ FOLDER
+
+set from = "cameron.eagans@nbcuni.com"
+set sendmail = "/usr/local/bin/msmtp -v -a nbc"
+set postponed = "+NBC/Drafts"
+set mbox = "+NBC/Archive"
+set trash = "+NBC/Trash"
+set signature = "~/.dotfiles/nbcuni-sig"
+
+macro index o "<shell-escape>offlineimap -q -a NBC<enter>"
+
+macro index,pager a "<save-message>=NBC/WORKING\ FOLDER<enter>"
+macro index,pager A "<tag-prefix><save-message>=NBC/WORKING\ FOLDER<enter>"
