@@ -9,5 +9,5 @@ set signature = "~/.dotfiles/nbcuni-sig"
 
 macro index o "<shell-escape>offlineimap -q -a NBC<enter>"
 
-macro index,pager a "<save-message>=NBC/WORKING\ FOLDER<enter>"
-macro index,pager A "<tag-prefix><save-message>=NBC/WORKING\ FOLDER<enter>"
+macro index,pager a "<save-message>=NBC/WORKING FOLDER<enter>"
+macro index,pager A "<tag-prefix><save-message>=NBC/WORKING FOLDER<enter>"
