@@ -1,0 +1,28 @@
+[general]
+status_path = ~/.vdirsyncer/status/
+
+[pair personal_calendar]
+a = personal_calendar_remote
+b = personal_calendar_local
+
+[storage personal_calendar_remote]
+type = caldav
+url = https://caldav.messagingengine.com/
+username = cweagans@fastmail.com
+
+[storage personal_calendar_local]
+type = filesystem
+path = ~/.calendar/personal
+
+[pair nbc_calendar]
+a = nbc_calendar_remote
+b = nbc_calendar_local
+
+[storage nbc_calendar_remote]
+type = caldav
+url = http://localhost:1080/
+username = tfayd\206451874
+
+[storage nbc_calendar_local]
+type = filesystem
+path = ~/.calendar/nbc

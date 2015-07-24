@@ -14,3 +14,8 @@ cd ~
 [ -e ~/Library/LaunchAgents/homebrew.mxcl.offline-imap.plist ] || ln -sf /usr/local/opt/offline-imap/homebrew.mxcl.offline-imap.plist ~/Library/LaunchAgents
 [ -d ~/.khal ] || mkdir ~/.khal
 [ -e ~/.khal/khal.conf ] || ln -s ~/.dotfiles/khal.conf ~/.khal/khal.conf
+[ -d ~/.dotfiles/vdirsyncer_env ] || virtualenv ~/.dotfiles/vdirsyncer_env
+[ -e ~/.dotfiles/vdirsyncer_env/bin/vdirsyncer ] || ~/.dotfiles/vdirsyncer_env/bin/pip install vdirsyncer
+[ -d ~/.vdirsyncer ] || mkdir ~/.vdirsyncer
+[ -e ~/.vdirsyncer/config ] || ln -s ~/.dotfiles/vdirsyncer_config ~/.vdirsyncer/config
+
