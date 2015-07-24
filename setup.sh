@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # Install dependencies
-brew install offlineimap sqlite mutt w3m libntlm gsasl
-brew install msmtp --build-from-source
+brew install offlineimap sqlite mutt w3m msmtp
 
 cd ~
 [ -d ~/Mail ] || mkdir ~/Mail
