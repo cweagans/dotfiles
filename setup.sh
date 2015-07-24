@@ -11,4 +11,4 @@ cd ~
 [ -e ~/.msmtprc ] || ln -s ~/.dotfiles/msmtprc ~/.msmtprc
 [ -e ~/.gitconfig ] || ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 [ -e ~/.gitignore_global ] || ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
-[ -e ~/Library/LaunchAgents/offlineimap-quickfetch.plist ] || ln -s ~/.dotfiles/offlineimap-quickfetch.plist ~/Library/LaunchAgents/offlineimap-quickfetch.plist
+[ -e ~/Library/LaunchAgents/homebrew.mxcl.offline-imap.plist ] || ln -sf /usr/local/opt/offline-imap/homebrew.mxcl.offline-imap.plist ~/Library/LaunchAgents
