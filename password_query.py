@@ -1,5 +1,7 @@
 #!/usr/bin/python
-import re, subprocess
+
+import re, subprocess, argparse
+
 def get_keychain_pass(account=None, server=None):
     params = {
         'security': '/usr/bin/security',
@@ -16,3 +18,10 @@ def get_keychain_pass(account=None, server=None):
 
     return re.match(r'password: "(.*)"', outtext).group(1)
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Query the keychain for account passwords')
+    parser.add_argument("account", help="The account to find a password for.")
+    parser.add_argument("server", help="The server that the account exists on.")
+    args = parser.parse_args()
+    print get_keychain_pass(args.account, args.server)
+    

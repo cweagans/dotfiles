@@ -1,7 +1,7 @@
 [general]
 ui = ttyui
 accounts = Personal,NBC
-pythonfile = ~/.dotfiles/offlineimap.py
+pythonfile = ~/.dotfiles/password_query.py
 fsync = False
 
 [Account Personal]
