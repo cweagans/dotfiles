@@ -3,6 +3,14 @@
 import re, subprocess, argparse
 
 def get_keychain_pass(account=None, server=None):
+    # Map some URLs/usernames to the canonical record in the keychain.
+    if (server == "localhost"):
+        server = "ecmail.inbcu.com"
+    if (server == "caldav.messagingengine.com"):
+        server = "mail.messagingengine.com"
+    if (account == "tfayd\\206451874"):
+        account = "cameron.eagans@nbcuni.com"
+
     params = {
         'security': '/usr/bin/security',
         'command': 'find-internet-password',
