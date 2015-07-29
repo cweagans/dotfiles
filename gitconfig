@@ -19,3 +19,5 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 	required = true
+[alias]
+	amend = commit --amend --no-edit
