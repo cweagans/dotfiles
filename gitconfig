@@ -1,6 +1,6 @@
 [user]
 	name = Cameron Eagans
-	email = cweagans@gmail.com
+	email = me@cweagans.net
 [push]
 	default = simple
 [core]
@@ -15,3 +15,7 @@
 	required = true
 [alias]
 	amend = commit --amend --no-edit
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
