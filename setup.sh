@@ -11,6 +11,8 @@ cd ~
 [ -e ~/.msmtprc ] || ln -s ~/.dotfiles/msmtprc ~/.msmtprc
 [ -e ~/.gitconfig ] || ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 [ -e ~/.gitignore_global ] || ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
+[ -d ~/.oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && rm ~/.zshrc
+[ -e ~/.zshrc ] || ln -s ~/.dotfiles/zshrc ~/.zshrc
 [ -e ~/Library/LaunchAgents/homebrew.mxcl.offline-imap.plist ] || ln -sf /usr/local/opt/offline-imap/homebrew.mxcl.offline-imap.plist ~/Library/LaunchAgents
 [ -d ~/.khal ] || mkdir ~/.khal
 [ -e ~/.khal/khal.conf ] || ln -s ~/.dotfiles/khal.conf ~/.khal/khal.conf
