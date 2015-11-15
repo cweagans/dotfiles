@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Install dependencies
-brew install offlineimap sqlite mutt w3m msmtp khal
+brew install offlineimap sqlite mutt w3m msmtp khal git-hooks
 
 cd ~
 [ -d ~/Mail ] || mkdir ~/Mail
@@ -20,4 +20,5 @@ cd ~
 [ -e ~/.dotfiles/vdirsyncer_env/bin/vdirsyncer ] || ~/.dotfiles/vdirsyncer_env/bin/pip install git+git://github.com/untitaker/vdirsyncer.git
 [ -d ~/.vdirsyncer ] || mkdir ~/.vdirsyncer
 [ -e ~/.vdirsyncer/config ] || ln -s ~/.dotfiles/vdirsyncer_config ~/.vdirsyncer/config
+[ -d ~/.git_hooks ] || ln -s ~/.dotfiles/githooks ~/.git_hooks
 
