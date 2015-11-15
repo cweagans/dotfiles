@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+function log_commit
+{
+  which dayone > /dev/null
+  if [ ! $? -eq 0 ]
+  then
+    echo "DayOne CLI is not installed. Commit message will not be logged!"
+    exit 0
+  fi
+
+  echo "New #git commit in \`$PWD\`: $(cat $1)" | dayone --date="$GIT_AUTHOR_DATE" new > /dev/null
+}
+
+case "${1}" in
+
+  --about )
+    echo -n "Log commits to Day One: "
+    ;;
+
+  * )
+    log_commit "$@"
+    ;;
+
+esac
