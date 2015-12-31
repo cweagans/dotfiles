@@ -1,18 +1,30 @@
 #!/bin/sh
 
-# Install dependencies
-brew install offlineimap sqlite mutt w3m msmtp khal git-hooks
+# Install email and calendar shit.
+brew install offlineimap sqlite mutt w3m msmtp khal
 
+# Install a modern bash and other misc stuff.
+brew install bash git-hooks
+
+# Append the brew-installed bash to /etc/shells if it's not already there.
+if ![ $(grep -xq "/usr/local/bin/bash" /etc/shells) ];
+then
+    echo "/usr/local/bin/bash" | sudo tee -a /etc/shells > /dev/null
+fi
+
+# Change the shell to the brew-installed Bash.
+chsh -s /usr/local/bin/bash
+
+# Link all the things.
 cd ~
 [ -d ~/Mail ] || mkdir ~/Mail
+[ -e ~/.bash_profile ] || ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 [ -d ~/.mutt ] || mkdir -p ~/.mutt/alias ~/.mutt/cache/headers ~/.mutt/cache/bodies ~/.mutt/certificates ~/.mutt/mailcap ~/.mutt/temp ~/.mutt/sig
 [ -e ~/.offlineimaprc ] || ln -s ~/.dotfiles/offlineimaprc ~/.offlineimaprc
 [ -e ~/.muttrc ] || ln -s ~/.dotfiles/muttrc ~/.muttrc
 [ -e ~/.msmtprc ] || ln -s ~/.dotfiles/msmtprc ~/.msmtprc
 [ -e ~/.gitconfig ] || ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 [ -e ~/.gitignore_global ] || ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
-[ -d ~/.oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && rm ~/.zshrc
-[ -e ~/.zshrc ] || ln -s ~/.dotfiles/zshrc ~/.zshrc
 [ -e ~/Library/LaunchAgents/homebrew.mxcl.offline-imap.plist ] || ln -sf /usr/local/opt/offline-imap/homebrew.mxcl.offline-imap.plist ~/Library/LaunchAgents
 [ -d ~/.khal ] || mkdir ~/.khal
 [ -e ~/.khal/khal.conf ] || ln -s ~/.dotfiles/khal.conf ~/.khal/khal.conf
