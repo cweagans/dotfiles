@@ -1,0 +1,1 @@
+../../../.dotfiles/zsh/.config/zsh/conf/k.zsh
