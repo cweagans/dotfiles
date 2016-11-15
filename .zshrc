@@ -29,6 +29,3 @@ done
 
 # Unset NULL_GLOB, as that behavior is generally undesirable.
 unsetopt NULL_GLOB
-
-# This has to be in this file, or the fzf installer won't see it.
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
