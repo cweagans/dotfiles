@@ -1,1 +1,5 @@
-../../../.dotfiles/zsh/.config/zsh/conf/prompt.zsh
+# Initialize the prompt system...
+autoload -U promptinit && promptinit
+
+# ...and set the prompt.
+prompt pure
