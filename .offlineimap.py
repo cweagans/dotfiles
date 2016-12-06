@@ -33,8 +33,8 @@ if __name__ == "__main__":
     operation, repo = sys.argv[1:]
 
     if operation == "set":
-        username = input('Username: ')
-        password = getpass.getpass("Enter password for user '%s': " % username)
+        username = raw_input('Username: ')
+        password = getpass.getpass("Enter password: ")
         password_confirmation = getpass.getpass("Confirm password: ")
         if password != password_confirmation:
             print "Error: password confirmation does not match"
