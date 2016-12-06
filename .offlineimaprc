@@ -1,6 +1,6 @@
 [general]
 ui = ttyui
-accounts = Personal
+accounts = Personal,Mobomo
 pythonfile = ~/.offlineimap.py
 fsync = False
 
@@ -24,3 +24,21 @@ remoteuser = cweagans@fastmail.com
 remoteusereval = get_username('Personal')
 remotepasseval = get_password('Personal')
 folderfilter = lambda folder: folder not in ['INBOX.Trash', 'INBOX.Junk Mail']
+
+[Account Mobomo]
+localrepository = Mobomo-Local
+remoterepository = Mobomo-Remote
+status_backend = sqlite
+
+[Repository Mobomo-Local]
+type = Maildir
+localfolders = ~/Mail/Mobomo
+
+[Repository Mobomo-Remote]
+type = Gmail
+auth_mechanisms = LOGIN
+cert_fingerprint = eaee2d5114eb26b3a840f92e566d44e24ea8c1b9
+cert_fingerprint = 9b0e86bea74b5ee97db8ab9fab36dab7970c81cb
+remoteusereval = get_username('Mobomo')
+remotepasseval = get_password('Mobomo')
+folderfilter = lambda folder: folder not in ['[Gmail]/Spam']
