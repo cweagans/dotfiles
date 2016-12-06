@@ -1,0 +1,26 @@
+[general]
+ui = ttyui
+accounts = Personal
+pythonfile = ~/.offlineimap.py
+fsync = False
+
+[Account Personal]
+localrepository = Personal-Local
+remoterepository = Personal-Remote
+status_backend = sqlite
+
+[Repository Personal-Local]
+type = Maildir
+localfolders = ~/Mail/Personal
+
+[Repository Personal-Remote]
+type = IMAP
+remotehost = imap.fastmail.com
+remoteport = 993
+ssl = yes
+holdconnectionopen = yes
+cert_fingerprint = 995d415e2a1000e0574efb30fd01b16709d218ed
+remoteuser = cweagans@fastmail.com
+remoteusereval = get_username('Personal')
+remotepasseval = get_password('Personal')
+folderfilter = lambda folder: folder not in ['INBOX.Trash', 'INBOX.Junk Mail']
