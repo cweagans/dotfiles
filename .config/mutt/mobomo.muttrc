@@ -1,0 +1,9 @@
+set from = "cameron@mobomo.com"
+set sendmail = "msmtp -a Mobomo"
+set postponed = "+Mobomo/[Gmail].Drafts"
+set mbox = "+Mobomo/[Gmail].All Mail"
+set trash = "+Mobomo/[Gmail].Trash"
+set signature = "~/.config/mutt/mobomo.sig"
+
+macro index,pager a "<save-message>=Mobomo/[Gmail].All Mail<enter>"
+macro index,pager A "<tag-prefix><save-message>=Mobomo/[Gmail].All Mail<enter>"
