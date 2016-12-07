@@ -18,3 +18,8 @@ setopt IGNORE_EOF
 
 # Prevent aliases from being internally substituted before completion is attempted.
 setopt COMPLETE_ALIASES
+
+# Prevent the delete key from outputting a ~ instead of doing a forward delete.
+# Credit: https://pilif.github.io/2004/10/delete-key-in-zsh/
+bindkey "^[[3~" delete-char
+bindkey "^[3;5~" delete-char
