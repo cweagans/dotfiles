@@ -1,0 +1,16 @@
+"*":
+  core:
+    excludeVcsIgnoredPaths: false
+    telemetryConsent: "limited"
+  editor:
+    scrollPastEnd: true
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "f209273f-f375-0b58-9374-f676a07eb88e"
+  "one-dark-ui":
+    fontSize: 13
+    layoutMode: "Compact"
+    tabSizing: "Even"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
