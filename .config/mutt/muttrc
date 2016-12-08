@@ -89,7 +89,7 @@ bind pager R  group-reply
 bind attach <return> view-mailcap
 
 # Compose View Options -------------------------------
-set editor = "nvim"                  # Use neovim for message composition.
+set editor = "atom --wait"           # Use atom for message composition.
 set realname = "Cameron Eagans"      # who am i?
 set envelope_from                    # which from?
 set sig_dashes                       # dashes before sig
