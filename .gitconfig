@@ -1,3 +1,62 @@
 [user]
-	email = me@cweagans.net
-	name = Cameron Eagans
+  email = me@cweagans.net
+  name = Cameron Eagans
+  signingkey = 0x651F2F16CFF0D53E
+
+[github]
+  user = cweagans
+
+[core]
+  ignorecase = false
+  compression = 9
+  editor = atom --wait
+  excludesfile = ~/.gitignore_global
+  pager = less -FRSX
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[apply]
+  whitespace = nowarn
+
+[branch]
+  autosetuprebase = always
+
+[branch "master"]
+  merge = refs/heads/master
+  remote = origin
+
+[color "interactive"]
+  error = red bold
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  frag = magenta
+  meta = yellow
+  new = green
+  old = red
+  whitespace = white reverse
+
+[color "status"]
+  added = yellow
+  branch = magenta
+  changed = green
+  untracked = cyan
+
+[diff]
+  algorithm = patience
+
+[gitflow "prefix"]
+  feature = feature-
+  release = release-
+  hotfix = hotfix-
+  support = support-
+  versiontag = v
+
+[push]
+  default = simple
+
+[rebase]
+  autostash = true
