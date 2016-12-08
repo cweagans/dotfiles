@@ -29,8 +29,6 @@
     scrollAnimation: true
   "nord-atom-ui":
     darkerFormFocusEffect: true
-  nvatom:
-    directory: "~/Dropbox/Notes"
   "one-dark-ui":
     fontSize: 12
     layoutMode: "Compact"

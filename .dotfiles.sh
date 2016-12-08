@@ -22,6 +22,6 @@ apm install linter linter-docker linter-terraform-syntax php-integrator-linter
 apm install php-integrator-autocomplete-plus
 
 ## Non-code editing
-apm install nvatom tasks language-eml linter-write-good linter-retext
+apm install tasks language-eml linter-write-good linter-retext
 
 # </Atom>
