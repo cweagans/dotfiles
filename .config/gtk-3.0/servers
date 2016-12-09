@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="smb://192.168.1.165/" added="2016-11-14T05:05:22Z" modified="2016-11-14T05:05:22Z" visited="2016-11-14T05:05:22Z">
+    <title>Windows shares on 192.168.1.165</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2016-11-14T05:05:22Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://192.168.1.165/remote-backup/cockpit.cweagans.net" added="2016-11-14T05:05:52Z" modified="2016-11-14T05:05:52Z" visited="2016-11-14T05:05:52Z">
+    <title>cockpit.cweagans.net</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus %u&apos;" modified="2016-11-14T05:05:52Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

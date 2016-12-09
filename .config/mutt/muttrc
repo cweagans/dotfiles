@@ -1,0 +1,111 @@
+# Paths ----------------------------------------------
+set folder = ~/Mail
+set alias_file = ~/.config/mutt/alias
+set header_cache = ~/.cache/mutt/headers
+set message_cachedir = ~/.cache/mutt/bodies
+set certificate_file = ~/.config/mutt/certificates
+set mailcap_path = ~/.config/mutt/mailcap
+
+# Basic Options --------------------------------------
+set wait_key = no                 # Shut up, mutt.
+set mbox_type = Maildir           # Mailbox type.
+set timeout = 3                   # Idle time before scanning.
+set mail_check = 0                # Minimum time between scanning.
+unset move                        # Gmail does this.
+set delete                        # Don't ask. Just do.
+unset confirmappend               # Don't ask. Just do.
+set quit                          # Don't ask. Just do.
+unset mark_old                    # Read/new is good enough for me.
+set beep_new                      # Bell on new mail.
+set pipe_decode                   # Strip headers and eval mimes when piping.
+set thorough_search               # Strip headers and eval mimes before searching.
+set sig_on_top = yes              # I like it this way, okay?
+
+# HTML Email -----------------------------------------
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+# Status Bar -----------------------------------------
+set status_chars = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+
+# Account Settings -----------------------------------
+
+# Default inbox.
+set spoolfile = "+Personal/INBOX"
+
+# Folder hooks to include account-specific configuration.
+folder-hook Personal/* source ~/.config/mutt/personal.muttrc
+folder-hook Mobomo/* source ~/.config/mutt/mobomo.muttrc
+
+# Set up macros to set the from address
+macro generic "1" ":source ~/.config/mutt/personal.muttrc<enter><change-folder> =Personal/INBOX<enter>"
+macro generic "2" ":source ~/.config/mutt/mobomo.muttrc<enter><change-folder> =Mobomo/INBOX<enter>"
+
+set sendmail_wait = 0
+unset record
+
+# Index Key Bindings ---------------------------------
+bind index gg       first-entry
+bind index G        last-entry
+
+bind index R        group-reply
+bind index <tab>    sync-mailbox
+bind index <space>  collapse-thread
+
+# Saner copy/move dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# Check for new mail
+macro index o "<shell-escape>offlineimap -q<enter>"
+
+
+# Pager View Options ---------------------------------
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+# Pager Key Bindings ---------------------------------
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager G  bottom
+
+bind pager R  group-reply
+
+# View attachments properly.
+bind attach <return> view-mailcap
+
+# Compose View Options -------------------------------
+set editor = "atom --wait"           # Use atom for message composition.
+set realname = "Cameron Eagans"      # who am i?
+set envelope_from                    # which from?
+set sig_dashes                       # dashes before sig
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+unset mime_forward                   # forward attachments as part of body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set forward_quote                    # include message in forwards
+
+set sort=threads
+set sort_browser=reverse-date
+set sort_aux=reverse-last-date-received
