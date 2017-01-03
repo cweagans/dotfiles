@@ -128,15 +128,12 @@ if (has('termguicolors'))
 endif
 
 " GUI configuration.
-if (has('gui'))
+if (has('gui_running'))
   " Increase line spacing in the GUI.
   set linespace=10
 
   " Hide all the gui components
   set guioptions=
-
-  " Set window size.
-  set lines=32 columns=110
 
   " Macvim
   if (has('gui_macvim'))
@@ -185,3 +182,10 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " NERDTree
 map <leader>1 :NERDTreeToggle<CR>
+
+""""""""""""""""""""""""
+" Local configuration
+""""""""""""""""""""""""
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
