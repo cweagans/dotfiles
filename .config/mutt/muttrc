@@ -89,7 +89,7 @@ bind pager R  group-reply
 bind attach <return> view-mailcap
 
 # Compose View Options -------------------------------
-set editor = "atom --wait"           # Use atom for message composition.
+set editor = "gvim --remote-wait"    # Use gvim for message composition.
 set realname = "Cameron Eagans"      # who am i?
 set envelope_from                    # which from?
 set sig_dashes                       # dashes before sig
