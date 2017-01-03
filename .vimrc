@@ -29,6 +29,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'mhinz/vim-startify'
   Plug 'itchyny/lightline.vim'
   Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'scrooloose/nerdtree'
 
   " Editing
   Plug 'tpope/vim-commentary'
