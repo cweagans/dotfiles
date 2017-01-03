@@ -183,3 +183,5 @@ vmap <C-/> :Commentary<CR>
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" NERDTree
+map <leader>1 :NERDTreeToggle<CR>
