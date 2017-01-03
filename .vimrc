@@ -176,8 +176,8 @@ let g:lightline = { 'colorscheme': 'tender' }
 let g:ctrlp_by_filename = 1
 
 " Commentary
-nmap <C-/> :Commentary<CR>
-vmap <C-/> :Commentary<CR>
+nmap <leader>/ :Commentary<CR>
+vmap <leader>/ :Commentary<CR>
 
 " Vim expand region
 vmap v <Plug>(expand_region_expand)
