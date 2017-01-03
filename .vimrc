@@ -19,7 +19,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-sensible'
   Plug 'jacoborus/tender.vim'
   Plug 'editorconfig/editorconfig-vim'
+
+  " Syntax
   Plug 'sheerun/vim-polyglot'
+  Plug 'hashivim/vim-terraform'
 
   " Interface
   Plug 'mhinz/vim-startify'
