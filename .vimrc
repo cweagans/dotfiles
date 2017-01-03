@@ -23,6 +23,7 @@ call plug#begin("~/.vim/plugged")
   " Syntax
   Plug 'sheerun/vim-polyglot'
   Plug 'hashivim/vim-terraform'
+  Plug 'chase/vim-ansible-yaml'
 
   " Interface
   Plug 'mhinz/vim-startify'
