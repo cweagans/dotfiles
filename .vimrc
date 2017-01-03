@@ -41,6 +41,9 @@ call plug#end()
 """""""""""""""""""""""
 " General
 """""""""""""""""""""""
+" Set the leader to ,
+let mapleader = ","
+
 " Set the encoding to UTF-8.
 set encoding=utf-8
 
