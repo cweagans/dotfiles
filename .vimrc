@@ -56,6 +56,9 @@ set mouse=a
 " Allow cursor positioning one character past the end of the line.
 set virtualedit=onemore
 
+" Use the system clipboard.
+set clipboard=unnamedplus
+
 " Highlight the cursor line.
 set cursorline
 
