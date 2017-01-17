@@ -19,6 +19,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-sensible'
   Plug 'jacoborus/tender.vim'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'shougo/neocomplete.vim'
 
   " Syntax
   Plug 'sheerun/vim-polyglot'
@@ -34,6 +35,9 @@ call plug#begin("~/.vim/plugged")
   " Editing
   Plug 'tpope/vim-commentary'
   Plug 'terryma/vim-expand-region'
+
+  " Language specific plugins
+  Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 call plug#end()
 
@@ -185,6 +189,27 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 " NERDTree
 map <leader>1 :NERDTreeToggle<CR>
+
+" Neocomplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_cast = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+" vim-go
+let g:go_bin_path = expand("~/Code/go/bin")
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <leader>gd <Plug>(go-doc-vertical)
+au FileType go nmap <leader>gdb <Plug>(go-doc-browser)
+au FileType go nmap <leader>gi <Plug>(go-implements)
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 """"""""""""""""""""""""
 " Local configuration
