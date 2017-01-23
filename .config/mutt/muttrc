@@ -43,10 +43,12 @@ set spoolfile = "+Personal/INBOX"
 # Folder hooks to include account-specific configuration.
 folder-hook Personal/* source ~/.config/mutt/personal.muttrc
 folder-hook Mobomo/* source ~/.config/mutt/mobomo.muttrc
+folder-hook Nasa/* source ~/.config/mutt/nasa.muttrc
 
 # Set up macros to set the from address
 macro generic "1" ":source ~/.config/mutt/personal.muttrc<enter><change-folder> =Personal/INBOX<enter>"
 macro generic "2" ":source ~/.config/mutt/mobomo.muttrc<enter><change-folder> =Mobomo/INBOX<enter>"
+macro generic "3" ":source ~/.config/mutt/nasa.muttrc<enter><change-folder> =Nasa/INBOX<enter>"
 
 set sendmail_wait = 0
 unset record

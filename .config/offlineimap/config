@@ -1,6 +1,6 @@
 [general]
 ui = ttyui
-accounts = Personal,Mobomo
+accounts = Personal,Mobomo,Nasa
 pythonfile = ~/.offlineimap.py
 fsync = False
 
@@ -43,3 +43,24 @@ sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remoteusereval = get_username('Mobomo')
 remotepasseval = get_password('Mobomo')
 folderfilter = lambda folder: folder not in ['[Gmail]/Spam']
+
+[Account Nasa]
+localrepository = Nasa-Local
+remoterepository = Nasa-Remote
+status_backend = sqlite
+postsynchook = notmuch new
+
+[Repository Nasa-Local]
+type = Maildir
+localfolders = ~/Mail/Nasa
+
+[Repository Nasa-Remote]
+type = IMAP
+remotehost = imap01.ndc.nasa.gov
+remoteport = 993
+ssl = yes
+holdconnectionopen = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteusereval = get_username('Nasa')
+remotepasseval = get_password('Nasa')
+
