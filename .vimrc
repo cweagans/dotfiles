@@ -212,6 +212,47 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+" Startify
+" Close NERDTree before saving sessions.
+let g:startify_session_before_save = [
+	\ 'echo "Cleaning up before saving session..."',
+	\ 'silent! NERDTreeClose'
+	\ ]
+" Automatically update sessions when vim is closed or a new session is loaded.
+let g:Startify_session_persistence = 1
+" Automatically cd to vcs root when opening a file from the startify menu.
+let g:startify_change_to_vcs_root = 1
+" Set the startify header
+let g:startify_custom_header = [
+	\ '               _             ',
+	\ '      __   __ (_)  _ __ ___  ',
+	\ '      \ \ / / | | | `_ ` _ \ ',
+	\ '       \ V /  | | | | | | | |',
+	\ '        \_/   |_| |_| |_| |_|',
+	\]
+
+" Set the order of the startify sections
+let g:startify_list_order = [
+	\['   Sessions:'],
+	\'sessions',
+	\['   Bookmarks:'],
+	\'bookmarks',
+	\['   MRU in dir:'],
+	\'dir',
+	\'commands',
+	\]
+
+" Set up some bookmarks for configs.
+let g:startify_bookmarks = [
+	\{ 'v': '~/.vimrc' },
+	\{ 'vl': '~/.vimrc.local' },
+	\{ 'g': '~/.gitconfig' },
+	\]
+
+" Set some nice session management keymappings.
+nmap <leader>ss :SSave<CR>
+nmap <leader>sc :SClose<CR>
+
 """"""""""""""""""""""""
 " Local configuration
 """"""""""""""""""""""""
