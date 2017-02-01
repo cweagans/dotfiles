@@ -204,6 +204,7 @@ au FileType go nmap <leader>gc <Plug>(go-coverage)
 au FileType go nmap <leader>gd <Plug>(go-doc-vertical)
 au FileType go nmap <leader>gdb <Plug>(go-doc-browser)
 au FileType go nmap <leader>gi <Plug>(go-implements)
+au FileType go nmap <leader>ga :GoAlternate<CR>
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
