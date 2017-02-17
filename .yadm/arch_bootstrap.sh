@@ -7,7 +7,7 @@ pacman -S --needed base-devel
 pacman -S sudo git openssh zsh wget
 
 ## Gnome and desktop-ish stuff
-pacman -S gnome networkmanager network-manager-applet gnome-tweak-tool gedit gnome-calendar deja-dup atom
+pacman -S gnome networkmanager network-manager-applet gnome-tweak-tool gedit gnome-calendar deja-dup
 
 ## Ansible
 pacman -S python-pip ansible
