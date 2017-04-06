@@ -1,2 +1,3 @@
 .aws/*
 .exercism.json
+.ssh/id_*
