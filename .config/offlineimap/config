@@ -7,7 +7,6 @@ fsync = False
 [Account Personal]
 localrepository = Personal-Local
 remoterepository = Personal-Remote
-status_backend = sqlite
 postsynchook = notmuch new
 
 [Repository Personal-Local]
@@ -29,7 +28,6 @@ folderfilter = lambda folder: folder not in ['INBOX.Trash', 'INBOX.Junk Mail']
 [Account Mobomo]
 localrepository = Mobomo-Local
 remoterepository = Mobomo-Remote
-status_backend = sqlite
 postsynchook = notmuch new
 
 [Repository Mobomo-Local]
@@ -47,7 +45,6 @@ folderfilter = lambda folder: folder not in ['[Gmail]/Spam']
 [Account Nasa]
 localrepository = Nasa-Local
 remoterepository = Nasa-Remote
-status_backend = sqlite
 postsynchook = notmuch new
 
 [Repository Nasa-Local]
