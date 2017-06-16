@@ -1,8 +1,8 @@
-# Helper to relaod my zsh configuration.
 alias reload!='. ~/.zshrc'
 
-# Navigation.
-alias ll='ls -alhG'
+# Use k for all the things.
+alias ls='k -A -h'
+alias ll='ls'
 
 # Never actually delete anything. Move it to the Trash first.
 alias gnurm='/usr/bin/rm'
