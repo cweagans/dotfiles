@@ -1,3 +1,4 @@
+# Reload zsh configuration.
 alias reload!='. ~/.zshrc'
 
 # Use k for all the things.
