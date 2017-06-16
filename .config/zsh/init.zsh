@@ -28,4 +28,7 @@ if ! zgen saved; then
 	zgen save
 fi
 
-source ~/.config/zsh/conf/*.zsh
+for file in ~/.config/zsh/conf/***/*.zsh;
+do
+	source $file
+done
