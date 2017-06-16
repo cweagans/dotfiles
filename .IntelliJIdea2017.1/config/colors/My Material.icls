@@ -4,17 +4,17 @@
     <property name="created">2016-09-12T15:01:30</property>
     <property name="ide">idea</property>
     <property name="ideVersion">2016.2.4.0.0</property>
-    <property name="modified">2017-05-03T13:58:51</property>
+    <property name="modified">2017-05-13T12:07:52</property>
     <property name="originalScheme">Material Theme - Default</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.8" />
   <font>
     <option name="EDITOR_FONT_NAME" value="Ubuntu Mono" />
-    <option name="EDITOR_FONT_SIZE" value="18" />
+    <option name="EDITOR_FONT_SIZE" value="15" />
   </font>
   <font>
     <option name="EDITOR_FONT_NAME" value="Source Code Pro" />
-    <option name="EDITOR_FONT_SIZE" value="18" />
+    <option name="EDITOR_FONT_SIZE" value="15" />
   </font>
   <option name="EDITOR_LIGATURES" value="true" />
   <option name="CONSOLE_FONT_NAME" value="DejaVu Sans Mono" />
