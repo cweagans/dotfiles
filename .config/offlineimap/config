@@ -5,8 +5,8 @@ pythonfile = ~/.offlineimap.py
 fsync = False
 
 [Account Personal]
-localrepository = Gmail-Local
-remoterepository = Gmail-Remote
+localrepository = Personal-Local
+remoterepository = Personal-Remote
 postsynchook = notmuch new
 
 [Repository Personal-Local]
