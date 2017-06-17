@@ -1,1 +1,1 @@
-/home/cweagans/.config/zsh/init.zsh
+./.config/zsh/init.zsh
