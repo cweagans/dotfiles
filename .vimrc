@@ -60,7 +60,7 @@ set mouse=a
 set virtualedit=onemore
 
 " Use the system clipboard.
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Highlight the cursor line.
 set cursorline
