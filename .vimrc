@@ -269,7 +269,7 @@ function! InitializeDirectories()
 	    let dir_list['undo'] = 'undodir'
 	endif
 
-	let common_dir = parent . '/.' . prefix
+	let common_dir = parent . '/.' . prefix . '/'
 
 	for [dirname, settingname] in items(dir_list)
 	    let directory = common_dir . dirname . '/'
