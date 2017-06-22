@@ -17,7 +17,7 @@ call plug#begin("~/.vim/plugged")
 
   " General
   Plug 'tpope/vim-sensible'
-  Plug 'jacoborus/tender.vim'
+  Plug 'sonph/onehalf', {'rtp': 'vim/'}
   Plug 'editorconfig/editorconfig-vim'
   Plug 'shougo/neocomplete.vim'
 
@@ -123,7 +123,7 @@ endif
 syntax enable
 
 " Set the colorscheme.
-colorscheme tender
+colorscheme onehalfdark
 
 " Turn on line nubering.
 set number
@@ -173,7 +173,7 @@ nnoremap <esc>^[ <esc>^[
 " Plugin configuration
 """"""""""""""""""""""""
 " Lightline
-let g:lightline = { 'colorscheme': 'tender' }
+let g:lightline = { 'colorscheme': 'onehalfdark' }
 
 " CtrlP
 let g:ctrlp_by_filename = 1
