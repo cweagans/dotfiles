@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Prerequisites:
+#   - Install brew
+#   - Make sure `brew doctor` is happy
+#   - Install yadm and git
+
+# Install vim plugins
+vim +PlugInstall +qall
+
+# Install onedark colorscheme for Terminal.app
+# @TODO: Only do this if OneHalfDark isn't already the default.
+open ~/.vim/plugged/onehalf/terminal/OneHalfDark.terminal
+defaults write com.apple.Terminal "Default Window Settings" "OneHalfDark"
+
+# Install Homebrew dependencies
+brew bundle --file=~/.Brewfile
+
+# @TODO: Set Mac OS defaults (see https://github.com/mathiasbynens/dotfiles/blob/master/.macos)
+# @TODO: Set default shell to Homebrew-installed zsh (edit /etc/shells)
