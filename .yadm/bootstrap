@@ -6,15 +6,27 @@
 #   - Install yadm and git
 
 # Install vim plugins
-vim +PlugInstall +qall
+echo " -> Installing vim plugins"
+~/.yadm/scripts/vim-install.plugins.sh
 
 # Install onedark colorscheme for Terminal.app
-# @TODO: Only do this if OneHalfDark isn't already the default.
-open ~/.vim/plugged/onehalf/terminal/OneHalfDark.terminal
-defaults write com.apple.Terminal "Default Window Settings" "OneHalfDark"
+echo " -> Configuring Terminal.app profile"
+~/.yadm/scripts/configure-terminal.sh
 
 # Install Homebrew dependencies
-brew bundle --file=~/.Brewfile
+echo " -> Installing Homebrew dependencies"
+~/.yadm/scripts/install-brew-deps.sh
 
-# @TODO: Set Mac OS defaults (see https://github.com/mathiasbynens/dotfiles/blob/master/.macos)
-# @TODO: Set default shell to Homebrew-installed zsh (edit /etc/shells)
+# Set macOS defaults
+echo " -> Setting macOS defaults"
+~/.yadm/scripts/mac-defaults.sh
+
+# Set default shell to zsh.
+echo " -> Setting default shell"
+~/.yadm/scripts/zsh-default-shell.sh
+
+# Install Mac App Store applications.
+echo " -> Installing software from the Mac App Store"
+~/.yadm/scripts/mas-install.sh
+
+echo " ->  Done."
