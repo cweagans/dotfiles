@@ -16,6 +16,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
+# Show battery percentage in menu bar.
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+
 # Set the error sound to something a little more subtle.
 defaults write com.apple.systemsound com.apple.sound.beep.sound -string "/System/Library/Sounds/Morse.aiff"
 
