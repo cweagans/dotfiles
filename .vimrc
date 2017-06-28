@@ -252,6 +252,18 @@ let g:startify_bookmarks = [
 nmap <leader>ss :SSave<CR>
 nmap <leader>sc :SClose<CR>
 
+""""""""""""""""""""""""
+" Drupal
+""""""""""""""""""""""""
+if has("autocmd")
+  augroup module
+    autocmd BufRead,BufNewFile *.{module,install,test,inc,profile} set filetype=php
+    autocmd BufRead,BufNewFile *.{info,make,build} set filetype=dosini
+  augroup END
+endif
+
+
+
 
 """"""""""""""""""""""""
 " Functions
