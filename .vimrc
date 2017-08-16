@@ -17,7 +17,7 @@ call plug#begin("~/.vim/plugged")
 
   " General
   Plug 'tpope/vim-sensible'
-  Plug 'sonph/onehalf', {'rtp': 'vim/'}
+  Plug 'dracula/vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'shougo/neocomplete.vim'
 
@@ -123,7 +123,7 @@ endif
 syntax enable
 
 " Set the colorscheme.
-colorscheme onehalfdark
+colorscheme dracula
 
 " Turn on line nubering.
 set number
@@ -173,7 +173,7 @@ nnoremap <esc>^[ <esc>^[
 " Plugin configuration
 """"""""""""""""""""""""
 " Lightline
-let g:lightline = { 'colorscheme': 'onehalfdark' }
+let g:lightline = { 'colorscheme': 'dracula' }
 
 " CtrlP
 let g:ctrlp_by_filename = 1
