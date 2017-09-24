@@ -1,42 +1,48 @@
 
 " Automatically install vim-plug if it's not present.
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 " Automatically install missing plugins on startup.
 autocmd VimEnter *
-  \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall | q
-  \| endif
+			\  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+			\|   PlugInstall | q
+			\| endif
 
 " Set up plugins
 call plug#begin("~/.vim/plugged")
 
-  " General
-  Plug 'tpope/vim-sensible'
-  Plug 'dracula/vim'
-  Plug 'editorconfig/editorconfig-vim'
-  Plug 'shougo/neocomplete.vim'
+" General
+Plug 'tpope/vim-sensible'
+Plug 'dracula/vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'shougo/neocomplete.vim'
 
-  " Syntax
-  Plug 'sheerun/vim-polyglot'
-  Plug 'hashivim/vim-terraform'
+" Syntax
+Plug 'sheerun/vim-polyglot'
+Plug 'hashivim/vim-terraform'
 
-  " Interface
-  Plug 'mhinz/vim-startify'
-  Plug 'itchyny/lightline.vim'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'scrooloose/nerdtree'
+" Interface
+Plug 'mhinz/vim-startify'
+Plug 'itchyny/lightline.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 
-  " Editing
-  Plug 'tpope/vim-commentary'
-  Plug 'terryma/vim-expand-region'
+" Editing
+Plug 'tpope/vim-commentary'
+Plug 'terryma/vim-expand-region'
+Plug 'Townk/vim-autoclose'
 
-  " Language specific plugins
-  Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+" Language specific plugins
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'shawncplus/phpcomplete.vim'
+
+" Other stuff
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'  
 
 call plug#end()
 
@@ -110,9 +116,9 @@ set colorcolumn=80
 
 " Undo behaviors
 if has('persistent_undo')
-  set undofile
-  set undolevels=1000
-  set undoreload=10000
+	set undofile
+	set undolevels=1000
+	set undoreload=10000
 endif
 
 
@@ -130,22 +136,26 @@ set number
 
 " Colors
 if (has('termguicolors'))
-  set termguicolors
+	set termguicolors
 endif
 
 " GUI configuration.
 if (has('gui_running'))
-  " Increase line spacing in the GUI.
-  set linespace=10
+	" Increase line spacing in the GUI.
+	set linespace=10
 
-  " Hide all the gui components
-  set guioptions=
+	" Hide all the gui components
+	set guioptions=
 
-  " Macvim
-  if (has('gui_macvim'))
-    " Disable the print shortcut because nobody prints their fucking code.
-    macm File.Print key=<nop>
-  endif
+	" Macvim
+	if has("gui_macvim")
+		" Disable the print shortcut because nobody prints their fucking code.
+		" Apparently, this has to live in .gvimrc.
+		" macmenu &File.Print key=<nop>
+
+		" Set font options.
+		set guifont=InputMono:h13
+	endif
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -164,16 +174,25 @@ cmap w!! w !sudo tee % >/dev/null
 " Disable ex mode.
 nnoremap Q <nop>
 
+" For wrapped lines, j and k should navigate between rows, rather than lines.
+nnoremap j gj
+nnoremap k gk
+
 " Clear searches on ESC.
 nnoremap <esc> :let @/ = ""<return><esc>
 nnoremap <esc>^[ <esc>^[
 
+" Navigate splits with Ctrl + h,j,k,l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 """"""""""""""""""""""""
 " Plugin configuration
 """"""""""""""""""""""""
 " Lightline
-let g:lightline = { 'colorscheme': 'dracula' }
+let g:lightline = { 'colorscheme': 'Dracula' }
 
 " CtrlP
 let g:ctrlp_by_filename = 1
@@ -211,42 +230,48 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+" phpcomplete
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+
+" automatically strip trailing whitespace
+autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+
 " Startify
 " Close NERDTree before saving sessions.
 let g:startify_session_before_save = [
-	\ 'echo "Cleaning up before saving session..."',
-	\ 'silent! NERDTreeClose'
-	\ ]
+			\ 'echo "Cleaning up before saving session..."',
+			\ 'silent! NERDTreeClose'
+			\ ]
 " Automatically update sessions when vim is closed or a new session is loaded.
 let g:Startify_session_persistence = 1
 " Automatically cd to vcs root when opening a file from the startify menu.
 let g:startify_change_to_vcs_root = 1
 " Set the startify header
 let g:startify_custom_header = [
-	\ '               _             ',
-	\ '      __   __ (_)  _ __ ___  ',
-	\ '      \ \ / / | | | `_ ` _ \ ',
-	\ '       \ V /  | | | | | | | |',
-	\ '        \_/   |_| |_| |_| |_|',
-	\]
+			\ '               _             ',
+			\ '      __   __ (_)  _ __ ___  ',
+			\ '      \ \ / / | | | `_ ` _ \ ',
+			\ '       \ V /  | | | | | | | |',
+			\ '        \_/   |_| |_| |_| |_|',
+			\]
 
 " Set the order of the startify sections
 let g:startify_list_order = [
-	\['   Sessions:'],
-	\'sessions',
-	\['   Bookmarks:'],
-	\'bookmarks',
-	\['   MRU in dir:'],
-	\'dir',
-	\'commands',
-	\]
+			\['   Sessions:'],
+			\'sessions',
+			\['   Bookmarks:'],
+			\'bookmarks',
+			\['   MRU in dir:'],
+			\'dir',
+			\'commands',
+			\]
 
 " Set up some bookmarks for configs.
 let g:startify_bookmarks = [
-	\{ 'v': '~/.vimrc' },
-	\{ 'vl': '~/.vimrc.local' },
-	\{ 'g': '~/.gitconfig' },
-	\]
+			\{ 'v': '~/.vimrc' },
+			\{ 'vl': '~/.vimrc.local' },
+			\{ 'g': '~/.gitconfig' },
+			\]
 
 " Set some nice session management keymappings.
 nmap <leader>ss :SSave<CR>
@@ -256,13 +281,11 @@ nmap <leader>sc :SClose<CR>
 " Drupal
 """"""""""""""""""""""""
 if has("autocmd")
-  augroup module
-    autocmd BufRead,BufNewFile *.{module,install,test,inc,profile} set filetype=php
-    autocmd BufRead,BufNewFile *.{info,make,build} set filetype=dosini
-  augroup END
+	augroup module
+		autocmd BufRead,BufNewFile *.{module,install,test,inc,profile} set filetype=php
+		autocmd BufRead,BufNewFile *.{info,make,build} set filetype=dosini
+	augroup END
 endif
-
-
 
 
 """"""""""""""""""""""""
@@ -273,37 +296,50 @@ function! InitializeDirectories()
 	let parent = $HOME
 	let prefix = 'vim'
 	let dir_list = {
-		    \ 'backup': 'backupdir',
-		    \ 'views': 'viewdir',
-		    \ 'swap': 'directory' }
+				\ 'backup': 'backupdir',
+				\ 'views': 'viewdir',
+				\ 'swap': 'directory' }
 
 	if has('persistent_undo')
-	    let dir_list['undo'] = 'undodir'
+		let dir_list['undo'] = 'undodir'
 	endif
 
 	let common_dir = parent . '/.' . prefix . '/'
 
 	for [dirname, settingname] in items(dir_list)
-	    let directory = common_dir . dirname . '/'
-	    if exists("*mkdir")
-		if !isdirectory(directory)
-		    call mkdir(directory)
+		let directory = common_dir . dirname . '/'
+		if exists("*mkdir")
+			if !isdirectory(directory)
+				call mkdir(directory)
+			endif
 		endif
-	    endif
-	    if !isdirectory(directory)
-		echo "Warning: Unable to create backup directory: " . directory
-		echo "Try: mkdir -p " . directory
-	    else
-		let directory = substitute(directory, " ", "\\\\ ", "g")
-		exec "set " . settingname . "=" . directory
-	    endif
+		if !isdirectory(directory)
+			echo "Warning: Unable to create backup directory: " . directory
+			echo "Try: mkdir -p " . directory
+		else
+			let directory = substitute(directory, " ", "\\\\ ", "g")
+			exec "set " . settingname . "=" . directory
+		endif
 	endfor
 endfunction
 call InitializeDirectories()
+
+function! StripTrailingWhitespace()
+	" Preparation: save last search, and cursor position.
+	let _s=@/
+	let l = line(".")
+	let c = col(".")
+	" do the business:
+	%s/\s\+$//e
+	" clean up: restore previous search history, and cursor position
+	let @/=_s
+	call cursor(l, c)
+endfunction
 
 """"""""""""""""""""""""
 " Local configuration
 """"""""""""""""""""""""
 if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+	source ~/.vimrc.local
 endif
+
