@@ -121,6 +121,12 @@ if has('persistent_undo')
 	set undoreload=10000
 endif
 
+" Lines to scroll when the cursor leaves the screen.
+set scrolljump=5
+
+" Minimum visible lines to keep above or below the cursor.
+set scrolloff=3
+
 
 """""""""""""""""""""""
 " Appearance
