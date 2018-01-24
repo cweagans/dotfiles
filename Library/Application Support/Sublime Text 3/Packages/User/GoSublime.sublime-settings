@@ -1,0 +1,4 @@
+{
+	"fmt_cmd": ["goimports", "-srcdir", "$_dir"],
+	"env": { "PATH": "$HOME/Code/go/bin:$PATH", "GOPATH": "$HOME/Code/go" },
+}

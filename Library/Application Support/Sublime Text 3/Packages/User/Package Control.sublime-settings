@@ -1,0 +1,22 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"EditorConfig",
+		"GitGutter",
+		"GitSavvy",
+		"GoRename",
+		"GoSublime",
+		"gruvbox",
+		"HexViewer",
+		"Package Control",
+		"SideBarEnhancements",
+		"Terminal",
+		"Vintageous",
+		"Whitespace",
+		"Zen Tabs"
+	]
+}

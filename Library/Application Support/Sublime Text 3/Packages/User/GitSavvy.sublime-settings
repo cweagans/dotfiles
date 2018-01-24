@@ -1,0 +1,7 @@
+// Settings in here override those in "GitSavvy/GitSavvy.sublime-settings",
+
+{
+	"git_path": "/usr/local/bin/git",
+	"vintageous_friendly": true,
+	"vintageous_enter_insert_mode": true,
+}

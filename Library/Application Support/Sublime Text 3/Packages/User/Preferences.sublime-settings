@@ -1,0 +1,47 @@
+{
+	"additional_path_items":
+	[
+		"~/Code/go/bin"
+	],
+	"always_show_minimap_viewport": true,
+	"atomic_save": true,
+	"auto_complete_commit_on_tab": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Medium).tmTheme",
+	"create_window_at_startup": false,
+	"default_encoding": "UTF-8",
+	"default_line_ending": "unix",
+	"ensure_newline_at_eof_on_save": true,
+	"fold_buttons": false,
+	"font_face": "Input Mono",
+	"font_size": 13,
+	"gruvbox_accent_blue": true,
+	"gruvbox_accent_neutral": true,
+	"gruvbox_animate_icons": true,
+	"gruvbox_autocomplete_border": true,
+	"gruvbox_autocomplete_comfortable": true,
+	"gruvbox_colored_tooltips": true,
+	"gruvbox_panel_xxs": true,
+	"gruvbox_sidebar_font_size_12": true,
+	"gruvbox_sideline_autocomplete_row_thickest": true,
+	"gruvbox_statusbar_font_size_12": true,
+	"gruvbox_statusbar_xs": true,
+	"gruvbox_tabs_font_size_12": true,
+	"gruvbox_tabs_xxs": true,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"overlay_scroll_bars": "disabled",
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": true,
+	"scroll_speed": 1.5,
+	"theme": "gruvbox (Dark) (Medium).sublime-theme"
+}
