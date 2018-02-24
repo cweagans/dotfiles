@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 bdb1326476fc89373692eb0c01b23894820ac9b8 Cameron Eagans <cweagans@Camerons-MBP.(none)> 1519450314 -0700	reset: moving to origin/master
-bdb1326476fc89373692eb0c01b23894820ac9b8 d04e2d63ac989f0f1f6b9a324e4438aea2ee3a46 Cameron Eagans <me@cweagans.net> 1519501798 -0700	commit: Remove mutt, gpg, msmtp, notmuch, offlineimap, and vim configs
-d04e2d63ac989f0f1f6b9a324e4438aea2ee3a46 a70ea1a5eda956f61f325b43f363397bb7281293 Cameron Eagans <me@cweagans.net> 1519502200 -0700	commit: Remove gtk config
