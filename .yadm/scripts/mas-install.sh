@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# First, install mas - the command line client to the mac app store.
-brew install mas
-
 # Install apps
 mas install 497799835 # Xcode
 mas install 441258766 # Magnet

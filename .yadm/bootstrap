@@ -5,21 +5,13 @@
 #   - Make sure `brew doctor` is happy
 #   - Install yadm and git
 
-# Install vim plugins
-echo " -> Installing vim plugins"
-~/.yadm/scripts/vim-install.plugins.sh
-
-# Install onedark colorscheme for Terminal.app
-echo " -> Configuring Terminal.app profile"
-~/.yadm/scripts/configure-terminal.sh
-
 # Install Homebrew dependencies
 echo " -> Installing Homebrew dependencies"
 ~/.yadm/scripts/install-brew-deps.sh
 
 # Set macOS defaults
 echo " -> Setting macOS defaults"
-~/.yadm/scripts/mac-defaults.sh
+sudo ~/.yadm/scripts/mac-defaults.sh
 
 # Set default shell to zsh.
 echo " -> Setting default shell"
