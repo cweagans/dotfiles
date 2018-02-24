@@ -1,9 +1,0 @@
-set from = "cameron.w.eagans@nasa.gov"
-set sendmail = "msmtp -a Nasa"
-set postponed = "+Nasa/Drafts"
-set mbox = "+Nasa/Archive"
-set trash = "+Nasa/Deleted Items"
-set signature = "~/.config/mutt/nasa.sig"
-
-macro index,pager a "<save-message>=Nasa/Archive<enter>"
-macro index,pager A "<tag-prefix><save-message>=Nasa/Archive<enter>"
