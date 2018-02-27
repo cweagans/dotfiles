@@ -9,6 +9,10 @@
 echo " -> Installing Homebrew dependencies"
 ~/.yadm/scripts/install-brew-deps.sh
 
+# Setup Hammerspoon
+echo " -> Setting up Hammerspoon dependencies"
+~/.yadm/scripts/setup-hammerspoon.sh
+
 # Set macOS defaults
 echo " -> Setting macOS defaults"
 sudo ~/.yadm/scripts/mac-defaults.sh
