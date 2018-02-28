@@ -38,3 +38,11 @@
   padding: 0px 5px 0px 75px !important;
 }
 
+/**
+ * Hide sidebar header
+ *
+ * From https://github.com/Timvde/UserChrome-Tweaks/commit/0b2b15817d95f4b391f50142e981bdc2972bef25#diff-41fa16080dd94a479266ac9ad2cb41fd
+ */
+#sidebar-header {
+  display: none;
+}
