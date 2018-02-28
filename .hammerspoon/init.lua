@@ -13,6 +13,8 @@ spoon.Caffeine:start()
 
 -- Add a screen lock shortcut.
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'L', function()
-  hs.caffeinate.lockScreen()
+    hs.caffeinate.lockScreen()
 end)
 
+-- Load the other parts of my configuration.
+require "sound"
