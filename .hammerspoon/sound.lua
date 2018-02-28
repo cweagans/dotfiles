@@ -12,7 +12,7 @@ local monitorOutputName = "DisplayPort"
 function useDockAudio()
 	hs.audiodevice.findInputByName(dockInputName):setDefaultInputDevice()
 	hs.audiodevice.findOutputByName(dockOutputName):setDefaultOutputDevice()
-	hs.audiodevice.findOutputByName(dockOutputName):setOutputVolume(25)
+	hs.audiodevice.findOutputByName(dockOutputName):setOutputVolume(75)
 end
 
 -- Helper function to set audio i/o to the monitor + webcam.
