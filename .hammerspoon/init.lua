@@ -18,3 +18,4 @@ end)
 
 -- Load the other parts of my configuration.
 require "sound"
+require "chunkwm"
