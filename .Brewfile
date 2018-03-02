@@ -32,6 +32,7 @@ brew "wget"
 brew "yadm"
 brew "zsh"
 brew "crisidev/chunkwm/chunkwm", args: ["with-purify"]
+cask "adobe-creative-cloud"
 cask "alfred"
 cask "arduino"
 cask "authy"
