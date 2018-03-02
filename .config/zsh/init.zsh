@@ -23,7 +23,6 @@ if ! zgen saved; then
 	# Misc completion
 	zgen load zsh-users/zsh-completions
 
-
 	# Write zgen's init.zsh
 	zgen save
 fi
