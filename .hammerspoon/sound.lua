@@ -29,8 +29,10 @@ hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'S', function()
 	if (hs.audiodevice.findOutputByName(dockOutputName) ~= nil) then
 		if (hs.audiodevice.defaultOutputDevice():name() == dockOutputName) then
 			useMonitorAudio()
+			hs.notify.show("Sound toggled", "Now using monitor audio")
 		else
 			useDockAudio()
+			hs.notify.show("Sound toggled", "Now using dock audio")
 		end
 	end
 
