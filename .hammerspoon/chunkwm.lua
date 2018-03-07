@@ -103,5 +103,5 @@ end)
 
 -- Open a terminal.
 hs.hotkey.bind({'ctrl'}, 'return', function()
-	hs.execute("open -na /Applications/Utilities/Terminal.app", true)
+	hs.execute("open -na /Applications/kitty.app", true)
 end)
