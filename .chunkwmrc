@@ -26,7 +26,7 @@ chunkc set window_float_next             0
 chunkc set window_region_locked          1
 
 # Tiling rules
-chunkc tiling::rule --owner Finder --name Copy --state float
+chunkc tiling::rule --owner Finder --state float
 chunkc tiling::rule --owner \"App Store\" --state float
 
 # Load plugins
