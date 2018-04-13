@@ -9,7 +9,7 @@
 [core]
   ignorecase = false
   compression = 9
-  editor = gvim -f
+  editor = subl -w
   excludesfile = ~/.gitignore_global
   pager = less -FRSX
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -19,10 +19,6 @@
 
 [branch]
   autosetuprebase = always
-
-[branch "master"]
-  merge = refs/heads/master
-  remote = origin
 
 [color "interactive"]
   error = red bold
