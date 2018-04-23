@@ -7,7 +7,7 @@
 	"atomic_save": true,
 	"auto_complete_commit_on_tab": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Medium).tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"create_window_at_startup": false,
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
