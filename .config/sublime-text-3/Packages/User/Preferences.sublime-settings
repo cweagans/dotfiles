@@ -14,7 +14,7 @@
 	"ensure_newline_at_eof_on_save": true,
 	"fold_buttons": false,
 	"font_face": "Input Mono",
-	"font_size": 13,
+	"font_size": 12,
 	"gruvbox_accent_blue": true,
 	"gruvbox_accent_neutral": true,
 	"gruvbox_animate_icons": true,
