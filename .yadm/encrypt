@@ -1,3 +1,4 @@
 .aws/*
 .exercism.json
 .ssh/id_*
+.kube/config
