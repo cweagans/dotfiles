@@ -1,0 +1,69 @@
+[general]
+ui = ttyui
+accounts = Gmail,Personal,BWS,Drud
+pythonfile = ~/.config/offlineimap/offlineimap.py
+fsync = False
+
+
+[Account Gmail]
+localrepository = Gmail-Local
+remoterepository = Gmail-Remote
+
+[Repository Gmail-Local]
+type = GmailMaildir
+localfolders = ~/Mail/Gmail
+
+[Repository Gmail-Remote]
+type = Gmail
+remoteuser = cweagans@gmail.com
+remotepasseval = get_password('Gmail')
+
+
+[Account Personal]
+localrepository = Personal-Local
+remoterepository = Personal-Remote
+
+[Repository Personal-Local]
+type = Maildir
+localfolders = ~/Mail/Personal
+
+[Repository Personal-Remote]
+type = IMAP
+remotehost = imap.migadu.com
+remoteport = 993
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteuser = me@cweagans.net
+remotepasseval = get_password('Personal')
+
+
+[Account BWS]
+localrepository = BWS-Local
+remoterepository = BWS-Remote
+
+[Repository BWS-Local]
+type = Maildir
+localfolders = ~/Mail/BWS
+
+[Repository BWS-Remote]
+type = IMAP
+remotehost = imap.migadu.com
+remoteport = 993
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteuser = cameron@boiseweddingsigns.com
+remotepasseval = get_password('BWS')
+
+
+[Account Drud]
+localrepository = Drud-Local
+remoterepository = Drud-Remote
+
+[Repository Drud-Local]
+type = GmailMaildir
+localfolders = ~/Mail/Drud
+
+[Repository Drud-Remote]
+type = Gmail
+remoteuser = ceagans@drud.com
+remotepasseval = get_password('Drud')
