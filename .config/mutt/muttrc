@@ -1,0 +1,113 @@
+# Paths
+set folder = ~/Mail
+set alias_file = ~/.config/mutt/alias
+set header_cache = ~/.cache/mutt/headers
+set message_cachedir = ~/.cache/mutt/bodies
+set certificate_file = ~/.config/mutt/certificates
+set mailcap_path = ~/.config/mutt/mailcap
+
+# Basic options
+set wait_key = no
+set mbox_type = Maildir
+set timeout = 3
+set mail_check = 0
+unset move
+set delete
+unset confirmappend
+set quit
+unset mark_old
+set beep_new
+set pipe_decode
+set thorough_search
+set sig_on_top = yes    # Don't @ me.
+
+# HTML Email
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+# Status bar
+set status_chars = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Header options
+ignore *
+unignore from: to: cc: date: subject:
+unhdr_order *
+hdr_order from: to: cc: date: subject:
+
+# Account settings
+folder-hook Gmail/* source ~/.config/mutt/gmail.muttrc
+folder-hook Personal/* source ~/.config/mutt/personal.muttrc
+folder-hook BWS/* source ~/.config/mutt/bws.muttrc
+folder-hook Drud/* source ~/.config/mutt/drud.muttrc
+
+# Set up macros to change accounts
+macro generic "1" "<change-folder> =Gmail/INBOX<enter>"
+macro generic "2" "<change-folder> =Personal/INBOX<enter>"
+macro generic "3" "<change-folder> =BWS/INBOX<enter>"
+macro generic "4" "<change-folder> =Drud/INBOX<enter>"
+
+# Default mailbox
+set spoolfile = "+Gmail/INBOX"
+
+set sendmail_wait = 0
+unset record
+
+
+# Index key bindings
+bind index g noop
+bind index gg first-entry
+bind index G last-entry
+bind index R group-reply
+bind index <tab> sync-mailbox
+bind index <space> collapse-thread
+
+# Saner move/copy dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# Check for new mail
+macro index o "<shell-escape>offlineimap -q<enter>"
+
+# Pager view options
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+unset markers
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+# Pager key bindings
+bind pager k previous-line
+bind pager j next-line
+bind pager g noop
+bind pager gg top
+bind pager G bottom
+bind pager R group-reply
+
+# View attachments properly.
+bind attach <return> view-mailcap
+
+# Compose view options
+set editor = "nvim"
+set realname = "Cameron Eagans"
+set envelope_from
+set sig_dashes
+set edit_headers
+set fast_reply
+set askcc
+set fcc_attach
+unset mime_forward
+set forward_format = "Fwd: %s"
+set forward_decode
+set attribution = "On %d, %n wrote:"
+set reply_to
+set reverse_name
+set include
+set forward_quote
+
+set sort=threads
+#set sort_browser=reverse_date
+set sort_aux=reverse-last-date-received

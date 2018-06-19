@@ -1,0 +1,9 @@
+set from = "cweagans@gmail.com"
+set sendmail = "msmtp -a Gmail"
+set postponed = "+Gmail/Drafts"
+set mbox = "+Gmail/Archive"
+set trash = "+Gmail/Trash"
+set signature = "~/.config/mutt/plain.sig"
+
+macro index,pager a "<save-message>=Gmail/Archive<enter>"
+macro index,pager A "<tag-prefix><save-message>=Gmail/Archive<enter>"

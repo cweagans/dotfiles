@@ -1,0 +1,9 @@
+set from = "cameron@boiseweddingsigns.com"
+set sendmail = "msmtp -a BWS"
+set postponed = "+BWS/Drafts"
+set mbox = "+BWS/Archive"
+set trash = "+BWS/Trash"
+set signature = "~/.config/mutt/bws.sig"
+
+macro index,pager a "<save-message>=BWS/Archive<enter>"
+macro index,pager A "<tag-prefix><save-message>=BWS/Archive<enter>"
