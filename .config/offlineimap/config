@@ -8,6 +8,7 @@ fsync = False
 [Account Gmail]
 localrepository = Gmail-Local
 remoterepository = Gmail-Remote
+postsynchook = notmuch new
 
 [Repository Gmail-Local]
 type = GmailMaildir
@@ -19,11 +20,13 @@ remoteuser = cweagans@gmail.com
 remotepasseval = get_password('Gmail')
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 maxconnections = 3
+folderfilter = lambda folder: folder not in ['[Gmail].Trash', '[Gmail].Spam']
 
 
 [Account Personal]
 localrepository = Personal-Local
 remoterepository = Personal-Remote
+postsynchook = notmuch new
 
 [Repository Personal-Local]
 type = Maildir
@@ -38,11 +41,13 @@ sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remoteuser = me@cweagans.net
 remotepasseval = get_password('Personal')
 maxconnections = 1
+folderfilter = lambda folder: folder not in ['Trash', 'Junk']
 
 
 [Account BWS]
 localrepository = BWS-Local
 remoterepository = BWS-Remote
+postsynchook = notmuch new
 
 [Repository BWS-Local]
 type = Maildir
@@ -57,11 +62,13 @@ sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remoteuser = cameron@boiseweddingsigns.com
 remotepasseval = get_password('BWS')
 maxconnections = 1
+folderfilter = lambda folder: folder not in ['Trash', 'Junk']
 
 
 [Account Drud]
 localrepository = Drud-Local
 remoterepository = Drud-Remote
+postsynchook = notmuch new
 
 [Repository Drud-Local]
 type = GmailMaildir
@@ -73,3 +80,5 @@ remoteuser = ceagans@drud.com
 remotepasseval = get_password('Drud')
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 maxconnections = 3
+folderfilter = lambda folder: folder not in ['[Gmail].Trash', '[Gmail].Spam']
+
