@@ -17,6 +17,8 @@ localfolders = ~/Mail/Gmail
 type = Gmail
 remoteuser = cweagans@gmail.com
 remotepasseval = get_password('Gmail')
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+maxconnections = 3
 
 
 [Account Personal]
@@ -35,6 +37,7 @@ ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remoteuser = me@cweagans.net
 remotepasseval = get_password('Personal')
+maxconnections = 1
 
 
 [Account BWS]
@@ -53,6 +56,7 @@ ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remoteuser = cameron@boiseweddingsigns.com
 remotepasseval = get_password('BWS')
+maxconnections = 1
 
 
 [Account Drud]
@@ -67,3 +71,5 @@ localfolders = ~/Mail/Drud
 type = Gmail
 remoteuser = ceagans@drud.com
 remotepasseval = get_password('Drud')
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+maxconnections = 3
