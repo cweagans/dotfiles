@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+def get_password(account):
+    if account == "foo":
+        return "your password"
+    if account == "bar":
+        return "another password"
+    return ""
+
+if __name__ == "__main__":
+    import sys
+    account = sys.argv[1]
+    print(get_password(account))
+
+
