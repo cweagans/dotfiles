@@ -17,14 +17,15 @@ call plug#begin("~/.config/nvim/plugged")
 
 " General
 Plug 'tpope/vim-sensible'
-Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'shougo/neocomplete.vim'
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'hashivim/vim-terraform'
 Plug 'stephpy/vim-yaml'
+Plug 'kylef/apiblueprint.vim'
 
 " Interface
 Plug 'mhinz/vim-startify'
@@ -39,7 +40,6 @@ Plug 'Townk/vim-autoclose'
 
 " Language specific plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'shawncplus/phpcomplete.vim'
 
 " Other stuff
 Plug 'mattn/webapi-vim'
@@ -136,7 +136,8 @@ set scrolloff=3
 syntax enable
 
 " Set the colorscheme.
-colorscheme dracula
+colorscheme gruvbox
+set bg=dark
 
 " Turn on line nubering.
 set number
@@ -180,7 +181,7 @@ nnoremap <C-l> <C-w>l
 " Plugin configuration
 """"""""""""""""""""""""
 " Lightline
-let g:lightline = { 'colorscheme': 'Dracula' }
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " CtrlP
 let g:ctrlp_by_filename = 1
@@ -196,10 +197,8 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " NERDTree
 map <leader>1 :NERDTreeToggle<CR>
 
-" Neocomplete
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_cast = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " vim-go
 let g:go_bin_path = expand("~/Code/go/bin")
