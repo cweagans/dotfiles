@@ -53,8 +53,11 @@ set spoolfile = "+Gmail/INBOX"
 set sendmail_wait = 0
 unset record
 
+# Generic bindings
+bind generic x tag-entry
 
 # Index key bindings
+bind index x tag-thread
 bind index g noop
 bind index gg first-entry
 bind index G last-entry
@@ -80,6 +83,7 @@ unset markers
 set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 
 # Pager key bindings
+bind pager x tag-message
 bind pager k previous-line
 bind pager j next-line
 bind pager g noop
