@@ -1,28 +1,18 @@
 #!/usr/bin/env bash
 
 # Prerequisites:
-#   - Install brew
-#   - Make sure `brew doctor` is happy
-#   - Install yadm and git
+#   - Install yadm and git via pacman
 
-# Install Homebrew dependencies
-echo " -> Installing Homebrew dependencies"
-~/.yadm/scripts/install-brew-deps.sh
-
-# Setup Hammerspoon
-echo " -> Setting up Hammerspoon dependencies"
-~/.yadm/scripts/setup-hammerspoon.sh
-
-# Set macOS defaults
-echo " -> Setting macOS defaults"
-sudo ~/.yadm/scripts/mac-defaults.sh
+# Install system level deps
+echo " -> Ensuring that system dependencies are installed."
+~/.yadm/scripts/install-system-deps.sh
 
 # Set default shell to zsh.
 echo " -> Setting default shell"
 ~/.yadm/scripts/zsh-default-shell.sh
 
-# Install Mac App Store applications.
-echo " -> Installing software from the Mac App Store"
-~/.yadm/scripts/mas-install.sh
+# Install vigor
+echo " -> Ensuring that Vigor is installed."
+~/.yadm/scripts/vim-vigor.sh
 
 echo " ->  Done."
