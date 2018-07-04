@@ -2,6 +2,7 @@
 
 # Prerequisites:
 #   - Install yadm and git via pacman
+#   - Install yay
 
 # Install system level deps
 echo " -> Ensuring that system dependencies are installed."
