@@ -14,8 +14,8 @@ python_packages="vint"
 echo " ---> Updating package information"
 sudo pacman -Sy
 
-echo " ---> Installing/updating Arch packages"
-sudo pacman -S $packages
+echo " ---> Installing Arch packages"
+sudo pacman -S --needed $packages
 
 echo " ---> Installing AUR packages"
 yay -S $aur_packages
