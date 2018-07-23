@@ -5,5 +5,5 @@ set mbox = "+Drud/[Gmail].All Mail"
 set trash = "+Drud/[Gmail].Trush"
 set signature = "~/.config/mutt/plain.sig"
 
-macro index,pager a "<save-message>=Drud/[Gmail].All Mail<enter>"
-macro index,pager A "<tag-prefix><save-message>=Drud/[Gmail].All Mail<enter>"
+macro index,pager a "<save-message>=Drud/[Gmail].All<tab><enter>"
+macro index,pager A "<tag-prefix><save-message>=Drud/[Gmail].All<tab><enter>"
