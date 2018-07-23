@@ -16,7 +16,7 @@ footer = "\n"
 [Account Gmail]
 localrepository = Gmail-Local
 remoterepository = Gmail-Remote
-postsynchook = notmuch new
+postsynchook = ~/.config/offlineimap/post-sync.sh Gmail
 
 [Repository Gmail-Local]
 type = GmailMaildir
@@ -34,7 +34,7 @@ folderfilter = lambda folder: folder not in ['[Gmail].Trash', '[Gmail].Spam']
 [Account Personal]
 localrepository = Personal-Local
 remoterepository = Personal-Remote
-postsynchook = notmuch new
+postsynchook = ~/.config/offlineimap/post-sync.sh Personal
 
 [Repository Personal-Local]
 type = Maildir
@@ -55,7 +55,7 @@ folderfilter = lambda folder: folder not in ['Trash', 'Junk']
 [Account BWS]
 localrepository = BWS-Local
 remoterepository = BWS-Remote
-postsynchook = notmuch new
+postsynchook = ~/.config/offlineimap/post-sync.sh BWS
 
 [Repository BWS-Local]
 type = Maildir
@@ -76,7 +76,7 @@ folderfilter = lambda folder: folder not in ['Trash', 'Junk']
 [Account Drud]
 localrepository = Drud-Local
 remoterepository = Drud-Remote
-postsynchook = notmuch new
+postsynchook = ~/.config/offlineimap/post-sync.sh Drud
 
 [Repository Drud-Local]
 type = GmailMaildir
