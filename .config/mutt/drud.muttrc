@@ -2,7 +2,7 @@ set from = "ceagans@drud.com"
 set sendmail = "msmtp -a Drud"
 set postponed = "+Drud/Drafts"
 set mbox = "+Drud/[Gmail].All Mail"
-set trash = "+Drud/[Gmail].Trush"
+set trash = "+Drud/[Gmail].Trash"
 set signature = "~/.config/mutt/plain.sig"
 
 macro index,pager a "<save-message>=Drud/[Gmail].All<tab><enter>"
