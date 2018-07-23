@@ -1,9 +1,9 @@
 set from = "ceagans@drud.com"
 set sendmail = "msmtp -a Drud"
 set postponed = "+Drud/Drafts"
-set mbox = "+Drud/Archive"
-set trash = "+Drud/Trash"
+set mbox = "+Drud/[Gmail].All Mail"
+set trash = "+Drud/[Gmail].Trush"
 set signature = "~/.config/mutt/plain.sig"
 
-macro index,pager a "<save-message>=Drud/Archive<enter>"
-macro index,pager A "<tag-prefix><save-message>=Drud/Archive<enter>"
+macro index,pager a "<save-message>=Drud/[Gmail].All Mail<enter>"
+macro index,pager A "<tag-prefix><save-message>=Drud/[Gmail].All Mail<enter>"
