@@ -1,0 +1,19 @@
+[general]
+status_path = "~/.cache/vdirsyncer"
+
+[pair Gmail_Contacts]
+a = "Gmail_Contacts_Local"
+b = "Gmail_Contacts_Remote"
+collections = ["from b"]
+
+[storage Gmail_Contacts_Local]
+type = "filesystem"
+path = "~/Contacts/Gmail"
+fileext = ".vcf"
+
+[storage Gmail_Contacts_Remote]
+type = "carddav"
+url = "https://google.com"
+username = "cweagans@gmail.com"
+password.fetch = ["command", "~/.config/offlineimap/offlineimap.py", "Gmail"]
+

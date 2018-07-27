@@ -23,3 +23,6 @@ yay -S $aur_packages
 
 echo " ---> Installing Python packages"
 pip install vim-vint
+
+echo " ---> Making sure that khard/khal/vdirsyncer have work dirs"
+[ -d ~/.cache/vdirsyncer ] || mkdir ~/.cache/vdirsyncer
