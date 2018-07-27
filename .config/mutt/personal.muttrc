@@ -7,3 +7,8 @@ set signature = "~/.config/mutt/plain.sig"
 
 macro index,pager a "<save-message>=Personal/Archive<enter>"
 macro index,pager A "<tag-prefix><save-message>=Personal/Archive<enter>"
+
+# Migadu doesn't save a copy of sent messages in Sent when you send them
+# through SMTP.
+set copy=yes
+set record="~/Mail/Personal/Sent"

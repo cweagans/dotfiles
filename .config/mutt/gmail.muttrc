@@ -7,3 +7,8 @@ set signature = "~/.config/mutt/plain.sig"
 
 macro index,pager a "<save-message>=Gmail/[Gmail].All<tab><enter>"
 macro index,pager A "<tag-prefix><save-message>=Gmail/[Gmail].All<tab><enter>"
+
+# Gmail automatically saves a copy of sent messages that come through SMTP,
+# so we don't need Mutt to handle this for us.
+set copy=no
+unset record

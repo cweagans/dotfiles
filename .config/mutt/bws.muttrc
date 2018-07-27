@@ -7,3 +7,8 @@ set signature = "~/.config/mutt/bws.sig"
 
 macro index,pager a "<save-message>=BWS/Archive<enter>"
 macro index,pager A "<tag-prefix><save-message>=BWS/Archive<enter>"
+
+# Migadu doesn't save a copy of sent messages in Sent when you send them
+# through SMTP.
+set copy=yes
+set record="~/Mail/BWS/Sent"
