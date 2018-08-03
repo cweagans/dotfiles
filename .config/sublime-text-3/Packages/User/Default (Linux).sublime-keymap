@@ -1,4 +1,0 @@
-[
-	{ "keys": ["super+["], "command": "jump_back" },
-	{ "keys": ["super+]"], "command": "jump_forward" },	
-]
