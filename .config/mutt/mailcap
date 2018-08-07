@@ -1,3 +1,5 @@
+text/plain; nvim %s
+
 # Documents
 application/msword; /usr/bin/xdg-open %s
 application/pdf; /usr/bin/xdg-open %s
