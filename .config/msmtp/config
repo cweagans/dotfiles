@@ -41,3 +41,13 @@ account Drud
   from ceagans@drud.com
   user ceagans@drud.com
   passwordeval "~/.config/offlineimap/offlineimap.py Drud"
+
+account Eagansfoundation
+  host smtp.migadu.com
+  port 587
+  tls on
+  protocol smtp
+  auth on
+  from cameron@eagans.foundation
+  user cameron@eagans.foundation
+  passwordeval "~/.config/offlineimap/offlineimap.py Eagansfoundation"

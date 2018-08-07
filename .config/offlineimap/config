@@ -1,6 +1,6 @@
 [general]
 ui = ttyui
-accounts = Gmail,Personal,BWS,Drud
+accounts = Gmail,Personal,BWS,Drud,Eagansfoundation
 pythonfile = ~/.config/offlineimap/offlineimap.py
 fsync = False
 
@@ -90,3 +90,24 @@ sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 maxconnections = 3
 folderfilter = lambda folder: folder not in ['[Gmail].Trash', '[Gmail].Spam']
 
+
+
+[Account Eagansfoundation]
+localrepository = Eagansfoundation-Local
+remoterepository = Eagansfoundation-Remote
+postsynchook = ~/.config/offlineimap/post-sync.sh Eagansfoundation
+
+[Repository Eagansfoundation-Local]
+type = Maildir
+localfolders = ~/Mail/Eagansfoundation
+
+[Repository Eagansfoundation-Remote]
+type = IMAP
+remotehost = imap.migadu.com
+remoteport = 993
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteuser = me@cweagans.net
+remotepasseval = get_password('Eagansfoundation')
+maxconnections = 1
+folderfilter = lambda folder: folder not in ['Trash', 'Junk']

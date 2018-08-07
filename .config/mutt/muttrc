@@ -46,6 +46,7 @@ macro generic "1" "<change-folder> =Gmail/INBOX<enter>"
 macro generic "2" "<change-folder> =Personal/INBOX<enter>"
 macro generic "3" "<change-folder> =BWS/INBOX<enter>"
 macro generic "4" "<change-folder> =Drud/INBOX<enter>"
+macro generic "5" "<change-folder> =Eagansfoundation/INBOX<enter>"
 
 # Default mailbox
 set spoolfile = "+Gmail/INBOX"
