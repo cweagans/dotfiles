@@ -1,5 +1,5 @@
 export GOPATH=~/Code/go
-export EDITOR="subl -w"
+export EDITOR="code --wait"
 
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_CONFIG_HOME=$HOME/.config
