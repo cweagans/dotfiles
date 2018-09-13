@@ -12,10 +12,6 @@ echo " -> Ensuring that system dependencies are installed."
 echo " -> Setting default shell"
 ~/.yadm/scripts/zsh-default-shell.sh
 
-# Install vigor
-echo " -> Ensuring that Vigor is installed."
-~/.yadm/scripts/vim-vigor.sh
-
 # Set up the yadm update alias.
 echo " -> Creating yadm update alias."
 yadm gitconfig --local alias.update '!yadm pull && yadm decrypt && yadm bootstrap'
