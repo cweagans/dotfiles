@@ -43,6 +43,7 @@
 
 [diff]
   algorithm = patience
+  tool = default-difftool
 
 [gitflow "prefix"]
   feature = feature-
@@ -56,3 +57,6 @@
 
 [rebase]
   autostash = true
+
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
