@@ -29,4 +29,13 @@
     "go.gopath": "~/Code/go",
     "window.menuBarVisibility": "toggle",
     "workbench.startupEditor": "none",
+    "workbench.sideBar.location": "right",
+    "github.hosts": [
+        {
+            "host": "https://github.com",
+            "username": "oauth",
+            "token": "system"
+        }
+    ],
+    "editor.tabCompletion": true,
 }

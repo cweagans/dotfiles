@@ -32,6 +32,7 @@ code --install-extension humao.rest-client
 code --install-extension mikestead.dotenv
 code --install-extension ms-vscode.Go
 code --install-extension redhat.vscode-yaml
+code --install-extension slevesque.vscode-hexdump
 code --install-extension vscodevim.vim
 code --install-extension vscoss.vscode-ansible
 code --install-extension wholroyd.jinja
