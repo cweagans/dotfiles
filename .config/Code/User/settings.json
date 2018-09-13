@@ -12,7 +12,7 @@
         80
     ],
     "editor.smoothScrolling": true,
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "Dracula",
     "workbench.settings.editor": "json",
     "files.autoSave": "onWindowChange",
     "files.insertFinalNewline": true,

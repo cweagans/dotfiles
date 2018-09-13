@@ -25,7 +25,7 @@ echo " ---> Installing Python packages"
 pip install vim-vint
 
 echo " ---> Installing vscode packages"
-code --install-extension arcticicestudio.nord-visual-studio-code
+code --install-extension dracula-theme.theme-dracula
 code --install-extension EditorConfig.EditorConfig
 code --install-extension GitHub.vscode-pull-request-github
 code --install-extension humao.rest-client
