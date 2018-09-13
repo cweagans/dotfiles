@@ -1,10 +1,10 @@
 {
-    "editor.fontSize": 15,
+    "editor.fontSize": 13,
     "editor.cursorBlinking": "phase",
     "editor.folding": false,
     "editor.fontFamily": "Input Mono",
     "editor.fontLigatures": true,
-    "editor.lineHeight": 22,
+    "editor.lineHeight": 24,
     "editor.minimap.enabled": false,
     "editor.renderLineHighlight": "all",
     "editor.renderWhitespace": "boundary",
@@ -27,4 +27,6 @@
     "vim.useCtrlKeys": false,
     "vim.useSystemClipboard": true,
     "go.gopath": "~/Code/go",
+    "window.menuBarVisibility": "toggle",
+    "workbench.startupEditor": "none",
 }
