@@ -40,4 +40,5 @@
     "editor.tabCompletion": true,
     "ansible.autocompletion": false,
     "workbench.editor.tabCloseButton": "left",
+    "workbench.editor.showTabs": false,
 }
