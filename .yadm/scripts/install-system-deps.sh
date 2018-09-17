@@ -30,6 +30,7 @@ code --install-extension dracula-theme.theme-dracula
 code --install-extension EditorConfig.EditorConfig
 code --install-extension GitHub.vscode-pull-request-github
 code --install-extension humao.rest-client
+code --install-extension lextudio.restructuredtext
 code --install-extension mikestead.dotenv
 code --install-extension ms-vscode.Go
 code --install-extension redhat.vscode-yaml
