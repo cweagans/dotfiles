@@ -41,4 +41,5 @@
     "ansible.autocompletion": false,
     "workbench.editor.tabCloseButton": "left",
     "workbench.editor.showTabs": false,
+    "git.autofetch": true,
 }
