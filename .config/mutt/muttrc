@@ -116,3 +116,6 @@ set forward_quote
 set sort=threads
 #set sort_browser=reverse_date
 set sort_aux=reverse-last-date-received
+
+# Set the color scheme
+source dracula.muttrc
