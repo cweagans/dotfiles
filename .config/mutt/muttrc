@@ -118,4 +118,4 @@ set sort=threads
 set sort_aux=reverse-last-date-received
 
 # Set the color scheme
-source dracula.muttrc
+source ~/.config/mutt/dracula.muttrc
