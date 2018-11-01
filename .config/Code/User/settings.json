@@ -30,16 +30,16 @@
     "window.menuBarVisibility": "toggle",
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "right",
-    "github.hosts": [
+    "editor.tabCompletion": true,
+    "ansible.autocompletion": false,
+    "workbench.editor.tabCloseButton": "left",
+    "workbench.editor.showTabs": false,
+    "git.autofetch": true,
+    "githubPullRequests.hosts": [
         {
             "host": "https://github.com",
             "username": "oauth",
             "token": "system"
         }
     ],
-    "editor.tabCompletion": true,
-    "ansible.autocompletion": false,
-    "workbench.editor.tabCloseButton": "left",
-    "workbench.editor.showTabs": false,
-    "git.autofetch": true,
 }
