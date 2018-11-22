@@ -6,9 +6,9 @@
 	# make sure multilib is enabled to be able to install wine
 
 # todo: remove kitty once alacritty is configured.
-packages="ansible arc-gtk-theme arc-icon-theme asciidoc blender composer cups dep docker feedreader firefox git go hub khal khard kitty libreoffice-fresh msmtp mutt neovim notmuch noto-fonts noto-fonts-cjk offlineimap pandoc pinta python python-neovim python-pip sudo texlive-core trash-cli vdirsyncer vlc w3m wget wine wine-mono wine_gecko xclip zsh"
+packages="alacritty ansible arc-gtk-theme arc-icon-theme asciidoc blender composer cups dep docker feedreader firefox git go hub kitty libreoffice-fresh msmtp mutt neovim notmuch noto-fonts noto-fonts-cjk offlineimap pandoc pinta python python-neovim python-pip sudo texlive-core trash-cli vdirsyncer vlc w3m wget xclip zsh"
 
-aur_packages="alacritty-git ddev-bin discord dropbox intellij-idea-ultimate-edition intellij-idea-ultimate-edition-jre keybase-bin kubernetes-helm kubectl-bin neovim-gtk slack-desktop spotify ttf-input ttf-symbola typora vale-bin visual-studio-code-bin yay-bin yadm-git zazu-bin zoom"
+aur_packages="ddev-bin discord-canary dropbox keybase-bin kubernetes-helm kubectl-bin slack-desktop spotify ttf-input ttf-symbola typora vale-bin visual-studio-code-bin yay yadm-git zoom"
 
 python_packages="vint"
 
