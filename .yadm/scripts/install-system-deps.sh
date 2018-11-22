@@ -8,7 +8,7 @@
 # todo: remove kitty once alacritty is configured.
 packages="alacritty ansible arc-gtk-theme arc-icon-theme asciidoc blender composer cups dep docker feedreader firefox git go hub kitty libreoffice-fresh msmtp mutt neovim notmuch noto-fonts noto-fonts-cjk offlineimap pandoc pinta python python-neovim python-pip sudo texlive-core trash-cli vdirsyncer vlc w3m wget xclip zsh"
 
-aur_packages="ddev-bin discord-canary dropbox keybase-bin kubernetes-helm kubectl-bin slack-desktop spotify ttf-input ttf-symbola typora vale-bin visual-studio-code-bin yay yadm-git zoom"
+aur_packages="bitwarden-bin bitwarden-cli ddev-bin discord-canary dropbox keybase-bin kubernetes-helm kubectl-bin slack-desktop spotify ttf-input ttf-symbola typora vale-bin visual-studio-code-bin yay yadm-git zoom"
 
 python_packages="vint"
 
