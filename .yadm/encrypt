@@ -2,4 +2,5 @@
 .exercism.json
 .ssh/id_*
 .kube/config
-.config/offlineimap/offlineimap.py
+.claws-mail/folderitemrc
+.claws-mail/passwordstorerc
