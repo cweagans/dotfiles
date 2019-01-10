@@ -35,11 +35,5 @@
     "workbench.editor.tabCloseButton": "left",
     "workbench.editor.showTabs": false,
     "git.autofetch": true,
-    "githubPullRequests.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ],
+    "window.titleBarStyle": "native",
 }
