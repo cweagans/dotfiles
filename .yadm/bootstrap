@@ -1,19 +1,26 @@
 #!/usr/bin/env bash
 
 # Prerequisites:
-#   - Install yadm and git via pacman
-#   - Install yay
+#   - Provision machine according to gitlab.com/cweagans/infrastructure
 
-# Install system level deps
-echo " -> Ensuring that system dependencies are installed."
-~/.yadm/scripts/install-system-deps.sh
+echo "==> Installing vscode extensions"
+code --install-extension bbenoist.vagrant
+code --install-extension dracula-theme.theme-dracula
+code --install-extension EditorConfig.EditorConfig
+code --install-extension GitHub.vscode-pull-request-github
+code --install-extension humao.rest-client
+code --install-extension lextudio.restructuredtext
+code --install-extension mikestead.dotenv
+code --install-extension ms-vscode.Go
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension redhat.vscode-yaml
+code --install-extension slevesque.vscode-hexdump
+code --install-extension sourcegraph.sourcegraph
+code --install-extension vscodevim.vim
+code --install-extension vscoss.vscode-ansible
+code --install-extension wholroyd.jinja
 
-# Set default shell to zsh.
-echo " -> Setting default shell"
-~/.yadm/scripts/zsh-default-shell.sh
-
-# Set up the yadm update alias.
-echo " -> Creating yadm update alias."
+echo "==> Create yadm update alias"
 yadm gitconfig --local alias.update '!yadm pull && yadm decrypt && yadm bootstrap'
 
-echo " -> Done."
+echo "==> Done."
