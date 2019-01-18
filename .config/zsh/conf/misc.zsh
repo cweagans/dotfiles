@@ -23,3 +23,6 @@ setopt COMPLETE_ALIASES
 # Credit: https://pilif.github.io/2004/10/delete-key-in-zsh/
 bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
+
+# Configure the Geometry prompt
+export GEOMETRY_PROMPT_PLUGINS=(exec_time git kube hostname)
