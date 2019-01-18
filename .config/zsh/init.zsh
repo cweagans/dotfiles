@@ -13,9 +13,6 @@ if ! zgen saved; then
 	# Jump to project directories.
 	zgen load cweagans/c
 
-	# Awesome file listing
-	zgen load supercrabtree/k
-
 	# Autoset env when cd'ing into a directory
 	zgen load Tarrasch/zsh-autoenv
 
