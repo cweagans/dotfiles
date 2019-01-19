@@ -13,6 +13,9 @@ if ! zgen saved; then
 	# Jump to project directories.
 	zgen load cweagans/c
 
+	# Directory jumping
+	zgen load rupa/z
+
 	# Autoset env when cd'ing into a directory
 	zgen load Tarrasch/zsh-autoenv
 
