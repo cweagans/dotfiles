@@ -3,9 +3,6 @@
 # Prerequisites:
 #   - Provision machine according to gitlab.com/cweagans/infrastructure
 
-echo "==> Installing rust toolchain"
-rustup default stable
-
 echo
 echo "==> Installing vscode extensions"
 code --install-extension bbenoist.vagrant
@@ -23,7 +20,6 @@ code --install-extension sourcegraph.sourcegraph
 code --install-extension vscodevim.vim
 code --install-extension vscoss.vscode-ansible
 code --install-extension wholroyd.jinja
-code --install-extension rust-lang.rust
 
 echo
 echo "==> Installing gnome extensions"
