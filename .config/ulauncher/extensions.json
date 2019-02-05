@@ -1,0 +1,16 @@
+{
+    "com.github.jasdent.ulauncher-snip": {
+        "url": "https://github.com/Jasdent/ulauncher-snip", 
+        "last_commit_time": "2018-11-02T11:29:04Z", 
+        "last_commit": "10c293243ea93a799f460a9e6f62a3fb2863b59b", 
+        "id": "com.github.jasdent.ulauncher-snip", 
+        "updated_at": "2019-02-05T08:33:35.984533"
+    }, 
+    "com.github.leinardi.ulauncher-systemctl": {
+        "url": "https://github.com/leinardi/ulauncher-systemctl", 
+        "last_commit_time": "2018-02-19T20:20:15Z", 
+        "last_commit": "0a8cbcba05f70b7607c61608cc3eb78d0757585a", 
+        "id": "com.github.leinardi.ulauncher-systemctl", 
+        "updated_at": "2019-02-05T08:33:45.670677"
+    }
+}
