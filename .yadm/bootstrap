@@ -37,4 +37,8 @@ echo "==> Create yadm update alias"
 yadm gitconfig --local alias.update '!yadm pull && yadm decrypt && yadm bootstrap'
 
 echo
+echo "==> Configure bitwarden CLI"
+bw config server https://bitwarden.servershare.xyz
+
+echo
 echo "==> Done."
