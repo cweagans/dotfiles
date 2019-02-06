@@ -1,6 +1,2 @@
-.aws/*
 .exercism.json
 .ssh/id_*
-.kube/config
-.claws-mail/folderitemrc
-.claws-mail/passwordstorerc
