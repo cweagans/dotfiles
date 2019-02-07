@@ -1,20 +1,11 @@
 {
-    "3f8026d7-8da8-41e0-842e-18e147b7dc9d": {
-        "added": 1549380392.408587, 
-        "name": "Stack Overflow", 
-        "keyword": "so", 
-        "cmd": "http://stackoverflow.com/search?q=%s", 
-        "is_default_search": true, 
-        "id": "3f8026d7-8da8-41e0-842e-18e147b7dc9d", 
-        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg"
-    }, 
-    "bad09637-4a72-4a2b-bd9a-ced43f1e0988": {
-        "added": 1549390686.586787, 
-        "name": "Gitlab", 
-        "keyword": "gl", 
-        "cmd": "https://www.gitlab.com/%s", 
+    "6fcde17a-8a63-4355-9304-ec6fd0871b6c": {
+        "added": 1549390673.651586, 
+        "name": "Github", 
+        "keyword": "gh", 
+        "cmd": "https://www.github.com/%s", 
         "is_default_search": false, 
-        "id": "bad09637-4a72-4a2b-bd9a-ced43f1e0988", 
+        "id": "6fcde17a-8a63-4355-9304-ec6fd0871b6c", 
         "icon": null
     }, 
     "f37d25bc-c055-4315-a063-9826ff026389": {
@@ -35,13 +26,31 @@
         "id": "d6f57260-4b11-434e-81f9-55997d63058f", 
         "icon": "/usr/share/ulauncher/media/google-search-icon.png"
     }, 
-    "6fcde17a-8a63-4355-9304-ec6fd0871b6c": {
-        "added": 1549390673.651586, 
-        "name": "Github", 
-        "keyword": "gh", 
-        "cmd": "https://www.github.com/%s", 
+    "bad09637-4a72-4a2b-bd9a-ced43f1e0988": {
+        "added": 1549390686.586787, 
+        "name": "Gitlab", 
+        "keyword": "gl", 
+        "cmd": "https://www.gitlab.com/%s", 
         "is_default_search": false, 
-        "id": "6fcde17a-8a63-4355-9304-ec6fd0871b6c", 
+        "id": "bad09637-4a72-4a2b-bd9a-ced43f1e0988", 
         "icon": null
+    }, 
+    "74155d65-c17f-495c-aa22-9f14f64f911f": {
+        "added": 1549554233.4041, 
+        "name": "Bitbucket", 
+        "keyword": "bb", 
+        "cmd": "https://bitbucket.org/%s", 
+        "is_default_search": false, 
+        "id": "74155d65-c17f-495c-aa22-9f14f64f911f", 
+        "icon": null
+    }, 
+    "3f8026d7-8da8-41e0-842e-18e147b7dc9d": {
+        "added": 1549380392.408587, 
+        "name": "Stack Overflow", 
+        "keyword": "so", 
+        "cmd": "http://stackoverflow.com/search?q=%s", 
+        "is_default_search": true, 
+        "id": "3f8026d7-8da8-41e0-842e-18e147b7dc9d", 
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg"
     }
 }
