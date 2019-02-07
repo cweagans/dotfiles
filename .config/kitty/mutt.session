@@ -1,0 +1,4 @@
+# This file is the Kitty startup session that I use for mutt.
+title Mutt
+launch mutt
+focus

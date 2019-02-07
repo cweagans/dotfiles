@@ -1,0 +1,62 @@
+defaults
+logfile ~/.cache/mail/msmtp.log
+
+account Gmail
+    host smtp.gmail.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cweagans@gmail.com
+    user cweagans@gmail.com
+    passwordeval "secret-tool lookup mail Gmail"
+
+account Personal
+    host smtp.migadu.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from me@cweagans.net
+    user me@cweagans.net
+    passwordeval "secret-tool lookup mail Personal"
+
+account Digitaldeployment
+    host smtp.gmail.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron@digitaldeployment.com
+    user cameron@digitaldeployment.com
+    passwordeval "secret-tool lookup mail Digitaldeployment"
+
+account Pineconegrove
+    host smtp.migadu.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron@pineconegrove.com
+    user cameron@pineconegrove.com
+    passwordeval "secret-tool lookup mail Pineconegrove"
+
+account Netherwire
+    host smtp.migadu.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron@netherwire.com
+    user cameron@netherwire.com
+    passwordeval "secret-tool lookup mail Netherwire"
+
+account Eagansfoundation
+    host smtp.migadu.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron@eagans.foundation
+    user cameron@eagans.foundation
+    passwordeval "secret-tool lookup mail Eagansfoundation"

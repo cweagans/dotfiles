@@ -1,0 +1,34 @@
+##
+# Generic bindings
+##
+bind generic x tag-entry
+
+##
+# Index
+##
+bind index x tag-thread
+bind index g noop
+bind index gg first-entry
+bind index G last-entry
+bind index R group-reply
+bind index <tab> sync-mailbox
+bind index <space> collapse-thread
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+#macro index o "<shell-escape>offlineimap -q<enter>"  # temporarily disabled since offlineimap syncs in the background now.
+
+##
+# Pager
+##
+bind pager x tag-message
+bind pager k previous-line
+bind pager j next-line
+bind pager g noop
+bind pager gg top
+bind pager G bottom
+bind pager R group-reply
+
+##
+# Attachment list
+##
+bind attach <return> view-mailcap

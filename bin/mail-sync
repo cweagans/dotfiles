@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+[ -d ~/.cache/mail/Gmail ] || mkdir ~/.cache/mail/Gmail
+[ -d ~/.cache/mail/Personal ] || mkdir ~/.cache/mail/Personal
+[ -d ~/.cache/mail/Digitaldeployment ] || mkdir ~/.cache/mail/Digitaldeployment
+[ -d ~/.cache/mail/Pineconegrove ] || mkdir ~/.cache/mail/Pineconegrove
+[ -d ~/.cache/mail/Netherwire ] || mkdir ~/.cache/mail/Netherwire
+[ -d ~/.cache/mail/Eagansfoundation ] || mkdir ~/.cache/mail/Eagansfoundation
+
+mbsync --all --verbose

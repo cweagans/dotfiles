@@ -1,0 +1,14 @@
+set from = "cameron@eagans.foundation"
+set sendmail = "msmtp -a Eagansfoundation"
+set postponed = "+Eagansfoundation/Drafts"
+set mbox = "+Eagansfoundation/Archive"
+set trash = "+Eagansfoundation/Trash"
+set signature = "~/.config/mutt/eagansfoundation.sig"
+
+macro index,pager a "<save-message>=Eagansfoundation/Archive<enter>"
+macro index,pager A "<tag-prefix><save-message>=Eagansfoundation/Archive<enter>"
+
+# Migadu doesn't save a copy of sent messages in Sent when you send them
+# through SMTP.
+set copy=yes
+set record="~/.cache/mail/Eagansfoundation/Sent"

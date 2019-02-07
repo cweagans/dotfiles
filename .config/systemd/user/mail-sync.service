@@ -1,0 +1,6 @@
+[Unit]
+Description = Mail sync service
+
+[Service]
+Type=oneshot
+ExecStart = /home/cweagans/bin/mail-sync

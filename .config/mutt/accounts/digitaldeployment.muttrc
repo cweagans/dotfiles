@@ -1,0 +1,13 @@
+set from = "cameron@digitaldeployment.com"
+set sendmail = "msmtp -a Digitaldeployment"
+set postponed = "+Digitaldeployment/Drafts"
+set mbox = "+Digitaldeployment/[Gmail]/All Mail"
+set trash = "+Digitaldeployment/[Gmail]/Trash"
+set signature = "~/.config/mutt/signatures/digitaldeployment.sig"
+
+macro index,pager a "<save-message>=Digitaldeployment/[Gmail]/All<tab><enter>"
+macro index,pager A "<tag-prefix><save-message>=Digitaldeployment/[Gmail]/All<tab><enter>"
+
+# Gmail automatically saves a copy of sent messages, so we don't need Mutt to handle this.
+set copy=no
+unset record
