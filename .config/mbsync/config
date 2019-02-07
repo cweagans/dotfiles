@@ -88,12 +88,12 @@ Subfolders Verbatim
 Path ~/.cache/mail/Eagansfoundation/
 Inbox ~/.cache/mail/Eagansfoundation/Inbox
 
-# Channel Gmail
-# Master :Gmail-Remote:
-# Slave :Gmail-Local:
-# Patterns * ![Gmail]/Spam
-# Create Both
-# SyncState *
+Channel Gmail
+Master :Gmail-Remote:
+Slave :Gmail-Local:
+Patterns * ![Gmail]/Spam
+Create Both
+SyncState *
 
 Channel Personal
 Master :Personal-Remote:
