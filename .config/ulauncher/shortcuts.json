@@ -8,15 +8,6 @@
         "id": "3f8026d7-8da8-41e0-842e-18e147b7dc9d", 
         "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg"
     }, 
-    "6fcde17a-8a63-4355-9304-ec6fd0871b6c": {
-        "added": 1549390673.651586, 
-        "name": "Github", 
-        "keyword": "gh", 
-        "cmd": "https://www.github.com/%s", 
-        "is_default_search": false, 
-        "id": "6fcde17a-8a63-4355-9304-ec6fd0871b6c", 
-        "icon": null
-    }, 
     "bad09637-4a72-4a2b-bd9a-ced43f1e0988": {
         "added": 1549390686.586787, 
         "name": "Gitlab", 
@@ -43,5 +34,14 @@
         "is_default_search": true, 
         "id": "d6f57260-4b11-434e-81f9-55997d63058f", 
         "icon": "/usr/share/ulauncher/media/google-search-icon.png"
+    }, 
+    "6fcde17a-8a63-4355-9304-ec6fd0871b6c": {
+        "added": 1549390673.651586, 
+        "name": "Github", 
+        "keyword": "gh", 
+        "cmd": "https://www.github.com/%s", 
+        "is_default_search": false, 
+        "id": "6fcde17a-8a63-4355-9304-ec6fd0871b6c", 
+        "icon": null
     }
 }
