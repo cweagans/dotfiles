@@ -1,3 +1,4 @@
+set spoolfile = "+Eagansfoundation/Inbox"
 set from = "cameron@eagans.foundation"
 set sendmail = "msmtp -a Eagansfoundation"
 set postponed = "+Eagansfoundation/Drafts"

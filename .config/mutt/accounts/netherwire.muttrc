@@ -1,3 +1,4 @@
+set spoolfile = "+Netherwire/Inbox"
 set from = "cameron@netherwire.com"
 set sendmail = "msmtp -a Netherwire"
 set postponed = "+Netherwire/Drafts"

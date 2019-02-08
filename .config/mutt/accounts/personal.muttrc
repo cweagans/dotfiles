@@ -1,3 +1,4 @@
+set spoolfile = "+Personal/Inbox"
 set from = "me@cweagans.net"
 set sendmail = "msmtp -a Personal"
 set postponed = "+Personal/Drafts"
