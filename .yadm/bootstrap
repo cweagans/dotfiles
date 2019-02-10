@@ -28,6 +28,7 @@ gnomeshell-extension-manage --install --extension-id 517 --user                 
 gnomeshell-extension-manage --install --extension-id 615 --version 3.26 --user  # appindicator support
 gnomeshell-extension-manage --install --extension-id 545 --version 3.26 --user  # hide top bar
 gnomeshell-extension-manage --install --extension-id 1236 --version 3.26 --user # no annoyance
+gnomeshell-extension-manage --install --extension-id 1176 --version 3.28 --user # argos
 
 echo
 echo "If extensions were installed or updated, do Alt+F2, type r, and hit enter."
