@@ -43,4 +43,8 @@ echo "==> Configure bitwarden CLI"
 bw config server https://bitwarden.servershare.xyz
 
 echo
+echo "==> Setting secrets for mail sync"
+~/.yadm/set-secrets.sh
+
+echo
 echo "==> Done."

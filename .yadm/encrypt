@@ -1,2 +1,3 @@
 .exercism.json
 .ssh/id_*
+.yadm/set-secrets.sh
