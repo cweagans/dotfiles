@@ -3,7 +3,7 @@ text/plain; more
 text/html; firefox %s
 text/html; w3m -I ${charset} -T text/html -dump %s; copiousoutput
 
-image/*: xdg-open %s
+image/*; xdg-open %s
 audio/*; xdg-open %s
 
 application/msword; xdg-open %s
