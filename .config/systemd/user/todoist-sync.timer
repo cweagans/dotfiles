@@ -1,0 +1,10 @@
+[Unit]
+Description = Todoist sync timer
+
+[Timer]
+OnBootSec = 15m
+OnUnitActiveSec = 15m
+Unit = todoist-sync.service
+
+[Install]
+WantedBy = timers.target

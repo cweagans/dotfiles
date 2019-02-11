@@ -1,0 +1,6 @@
+[Unit]
+Description = Todoist sync service
+
+[Service]
+Type=oneshot
+ExecStart = /usr/bin/todoist sync
