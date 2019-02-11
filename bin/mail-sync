@@ -13,3 +13,6 @@ mbsync --all --verbose
 
 # Index all the mail.
 mu index --maildir ~/.cache/mail
+
+# Generate mutt alias file.
+mu cfind --format=mutt-alias > ~/.config/mutt/aliases
