@@ -9,3 +9,6 @@ echo "---"
 for d in ~/.cache/mail/*/; do
     echo "`basename $d`: `find $d/Inbox/{new,cur}/ -type f | wc -l`"
 done
+
+echo "---"
+echo "Refresh... | refresh=true"
