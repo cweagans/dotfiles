@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+# Ensure individual account maildirs exist.
 [ -d ~/.cache/mail/Gmail ] || mkdir ~/.cache/mail/Gmail
 [ -d ~/.cache/mail/Personal ] || mkdir ~/.cache/mail/Personal
 [ -d ~/.cache/mail/Digitaldeployment ] || mkdir ~/.cache/mail/Digitaldeployment
@@ -6,4 +8,8 @@
 [ -d ~/.cache/mail/Netherwire ] || mkdir ~/.cache/mail/Netherwire
 [ -d ~/.cache/mail/Eagansfoundation ] || mkdir ~/.cache/mail/Eagansfoundation
 
+# Sync everything up.
 mbsync --all --verbose
+
+# Index all the mail.
+mu index --maildir ~/.cache/mail
