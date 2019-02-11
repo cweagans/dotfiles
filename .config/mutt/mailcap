@@ -1,11 +1,11 @@
 text/plain; more
 
-text/html; firefox %s
-text/html; w3m -I ${charset} -T text/html -dump %s; copiousoutput
+text/html; firefox %s && sleep 2; needsterminal;
+text/html; w3m -I %{charset} -T text/html -dump %s; copiousoutput;
 
-image/*; xdg-open %s
-audio/*; xdg-open %s
+image/*; xdg-open %s && sleep 2; needsterminal;
+audio/*; xdg-open %s && sleep 2; needsterminal;
 
-application/msword; xdg-open %s
-application/pdf; xdg-open %s
-application/postscript; xdg-open %s
+application/msword; xdg-open %s && sleep 2; needsterminal;
+application/pdf; xdg-open %s && sleep 2; needsterminal;
+application/postscript; xdg-open %s && sleep 2; needsterminal;
