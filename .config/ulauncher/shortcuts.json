@@ -8,6 +8,15 @@
         "id": "6fcde17a-8a63-4355-9304-ec6fd0871b6c", 
         "icon": null
     }, 
+    "afc2af07-49ca-43a7-99c5-be2aac4045d8": {
+        "added": 1549934751.697866, 
+        "name": "Todoist", 
+        "keyword": "t", 
+        "cmd": "#!/bin/bash\ntodoist add --project-name Inbox \"$*\"", 
+        "is_default_search": false, 
+        "id": "afc2af07-49ca-43a7-99c5-be2aac4045d8", 
+        "icon": "~/.local/share/icons/todoist.png"
+    }, 
     "f37d25bc-c055-4315-a063-9826ff026389": {
         "added": 1549380392.408687, 
         "name": "Wikipedia", 
