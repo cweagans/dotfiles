@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Download new data from todoist.
+todoist sync
+
+# Force menu bar data to update.
+touch ~/.config/argos/todoist.sh
+touch ~/.config/argos/todoist-karma.sh

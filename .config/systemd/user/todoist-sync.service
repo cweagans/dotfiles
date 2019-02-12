@@ -3,4 +3,4 @@ Description = Todoist sync service
 
 [Service]
 Type=oneshot
-ExecStart = /usr/bin/todoist sync
+ExecStart = /home/cweagans/bin/todoist-sync
