@@ -3,8 +3,9 @@ Type=Application
 Name=Mutt
 GenericName=Mail client
 Comment=A fast, terminal based mail client.
-Exec=kitty -o "map=ctrl+shift+t no-op" --session=/home/cweagans/.config/kitty/mutt.session
+Exec=kitty -o "map=ctrl+shift+t no-op" --session=/home/cweagans/.config/kitty/mutt.session --class=mutt
 Icon=/home/cweagans/.config/mutt/mutt-256.png
 Categories=System;Mail;
 Terminal=false
 StartupNotify=true
+StartupWMClass=mutt
