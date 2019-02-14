@@ -13,3 +13,6 @@ mbsync --all --verbose
 
 # Index all the mail.
 mu index --maildir ~/.cache/mail
+
+# Update the menu bar display.
+touch ~/.config/argos/maildir.sh
