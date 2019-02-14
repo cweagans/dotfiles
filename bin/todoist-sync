@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Clear cached todoist data.
+rm ~/.todoist.cache.json
+
 # Download new data from todoist.
 todoist sync
 
