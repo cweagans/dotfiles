@@ -20,6 +20,7 @@ bind index <tab> sync-mailbox
 bind index <space> collapse-thread
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+macro index I "<shell-escape>~/bin/mail-sync<enter>"
 
 ##
 # Pager
