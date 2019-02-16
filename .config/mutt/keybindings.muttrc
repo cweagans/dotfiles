@@ -4,6 +4,11 @@
 bind generic x tag-entry
 
 ##
+# Editor
+##
+bind editor <Tab> complete-query
+
+##
 # Index
 ##
 bind index x tag-thread
@@ -15,7 +20,6 @@ bind index <tab> sync-mailbox
 bind index <space> collapse-thread
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
-#macro index o "<shell-escape>offlineimap -q<enter>"  # temporarily disabled since offlineimap syncs in the background now.
 
 ##
 # Pager
