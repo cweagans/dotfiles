@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+#
+# Usage:
+# ./mail-sync [account]
+#
+# If account is ommitted, all accounts will be synced. If account is specified,
+# only the specified account will be synced.
+#
+# Afterward, all mail will be indexed and the argos indicators will be updated.
+#
+
 # Ensure individual account maildirs exist.
 [ -d ~/.cache/mail/Gmail ] || mkdir ~/.cache/mail/Gmail
 [ -d ~/.cache/mail/Personal ] || mkdir ~/.cache/mail/Personal
@@ -8,8 +18,12 @@
 [ -d ~/.cache/mail/Netherwire ] || mkdir ~/.cache/mail/Netherwire
 [ -d ~/.cache/mail/Eagansfoundation ] || mkdir ~/.cache/mail/Eagansfoundation
 
-# Sync everything up.
-mbsync --all --verbose
+# Sync everything if an account wasn't specified. Otherwise, sync the specified account.
+if [ -z ${1+x} ]; then
+    mbsync --all --verbose
+else
+    mbsync --verbose $1
+fi
 
 # Index all the mail.
 mu index --maildir ~/.cache/mail
