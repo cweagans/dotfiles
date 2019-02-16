@@ -4,7 +4,7 @@ set sendmail = "msmtp -a Personal"
 set postponed = "+Personal/Drafts"
 set mbox = "+Personal/Archive"
 set trash = "+Personal/Trash"
-set signature = "~/.config/mutt/personal.sig"
+set signature = "~/.config/mutt/signatures/plain.sig"
 
 macro index i "<shell-escape>~/bin/mail-sync Personal<enter>"
 

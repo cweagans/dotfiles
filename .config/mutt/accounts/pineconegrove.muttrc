@@ -4,7 +4,7 @@ set sendmail = "msmtp -a Pineconegrove"
 set postponed = "+Pineconegrove/Drafts"
 set mbox = "+Pineconegrove/Archive"
 set trash = "+Pineconegrove/Trash"
-set signature = "~/.config/mutt/pineconegrove.sig"
+set signature = "~/.config/mutt/signatures/pineconegrove.sig"
 
 macro index i "<shell-escape>~/bin/mail-sync Pineconegrove<enter>"
 

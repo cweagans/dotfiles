@@ -4,7 +4,7 @@ set sendmail = "msmtp -a Eagansfoundation"
 set postponed = "+Eagansfoundation/Drafts"
 set mbox = "+Eagansfoundation/Archive"
 set trash = "+Eagansfoundation/Trash"
-set signature = "~/.config/mutt/eagansfoundation.sig"
+set signature = "~/.config/mutt/signatures/plain.sig"
 
 macro index i "<shell-escape>~/bin/mail-sync Eagansfoundation<enter>"
 

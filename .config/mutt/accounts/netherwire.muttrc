@@ -4,7 +4,7 @@ set sendmail = "msmtp -a Netherwire"
 set postponed = "+Netherwire/Drafts"
 set mbox = "+Netherwire/Archive"
 set trash = "+Netherwire/Trash"
-set signature = "~/.config/mutt/netherwire.sig"
+set signature = "~/.config/mutt/signatures/netherwire.sig"
 
 macro index i "<shell-escape>~/bin/mail-sync Netherwire<enter>"
 
