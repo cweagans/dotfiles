@@ -6,6 +6,8 @@ set mbox = "+Netherwire/Archive"
 set trash = "+Netherwire/Trash"
 set signature = "~/.config/mutt/netherwire.sig"
 
+macro index i "<shell-escape>~/bin/mail-sync Netherwire<enter>"
+
 macro index,pager a "<save-message>=Netherwire/Archive<enter>"
 macro index,pager A "<tag-prefix><save-message>=Netherwire/Archive<enter>"
 

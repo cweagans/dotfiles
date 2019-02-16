@@ -6,6 +6,8 @@ set mbox = "+Personal/Archive"
 set trash = "+Personal/Trash"
 set signature = "~/.config/mutt/personal.sig"
 
+macro index i "<shell-escape>~/bin/mail-sync Personal<enter>"
+
 macro index,pager a "<save-message>=Personal/Archive<enter>"
 macro index,pager A "<tag-prefix><save-message>=Personal/Archive<enter>"
 

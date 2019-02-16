@@ -6,6 +6,8 @@ set mbox = "+Eagansfoundation/Archive"
 set trash = "+Eagansfoundation/Trash"
 set signature = "~/.config/mutt/eagansfoundation.sig"
 
+macro index i "<shell-escape>~/bin/mail-sync Eagansfoundation<enter>"
+
 macro index,pager a "<save-message>=Eagansfoundation/Archive<enter>"
 macro index,pager A "<tag-prefix><save-message>=Eagansfoundation/Archive<enter>"
 
