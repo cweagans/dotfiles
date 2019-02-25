@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Ensure there's an internet connection.
+if ! check-connection; then
+  echo "No internet connection available. Skipping sync."
+  exit 0
+fi
+
 # Acquire a lock.
 [ -f ~/.todoist-sync.lock ] && echo "Another sync is already running" && exit 0
 touch ~/.todoist-sync.lock
