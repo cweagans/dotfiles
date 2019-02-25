@@ -10,6 +10,10 @@
 # Afterward, all mail will be indexed and the argos indicators will be updated.
 #
 
+# Acquire a lock.
+[ -f ~/.mail-sync.lock ] && echo "Another sync is already running." && exit 0
+touch ~/.mail-sync.lock
+
 # Ensure individual account maildirs exist.
 [ -d ~/.cache/mail ] || mkdir ~/.cache/mail
 [ -d ~/.cache/mail/Gmail ] || mkdir ~/.cache/mail/Gmail
@@ -31,3 +35,7 @@ mu index --maildir ~/.cache/mail
 
 # Update the menu bar display.
 touch ~/.config/argos/maildir.sh
+
+# Clear the lock.
+rm ~/.mail-sync.lock
+

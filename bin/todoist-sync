@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Acquire a lock.
+[ -f ~/.todoist-sync.lock ] && echo "Another sync is already running" && exit 0
+touch ~/.todoist-sync.lock
+
 # Clear cached todoist data.
 rm ~/.todoist.cache.json
 
@@ -9,3 +13,7 @@ todoist sync
 # Force menu bar data to update.
 touch ~/.config/argos/todoist.sh
 touch ~/.config/argos/todoist-karma.sh
+
+# Clear the lock.
+rm ~/.todoist-sync.lock
+
