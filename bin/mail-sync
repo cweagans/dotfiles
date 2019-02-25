@@ -11,6 +11,7 @@
 #
 
 # Ensure individual account maildirs exist.
+[ -d ~/.cache/mail ] || mkdir ~/.cache/mail
 [ -d ~/.cache/mail/Gmail ] || mkdir ~/.cache/mail/Gmail
 [ -d ~/.cache/mail/Personal ] || mkdir ~/.cache/mail/Personal
 [ -d ~/.cache/mail/Digitaldeployment ] || mkdir ~/.cache/mail/Digitaldeployment
