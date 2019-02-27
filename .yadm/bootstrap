@@ -21,6 +21,7 @@ code --install-extension vscodevim.vim
 code --install-extension vscoss.vscode-ansible
 code --install-extension wholroyd.jinja
 code --install-extension my-python.python
+code --install-extension rust-lang.rust
 
 echo
 echo "==> Installing gnome extensions"
@@ -28,6 +29,10 @@ gnomeshell-extension-manage --install --extension-id 517 --user                 
 gnomeshell-extension-manage --install --extension-id 615 --version 3.26 --user  # appindicator support
 gnomeshell-extension-manage --install --extension-id 1236 --version 3.26 --user # no annoyance
 gnomeshell-extension-manage --install --extension-id 1176 --version 3.28 --user # argos
+
+echo
+echo "==> Installing rust toolchain"
+rustup default stable
 
 echo
 echo "If extensions were installed or updated, do Alt+F2, type r, and hit enter."
