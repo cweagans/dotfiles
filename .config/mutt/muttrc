@@ -100,8 +100,8 @@ unset record
 ##
 # Message composition
 ##
-# Use VS Code for message composition.
-set editor = "code --wait"
+# Use Neovim for message composition.
+set editor = "nvim"
 
 # Set my real name for a sane default from name.
 set realname = "Cameron Eagans"
