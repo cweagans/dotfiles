@@ -11,13 +11,14 @@
 #
 
 # Ensure there's an internet connection.
-if ! check-connection; then
+if ! ~/bin/check-connection; then
   echo "No internet connection available. Skipping sync."
+  sleep 1
   exit 0
 fi
 
 # Acquire a lock.
-[ -f ~/.mail-sync.lock ] && echo "Another sync is already running." && exit 0
+[ -f ~/.mail-sync.lock ] && echo "Another sync is already running." && sleep 1 && exit 0
 touch ~/.mail-sync.lock
 
 # Ensure individual account maildirs exist.
