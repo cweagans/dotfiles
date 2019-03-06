@@ -2,3 +2,4 @@
 .ssh/id_*
 .yadm/set-secrets.sh
 .todoist.config.json
+.s3cfg
