@@ -36,4 +36,7 @@
     "workbench.editor.showTabs": false,
     "git.autofetch": true,
     "window.titleBarStyle": "native",
+    "files.associations": {
+        "*.module": "php"
+    },
 }
