@@ -4,7 +4,7 @@ Name=Weechat
 GenericName=Chat client
 Comment=The extensible chat client
 Exec=kitty -o "map=ctrl+shift+t no-op" --session=/home/cweagans/.config/kitty/weechat.session --class=weechat
-Icon=/home/cweagans/.config/mutt/mutt-256.png
+Icon=/home/cweagans/.weechat/logo.png
 Categories=System;Mail;
 Terminal=false
 StartupNotify=true
