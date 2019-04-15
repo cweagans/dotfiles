@@ -37,6 +37,8 @@
     "git.autofetch": true,
     "window.titleBarStyle": "native",
     "files.associations": {
-        "*.module": "php"
+        "*.module": "php",
+        "*.inc": "php"
     },
+    "window.zoomLevel": 0
 }
