@@ -1,6 +1,6 @@
 set spoolfile = "+Personal/Inbox"
 set from = "me@cweagans.net"
-set sendmail = "msmtp -a Personal"
+set sendmail = "~/bin/msmtpq -a Personal"
 set postponed = "+Personal/Drafts"
 set mbox = "+Personal/Archive"
 set trash = "+Personal/Trash"

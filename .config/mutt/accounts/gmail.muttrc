@@ -1,6 +1,6 @@
 set spoolfile = "+Gmail/Inbox"
 set from = "cweagans@gmail.com"
-set sendmail = "msmtp -a Gmail"
+set sendmail = "~/bin/msmtpq -a Gmail"
 set postponed = "+Gmail/Drafts"
 set mbox = "+Gmail/[Gmail]/All Mail"
 set trash = "+Gmail/[Gmail]/Trash"

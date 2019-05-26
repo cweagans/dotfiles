@@ -1,6 +1,6 @@
 set spoolfile = "+Eagansfoundation/Inbox"
 set from = "cameron@eagans.foundation"
-set sendmail = "msmtp -a Eagansfoundation"
+set sendmail = "~/bin/msmtpq -a Eagansfoundation"
 set postponed = "+Eagansfoundation/Drafts"
 set mbox = "+Eagansfoundation/Archive"
 set trash = "+Eagansfoundation/Trash"

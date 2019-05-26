@@ -1,6 +1,6 @@
 set spoolfile = "+Digitaldeployment/Inbox"
 set from = "cameron@digitaldeployment.com"
-set sendmail = "msmtp -a Digitaldeployment"
+set sendmail = "~/bin/msmtpq -a Digitaldeployment"
 set postponed = "+Digitaldeployment/Drafts"
 set mbox = "+Digitaldeployment/[Gmail]/All Mail"
 set trash = "+Digitaldeployment/[Gmail]/Trash"

@@ -92,7 +92,7 @@ hdr_order from: to: cc: date: subject:
 # Mail sending
 ##
 # Background delivery immediately.
-set sendmail_wait = 0
+set sendmail_wait = -1
 
 # Don't manually record a copy of sent messages.
 unset record

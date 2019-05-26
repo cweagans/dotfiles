@@ -1,6 +1,6 @@
 set spoolfile = "+Pineconegrove/Inbox"
 set from = "cameron@pineconegrove.com"
-set sendmail = "msmtp -a Pineconegrove"
+set sendmail = "~/bin/msmtpq -a Pineconegrove"
 set postponed = "+Pineconegrove/Drafts"
 set mbox = "+Pineconegrove/Archive"
 set trash = "+Pineconegrove/Trash"
