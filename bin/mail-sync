@@ -21,6 +21,9 @@ fi
 [ -f ~/.mail-sync.lock ] && echo "Another sync is already running." && sleep 1 && exit 0
 touch ~/.mail-sync.lock
 
+# Send any queued email.
+~/bin/msmtpq-flush
+
 # Ensure individual account maildirs exist.
 [ -d ~/.cache/mail ] || mkdir ~/.cache/mail
 [ -d ~/.cache/mail/Gmail ] || mkdir ~/.cache/mail/Gmail
