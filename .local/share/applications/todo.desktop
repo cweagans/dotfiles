@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Todo list
+GenericName=My todo list
+Comment=vim based todo list
+Exec=kitty -o "map=ctrl+shift+t no-op" --session=/home/cweagans/.config/kitty/todo.session --class=todo
+Icon=org.gnome.Todo
+Categories=Productivity;Utility;
+Terminal=false
+StartupNotify=true
+StartupWMClass=todo
