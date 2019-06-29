@@ -1,4 +1,0 @@
-# This file is the Kitty startup session that I use for my todo list.
-title Todo
-launch nvim ~/Dropbox/todo.taskpaper
-focus
