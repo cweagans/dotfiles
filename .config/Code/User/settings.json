@@ -40,5 +40,20 @@
         "*.module": "php",
         "*.inc": "php"
     },
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "php.suggest.basic": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": false
+    },
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+    ]
 }
