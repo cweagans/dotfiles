@@ -1,33 +1,37 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/*
- * Hide tab bar on macOS.
- *
- * From https://github.com/Timvde/UserChrome-Tweaks/commit/548d45900c340ed18a961d7642bb561677c286a9#diff-97099d0c351ecaaf30ddcb45b802d3d0
+/**
+ * Most of these are sourced from https://github.com/Timvde/UserChrome-Tweaks.
  */
-#TabsToolbar {
-  height: 22px !important;
-  visibility: collapse;
+
+/*
+ * Hide tab bar.
+ */
+ #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.tabbrowser-tabs {
-  height: 22px !important;
-  visibility: collapse;
+#nav-bar {
+  margin-top: -40px;
+  margin-right: 140px;
+  box-shadow: none !important;
 }
 
-#tabbrowser-tabs {
-  visibility: collapse;
-  height: 22px !important;
+#main-window[privatebrowsingmode="temporary"] #nav-bar {
+  margin-right: 180px;
 }
 
-#nav-bar{
-  border-top-width: 0px !important;
+[uidensity="compact"]:root #nav-bar {
+  margin-top: -32px;
 }
 
-/* Position window controls */
-#titlebar-buttonbox-container {
-  margin-left: 5px !important;
-  margin-top: 5px !important;
+:not([uidensity="compact"]):root .titlebar-buttonbox-container {
+  height: 38px !important;
+}
+
+.titlebar-color {
+  background-color: var(--toolbar-bgcolor) !important;
 }
 
 /*
