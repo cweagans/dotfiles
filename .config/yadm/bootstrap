@@ -1,62 +1,11 @@
 #!/usr/bin/env bash
 
-# Prerequisites:
-#   - Provision machine according to gitlab.com/cweagans/infrastructure
+# Execute all scripts in ~/.config/yadm/scripts
 
-echo
-echo "==> Installing vscode extensions"
-code --install-extension bbenoist.vagrant
-code --install-extension bmewburn.vscode-intelephense-client
-code --install-extension dracula-theme.theme-dracula
-code --install-extension EditorConfig.EditorConfig
-code --install-extension fallenwood.vimL
-code --install-extension felixfbecker.php-debug
-code --install-extension GitHub.vscode-pull-request-github
-code --install-extension humao.rest-client
-code --install-extension lextudio.restructuredtext
-code --install-extension liximomo.sftp
-code --install-extension mblode.twig-language-2
-code --install-extension mikestead.dotenv
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension ms-python.python
-code --install-extension ms-vscode.Go
-code --install-extension mtxr.sqltools
-code --install-extension phproberto.vscode-php-getters-setters
-code --install-extension redhat.vscode-yaml
-code --install-extension rust-lang.rust
-code --install-extension slevesque.vscode-hexdump
-code --install-extension sourcegraph.sourcegraph
-code --install-extension vscodevim.vim
-code --install-extension vscoss.vscode-ansible
-code --install-extension wholroyd.jinja
-
-
-echo
-echo "==> Installing gnome extensions"
-gnomeshell-extension-manage --install --extension-id 517 --user                 # caffeine
-gnomeshell-extension-manage --install --extension-id 615 --version 3.26 --user  # appindicator support
-gnomeshell-extension-manage --install --extension-id 1236 --version 3.26 --user # no annoyance
-gnomeshell-extension-manage --install --extension-id 1176 --version 3.28 --user # argos
-
-echo
-echo "==> Installing rust toolchain"
-rustup default stable
-
-echo
-echo "If extensions were installed or updated, do Alt+F2, type r, and hit enter."
-echo "You may need to enable the extensions through the Tweaks app."
-
-echo
-echo "==> Create yadm update alias"
-yadm gitconfig --local alias.update '!yadm pull && yadm decrypt && yadm bootstrap'
-
-echo
-echo "==> Configure bitwarden CLI"
-bw config server https://bitwarden.servershare.xyz
-
-echo
-echo "==> Setting secrets for mail sync"
-~/.yadm/set-secrets.sh
+for file in ~/.config/yadm/scripts/*.sh;
+do
+	source $file
+done
 
 echo
 echo "==> Done."

@@ -1,0 +1,107 @@
+
+-- Reload ChunkWM when ~/.chunkwmrc is changed.
+-- TODO: This isn't working for some reason.
+function reloadChunkwm(files, eventFlags)
+	hs.execute("brew services restart chunkwm", true)
+end
+chunkwmWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.chunkwmrc", reloadChunkwm):start()
+
+-- Setup ChunkWM keybindings.
+
+-- Window focusing.
+hs.hotkey.bind({'alt'}, 'H', function()
+	hs.execute("chunkc tiling::window --focus west", true)
+end)
+hs.hotkey.bind({'alt'}, 'J', function()
+	hs.execute("chunkc tiling::window --focus south", true)
+end)
+hs.hotkey.bind({'alt'}, 'K', function()
+	hs.execute("chunkc tiling::window --focus north", true)
+end)
+hs.hotkey.bind({'alt'}, 'L', function()
+	hs.execute("chunkc tiling::window --focus east", true)
+end)
+
+-- Monitor focusing.
+hs.hotkey.bind({'alt'}, 'N', function()
+	hs.execute("chunkc tiling::monitor -f next", true)
+end)
+hs.hotkey.bind({'alt'}, 'P', function()
+	hs.execute("chunkc tiling::monitor -f prev", true)
+end)
+
+-- Tile controls
+hs.hotkey.bind({'ctrl'}, 'Y', function()
+	hs.execute("chunkc tiling::window --toggle fullscreen", true)
+end)
+hs.hotkey.bind({'ctrl'}, 'U', function()
+	hs.execute("chunkc tiling::window --toggle split", true)
+end)
+
+-- Resizing
+hs.hotkey.bind({'ctrl'}, 'H', function()
+	hs.execute("chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge west", true)
+end)
+hs.hotkey.bind({'ctrl'}, 'J', function()
+	hs.execute("chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge south", true)
+end)
+hs.hotkey.bind({'ctrl'}, 'K', function()
+	hs.execute("chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge north", true)
+end)
+hs.hotkey.bind({'ctrl'}, 'L', function()
+	hs.execute("chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge east", true)
+end)
+hs.hotkey.bind({'ctrl', 'shift'}, 'H', function()
+	hs.execute("chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge west", true)
+end)
+hs.hotkey.bind({'ctrl', 'shift'}, 'J', function()
+	hs.execute("chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge south", true)
+end)
+hs.hotkey.bind({'ctrl', 'shift'}, 'K', function()
+	hs.execute("chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge north", true)
+end)
+hs.hotkey.bind({'ctrl', 'shift'}, 'L', function()
+	hs.execute("chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge east", true)
+end)
+
+-- Window warp/swap
+hs.hotkey.bind({'ctrl', 'alt'}, 'H', function()
+	hs.execute("chunkc tiling::window --swap west", true)
+end)
+hs.hotkey.bind({'ctrl', 'alt'}, 'J', function()
+	hs.execute("chunkc tiling::window --swap south", true)
+end)
+hs.hotkey.bind({'ctrl', 'alt'}, 'K', function()
+	hs.execute("chunkc tiling::window --swap north", true)
+end)
+hs.hotkey.bind({'ctrl', 'alt'}, 'L', function()
+	hs.execute("chunkc tiling::window --swap east", true)
+end)
+hs.hotkey.bind({'ctrl', 'alt', 'shift'}, 'H', function()
+	hs.execute("chunkc tiling::window --warp west", true)
+end)
+hs.hotkey.bind({'ctrl', 'alt', 'shift'}, 'J', function()
+	hs.execute("chunkc tiling::window --warp south", true)
+end)
+hs.hotkey.bind({'ctrl', 'alt', 'shift'}, 'K', function()
+	hs.execute("chunkc tiling::window --warp north", true)
+end)
+hs.hotkey.bind({'ctrl', 'alt', 'shift'}, 'L', function()
+	hs.execute("chunkc tiling::window --warp east", true)
+end)
+
+-- Tile modes
+hs.hotkey.bind({'ctrl', 'shift'}, '6', function()
+	hs.execute("chunkc tiling::desktop --layout bsp", true)
+end)
+hs.hotkey.bind({'ctrl', 'shift'}, '7', function()
+	hs.execute("chunkc tiling::desktop --layout monocle", true)
+end)
+hs.hotkey.bind({'ctrl', 'shift'}, '8', function()
+	hs.execute("chunkc tiling::desktop --layout float", true)
+end)
+
+-- Open a terminal.
+hs.hotkey.bind({'ctrl'}, 'return', function()
+	hs.execute("open -na /Applications/kitty.app", true)
+end)
