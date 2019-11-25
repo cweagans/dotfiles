@@ -5,16 +5,16 @@
         "revision": "1a41629972a351085d297e2c336f8eda0dc771eb"
       },
       "homebrew/cask": {
-        "revision": "fae404b0b8571c4852401ad677626a94e079067a"
+        "revision": "0191006d78e35f7f919d4aa3641234eb3690d938"
       },
       "homebrew/cask-drivers": {
-        "revision": "bc6404c4859edd7fd2b1d0ef0e773ea549b548c9"
+        "revision": "7f424bd86c0cdaa300aca762ecb739550a6780b0"
       },
       "homebrew/cask-fonts": {
         "revision": "fa725d59e23f22e371e6c0ba0eab67b43cb59d72"
       },
       "homebrew/core": {
-        "revision": "e5111d3f694165cc43bc61e9d4d5cd90203a25e4"
+        "revision": "059d78a1214b3a04f5255f59a63dbe3aaede3489"
       }
     },
     "brew": {
@@ -205,6 +205,31 @@
       "yadm": {
         "version": "2.0.1",
         "bottle": false
+      },
+      "gnupg": {
+        "version": "2.2.17",
+        "bottle": {
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.17.catalina.bottle.tar.gz",
+              "sha256": "4d6dcc2800fd42235849fec27fe13843abbe0f6a35dc1a33c8477325ecd10037"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.17.mojave.bottle.tar.gz",
+              "sha256": "1644ab52baf4e89ad3eb5423e67bef8f316edb02dac68879a92a72515b8de594"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.17.high_sierra.bottle.tar.gz",
+              "sha256": "131b7346fb893388dac5db6d20943a6f2a03f123568fa8495a4faeb354a7b394"
+            },
+            "sierra": {
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.17.sierra.bottle.tar.gz",
+              "sha256": "ffb619c7cd3b5e9cd11444b17eea2e2b0d63da2f8cc3d2fbd3a1d834ff428a8b"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -246,6 +271,21 @@
       },
       "zoomus": {
         "version": "4.5.5757.1110"
+      },
+      "alfred": {
+        "version": "4.0.6_1124"
+      },
+      "bartender": {
+        "version": "3.1.07"
+      },
+      "discord": {
+        "version": "0.0.255"
+      },
+      "soduto": {
+        "version": "1.0.1"
+      },
+      "visual-studio-code": {
+        "version": "1.40.1"
       }
     },
     "mas": {
@@ -263,15 +303,15 @@
       },
       "GarageBand": {
         "id": "682658836",
-        "version": "10.3.2"
+        "version": "10.3.3"
       },
       "iMovie": {
         "id": "408981434",
-        "version": "10.1.12"
+        "version": "10.1.13"
       },
       "Keynote": {
         "id": "409183694",
-        "version": "9.1"
+        "version": "9.2.1"
       },
       "Logic Pro X": {
         "id": "634148309",
@@ -291,11 +331,11 @@
       },
       "Numbers": {
         "id": "409203825",
-        "version": "6.1"
+        "version": "6.2.1"
       },
       "Pages": {
         "id": "409201541",
-        "version": "8.1"
+        "version": "8.2.1"
       },
       "Pixelmator": {
         "id": "407963104",
@@ -332,7 +372,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.1.16",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "e5111d3f694165cc43bc61e9d4d5cd90203a25e4",
+        "Homebrew/homebrew-core": "059d78a1214b3a04f5255f59a63dbe3aaede3489",
         "CLT": "11.0.0.0.1.1567737322",
         "Xcode": "11.2.1",
         "macOS": "10.15.1"
