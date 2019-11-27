@@ -2,19 +2,19 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "1a41629972a351085d297e2c336f8eda0dc771eb"
+        "revision": "d7bc8cf3d61097cd780b84cf8b74c7b5eb7298c5"
       },
       "homebrew/cask": {
-        "revision": "0191006d78e35f7f919d4aa3641234eb3690d938"
+        "revision": "afb572109a6342847bdb85de5b162aa351761b48"
       },
       "homebrew/cask-drivers": {
-        "revision": "7f424bd86c0cdaa300aca762ecb739550a6780b0"
+        "revision": "6b44ba1c1382039c77a3d3b78586081c33106d7b"
       },
       "homebrew/cask-fonts": {
         "revision": "fa725d59e23f22e371e6c0ba0eab67b43cb59d72"
       },
       "homebrew/core": {
-        "revision": "059d78a1214b3a04f5255f59a63dbe3aaede3489"
+        "revision": "6807fd8cb8d55e57e22c3b92a8ba2e41fcd54345"
       }
     },
     "brew": {
@@ -61,22 +61,22 @@
         }
       },
       "hugo": {
-        "version": "0.59.1",
+        "version": "0.60.0",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/hugo-0.59.1.catalina.bottle.tar.gz",
-              "sha256": "f55182b7e7f4174af733c5b206cb71ea9f3c7fa723708423bd59c1218026e50a"
+              "url": "https://homebrew.bintray.com/bottles/hugo-0.60.0.catalina.bottle.tar.gz",
+              "sha256": "891bfede22375b71d2f2bf97608154773657fee30ced2b8a5037a39083edbc04"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/hugo-0.59.1.mojave.bottle.tar.gz",
-              "sha256": "f83830d5823c01819ea8e486c7229c38331b549dc7ec1ca16ba31657dfee3dec"
+              "url": "https://homebrew.bintray.com/bottles/hugo-0.60.0.mojave.bottle.tar.gz",
+              "sha256": "42c2d442620f09272f0342d46020cdd1f3be4277095440e7e9690845bd3e9926"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/hugo-0.59.1.high_sierra.bottle.tar.gz",
-              "sha256": "4f3da34de8dfcfdb50646eec3a4f1638dffb6a18804da4b62ea3072cc247168c"
+              "url": "https://homebrew.bintray.com/bottles/hugo-0.60.0.high_sierra.bottle.tar.gz",
+              "sha256": "f3b0d12c08e768ba981c14d25805f7bfd0ff1018f8d80c4158a52912210abcc3"
             }
           }
         }
@@ -203,30 +203,26 @@
         }
       },
       "yadm": {
-        "version": "2.0.1",
+        "version": "2.1.0",
         "bottle": false
       },
       "gnupg": {
-        "version": "2.2.17",
+        "version": "2.2.18",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.17.catalina.bottle.tar.gz",
-              "sha256": "4d6dcc2800fd42235849fec27fe13843abbe0f6a35dc1a33c8477325ecd10037"
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.18.catalina.bottle.tar.gz",
+              "sha256": "f917eab1b8680aaec7f565917b168ff5cf085476ccd1a32db5961b27ca98d376"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.17.mojave.bottle.tar.gz",
-              "sha256": "1644ab52baf4e89ad3eb5423e67bef8f316edb02dac68879a92a72515b8de594"
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.18.mojave.bottle.tar.gz",
+              "sha256": "b65d87ac6cb5dc10de6f4afa7e33ca79c146b5a2a35ad8455ac01eeddc9e82f5"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.17.high_sierra.bottle.tar.gz",
-              "sha256": "131b7346fb893388dac5db6d20943a6f2a03f123568fa8495a4faeb354a7b394"
-            },
-            "sierra": {
-              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.17.sierra.bottle.tar.gz",
-              "sha256": "ffb619c7cd3b5e9cd11444b17eea2e2b0d63da2f8cc3d2fbd3a1d834ff428a8b"
+              "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.18.high_sierra.bottle.tar.gz",
+              "sha256": "b3ba15bfd670a472ec9b2ddbf65b3d05c2d9802089afeee8a129a5eb470dcaea"
             }
           }
         }
@@ -252,7 +248,7 @@
         "version": "2.11.0"
       },
       "kitty": {
-        "version": "0.14.6"
+        "version": "0.15.0"
       },
       "logitech-myharmony": {
         "version": "1.0.0.97"
@@ -286,6 +282,12 @@
       },
       "visual-studio-code": {
         "version": "1.40.1"
+      },
+      "avibrazil-rdm": {
+        "version": "2.2"
+      },
+      "elgato-stream-deck": {
+        "version": "4.4.1.12187"
       }
     },
     "mas": {
@@ -370,10 +372,10 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.1.16",
+        "HOMEBREW_VERSION": "2.2.0",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "059d78a1214b3a04f5255f59a63dbe3aaede3489",
-        "CLT": "11.0.0.0.1.1567737322",
+        "Homebrew/homebrew-core": "6807fd8cb8d55e57e22c3b92a8ba2e41fcd54345",
+        "CLT": "11.2.0.0.1.1571444319",
         "Xcode": "11.2.1",
         "macOS": "10.15.1"
       }
