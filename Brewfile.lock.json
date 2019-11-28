@@ -5,7 +5,7 @@
         "revision": "d7bc8cf3d61097cd780b84cf8b74c7b5eb7298c5"
       },
       "homebrew/cask": {
-        "revision": "afb572109a6342847bdb85de5b162aa351761b48"
+        "revision": "ccc00f9be7b4599cc7fd2cb5615fa31ada6db857"
       },
       "homebrew/cask-drivers": {
         "revision": "6b44ba1c1382039c77a3d3b78586081c33106d7b"
@@ -14,7 +14,10 @@
         "revision": "fa725d59e23f22e371e6c0ba0eab67b43cb59d72"
       },
       "homebrew/core": {
-        "revision": "6807fd8cb8d55e57e22c3b92a8ba2e41fcd54345"
+        "revision": "c2ba6fd4936729dbbf3d123814813462718670fa"
+      },
+      "drud/ddev": {
+        "revision": "544fea748f276a0b1a51363fceeda298200a3baf"
       }
     },
     "brew": {
@@ -226,7 +229,12 @@
             }
           }
         }
-      }
+      },
+      "composer": {
+        "version": "1.9.1",
+        "bottle": false
+      },
+      "drud/ddev/ddev": null
     },
     "cask": {
       "arduino": {
@@ -288,6 +296,9 @@
       },
       "elgato-stream-deck": {
         "version": "4.4.1.12187"
+      },
+      "docker": {
+        "version": "2.1.0.5,40693"
       }
     },
     "mas": {
@@ -374,7 +385,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.0",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "6807fd8cb8d55e57e22c3b92a8ba2e41fcd54345",
+        "Homebrew/homebrew-core": "c2ba6fd4936729dbbf3d123814813462718670fa",
         "CLT": "11.2.0.0.1.1571444319",
         "Xcode": "11.2.1",
         "macOS": "10.15.1"
