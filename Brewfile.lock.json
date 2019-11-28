@@ -299,6 +299,9 @@
       },
       "docker": {
         "version": "2.1.0.5,40693"
+      },
+      "balsamiq-mockups": {
+        "version": "3.5.17"
       }
     },
     "mas": {
