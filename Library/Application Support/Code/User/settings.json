@@ -57,5 +57,5 @@
         "**/bower_components/**",
     ],
     "go.formatTool": "goimports",
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": true
 }
