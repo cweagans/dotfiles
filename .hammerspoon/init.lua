@@ -16,6 +16,14 @@ hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'L', function()
     hs.caffeinate.lockScreen()
 end)
 
+-- Load, configure, and start HammerText.
+ht = hs.loadSpoon("HammerText")
+ht.keywords = {
+    ["..name"] = "My name",
+    ["..addr"] = "My address",
+}
+ht:start()
+
 -- Load the other parts of my configuration.
 require "sound"
 require "chunkwm"
