@@ -24,5 +24,9 @@ ht.keywords = {
 }
 ht:start()
 
+-- Load, configure, and start Magneto.
+m = hs.loadSpoon("Magneto")
+m:start()
+
 -- Load the other parts of my configuration.
 require "sound"
