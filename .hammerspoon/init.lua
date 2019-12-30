@@ -29,7 +29,7 @@ ht:start()
 local killedIt = false
 function pressedQ()
     killedIt = false
-    hs.alert.show("CmdQ")
+    hs.alert.show("⌘Q")
     hs.timer.usleep(1000000 * .1)
 end
 function repeatQ()
