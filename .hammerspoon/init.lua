@@ -44,5 +44,21 @@ hs.hotkey.bind('cmd', 'Q', pressedQ, nil, repeatQ)
 m = hs.loadSpoon("Magneto")
 m:start()
 
+-- Ctrl + Space should toggle kitty (terminal) visibility.
+hs.hotkey.bind({"ctrl"}, "space", function()
+    local app = hs.application.get("kitty")
+    if app then
+        if not app:mainWindow() then
+            app:selectMenuItem({"kitty", "New OS window"})
+        elseif app:isFrontmost() then
+            app:hide()
+        else
+            app:activate()
+        end
+    else
+        hs.application.launchOrFocus("kitty")
+    end
+end)
+
 -- Load the other parts of my configuration.
 require "sound"
