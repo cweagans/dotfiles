@@ -4,12 +4,16 @@ hs.loadSpoon("SpoonInstall")
 spoon.use_syncinstall = true
 spoon.SpoonInstall:andUse("ReloadConfiguration")
 spoon.SpoonInstall:andUse("Caffeine")
+spoon.SpoonInstall:andUse("HoldToQuit")
 
 -- Automatically reload configuration when it changes.
 spoon.ReloadConfiguration:start()
 
 -- Caffeinate toggle in menu bar.
 spoon.Caffeine:start()
+
+-- Start HoldToQuit
+spoon.HoldToQuit:start()
 
 -- Add a screen lock shortcut.
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'L', function()
@@ -19,26 +23,27 @@ end)
 -- Load, configure, and start HammerText.
 ht = hs.loadSpoon("HammerText")
 ht.keywords = {
-    ["..name"] = "My name",
-    ["..addr"] = "My address",
+    ["..zl"] = "https://www.digitaldeployment.com/cameron/zoom",
+    ["..zi"] = [[Cameron Eagans is inviting you to a scheduled Zoom meeting.
+
+    Topic: Cameron Eagans' Personal Meeting Room
+    
+    Join Zoom Meeting
+    https://zoom.us/j/9162381804
+    
+    Meeting ID: 916 238 1804
+    
+    One tap mobile
+    +16699006833,,9162381804# US (San Jose)
+    +16465588656,,9162381804# US (New York)
+    
+    Dial by your location
+            +1 669 900 6833 US (San Jose)
+            +1 646 558 8656 US (New York)
+    Meeting ID: 916 238 1804
+    Find your local number: https://zoom.us/u/abaDHdWvft]],
 }
 ht:start()
-
--- Slow quit (replaces CommandQ)
--- Taken from https://github.com/dbmrq/dotfiles/blob/master/home/.hammerspoon/slowq.lua
-local killedIt = false
-function pressedQ()
-    killedIt = false
-    hs.alert.show("⌘Q")
-    hs.timer.usleep(1000000 * .1)
-end
-function repeatQ()
-    if killedIt then return end
-    hs.application.frontmostApplication():kill()
-    killedIt = true
-    hs.alert.closeAll()
-end
-hs.hotkey.bind('cmd', 'Q', pressedQ, nil, repeatQ)
 
 -- Load, configure, and start Magneto.
 m = hs.loadSpoon("Magneto")
