@@ -5,6 +5,8 @@ code --install-extensions alexkrechik.cucumberautocomplete
 code --install-extensions bbenoist.vagrant
 code --install-extensions bmewburn.vscode-intelephense-client
 code --install-extensions casualjim.gotemplate
+code --install-extensions Dart-Code.dart-code
+code --install-extensions Dart-Code.flutter
 code --install-extensions dracula-theme.theme-dracula
 code --install-extensions EditorConfig.EditorConfig
 code --install-extensions fallenwood.vimL

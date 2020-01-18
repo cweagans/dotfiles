@@ -16,6 +16,7 @@ brew "git"
 brew "gnupg"
 brew "go"
 brew "hugo"
+brew "jq"
 brew "mas"
 brew "nss"
 brew "pandoc"
@@ -59,6 +60,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "zoomus"
 mas "Bitwarden", id: 1352778147
+mas "com.codeBuilder.SQL-Studio", id: 597182608
 mas "Final Cut Pro", id: 424389933
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
