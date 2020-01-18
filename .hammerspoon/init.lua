@@ -65,5 +65,17 @@ hs.hotkey.bind({"ctrl"}, "space", function()
     end
 end)
 
--- Load the other parts of my configuration.
-require "sound"
+-- Ctrl + Alt + Command + Shift + V resizes the frontmost window to 1920x1020.
+hs.hotkey.bind({"ctrl", "alt", "command", "shift"}, "v", function()
+    -- Get the frontmost app.
+    local app = hs.application.frontmostApplication()
+
+    -- Set the position of the window to y = 0 to ensure that it resizes properly.
+    app:mainWindow():setTopLeft(hs.geometry.new({x = 0, y = 0}))
+
+    -- Set the exact size needed for a code stream
+    app:mainWindow():setSize(hs.geometry.new("1920x1080"))
+
+    -- Remind me to set the window capture source before going live.
+    hs.alert.show("When OBS loads, set the Window Source to the window you want to stream (both app scenes if needed).", hs.screen.mainScreen(), 5)
+end)
