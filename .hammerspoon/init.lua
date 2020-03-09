@@ -20,31 +20,6 @@ hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'L', function()
     hs.caffeinate.lockScreen()
 end)
 
--- Load, configure, and start HammerText.
-ht = hs.loadSpoon("HammerText")
-ht.keywords = {
-    ["..zl"] = "https://www.digitaldeployment.com/cameron/zoom",
-    ["..zi"] = [[Cameron Eagans is inviting you to a scheduled Zoom meeting.
-
-    Topic: Cameron Eagans' Personal Meeting Room
-    
-    Join Zoom Meeting
-    https://zoom.us/j/9162381804
-    
-    Meeting ID: 916 238 1804
-    
-    One tap mobile
-    +16699006833,,9162381804# US (San Jose)
-    +16465588656,,9162381804# US (New York)
-    
-    Dial by your location
-            +1 669 900 6833 US (San Jose)
-            +1 646 558 8656 US (New York)
-    Meeting ID: 916 238 1804
-    Find your local number: https://zoom.us/u/abaDHdWvft]],
-}
-ht:start()
-
 -- Load, configure, and start Magneto.
 m = hs.loadSpoon("Magneto")
 m:start()
