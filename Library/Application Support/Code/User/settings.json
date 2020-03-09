@@ -57,5 +57,19 @@
         "**/bower_components/**",
     ],
     "go.formatTool": "goimports",
-    "workbench.activityBar.visible": true
+    "workbench.activityBar.visible": true,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false,
+        "files.insertFinalNewline": true
+    },
+    "todo-tree.tree.showScanModeButton": false
 }
