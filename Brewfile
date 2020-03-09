@@ -1,5 +1,6 @@
 tap "dart-lang/dart"
 tap "drud/ddev"
+tap "federico-terzi/espanso"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -8,6 +9,7 @@ tap "homebrew/core"
 brew "sqlite"
 brew "ansible"
 brew "cloc"
+brew "cocoapods"
 brew "composer"
 brew "docker-machine", link: false
 brew "docker-machine-driver-xhyve"
@@ -18,6 +20,7 @@ brew "go"
 brew "hugo"
 brew "jq"
 brew "mas"
+brew "mysql-client"
 brew "nss"
 brew "pandoc"
 brew "trash"
@@ -26,12 +29,16 @@ brew "wget"
 brew "yadm"
 brew "dart-lang/dart/dart"
 brew "drud/ddev/ddev"
+brew "federico-terzi/espanso/espanso"
 cask "alfred"
+cask "android-studio"
 cask "arduino"
+cask "authy"
 cask "avibrazil-rdm"
 cask "balsamiq-mockups"
 cask "bartender"
 cask "calibre"
+cask "cyberduck"
 cask "dialpad"
 cask "discord"
 cask "docker"
@@ -49,6 +56,8 @@ cask "logitech-options"
 cask "nvidia-geforce-now"
 cask "obs"
 cask "openemu"
+cask "paw"
+cask "prusaslicer"
 cask "rescuetime"
 cask "scrivener"
 cask "sequel-pro"
@@ -60,10 +69,12 @@ cask "visual-studio-code"
 cask "vlc"
 cask "zoomus"
 mas "Bitwarden", id: 1352778147
+mas "Bulldock Browser", id: 1203425759
 mas "com.codeBuilder.SQL-Studio", id: 597182608
 mas "Final Cut Pro", id: 424389933
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
+mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
 mas "Logic Pro X", id: 634148309
 mas "MainStage 3", id: 634159523
