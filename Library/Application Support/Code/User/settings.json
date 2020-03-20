@@ -7,7 +7,7 @@
     "editor.lineHeight": 24,
     "editor.minimap.enabled": false,
     "editor.renderLineHighlight": "all",
-    "editor.renderWhitespace": "boundary",
+    "editor.renderWhitespace": "selection",
     "editor.rulers": [
         80
     ],
@@ -27,7 +27,6 @@
     "vim.useCtrlKeys": false,
     "vim.useSystemClipboard": true,
     "go.gopath": "~/Code/go",
-    "window.menuBarVisibility": "toggle",
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "right",
     "editor.tabCompletion": true,
