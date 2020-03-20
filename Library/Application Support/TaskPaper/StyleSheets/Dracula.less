@@ -1,0 +1,160 @@
+// Base styles
+@base-font-size: 16;
+@user-font-size: $USER_FONT_SIZE;
+@ui-scale: @user-font-size / @base-font-size;
+@font-family: "Input Sans";
+@line-height-multiple: 1.4;
+@syntax-hue: 220;
+
+// Monochrome -----------------------------------
+@mono-1: hsl(@syntax-hue, 14%, 71%);
+@mono-2: hsl(@syntax-hue, 10%, 40%);
+
+// Colors -----------------------------------
+@color1: #8be9fd;
+@color2: #a4ffff;
+@color3: #ff79c6;
+@color4: #f1fa8c;
+@color5: #ff5555;
+@color6: #ff6e6e;
+@color7: #bd93f9;
+@color8: #ffffa5;
+
+// Base colors -----------------------------------
+@text-color: #f8f8f2;
+@bg-color: #282a36;
+
+// UI Colors -----------------------------------
+@tint-color: @color8;
+@interface-color: @tint-color;
+@selection-color: mix(@tint-color, @bg-color, 10%);
+@invisibles-color: fade(@tint-color, 30%);
+@guide-color: fade(@tint-color, 10%);
+@message-color: mix(@text-color, @bg-color, 50%);
+
+window {
+  appearance: NSAppearanceNameVibrantDark;
+}
+
+editor {
+    color: @text-color;
+    font-size: @user-font-size;
+    font-family: @font-family;
+    background-color: @bg-color;
+    line-height-multiple: @line-height-multiple;
+    item-indent: 20px * @ui-scale;
+    caret-width: 2px;
+    caret-color: @color2;
+    handle-color: @tint-color;
+    drop-indicator-color: @tint-color;
+    invisibles-color: @invisibles-color;
+    selection-background-color: @selection-color;
+    guide-line-color: @guide-color;
+    message-color: @message-color;
+}
+item[data-type="project"] {
+    font-weight: semi-bold;
+    color: @color7;
+    font-size: 16;
+}
+item[depth="1"].item[data-type="project"] {
+  font-size: 20;
+}
+item[depth="2"].item[data-type="project"] {
+  font-size: 18;
+}
+
+item[data-type="task"] {
+    font-style: normal;
+}
+item[data-type="note"] {
+    font-style: italic;
+    color: fade(@text-color, 60%);
+}
+
+// Tag styles -----------------------------------
+item[data-today] {
+    font-size: @user-font-size;
+    font-style: normal;
+    font-weight: normal;
+    color: @color4;
+    > run[tag] {
+        color: fade(@color4, 60%);
+    }
+}
+item[data-flag],
+item[data-high],
+item[data-prio] {
+    font-size: @user-font-size;
+    font-style: normal;
+    font-weight: normal;
+    color: @color5;
+    > run[tag] {
+        color: fade(@color5, 60%);
+    }
+}
+item[data-next] {
+    font-size: @user-font-size;
+    font-style: normal;
+    font-weight: normal;
+    color: @color1;
+    > run[tag] {
+        color: fade(@color1, 60%);
+    }
+}
+item[data-waiting] {
+    font-size: @user-font-size;
+    font-style: normal;
+    font-weight: normal;
+    color: fade(@color2, 60%);
+    > run[tag] {
+        color: fade(@color2, 20%);
+    }
+}
+item[data-search] {
+    font-size: @user-font-size;
+    font-style: normal;
+    font-weight: normal;
+    color: fade(@mono-1, 50%);
+    > run[tag] {
+        color: fade(@mono-1, 20%);
+    }
+}
+item[data-due] {
+  > run[tag] {
+    color: fade(@color3, 70%);
+  }
+}
+item[data-overdue] {
+  > run[tag] {
+    color: fade(@color3, 70%);
+  }
+}
+item[data-done] {
+    > run[display] {
+        text-strikethrough: NSUnderlineStyleSingle;
+        text-strikethrough-color: fade(@text-color, 20%);
+        color: fade(@text-color, 20%);
+    }
+    > run[tag] {
+        text-strikethrough: NSUnderlineStyleSingle;
+        text-strikethrough-color: fade(@text-color, 20%);
+        color: fade(@text-color, 20%);
+    }
+}
+run[link] {
+    cursor: pointer;
+    color: fade(@color2, 80%);
+}
+run[lead] {
+    color: fade(@color2, 50%);
+}
+run[link^="filter"] {
+    color: @text-color;
+}
+run[tag] {
+    font-size: @user-font-size;
+    font-style: normal;
+    font-weight: normal;
+    color: fade(@color1, 70%);
+}
