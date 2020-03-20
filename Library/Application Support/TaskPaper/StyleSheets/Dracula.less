@@ -55,13 +55,13 @@ editor {
 item[data-type="project"] {
     font-weight: semi-bold;
     color: @color7;
-    font-size: 16;
+    font-size: @user-font-size + 2;
 }
 item[depth="1"].item[data-type="project"] {
-  font-size: 20;
+  font-size: @user-font-size + 6;
 }
 item[depth="2"].item[data-type="project"] {
-  font-size: 18;
+  font-size: @user-font-size + 4;
 }
 
 item[data-type="task"] {
