@@ -1,0 +1,139 @@
+#!/bin/bash
+
+# Requires nc and jq and for slobs to be running.
+
+
+function getScenes() {
+    query=$(cat <<QUERY
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "getScenes",
+    "params": {
+        "resource": "ScenesService"
+    }
+}    
+QUERY
+)
+
+    echo $query | jq -c -M | nc localhost 28194
+}
+
+function getSceneItem() {
+    sceneResourceId="$1"
+    itemId="$2"
+
+    query=$(cat <<QUERY
+{
+    "jsonrpc": "2.0",
+    "id": 9,
+    "method": "getItem",
+    "params": {
+        "resource": "Scene[\"${sceneResourceId}\"]",
+        "args": ["${itemId}"]
+    }
+}
+QUERY
+)
+
+    echo $query | jq -c -M | nc localhost 28194
+}
+
+function setItemVisibility() {
+    itemResourceId="$1"
+    visibility="$2"
+
+    query=$(cat <<QUERY
+{
+    "jsonrpc": "2.0",
+    "id": 10,
+    "method": "setVisibility",
+    "params": {
+        "resource": ${itemResourceId},
+        "args": [${visibility}]
+    }
+}    
+QUERY
+)
+
+    echo $query | jq -c -M | nc localhost 28194
+
+}
+
+function makeSceneActive() {
+    sceneId="$1"
+
+    query=$(cat <<QUERY
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "makeSceneActive",
+    "params": {
+        "resource": "ScenesService",
+        "args": ["${sceneId}"]
+    }
+}    
+QUERY
+)
+
+    echo $query | jq -c -M | nc localhost 28194
+}
+
+function switchToScene() {
+    sceneName="$1"
+    sceneData=$(getScenes)
+    sceneID=$(echo $sceneData | jq -r ".result[] | select(.name==\"${1}\") | .id")
+    makeSceneActive "${sceneID}"
+}
+
+# Show the secret cover item in the Doing Stuff scene
+if [ "$1" == "showSecretCover" ]; then
+    sceneData=$(getScenes)
+
+    sceneID=$(echo $sceneData | jq -r '.result[] | select(.name=="Doing Stuff") | .id')
+    secretCoverID=$(echo $sceneData | jq -r '.result[] | select(.name=="Doing Stuff") | .nodes[] | select(.name=="Secret") | .sceneItemId')
+
+    itemData=$(getSceneItem ${sceneID} ${secretCoverID})
+
+    setItemVisibility $(echo $itemData | jq '.result.resourceId') "true"
+fi
+
+# Hide the secret cover item in the Doing Stuff scene
+if [ "$1" == "hideSecretCover" ]; then
+    sceneData=$(getScenes)
+
+    sceneID=$(echo $sceneData | jq -r '.result[] | select(.name=="Doing Stuff") | .id')
+    secretCoverID=$(echo $sceneData | jq -r '.result[] | select(.name=="Doing Stuff") | .nodes[] | select(.name=="Secret") | .sceneItemId')
+
+    itemData=$(getSceneItem ${sceneID} ${secretCoverID})
+
+    setItemVisibility $(echo $itemData | jq '.result.resourceId') "false"
+fi
+
+# If no command is specified, do nothing.
+if [ "$1" == "" ]; then
+    echo "no command specified"
+    exit 1
+fi
+
+# Switch to the Info Page scene (+ variants for different contexts)
+if [ "$1" == "infoPage" ]; then
+    switchToScene "Info Page"
+fi
+if [ "$1" == "starting" ]; then
+    cp ~/Documents/Streaming/cweagans2017/textfiles/start-time.txt ~/Documents/Streaming/cweagans2017/textfiles/subtext.txt
+    switchToScene "Info Page"
+fi
+if [ "$1" == "brb" ]; then
+    echo "BE RIGHT BACK" > ~/Documents/Streaming/cweagans2017/textfiles/subtext.txt
+    switchToScene "Info Page"
+fi
+if [ "$1" == "ending" ]; then
+    echo "ENDING SOON. THANKS FOR WATCHING!" > ~/Documents/Streaming/cweagans2017/textfiles/subtext.txt
+    switchToScene "Info Page"
+fi
+
+# Switch to the Doing Stuff scene
+if [ "$1" == "doingStuff" ]; then
+    switchToScene "Doing Stuff"
+fi
