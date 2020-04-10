@@ -110,6 +110,56 @@ if [ "$1" == "hideSecretCover" ]; then
     setItemVisibility $(echo $itemData | jq '.result.resourceId') "false"
 fi
 
+# Hide the secret cover item in the Doing Stuff scene
+if [ "$1" == "showHardwareBackground" ]; then
+    sceneData=$(getScenes)
+
+    sceneID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .id')
+    hardwareBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Hardware background") | .sceneItemId')
+    gameBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Game background") | .sceneItemId')
+    codeBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Code background") | .sceneItemId')
+
+    hardwareItemData=$(getSceneItem ${sceneID} ${hardwareBgID})
+    gameItemData=$(getSceneItem ${sceneID} ${gameBgID})
+    codeItemData=$(getSceneItem ${sceneID} ${codeBgID})
+
+    setItemVisibility $(echo $hardwareItemData | jq '.result.resourceId') "true"
+    setItemVisibility $(echo $gameItemData | jq '.result.resourceId') "false"
+    setItemVisibility $(echo $codeItemData | jq '.result.resourceId') "false"
+fi
+if [ "$1" == "showGameBackground" ]; then
+    sceneData=$(getScenes)
+
+    sceneID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .id')
+    hardwareBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Hardware background") | .sceneItemId')
+    gameBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Game background") | .sceneItemId')
+    codeBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Code background") | .sceneItemId')
+
+    hardwareItemData=$(getSceneItem ${sceneID} ${hardwareBgID})
+    gameItemData=$(getSceneItem ${sceneID} ${gameBgID})
+    codeItemData=$(getSceneItem ${sceneID} ${codeBgID})
+
+    setItemVisibility $(echo $hardwareItemData | jq '.result.resourceId') "false"
+    setItemVisibility $(echo $gameItemData | jq '.result.resourceId') "true"
+    setItemVisibility $(echo $codeItemData | jq '.result.resourceId') "false"
+fi
+if [ "$1" == "showCodeBackground" ]; then
+    sceneData=$(getScenes)
+
+    sceneID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .id')
+    hardwareBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Hardware background") | .sceneItemId')
+    gameBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Game background") | .sceneItemId')
+    codeBgID=$(echo $sceneData | jq -r '.result[] | select(.name=="Info Page") | .nodes[] | select(.name=="Code background") | .sceneItemId')
+
+    hardwareItemData=$(getSceneItem ${sceneID} ${hardwareBgID})
+    gameItemData=$(getSceneItem ${sceneID} ${gameBgID})
+    codeItemData=$(getSceneItem ${sceneID} ${codeBgID})
+
+    setItemVisibility $(echo $hardwareItemData | jq '.result.resourceId') "false"
+    setItemVisibility $(echo $gameItemData | jq '.result.resourceId') "false"
+    setItemVisibility $(echo $codeItemData | jq '.result.resourceId') "true"
+fi
+
 # If no command is specified, do nothing.
 if [ "$1" == "" ]; then
     echo "no command specified"
