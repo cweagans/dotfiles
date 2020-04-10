@@ -70,5 +70,6 @@
         "editor.wordBasedSuggestions": false,
         "files.insertFinalNewline": true
     },
-    "todo-tree.tree.showScanModeButton": false
+    "todo-tree.tree.showScanModeButton": false,
+    "go.useLanguageServer": true
 }
