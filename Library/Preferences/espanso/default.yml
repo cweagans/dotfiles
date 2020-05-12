@@ -19,6 +19,16 @@ matches:
         type: shell
         params:
           cmd: "curl https://icanhazip.com"
+          trim: true
+
+  - trigger: "..unixtime"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "date +%s"
+          trim: true
 
   - trigger: "..zi"
     replace: |
