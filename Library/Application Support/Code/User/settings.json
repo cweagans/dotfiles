@@ -71,5 +71,7 @@
         "files.insertFinalNewline": true
     },
     "todo-tree.tree.showScanModeButton": false,
-    "go.useLanguageServer": true
+    "go.useLanguageServer": false,
+    "erd-preview.dotPath": "/usr/local/bin/dot",
+    "erd-preview.erdPath": "/usr/local/bin/erd-go"
 }
