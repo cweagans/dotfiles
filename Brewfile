@@ -6,8 +6,13 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "kaishuu0123/erd-go"
+tap "mutagen-io/mutagen"
 brew "sqlite"
 brew "ansible"
+brew "bats-core"
+brew "node"
+brew "bitwarden-cli"
 brew "cloc"
 brew "cocoapods"
 brew "composer"
@@ -15,14 +20,25 @@ brew "docker-machine", link: false
 brew "docker-machine-driver-xhyve"
 brew "docker-machine-nfs"
 brew "git"
+brew "git-flow"
+brew "gnu-sed"
 brew "gnupg"
 brew "go"
+brew "graphviz"
 brew "hugo"
+brew "imagemagick"
 brew "jq"
 brew "mas"
 brew "mysql-client"
+brew "neovim"
 brew "nss"
 brew "pandoc"
+brew "php"
+brew "ripgrep"
+brew "s3cmd"
+brew "sassc"
+brew "scons"
+brew "telnet"
 brew "trash"
 brew "watch"
 brew "wget"
@@ -30,16 +46,18 @@ brew "yadm"
 brew "dart-lang/dart/dart"
 brew "drud/ddev/ddev"
 brew "federico-terzi/espanso/espanso"
+brew "kaishuu0123/erd-go/erd-go"
+brew "mutagen-io/mutagen/mutagen", args: ["devel"]
 cask "alfred"
 cask "android-studio"
 cask "arduino"
 cask "authy"
+cask "autodesk-fusion360"
 cask "avibrazil-rdm"
 cask "balsamiq-mockups"
 cask "bartender"
 cask "calibre"
 cask "cyberduck"
-cask "dialpad"
 cask "discord"
 cask "docker"
 cask "dropbox"
@@ -50,29 +68,41 @@ cask "font-roboto"
 cask "google-chrome"
 cask "hammerspoon"
 cask "hex-fiend"
+cask "jqbx"
+cask "kiibohd-configurator"
 cask "kitty"
 cask "logitech-myharmony"
 cask "logitech-options"
 cask "nvidia-geforce-now"
 cask "obs"
+cask "openconnect-gui"
 cask "openemu"
+cask "parallels"
 cask "paw"
+cask "postbox"
+cask "proxyman"
 cask "prusaslicer"
 cask "rescuetime"
 cask "scrivener"
 cask "sequel-pro"
-cask "soduto"
 cask "spotify"
 cask "steam"
+cask "streamlabs-obs"
 cask "synology-drive"
+cask "taskpaper"
+cask "vimr"
 cask "visual-studio-code"
 cask "vlc"
 cask "zoomus"
+mas "Affinity Designer", id: 824171161
+mas "Affinity Photo", id: 824183456
+mas "Affinity Publisher", id: 881418622
 mas "Bitwarden", id: 1352778147
 mas "Bulldock Browser", id: 1203425759
 mas "com.codeBuilder.SQL-Studio", id: 597182608
 mas "Final Cut Pro", id: 424389933
 mas "GarageBand", id: 682658836
+mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
 mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
@@ -86,9 +116,9 @@ mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Pocket", id: 568494494
 mas "Sequence Diagram", id: 1195426709
-mas "Simplenote", id: 692867256
 mas "Slack", id: 803453959
 mas "Todoist", id: 585829637
 mas "Twitter", id: 1482454543
 mas "Vectornator Pro", id: 1470168007
+mas "Webcam Settings", id: 533696630
 mas "Xcode", id: 497799835
