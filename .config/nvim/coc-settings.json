@@ -1,0 +1,18 @@
+{
+	"languageserver": {
+		"intelephense": {
+			"command": "intelephense",
+			"args": ["--stdio"],
+			"filetypes": ["php"],
+			"initializationOptions": {
+				"storagePath": "/tmp/intelephense"
+			}
+		},
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"disableWorkspaceFolders": true,
+			"filetypes": ["go"]
+		}
+	}
+}
