@@ -18,6 +18,7 @@
 " 	- Get coc.nvim working with lua language server
 " 	- Get coc.nvim working with bash language server
 " 	- Get coc.nvim working with docker language server
+" 	- Go through https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim to see if there's anything of interest
 "
 
 " Environment setup {{{
@@ -33,6 +34,13 @@
 		" Normally, we would avoid changing envvars, but since this is a fairly
 		" standard one, we'll do it just this once.
 		let $XDG_CONFIG_HOME = $HOME . '/.config'
+	endif
+
+	" Make sure that my $PATH is set correctly. When launching vimr from
+	" Alfred, my $PATH is just set to the defaults, so various things
+	" don't work as expected.
+	if $PATH !~ "/Users/cweagans/Code/go"
+		let $PATH = '/usr/local/opt/llvm/bin:/usr/local/opt/mysql-client/bin:/Users/cweagans/bin:/Users/cweagans/.config/composer/vendor/bin:/Users/cweagans/Code/go/bin:/Users/cweagans/Code/npm/bin:/Users/cweagans/Code/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/kitty.app/Contents/MacOS'
 	endif
 
 	" Finally, we'll define the root directory of the config.
@@ -191,8 +199,6 @@
 		" Turn off extra GUI stuff.
 		set guioptions=
 
-		" Set the font
-
 		" Use true colors if possible.
 		if (has('termguicolors'))
 			set termguicolors
@@ -213,6 +219,22 @@
 
 	" Draw a vertical ruler for formatting assistance.
 	set colorcolumn=80
+
+	" Don't show the mode in the second status line. Airline takes care of
+	" that.
+	set noshowmode
+
+	" If a file has been changed outside of vim, automatically reload it.
+	set autoread
+
+	" autoread only triggers if an external command is run, so we'll fake
+	" it with checktime on several common events.
+	autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
+		\ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+
+	" When autoread kicks in, show a warning message.
+	autocmd FileChangedShellPost *
+		\ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 	" Set split behavior.
 	set splitright  " vsplit opens new window to the right
@@ -322,6 +344,16 @@
 	" Turn on front matter support for markdown
 	let g:vim_markdown_frontmatter = 1
 
+	" Automatic, smart link generation for vimwiki.
+	function! VwGenerateLinks()
+		if expand('%:p') =~ $HOME . '/Dropbox/Wiki/Journal'
+			VimwikiDiaryGenerateLinks
+		elseif expand('%:p') == $HOME . '/Dropbox/Wiki/index.md'
+			VimwikiGenerateLinks
+		else
+			VimwikiGenerateLinks expand('%:p:h:t') . '/*.md'
+		endif
+	endfunction
 " }}}
 
 
@@ -375,4 +407,12 @@
 	nnoremap <leader>mp :MarkdownPreview<CR>
 	nnoremap <leader>mps :MarkdownPreviewStop<CR>
 	nnoremap <leader>df :call ToggleGoyo()<CR>
+
+	" vimwiki
+	nnoremap <leader>wgl :call VwGenerateLinks()<CR>
+
+	" coc.nvim
+	nmap <silent> <leader>gd <Plug>(coc-definition)
+	nmap <silent> <leader>gr <Plug>(coc-references)
+	
 " }}}
