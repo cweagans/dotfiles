@@ -54,6 +54,12 @@ end)
 hs.hotkey.bind({"ctrl", "alt"}, "t", function()
     moveWindow("offscreenRight")
 end)
+hs.hotkey.bind({"ctrl", "alt"}, "c", function()
+    moveWindow("halfLeft")
+end)
+hs.hotkey.bind({"ctrl", "alt"}, "b", function()
+    moveWindow("halfRight")
+end)
 
 
 function moveWindow(position)
@@ -86,6 +92,14 @@ function moveWindow(position)
     elseif position == "offscreenRight" then
         newRect.x = 3840
         newRect.w = 1280
+        newRect.h = 1920
+    elseif position == "halfLeft" then
+        newRect.x = 0
+        newRect.w = 2560
+        newRect.h = 1920
+    elseif position == "halfRight" then
+        newRect.x = 2560
+        newRect.w = 2560
         newRect.h = 1920
     end
 
