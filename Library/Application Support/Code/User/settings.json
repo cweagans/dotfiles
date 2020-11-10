@@ -37,7 +37,8 @@
     "window.titleBarStyle": "native",
     "files.associations": {
         "*.module": "php",
-        "*.inc": "php"
+        "*.inc": "php",
+        "*.theme": "php"
     },
     "window.zoomLevel": 0,
     "php.suggest.basic": false,
@@ -73,5 +74,7 @@
     "todo-tree.tree.showScanModeButton": false,
     "go.useLanguageServer": false,
     "erd-preview.dotPath": "/usr/local/bin/dot",
-    "erd-preview.erdPath": "/usr/local/bin/erd-go"
+    "erd-preview.erdPath": "/usr/local/bin/erd-go",
+    "extensions.ignoreRecommendations": false,
+    "liveServer.settings.donotShowInfoMsg": true
 }
