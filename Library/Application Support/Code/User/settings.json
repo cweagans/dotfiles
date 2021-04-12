@@ -40,7 +40,6 @@
         "*.inc": "php",
         "*.theme": "php"
     },
-    "window.zoomLevel": 0,
     "php.suggest.basic": false,
     "editor.quickSuggestions": {
         "other": true,
@@ -57,7 +56,6 @@
         "**/bower_components/**",
     ],
     "go.formatTool": "goimports",
-    "workbench.activityBar.visible": true,
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -72,9 +70,14 @@
         "files.insertFinalNewline": true
     },
     "todo-tree.tree.showScanModeButton": false,
-    "go.useLanguageServer": false,
     "erd-preview.dotPath": "/usr/local/bin/dot",
     "erd-preview.erdPath": "/usr/local/bin/erd-go",
     "extensions.ignoreRecommendations": false,
-    "liveServer.settings.donotShowInfoMsg": true
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }
