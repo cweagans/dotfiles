@@ -21,5 +21,6 @@ ensurePath /Users/cweagans/Code/npm/bin
 ensurePath /Users/cweagans/Code/flutter/bin
 ensurePath /usr/local/opt/mysql-client/bin
 ensurePath /usr/local/opt/llvm/bin
+ensurePath /Users/cweagans/Code/esp-toolchain/xtensa-esp32-elf/bin
 
 echo " -> WARNING: Apps may need to be manually restarted to see the new contents of \$PATH."
