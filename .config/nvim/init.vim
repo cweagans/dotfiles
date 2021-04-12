@@ -5,6 +5,10 @@
 " configuration. It may or may not be useful for you as it's heavily tailored
 " to how I want my vim to work.
 "
+" Things I want to fix:
+"   * Comments should not be trying to do autocomplete. I don't want help
+"     writing prose.
+"
 
 " We need a plugin manager to be able to do anything as vim starts up,
 " so we'll make sure we have one available here.
@@ -19,6 +23,7 @@ call plug#begin(stdpath('config') . '/plugins')
 	" Defaults
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'tyru/caw.vim'
+	Plug 'airblade/vim-rooter'
 
 	" UI
 	Plug 'dracula/vim', { 'as': 'dracula' }
@@ -27,6 +32,8 @@ call plug#begin(stdpath('config') . '/plugins')
 	Plug 'junegunn/fzf', {'do': './install --bin'}
 	Plug 'junegunn/fzf.vim'
 	Plug 'moll/vim-bbye'
+	Plug 'tpope/vim-vinegar'
+	Plug 'tpope/vim-obsession'
 
 	" Git integration
 	Plug 'jreybert/vimagit'
@@ -36,6 +43,16 @@ call plug#begin(stdpath('config') . '/plugins')
 	Plug 'sheerun/vim-polyglot'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+	Plug 'puremourning/vimspector'
+	" Plug 'nvim-treesitter/nvim-treesitter'  " treesitter doesn't work unless
+	" I"m running a nightly release or nvim 0.5 or better (which isn't out yet).
+	
+	" New stuff
+	Plug 'TaDaa/vimade'
+	Plug 'easymotion/vim-easymotion'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+	Plug 'voldikss/vim-floaterm'
+	Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " When there are new plugins, the color scheme should be activated
@@ -112,8 +129,12 @@ set scrolljump=5
 " Minimum visible lines to keep above or below the cursor.
 set scrolloff=3
 
-" Disable python2 support in Neovim
-let g:loaded_python_provider = 0
+" Prefer Python 3 over Python 2
+if has('python')
+	set pyx=2
+elseif has('python3')
+	set pyx=3
+endif
 
 " Set the color scheme to dracula
 colorscheme dracula
@@ -168,6 +189,20 @@ autocmd FileChangedShellPost *
 set splitright  " vsplit opens new window to the right
 set splitbelow  " split opens new window below
 
+" Disable unwanted builtin plugins
+let g:loaded_gzip = 1
+let g:loaded_tar = 1
+let g:loaded_tarPlugin = 1
+let g:loaded_zip = 1
+let g:loaded_zipPlugin = 1
+let g:loaded_getscript = 1
+let g:loaded_getscriptPlugin = 1
+let g:loaded_vimball = 1
+let g:loaded_vimballPlugin = 1
+let g:loaded_2html_plugin = 1
+let g:loaded_logiPat = 1
+let g:loaded_rrhelper = 1
+
 " Turn on Airline/Fugitive integration.
 let g:airline#extensions#branch#enabled = 1
 
@@ -175,6 +210,19 @@ let g:airline#extensions#branch#enabled = 1
 " switch buffers or tabs, focus the GUI, save a buffer, etc. There's no need
 " to continuously run `git status` every four seconds.
 let g:gitgutter_realtime = 0
+
+" floaterm width should be 80%
+let g:floaterm_width = 0.8
+
+" floaterm height should be 50%
+let g:floaterm_height = 0.5
+
+" floaterm should be positioned at the top of the screen.
+let g:floaterm_position = 'top'
+
+" since it's unlikely that i'll use multiple floating terms, I'll just title
+" it Terminal
+let g:floaterm_title = 'Terminal'
 
 " Always show the signcolumn. Otherwise, it would shift the text every
 " time diagnostics appear/become resolved.
@@ -198,6 +246,9 @@ augroup END
 " Do not register an omnifunc for vim-go. Instead, it'll run through
 " coc.nvim
 let g:go_code_completion_enabled = 0
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Yank from the cursor to the end of the line to be consistent with C and D.
 nnoremap Y y$
@@ -234,29 +285,38 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " caw.vim comment toggle
-nnoremap <leader>/ <Plug>(caw:hatpos:toggle)
-vnoremap <leader>/ <Plug>(caw:hatpos:toggle)
+nmap <D-/> <Plug>(caw:hatpos:toggle)
+vmap <D-/> <Plug>(caw:hatpos:toggle)
 
 " Use fzf
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>s :Ack<space>
+nnoremap <leader>s :Rg<space>
+
+" netrw in cwd
+nnoremap <leader>d :Explore<CR>
 
 " coc.nvim
 nmap <silent> <leader>gd <Plug>(coc-definition)
 nmap <silent> <leader>gr <Plug>(coc-references)
+nmap <silent> <leader>gh :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" markdown preview toggle
+nmap <silent> <leader>mp <Plug>MarkdownPreviewToggle
+
+" toggle floating terminal
+nmap <silent> <leader>t :FloatermToggle<CR>
+tmap <silent> <leader>t <C-\><C-n>:FloatermToggle<CR>
 
 " helper for editing my vim config
 nnoremap <leader>vc :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>vr :source ~/.config/nvim/init.vim<CR>
-
-
-"
-"Current TODO:
-" * Build a plugin that lets me :c projectname to switch to ~/Code/projectname
-"   and load the previous session (which should live somewhere other than the
-"   project dir)
-" * If I open any file inside of any of my projects (dir inside ~/Code), set
-"   the cwd to the project root
-" * tpope/obsession to handle auto-saving a session?
-"
