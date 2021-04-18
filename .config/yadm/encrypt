@@ -1,2 +1,2 @@
-.exercism.json
 .ssh/id_*
+.config/exercism/user.json
