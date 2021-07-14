@@ -52,7 +52,7 @@
   versiontag = v
 
 [push]
-  default = simple
+	default = current
 
 [rebase]
   autostash = true
