@@ -12,7 +12,6 @@
         80
     ],
     "editor.smoothScrolling": true,
-    "workbench.colorTheme": "Dracula",
     "workbench.settings.editor": "json",
     "files.autoSave": "onWindowChange",
     "files.insertFinalNewline": true,
@@ -20,8 +19,6 @@
     "terminal.explorerKind": "external",
     "terminal.external.linuxExec": "kitty",
     "vim.easymotion": true,
-    "vim.easymotionMarkerFontFamily": "Input Mono",
-    "vim.easymotionMarkerFontSize": "15",
     "vim.hlsearch": true,
     "vim.leader": ",",
     "vim.useCtrlKeys": false,
@@ -29,8 +26,7 @@
     "go.gopath": "~/Code/go",
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "right",
-    "editor.tabCompletion": true,
-    "ansible.autocompletion": false,
+    "editor.tabCompletion": "on",
     "workbench.editor.tabCloseButton": "left",
     "workbench.editor.showTabs": false,
     "git.autofetch": true,
@@ -69,15 +65,30 @@
         "editor.wordBasedSuggestions": false,
         "files.insertFinalNewline": true
     },
-    "todo-tree.tree.showScanModeButton": false,
     "erd-preview.dotPath": "/usr/local/bin/dot",
     "erd-preview.erdPath": "/usr/local/bin/erd-go",
     "extensions.ignoreRecommendations": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ]
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "files.watcherExclude": {
+        "**/vendor/**": true
+    },
+    "dart.checkForSdkUpdates": false,
+    "terraform.languageServer": {
+        "external": true,
+        "pathToBinary": "/usr/local/bin/terraform-ls",
+        "args": [
+            "serve"
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
+    },
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.previewFlutterUiGuides": true,
+    "dart.debugExternalLibraries": true,
+    "dart.debugSdkLibraries": false,
+    "redhat.telemetry.enabled": false,
+    "docker.showStartPage": false,
+    "workbench.colorTheme": "Nord",
 }
