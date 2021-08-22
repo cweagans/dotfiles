@@ -13,9 +13,6 @@ if ! zgenom saved; then
 	# Jump to project directories.
 	zgenom load cweagans/c
 
-	# Directory jumping
-	zgenom load rupa/z
-
 	# Autoset env when cd'ing into a directory
 	zgenom load Tarrasch/zsh-autoenv
 
