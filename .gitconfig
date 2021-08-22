@@ -1,7 +1,7 @@
 [user]
   email = me@cweagans.net
   name = Cameron Eagans
-  signingkey = 0x651F2F16CFF0D53E
+	signingkey = E46A8624292939EF4E383ACBB3F1C63C3DCE141E
 
 [github]
   user = cweagans
@@ -61,3 +61,9 @@
   cmd = code --wait --diff $LOCAL $REMOTE
 [init]
 	defaultBranch = main
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
+[ghq]
+	root = /Users/cweagans/Code
