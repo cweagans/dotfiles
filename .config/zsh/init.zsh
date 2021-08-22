@@ -1,29 +1,29 @@
-# Install zgen if it's not already present.
-if [[ ! -e ~/.config/zsh/zgen ]]; then
-	git clone https://github.com/tarjoilija/zgen.git ~/.config/zsh/zgen
+# Install zgenom if it's not already present.
+if [[ ! -e ~/.config/zsh/zgenom ]]; then
+	git clone https://github.com/jandamm/zgenom.git ~/.config/zsh/zgenom
 fi
 
-export ZGEN_DIR=~/.config/zsh/zgen
-source ~/.config/zsh/zgen/zgen.zsh
+export ZGENOM_DIR=~/.config/zsh/zgenom
+source ~/.config/zsh/zgenom/zgenom.zsh
 
-if ! zgen saved; then
+if ! zgenom saved; then
 	# Geometry prompt
-	zgen load geometry-zsh/geometry
+	zgenom load geometry-zsh/geometry
 
 	# Jump to project directories.
-	zgen load cweagans/c
+	zgenom load cweagans/c
 
 	# Directory jumping
-	zgen load rupa/z
+	zgenom load rupa/z
 
 	# Autoset env when cd'ing into a directory
-	zgen load Tarrasch/zsh-autoenv
+	zgenom load Tarrasch/zsh-autoenv
 
 	# Misc completion
-	zgen load zsh-users/zsh-completions
+	zgenom load zsh-users/zsh-completions
 
-	# Write zgen's init.zsh
-	zgen save
+	# Write zgenom's init.zsh
+	zgenom save
 fi
 
 for file in ~/.config/zsh/conf/***/*.zsh;
