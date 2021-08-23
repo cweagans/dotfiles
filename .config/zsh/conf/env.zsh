@@ -10,3 +10,6 @@ export XDG_DATA_HOME=$HOME/.local/share
 # This is needed for yadm encrypt to work on mac for some reason?
 # https://github.com/TheLocehiliosan/yadm/issues/33#issuecomment-274167682
 export GPG_TTY=$(tty)
+
+# Add a newline in the Geometry prompt
+GEOMETRY_PROMPT=(geometry_newline $GEOMETRY_PROMPT)
