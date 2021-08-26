@@ -7,6 +7,9 @@ export ZGENOM_DIR=~/.config/zsh/zgenom
 source ~/.config/zsh/zgenom/zgenom.zsh
 
 if ! zgenom saved; then
+	# Tab titles
+	zgenom load jreese/zsh-titles
+
 	# Geometry prompt
 	zgenom load geometry-zsh/geometry
 
