@@ -34,7 +34,8 @@
     "files.associations": {
         "*.module": "php",
         "*.inc": "php",
-        "*.theme": "php"
+        "*.theme": "php",
+        "*.hl7": "hl7"
     },
     "php.suggest.basic": false,
     "editor.quickSuggestions": {
@@ -91,4 +92,5 @@
     "redhat.telemetry.enabled": false,
     "docker.showStartPage": false,
     "workbench.colorTheme": "Nord",
+    "go.toolsManagement.autoUpdate": true,
 }
