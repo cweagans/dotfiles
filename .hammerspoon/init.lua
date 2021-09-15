@@ -22,17 +22,17 @@ end)
 
 -- Ctrl + Space should toggle kitty (terminal) visibility.
 hs.hotkey.bind({"ctrl"}, "space", function()
-    local app = hs.application.get("kitty")
+    local app = hs.application.get("iTerm2")
     if app then
         if not app:mainWindow() then
-            app:selectMenuItem({"kitty", "New OS window"})
+            app:selectMenuItem({"iTerm2", "New OS window"})
         elseif app:isFrontmost() then
             app:hide()
         else
             app:activate()
         end
     else
-        hs.application.launchOrFocus("kitty")
+        hs.application.launchOrFocus("iTerm2")
     end
 end)
 
