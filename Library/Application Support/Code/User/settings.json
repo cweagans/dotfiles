@@ -35,7 +35,8 @@
         "*.module": "php",
         "*.inc": "php",
         "*.theme": "php",
-        "*.hl7": "hl7"
+        "*.hl7": "hl7",
+        "*_defconfig": "dotenv"
     },
     "php.suggest.basic": false,
     "editor.quickSuggestions": {
