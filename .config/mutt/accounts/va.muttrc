@@ -1,0 +1,15 @@
+set spoolfile = "+VA/Inbox"
+set from = "cameron.eagans@va.gov"
+set sendmail = "msmtpq -a VA"
+set postponed = "+VA/Drafts"
+set mbox = "+VA/Archive"
+set trash = "+VA/Trash"
+set signature = "~/.config/mutt/signatures/plain.sig"
+
+macro index i "<shell-escape>~/bin/mail-sync -a VA<enter>"
+
+macro index,pager a "<save-message>=VA/Archive<enter>"
+macro index,pager A "<tag-prefix><save-message>=VA/Archive<enter>"
+
+set copy=yes
+set record="~/Mail/VA/Sent"

@@ -1,0 +1,83 @@
+defaults
+logfile ~/Mail/msmtp.log
+
+account Gmail
+    host smtp.gmail.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cweagans@gmail.com
+    user cweagans@gmail.com
+    passwordeval "security find-generic-password -wl mailsync.Gmail"
+
+account Personal
+    host smtp.migadu.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from me@cweagans.net
+    user me@cweagans.net
+    passwordeval "security find-generic-password -wl mailsync.Personal"
+
+account Agilesix
+    host smtp.gmail.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron.eagans@agile6.com
+    user cameron.eagans@agile6.com
+    passwordeval "security find-generic-password -wl mailsync.Agilesix"
+
+account Digitaldeployment
+    host smtp.gmail.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron@digitaldeployment.com
+    user cameron@digitaldeployment.com
+    passwordeval "security find-generic-password -wl mailsync.Digitaldeployment"
+
+account Pineconegrove
+    host smtp.migadu.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron@pineconegrove.com
+    user cameron@pineconegrove.com
+    passwordeval "security find-generic-password -wl mailsync.Pineconegrove"
+
+account Netherwire
+    host smtp.migadu.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron@netherwire.com
+    user cameron@netherwire.com
+    passwordeval "security find-generic-password -wl mailsync.Netherwire"
+
+account Eagansfoundation
+    host smtp.migadu.com
+    port 587
+    tls on
+    protocol smtp
+    auth on
+    from cameron@eagans.foundation
+    user cameron@eagans.foundation
+    passwordeval "security find-generic-password -wl mailsync.Eagansfoundation"
+
+account VA
+    host localhost
+    port 1025
+    tls off
+    protocol smtp
+    auth login
+    from cameron.eagans@va.gov
+    user cameron.eagans@va.gov
+    passwordeval "security find-generic-password -wl mailsync.VA"
+

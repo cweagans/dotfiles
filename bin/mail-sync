@@ -1,51 +1,106 @@
 #!/usr/bin/env bash
 
-#
-# Usage:
-# ./mail-sync [account]
-#
-# If account is ommitted, all accounts will be synced. If account is specified,
-# only the specified account will be synced.
-#
-# Afterward, all mail will be indexed and the argos indicators will be updated.
-#
+set -Eeuo pipefail
+trap cleanup SIGINT SIGTERM ERR EXIT
+
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
+
+usage() {
+  cat <<EOF
+Usage: $(basename "${BASH_SOURCE[0]}") [-h] [-a account]
+
+If account is omitted, all accounts will be synced. If account is specified,
+only the specified account will be synced.
+
+Afterward, all mail will be indexed.
+
+Available options:
+
+-h, --help      Print this help and exit
+-a, --account   Specify sync for a single account
+EOF
+  exit
+}
+
+clear_lock() {
+  [ -e ~/.mail-sync.lock ] && rm ~/.mail-sync.lock
+}
+
+cleanup() {
+  trap - SIGINT SIGTERM ERR EXIT
+  clear_lock
+}
+
+msg() {
+  echo >&2 -e "${1-}"
+}
+
+die() {
+  local msg=$1
+  local code=${2-1} # default exit status 1
+  msg "$msg"
+  exit "$code"
+}
+
+parse_params() {
+  account='all'
+
+  while :; do
+    case "${1-}" in
+    -h | --help) usage ;;
+    -a | --account)
+      account="${2-}"
+      shift
+      ;;
+    -?*) die "Unknown option: $1" ;;
+    *) break ;;
+    esac
+    shift
+  done
+
+  args=("$@")
+
+  return 0
+}
+
+parse_params "$@"
+
+MAIL_DIR="$HOME/Mail"
+LOG="$MAIL_DIR/mail-sync.log"
+
+# Log all output.
+exec &> >(while read line; do echo "[$(date)] $line" | tee -a "$LOG"; done)
 
 # Ensure there's an internet connection.
-if ! ~/bin/check-connection; then
-  echo "No internet connection available. Skipping sync."
-  sleep 1
-  exit 0
+if ! check-connection; then
+  die "No internet connection available. Skipping sync."
 fi
 
 # Acquire a lock.
-[ -f ~/.mail-sync.lock ] && echo "Another sync is already running." && sleep 1 && exit 0
+[ -e ~/.mail-sync.lock ] && die "Another sync is already running."
 touch ~/.mail-sync.lock
 
-# Send any queued email.
-~/bin/msmtpq-flush
+# Send any queued email. || true so that it doesn't cause this script to exit
+# if there isn't any queued mail to send.
+~/bin/msmtpq-flush || true
 
 # Ensure individual account maildirs exist.
-[ -d ~/.cache/mail ] || mkdir ~/.cache/mail
-[ -d ~/.cache/mail/Gmail ] || mkdir ~/.cache/mail/Gmail
-[ -d ~/.cache/mail/Personal ] || mkdir ~/.cache/mail/Personal
-[ -d ~/.cache/mail/Digitaldeployment ] || mkdir ~/.cache/mail/Digitaldeployment
-[ -d ~/.cache/mail/Pineconegrove ] || mkdir ~/.cache/mail/Pineconegrove
-[ -d ~/.cache/mail/Netherwire ] || mkdir ~/.cache/mail/Netherwire
-[ -d ~/.cache/mail/Eagansfoundation ] || mkdir ~/.cache/mail/Eagansfoundation
+[ -d ~/Mail ] || mkdir ~/Mail
+[ -d ~/Mail/Gmail ] || mkdir ~/Mail/Gmail
+[ -d ~/Mail/Personal ] || mkdir ~/Mail/Personal
+[ -d ~/Mail/Agilesix ] || mkdir ~/Mail/Agilesix
+[ -d ~/Mail/Digitaldeployment ] || mkdir ~/Mail/Digitaldeployment
+[ -d ~/Mail/Pineconegrove ] || mkdir ~/Mail/Pineconegrove
+[ -d ~/Mail/Netherwire ] || mkdir ~/Mail/Netherwire
+[ -d ~/Mail/Eagansfoundation ] || mkdir ~/Mail/Eagansfoundation
 
 # Sync everything if an account wasn't specified. Otherwise, sync the specified account.
-if [ -z ${1+x} ]; then
+if [ "$account" = "all" ]; then
     mbsync --all --verbose
 else
-    mbsync --verbose $1
+    mbsync --verbose $account
 fi
 
 # Index all the mail.
-mu index --maildir ~/.cache/mail
-
-# Update the menu bar display.
-touch ~/.config/argos/maildir.sh
-
-# Clear the lock.
-rm ~/.mail-sync.lock
+mu index
 

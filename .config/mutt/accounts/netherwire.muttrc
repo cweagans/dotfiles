@@ -1,0 +1,17 @@
+set spoolfile = "+Netherwire/Inbox"
+set from = "cameron@netherwire.com"
+set sendmail = "msmtpq -a Netherwire"
+set postponed = "+Netherwire/Drafts"
+set mbox = "+Netherwire/Archive"
+set trash = "+Netherwire/Trash"
+set signature = "~/.config/mutt/signatures/plain.sig"
+
+macro index i "<shell-escape>~/bin/mail-sync -a Netherwire<enter>"
+
+macro index,pager a "<save-message>=Netherwire/Archive<enter>"
+macro index,pager A "<tag-prefix><save-message>=Netherwire/Archive<enter>"
+
+# Migadu doesn't save a copy of sent messages in Sent when you send them
+# through SMTP.
+set copy=yes
+set record="~/Mail/Netherwire/Sent"

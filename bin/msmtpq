@@ -1,10 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 set -e
 set -o pipefail
 
-QUEUE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/mail.queue"
+MAIL_DIR="$HOME/Mail"
+QUEUE_DIR="$MAIL_DIR/Outbox"
 
-[[ -d "$QUEUE_DIR" ]] || mkdir -m0700 -p "$QUEUE_DIR"
+[[ -d "$QUEUE_DIR" ]] || mkdir -p "$QUEUE_DIR"
 
 if [[ ! -w "$QUEUE_DIR" ]]; then
     echo "Insufficient privileges to write to queue."
@@ -27,7 +29,7 @@ cat > "$TMP_DIR/message"
 while [[ -d "$TMP_DIR" ]]; do
     MESSAGE_DIR="$(date +"$HOSTNAME-%s%N-P$$.mail")"
     # Atomic rename.
-    mv -n -T "$TMP_DIR" "$QUEUE_DIR/$MESSAGE_DIR"
+    mv -n "$TMP_DIR" "$QUEUE_DIR/$MESSAGE_DIR"
 done
 
 trap - EXIT

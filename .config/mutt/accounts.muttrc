@@ -1,0 +1,22 @@
+# Account settings
+folder-hook Gmail/* source ~/.config/mutt/accounts/gmail.muttrc
+folder-hook Personal/* source ~/.config/mutt/accounts/personal.muttrc
+folder-hook Agilesix/* source ~/.config/mutt/accounts/agilesix.muttrc
+folder-hook Digitaldeployment/* source ~/.config/mutt/accounts/digitaldeployment.muttrc
+folder-hook Pineconegrove/* source ~/.config/mutt/accounts/pineconegrove.muttrc
+folder-hook Netherwire/* source ~/.config/mutt/accounts/netherwire.muttrc
+folder-hook Eagansfoundation/* source ~/.config/mutt/accounts/eagansfoundation.muttrc
+folder-hook VA/* source ~/.config/mutt/accounts/va.muttrc
+
+# Set up macros to change accounts
+macro generic "1" "<change-folder> =Gmail/Inbox<enter>"
+macro generic "2" "<change-folder> =Personal/Inbox<enter>"
+macro generic "3" "<change-folder> =Agilesix/Inbox<enter>"
+macro generic "4" "<change-folder> =Digitaldeployment/Inbox<enter>"
+macro generic "5" "<change-folder> =Pineconegrove/Inbox<enter>"
+macro generic "6" "<change-folder> =Netherwire/Inbox<enter>"
+macro generic "7" "<change-folder> =Eagansfoundation/Inbox<enter>"
+macro generic "8" "<change-folder> =VA/Inbox<enter>"
+
+# Default mailbox
+source ~/.config/mutt/accounts/gmail.muttrc
