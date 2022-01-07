@@ -106,3 +106,7 @@ function moveWindow(position)
     currentWindow:setFrame(newRect, 0)
 
 end
+
+-- Load other configuration.
+require "sound"
+require "mail"
