@@ -1,2 +1,3 @@
 .ssh/id_*
+.ssh/va_config
 .config/exercism/user.json
