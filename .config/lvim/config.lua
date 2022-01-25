@@ -9,20 +9,11 @@
 --    * gitlinker.nvim: https://github.com/ruifm/gitlinker.nvim
 --    * diffview.nvim: https://github.com/sindrets/diffview.nvim
 -- * Config
---    * Add togglable floating term support:
---      * Normal terminal
---      * Lazygit? Or maybe a floating window for neogit (which is like magit)
---    * Add phpstan diagnostics for PHP/Drupal projects
---    * Add terraform-related null ls config
---      * terraform-ls is installed
+--    * Consider adding neogit (which is like magit for neovim)
 --    * Add ansible-related null ls config
 --      * ansible-lint is installed
---    * Add bash-related null ls config
---      * shellcheck is now installed
 --    * Get full DAP support working for PHP and Go and Tinygo
---      * Include UI
---      * Include https://github.com/theHamsta/nvim-dap-virtual-text
---      * Include https://github.com/Pocco81/DAPInstall.nvim
+--      * Plugins are already installed
 --    * Enable other framework-specific stubs
 --      * Wordpress
 --      * Laravel
@@ -30,9 +21,6 @@
 --      * godot integration: https://www.reddit.com/r/neovim/comments/oiani5/need_help_setting_up_native_lsp_for_godot/
 --      * godot integration: https://github.com/habamax/vim-godot
 --    * Build a telescope plugin to configure a project for Tinygo
---    * Add go-related null ls config
---      * Probably also set up https://github.com/ray-x/go.nvim
---    * Add lua-related null ls config
 --    * Rewrite asyncdo.vim and asynctasks.vim in Lua and allow Telescope-style third party registration of tasks
 --      * Want to support Makefile, Taskfile, composer, npm, etc. AND any externally defined task discovery things
 --      * Also support language-standard things (e.g. go build/run/etc)
@@ -54,6 +42,7 @@ require('user.lualine')
 require('user.null_ls')
 require('user.options')
 require('user.project_type')
+require('user.toggleterm')
 require('user.trouble')
 
 -- Set the leader to comma
@@ -64,6 +53,13 @@ lvim.plugins = {
   {"goolord/alpha-nvim"},
   {"gpanders/editorconfig.nvim"},
   {"arkav/lualine-lsp-progress"},
+  {"andersevenrud/nordic.nvim"},
+  {"folke/trouble.nvim"},
+  {"~/.config/lvim/plugins/telescope-task.nvim"},
+  {"akinsho/flutter-tools.nvim"},
+  {"ray-x/go.nvim"},
+  {"rcarriga/nvim-dap-ui"},
+  {"theHamsta/nvim-dap-virtual-text"},
   {
     "chentau/marks.nvim",
     config = function()
@@ -72,9 +68,6 @@ lvim.plugins = {
       })
     end
   },
-  {"andersevenrud/nordic.nvim"},
-  {"folke/trouble.nvim"},
-  {"~/.config/lvim/plugins/telescope-task.nvim"},
   {
     "klen/nvim-config-local",
     config = function()
@@ -92,7 +85,6 @@ lvim.plugins = {
       require("persistence").setup()
     end,
   },
-  {"akinsho/flutter-tools.nvim"},
   {
     "lukas-reineke/virt-column.nvim",
     config = function()
@@ -110,6 +102,12 @@ lvim.builtin.bufferline.active = false
 
 -- Disable the dashboard (the plugin isn't installed by default anyway)
 lvim.builtin.dashboard.active = false
+
+-- Enable debugging
+lvim.builtin.dap.active = true
+
+-- Enable toggleterm
+lvim.builtin.terminal.active = true
 
 -- Open nvim-tree on the right side of the screen
 lvim.builtin.nvimtree.setup.view.side = "right"
@@ -133,9 +131,15 @@ lvim.builtin.which_key.mappings[";"] = { "<cmd>Alpha<CR>", "Dashboard"}
 -- Enable the treesitter autotag extension
 lvim.builtin.treesitter.autotag.enable = true
 
--- Disable treesitter which_key config
-lvim.builtin.which_key.mappings["T"] = nil
+-- Disable treesitter which_key config (replacing with trouble keybinds)
 lvim.builtin.which_key.mappings["h"] = nil
+lvim.builtin.which_key.mappings["T"] = lvim.builtin.which_key.mappings["t"]
+
+-- Set up terminal keybinds
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Terminal",
+  t = { "<cmd>ToggleTerm<cr>", "Terminal" },
+}
 
 -- Custom buffer switching shortcuts
 lvim.builtin.which_key.mappings["b"]["b"] = nil
@@ -168,3 +172,10 @@ lvim.builtin.which_key.mappings["S"] = { "<cmd>lua require('persistence').load({
 
 -- Turn off lunarvim autoconfig of dartls. Flutter tools plugin handles this.
 vim.list_extend(lvim.lsp.override, { "dartls" })
+
+-- Enable treesitter parser for hcl to run on terraform files too.
+local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
+parser_configs.hcl = {
+  filetype = "hcl", "terraform",
+}
+

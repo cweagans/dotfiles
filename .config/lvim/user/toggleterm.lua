@@ -1,0 +1,9 @@
+--require("toggleterm").setup({
+  --open_mapping = nil,
+  --shade_terminals = true,
+  --shading_factor = '3',
+  --direction = 'float',
+  --float_opts = {
+    --border = 'single',
+  --}
+--})

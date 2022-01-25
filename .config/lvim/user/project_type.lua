@@ -26,6 +26,30 @@ local function config_php()
   }})
 end
 
+-- Determine if a project has phpstan set up
+local function detect_phpstan()
+  if not detect_php() then
+    return false
+  end
+  local files = { "phpstan.neon" }
+  for _, path in pairs(files) do
+    if file_exists(path) then
+      return true
+    end
+  end
+
+  return false
+end
+
+-- Enable phpstan diagnostics.
+local function config_phpstan()
+  local linters = require("lvim.lsp.null-ls.linters")
+  linters.setup({{
+    exe = "phpstan",
+    args = { "-l", "-d", "display_errors=STDERR", "-d", " log_errors=Off" }
+  }})
+end
+
 -- If we can find Drupal.php in one of these locations, it's probably a Drupal project.
 local function detect_drupal()
   local files = { "core/lib/Drupal.php", "docroot/core/lib/Drupal.php", "web/core/lib/Drupal.php" }
@@ -101,7 +125,7 @@ local function detect_flutter()
   return false
 end
 
--- Enable php linting.
+-- Enable flutte linting and other tools
 local function config_flutter()
   require("flutter-tools").setup({})
 
@@ -114,9 +138,72 @@ local function config_flutter()
   end
 end
 
+-- Determine if a project is a Go project or not.
+local function detect_go()
+  local files = { "go.mod", "go.sum", "main.go" }
+  for _, path in pairs(files) do
+    if file_exists(path) then
+      return true
+    end
+  end
+
+  return false
+end
+
+-- Set up the go plugin.
+local function config_go()
+  require('go').setup()
+
+  -- Let's let dartls do flutter formatting.
+  lvim.lsp.on_attach_callback = function(client, _)
+    if client.name == "null-ls" then
+      client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_range_formatting = false
+    end
+  end
+end
+
+-- Determine if a project is a nodejs project
+local function detect_nodejs()
+  local files = { "package.json", "package-lock.json" }
+  for _, path in pairs(files) do
+    if file_exists(path) then
+      return true
+    end
+  end
+
+  return false
+end
+
+-- Enable nodejs stuff
+local function config_nodejs()
+  require("lvim.lsp.manager").setup("eslint")
+end
+
+-- Determine if a project is a svelte project
+local function detect_svelte()
+  local files = { "src/App.svelte" }
+  for _, path in pairs(files) do
+    if file_exists(path) then
+      return true
+    end
+  end
+
+  return false
+end
+
+-- Enable svelte stuff
+local function config_svelte()
+  require("lvim.lsp.manager").setup("svelte")
+end
+
 function ConfigureProject()
   if detect_php() then
     config_php()
+  end
+
+  if detect_phpstan() then
+    config_phpstan()
   end
 
   if detect_drupal() then
@@ -125,6 +212,18 @@ function ConfigureProject()
 
   if detect_flutter() then
     config_flutter()
+  end
+
+  if detect_go() then
+    config_go()
+  end
+
+  if detect_nodejs() then
+    config_nodejs()
+  end
+
+  if detect_svelte() then
+    config_svelte()
   end
 end
 

@@ -36,3 +36,6 @@ lvim.keys.normal_mode["<Esc>"] = '<cmd>let @/ = ""<cr><esc>'
 
 -- Better goto mark mapping
 lvim.keys.normal_mode["gm"] = "g'"
+
+-- Toggle term
+lvim.keys.term_mode["<leader>tt"] = "<cmd>ToggleTerm<cr>"
