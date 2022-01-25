@@ -1,0 +1,11 @@
+#!/bin/bash
+
+## Description: Open current project database in the default application for mysql:// URLs
+## Usage: db
+## Example: "ddev db"
+
+set -x
+query="mysql://root:root@127.0.0.1:${DDEV_HOST_DB_PORT}/db"
+
+open "$query"
+
