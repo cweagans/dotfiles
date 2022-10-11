@@ -1,6 +1,6 @@
 
 local inboxCount = 0;
-local mailMenuBar = hs.menubar.new()
+-- local mailMenuBar = hs.menubar.new()
 
 function countInboxMessages()
     local output, status, type, rc = hs.execute('osascript -e \'tell Application "Mail"\' -e \'unread count of inbox\' -e \'end tell\'')
@@ -18,5 +18,5 @@ function updateMenuBar()
     mailMenuBar:setTitle(title)
 end
 
-mailMenuBar:setClickCallback(updateMenuBar)
-updateMenuBar()
+-- mailMenuBar:setClickCallback(updateMenuBar)
+-- updateMenuBar()

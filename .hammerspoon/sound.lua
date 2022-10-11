@@ -2,6 +2,8 @@
 --- Sound handling
 ---
 
+--- @todo: check if computer is docked when coming up from sleep or periodically maybe?
+
 local dockInputName = "Producer USB"
 local dockOutputName = "TX-384Khz Hifi Type-C Audio"
 

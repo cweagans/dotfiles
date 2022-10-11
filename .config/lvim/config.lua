@@ -8,6 +8,7 @@
 --    * mini.nvim: https://github.com/echasnovski/mini.nvim
 --    * gitlinker.nvim: https://github.com/ruifm/gitlinker.nvim
 --    * diffview.nvim: https://github.com/sindrets/diffview.nvim
+--    * fidget.nvim: https://github.com/j-hui/fidget.nvim
 -- * Config
 --    * Consider adding neogit (which is like magit for neovim)
 --    * Add ansible-related null ls config

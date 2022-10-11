@@ -1,20 +1,55 @@
 {
-    "editor.fontSize": 13,
     "editor.cursorBlinking": "phase",
     "editor.folding": false,
-    "editor.fontFamily": "Input Mono",
+    "editor.fontFamily": "SauceCodePro Nerd Font",
     "editor.fontLigatures": true,
-    "editor.lineHeight": 24,
+    "editor.fontSize": 15,
+    "editor.lineHeight": 27,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": false
+    },
+    "editor.minimap.enabled": false,
     "editor.renderLineHighlight": "all",
     "editor.renderWhitespace": "selection",
     "editor.rulers": [
         80
     ],
     "editor.smoothScrolling": true,
-    "workbench.settings.editor": "json",
+    "editor.tabCompletion": "on",
+    "extensions.ignoreRecommendations": false,
+    "files.associations": {
+        "*.module": "php",
+        "*.inc": "php",
+        "*.theme": "php",
+        "*_defconfig": "dotenv"
+    },
     "files.autoSave": "onWindowChange",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules/**": true,
+        "**/bower_components/**": true
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "files.watcherExclude": {
+        "**/vendor/**": true
+    },
+    "git.autofetch": true,
+    "php.suggest.basic": false,
+    "profiles.extensions.excluded": [],
+    "profiles.extensions.common": [
+        "EditorConfig.EditorConfig",
+        "bierner.markdown-mermaid",
+        "arcticicestudio.nord-visual-studio-code",
+        "vscodevim.vim"
+    ],
     "terminal.explorerKind": "external",
     "terminal.external.linuxExec": "kitty",
     "vim.easymotion": true,
@@ -22,37 +57,17 @@
     "vim.leader": ",",
     "vim.useCtrlKeys": false,
     "vim.useSystemClipboard": true,
-    "go.gopath": "~/Code/go",
-    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Nord",
+    "workbench.settings.editor": "json",
     "workbench.sideBar.location": "right",
-    "editor.tabCompletion": "on",
     "workbench.editor.tabCloseButton": "left",
     "workbench.editor.showTabs": false,
-    "git.autofetch": true,
     "window.titleBarStyle": "native",
-    "files.associations": {
-        "*.module": "php",
-        "*.inc": "php",
-        "*.theme": "php",
-        "*.hl7": "hl7",
-        "*_defconfig": "dotenv"
-    },
-    "php.suggest.basic": false,
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": true,
-        "strings": false
-    },
-    "intelephense.files.exclude": [
-        "**/.git/**",
-        "**/.svn/**",
-        "**/.hg/**",
-        "**/CVS/**",
-        "**/.DS_Store/**",
-        "**/node_modules/**",
-        "**/bower_components/**",
-    ],
-    "go.formatTool": "goimports",
+    "dart.checkForSdkUpdates": false,
+    "dart.debugExternalLibraries": true,
+    "dart.debugSdkLibraries": false,
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -66,32 +81,18 @@
         "editor.wordBasedSuggestions": false,
         "files.insertFinalNewline": true
     },
-    "erd-preview.dotPath": "/usr/local/bin/dot",
-    "erd-preview.erdPath": "/usr/local/bin/erd-go",
-    "extensions.ignoreRecommendations": false,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "files.watcherExclude": {
-        "**/vendor/**": true
-    },
-    "dart.checkForSdkUpdates": false,
-    "terraform.languageServer": {
-        "external": true,
-        "pathToBinary": "/usr/local/bin/terraform-ls",
-        "args": [
-            "serve"
-        ],
-        "maxNumberOfProblems": 100,
-        "trace.server": "off"
-    },
-    "dart.previewFlutterUiGuidesCustomTracking": true,
-    "dart.previewFlutterUiGuides": true,
-    "dart.debugExternalLibraries": true,
-    "dart.debugSdkLibraries": false,
-    "redhat.telemetry.enabled": false,
-    "docker.showStartPage": false,
-    "workbench.colorTheme": "Nord",
+    "go.formatTool": "goimports",
     "go.toolsManagement.autoUpdate": true,
-    "editor.minimap.enabled": false,
+    "go.gopath": "~/Code/go",
+    "php-docblocker.returnGap": true,
+    "php-docblocker.paramDescription": true,
+    "php-docblocker.returnDescription": true,
+    "php.validate.executablePath": "/usr/local/bin/php",
+    "redhat.telemetry.enabled": true,
+    "zls.path": "/Users/cweagans/Library/Application Support/Code/User/globalStorage/augusterame.zls-vscode/zls_install/zls",
+    "v.vls.enable": true,
+    "v.vls.customVrootPath": "/usr/local/Cellar/vlang/0.2.4/libexec",
+    "v.vls.customPath": "/Users/cweagans/.vls/bin/vls_macos_x64",
+    "terraform.languageServer.enable": true,
+    "terraform.languageServer.path": "/usr/local/bin/terraform-ls",
 }
