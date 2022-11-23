@@ -1,8 +1,0 @@
--- Set some fvim-specific settings
--- TODO: fvim won't work for me because telescope is broken.
--- vim.cmd([[
---   if exists('g:fvim_loaded')
---     FVimFontLineHeight '+3'
---     FVimFontNoBuiltinSymbols v:true
---   endif
--- ]])
