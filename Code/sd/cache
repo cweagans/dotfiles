@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# Provide a filesystem based cache for bash commands.
+#
+# If a command takes a while to run, you can prefix it with `sd cache` and the
+# output will be written to disk. Next time you run the command prefixed with
+# `sd cache`, you'll get the cached version from disk. The cache lifetime is
+# hardcoded to three hours, but you can manually delete the cache by clearing
+# the contents of ~/.cache/sdcache
+#
+# If you want to force invalidation of the cache, you can set the environment
+# variable SDCACHE_FORCE_EXEC to "true"
+#
+# Example usage:
+#   sd cache echo hello world
+#   sd cache my_long_running_script.sh
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+require_program "shasum"
+require_program "awk"
+
+CACHE_ROOT="$HOME/.cache/sdcache"
+_SDCACHE_FORCE_EXEC="${SDCACHE_FORCE_EXEC+false}"
+
+# First, check that this script isn't called without arguments.
+args="${1+noargs}"
+if [[ "$args" = "" ]]; then
+    format_error "This script requires command output to cache. See sd cache --help for more information"
+fi
+
+# Get the name of the command that we're running and shift it off of the args list.
+cmd=$1
+shift 1
+
+# Make sure that we have a place to store the data.
+[ -d "${CACHE_ROOT}/${cmd}" ] || mkdir -p "${CACHE_ROOT}/${cmd}"
+
+# Delete cache files older than three hours.
+find "$CACHE_ROOT" -mindepth 1 -mmin +180 -delete
+
+# Generate a cache filename.
+filename=$(echo -n "$cmd $@" | shasum | awk '{print $1}')
+
+# If the file doesn't exist, run the requested command to generate a new cache entry.
+if [ ! -f "${CACHE_ROOT}/${cmd}/${filename}" ] || [ "$_SDCACHE_FORCE_EXEC" == "true" ]; then
+    eval "${cmd} $@" > "${CACHE_ROOT}/${cmd}/${filename}"
+
+    # If the command wasn't successful, delete the cache entry and exist with the
+    # same exit code.
+    exitcode="$?"
+    if [ "$exitcode" != 0 ]; then
+        rm "${CACHE_ROOT}/${cmd}/${filename}"
+        exit $exitcode
+    fi
+fi
+
+# Either way, the contents of the cache file are now valid, so we can emit them.
+cat "${CACHE_ROOT}/${cmd}/${filename}"

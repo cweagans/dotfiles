@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+# Send all queued outgoing messages via msmtp.
+#
+# This command is implicitly called during `sd mail sync`.
+#
+# Example usage:
+#   sd mail send
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+require_program "gxargs"
+require_program "msmtp"
+
+if [[ ! -w "$MAIL_QUEUE" ]]; then
+    format_error "Insufficient privileges to modify queue."
+fi
+
+if ! check_connection; then
+    format_error "No internet connection available."
+fi
+
+if [ -z "$(ls -A $MAIL_QUEUE)" ]; then
+    format_error "No mail queued for delivery."
+fi
+
+trap cleanup SIGINT SIGTERM ERR EXIT
+acquire_lock "mail-send"
+
+cleanup() {
+    trap - SIGINT SIGTERM ERR EXIT
+    clear_lock "mail-send"
+}
+
+for mail in "$MAIL_QUEUE"/*.mail/; do
+    id="$(basename "$mail")"
+    prefix="mail [ $id ]"
+
+    if [[ ! -r "$mail/msmtp_flags" ]]; then
+        format_error "${prefix} failed to send message; missing flags" || true
+        continue
+    fi
+    if [[ ! -r "$mail/message" ]]; then
+        format_error "${prefix} failed to send message; missing message" || true
+        continue
+    fi
+    if [[ ! -w "$mail" ]]; then
+        format_error "${prefix} failed to send message; insufficient privileges" || true
+        continue
+    fi
+
+    prefix="$prefix [ $(gxargs -0 -a "$mail/msmtp_flags" prinf '%s ')]"
+
+    format_message "$prefix sending"
+
+    gxargs -0 -a "$mail/msmtp_flags" msmtp -C "$MSMTP_CONFIG" -X - < "$mail/message"
+    ret="$?"
+    if [[ ! "$ret" -eq 0 ]]; then
+        format_detail "$prefix failed to send; msmtp rc = $ret"
+        continue
+    fi
+    if ! rm -rf "$mail"; then
+        format_detail "$prefix sent but not purged from queue!?"
+    fi
+
+done

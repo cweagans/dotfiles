@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Index mail for searching with mu.
+#
+# This is done automatically as part of a mail sync, but in rare cases, it might
+# be useful to manually index mail messages.
+#
+# Example usage:
+#   sd mail index
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+require_program "mu"
+
+# Index all the mail
+mu index

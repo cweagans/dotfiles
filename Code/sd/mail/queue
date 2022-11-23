@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# Queue a message for sending later.
+#
+# The outbox is managed as a set of files in $MAIL_QUEUE. When a message is
+# queued, a timestamped directory is created with the message contents and the
+# flags that should be passed to msmtp to send the message later.
+#
+# This command should be used in place of direct calls to msmtp. It supports the
+# same flags and input as msmtp, so consult the manual page for details.
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+if [[ ! -w "$MAIL_QUEUE" ]]; then
+    format_error "Insufficient privileges to write to mail queue."
+fi
+
+TMP_DIR=$(mktemp -d "$MAIL_QUEUE/.tmpXXXXXXXXXX")
+
+bail() {
+    if [[ "$?" -eq 0 ]]; then
+        format_message "Cancelled. Not queueing message."
+    fi
+    rm -rf "$TMP_DIR"
+}
+trap bail EXIT
+
+printf '%s\0' "$@" > "$TMP_DIR/msmtp_flags"
+cat > "$TMP_DIR/message"
+
+while [[ -d "$TMP_DIR" ]]; do
+    MESSAGE_DIR="$(date +"$HOSTNAME-%s%N-p$$.mail")"
+    mv -n "$TMP_DIR" "${MAIL_QUEUE}/${MESSAGE_DIR}"
+done
+
+trap - EXIT
