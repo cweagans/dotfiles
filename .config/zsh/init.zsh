@@ -16,6 +16,9 @@ if ! zgenom saved; then
 	# Jump to project directories.
 	zgenom load cweagans/c
 
+	# Ian Henry's "script directory" tool
+	zgenom load ianthehenry/sd
+
 	# Autoset env when cd'ing into a directory
 	zgenom load Tarrasch/zsh-autoenv
 
