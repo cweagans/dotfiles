@@ -1,0 +1,7 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/zsh
+pushd ~
+	# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+	brew bundle
+popd
+{{ end -}}
