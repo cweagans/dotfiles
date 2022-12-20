@@ -5,13 +5,13 @@
         "revision": "3ca2fcf25d10b2974e09c5fe057ec7d312aec097"
       },
       "homebrew/cask": {
-        "revision": "7838333a21c371766233a4f31c1b1e6dd61fb13c"
+        "revision": "ff26c72e5f57392a9b16363a970a1ec2f5456bb8"
       },
       "homebrew/cask-drivers": {
         "revision": "082a40cc3990b93fb8426e2166f8abb1ab3b828a"
       },
       "homebrew/core": {
-        "revision": "3f6a392fe7c38c794c242c84ae49c40e12efe11a"
+        "revision": "3ce0b01921129a5e100f79dc04b197be6abc7195"
       },
       "homebrew/services": {
         "revision": "5aaabd01f249f0d04d2d4a746431f6c3e17accb5"
@@ -784,6 +784,10 @@
       "Vectornator Pro": {
         "id": "1470168007",
         "version": "3.5.4"
+      },
+      "Things": {
+        "id": "904280696",
+        "version": "3.16.2"
       }
     }
   },
@@ -792,7 +796,7 @@
       "ventura": {
         "HOMEBREW_VERSION": "3.6.15",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3f6a392fe7c38c794c242c84ae49c40e12efe11a",
+        "Homebrew/homebrew-core": "3ce0b01921129a5e100f79dc04b197be6abc7195",
         "CLT": "14.2.0.0.1.1668646533",
         "Xcode": "14.1",
         "macOS": "13.1"

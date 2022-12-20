@@ -48,4 +48,5 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Slack", id: 803453959
+mas "Things", id: 904280696
 mas "Vectornator Pro", id: 1470168007
