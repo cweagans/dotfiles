@@ -1,1 +1,0 @@
-./.config/zsh/init.zsh
