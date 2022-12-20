@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+# TODO: Move these into sd.
+
 # Usage: extract <file>
 # Description: extracts archived files / mounts disk images
 # Note: .dmg/hdiutil is macOS-specific.
