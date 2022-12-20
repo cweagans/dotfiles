@@ -1,0 +1,30 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/zsh
+# This script will be run on first install and any time the LaunchAgent is changed.
+# LaunchAgent hash: {{ include "private_Library/LaunchAgents/com.homebrew.ssh-agent.plist" | sha256sum }}
+
+# Credit: https://gist.github.com/lmb/e4448973daf99f0cc4a182a4e1811f93
+
+# First, make sure the system ssh-agent is disabled.
+if ! launchctl print gui/$UID/com.openssh.ssh-agent | grep "not running" > /dev/null; then
+	echo "Disabling system ssh-agent"
+	launchctl disable gui/$UID/com.openssh.ssh-agent
+fi
+
+# Next, make sure all running ssh-agent processes are stopped.
+echo "Stopping ssh-agent"
+killall ssh-agent
+
+# If the service hasn't been bootstrapped, do that.
+if ! launchctl print gui/$UID/com.homebrew.ssh-agent > /dev/null; then
+	echo "Bootstrapping Homebrew ssh-agent service"
+	pushd ~/Library/LaunchAgents > /dev/null
+		launchctl bootstrap gui/$UID com.homebrew.ssh-agent.plist
+	popd
+fi
+
+# Finally, restart the process unconditionally (in case this is just an update).
+echo "Restarting ssh-agent"
+launchctl stop com.homebrew.ssh-agent
+launchctl start com.homebrew.ssh-agent
+{{ end -}}
