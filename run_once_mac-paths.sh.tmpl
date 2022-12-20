@@ -1,19 +1,19 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/zsh
 
-echo "If prompted for a password, it's for managing /etc/paths.d/200-cweagans"
+echo "If prompted for a password, it's for managing /etc/paths.d/200-{{ .chezmoi.username }}"
 
 function ensurePath {
     newPath=$1
-    if ! cat /etc/paths.d/200-cweagans | grep "$newPath" >> /dev/null; then
+    if ! cat /etc/paths.d/200-{{ .chezmoi.username }} | grep "$newPath" >> /dev/null; then
         echo -n "Adding new path: "
-        echo $newPath | sudo tee -a /etc/paths.d/200-cweagans
+        echo $newPath | sudo tee -a /etc/paths.d/200-{{ .chezmoi.username }}
     fi
 }
 
-[ -f "/etc/paths.d/200-cweagans" ] || sudo touch /etc/paths.d/200-cweagans
+[ -f "/etc/paths.d/200-{{ .chezmoi.username }}" ] || sudo touch /etc/paths.d/200-{{ .chezmoi.username }}
 
-ensurePath /usr/local/bin
-ensurePath /Users/cweagans/bin
+ensurePath {{ output "/usr/local/bin/brew" "--prefix" | trim }}/bin
+ensurePath {{ .chezmoi.homeDir }}/bin
 
 {{ end -}}

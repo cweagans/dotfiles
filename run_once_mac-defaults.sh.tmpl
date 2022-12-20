@@ -95,7 +95,7 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Use custom config dir for iterm2
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "/Users/cweagans/.config/iterm"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "{{ .chezmoi.homeDir }}/.config/iterm"
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
