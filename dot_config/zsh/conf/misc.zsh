@@ -26,3 +26,6 @@ bindkey "^[3;5~" delete-char
 
 # Configure the Geometry prompt
 export GEOMETRY_PROMPT_PLUGINS=(exec_time git kube hostname)
+
+# Comments should work as expected in interactive mode.
+setopt INTERACTIVECOMMENTS
