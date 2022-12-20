@@ -27,3 +27,20 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
+
+# Usage: updatebrew
+# Description: Dumps a brew bundle file, installs the bundle, then adds the result to chezmoi config.
+updatebrew () {
+
+    pushd ~ > /dev/null
+        brew bundle dump --force
+        brew bundle
+        chezmoi add Brewfile Brewfile.lock.json
+    popd > /dev/null
+
+    pushd $(chezmoi source-path) > /dev/null
+        git add Brewfile Brewfile.lock.json
+    popd > /dev/null
+
+    echo "Homebrew dependency updates have been staged in chezmoi source dir ($(chezmoi source-path))"
+}
