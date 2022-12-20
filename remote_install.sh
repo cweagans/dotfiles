@@ -7,8 +7,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
 	# Setup Homebrew envvars.
 	eval $(/usr/local/bin/brew shellenv)
 
-	# Install chezmoi.
-	brew install chezmoi
+	# Install chezmoi and Bitwarden CLI (for secret storage).
+	brew install bitwarden-cli chezmoi
 
 	# Bootstrap environment (will prompt for values in chezmoi config).
 	chezmoi init --apply --verbose https://github.com/cweagans/dotfiles.git
