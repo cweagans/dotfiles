@@ -1,0 +1,14 @@
+{
+	"label": "Software Update",
+	"restart": "killall \"App Store\"",
+	"values": {
+		// Enable auto update check.
+		"AutomaticCheckEnabled": true,
+		// Check for updates daily, not weekly.
+		"ScheduleFrequency": 1,
+		// Download available updates in background.
+		"AutomaticDownload": true,
+		// Install system data files & security updates.
+		"CriticalUpdateInstall": true
+	}
+}

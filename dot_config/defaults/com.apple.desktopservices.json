@@ -1,0 +1,8 @@
+{
+	"label": "Desktop services",
+	"restart": "true",
+	"values": {
+		// Avoid creating .DS_Store files on network or USB volumes.
+		"DSDontWriteNetworkStores": true
+	}
+}

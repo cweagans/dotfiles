@@ -1,3 +1,10 @@
 README.md
 notes.md
 remote_install.sh
+
+{{ if ne .chezmoi.os "darwin" }}
+.chezmoiscripts/darwin/**
+dot_config/hammerspoon/**
+dot_config/iterm/**
+private_Library/**
+{{ end }}

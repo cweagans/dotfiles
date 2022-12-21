@@ -1,0 +1,27 @@
+{
+	"label": "Global",
+	"restart": "killall SystemUIServer",
+	"values": {
+		// Don't do the annoying press and hold thing.
+		"ApplePressAndHoldEnabled": false,
+		// Fast keyboard repeat rate..
+		"KeyRepeat": 2,
+		"InitialKeyRepeat": 10,
+		// Show all file extensions....
+		"AppleShowAllExtensions": true,
+		// Show a context menu item for showing the web inspector in web views.
+		"WebKitDeveloperExtras": true,
+		// Do *NOT* change what I type.
+		"NSAutomaticCapitalizationEnabled": false,
+		"NSAutomaticDashSubstitutionEnabled": false,
+		"NSAutomaticPeriodSubstitutionEnabled": false,
+		"NSAutomaticQuoteSubstitutionEnabled": false,
+		"NSAutomaticSpellingCorrectionEnabled": false,
+		// Expand save panel by default.
+		"NSNavPanelExpandedStateForSaveMode": true,
+		// Save to disk (not iCloud) by default.
+		"NSDocumentSaveNewDocumentsToCloud": false,
+		// Set highlight color to blue.
+		"AppleHighlightColor": "0.698039 0.843137 1.000000"
+	}
+}

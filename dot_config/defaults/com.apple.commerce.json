@@ -1,0 +1,10 @@
+{
+	"label": "Commerce (Software Update)",
+	"restart": "killall \"App Store\"",
+	"values": {
+		// Turn on app auto-update.
+		"AutoUpdate": true,
+		// Allow the App Store to reboot machine on macOS updates.
+		"AutoUpdateRestartRequired": true
+	}
+}

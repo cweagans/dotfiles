@@ -1,0 +1,19 @@
+{
+	"label": "Finder",
+	"restart": "killall Finder",
+	"values": {
+		// Show hidden files.
+		"AppleShowAllFiles": true,
+		// Show files in a list with folders at the top.
+		"FXPreferredViewStyle": "Nlsv",
+		"_FXSortFoldersFirst": true,
+		// Auto-purge trash.
+		"FXRemoveOldTrashItems": true,
+		// Don't warn me about changing extensions.
+		"FXEnableExtensionChangeWarning": false,
+		// Don't put any real files on the desktop.
+		"CreateDesktop": false,
+		// Show mounted servers on the desktop.
+		"ShowMountedServersOnDesktop": true
+	}
+}

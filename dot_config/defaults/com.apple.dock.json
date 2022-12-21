@@ -1,0 +1,20 @@
+{
+	"label": "Dock",
+	"restart": "killall Dock",
+	"values": {
+		// Dock should be small, magnified a bit on hover, autohidden, and uncluttered.
+		"tilesize": 36,
+		"magnification": true,
+		"largesize": 50,
+		"autohide": true,
+		"show-recents": false,
+		// Mission control shoudn't rearrange itself
+		"mru-spaces": false,
+		// Mission control hotcorner (top left)
+		"wvous-tl-corner": 2,
+		"wvous-tl-modifier": 0,
+		// Disable quick note hotcorner (bottom right)
+		"wvous-br-corner": 0,
+		"wvous-br-modifier": 0
+	}
+}

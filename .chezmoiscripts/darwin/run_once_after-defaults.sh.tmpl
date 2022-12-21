@@ -1,0 +1,55 @@
+#!/bin/zsh
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+sleep 2
+
+# This is dumb, but all of the hashes need to be included to make Chezmoi pick
+# up changes to any of the JSON files.
+{{ range (glob (joinPath .chezmoi.homeDir ".config/defaults/*.json")) -}}
+# {{ . }} hash: {{ include . | sha256sum }}
+{{ end -}}
+
+for f in {{ .chezmoi.homeDir }}/.config/defaults/*.json; do
+	if [ ! -e "{{ .chezmoi.homeDir }}/.config/defaults/.lastupdate" ] || [ "$f" -nt "{{ .chezmoi.homeDir }}/.config/defaults/.lastupdate" ]; then
+
+		domain=$(basename $f .json)
+		label=$(cat "$f" | grep -v "//" | jq -r '.label')
+		restart_cmd=$(cat "$f" | grep -v "//" | jq -r '.restart')
+		values=$(cat "$f" | grep -v "//" | jq -r '.values | to_entries | map({"key": .key, "value": .value, "typ": (.value | type)})')
+
+		echo "Applying ${domain} (${label})"
+
+		intcommands=$(echo $values | jq '.[] | select(.typ == "number")'  | jq -r ". | @text \"defaults write ${domain} \\\"\(.key)\\\" -int \(.value)\"")
+		boolcommands=$(echo $values | jq '.[] | select(.typ == "boolean")' | jq -r ". | @text \"defaults write ${domain} \\\"\(.key)\\\" -bool \\\"\(.value)\\\"\"")
+		strcommands=$(echo $values | jq '.[] | select(.typ == "string")'  | jq -r ". | @text \"defaults write ${domain} \\\"\(.key)\\\" -string \\\"\(.value)\\\"\"")
+
+		while read -r line; do
+			if [[ "${line}" != "" ]]; then
+				echo "Running ${line}"
+				eval $(echo ${line})
+			fi
+		done < <(printf '%s\n' "$intcommands")
+		while read -r line; do
+			if [[ "${line}" != "" ]]; then
+				echo "Running ${line}"
+				eval $(echo ${line})
+			fi
+		done < <(printf '%s\n' "$boolcommands")
+		while read -r line; do
+			if [[ "${line}" != "" ]]; then
+				echo "Running ${line}"
+				eval $(echo ${line})
+			fi
+		done < <(printf '%s\n' "$strcommands")
+
+		echo "Running restart command: ${restart_cmd}"
+		eval $(echo ${restart_cmd})
+	fi
+done
+
+touch {{ .chezmoi.homeDir }}/.config/defaults/.lastupdate
+
+echo "You may need to log out and log back in for all changes to take effect."

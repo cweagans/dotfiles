@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/zsh
 # This script will be run on first install and any time the LaunchAgent is changed.
 # LaunchAgent hash: {{ include "private_Library/LaunchAgents/com.homebrew.ssh-agent.plist.tmpl" | sha256sum }}
@@ -32,5 +31,3 @@ fi
 # Restart the service (just to make sure things are appropriately picked up)
 launchctl stop com.homebrew.ssh-agent
 launchctl start com.homebrew.ssh-agent
-
-{{ end -}}
