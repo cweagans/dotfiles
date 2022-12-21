@@ -13,6 +13,9 @@ export XDG_DATA_HOME=$HOME/.local/share
 export SD_CAT=bat
 export SD_ROOT=~/Code/sd
 
+# Set up SSH agent
+export SSH_AUTH_SOCK=~/.ssh/agent.sock
+
 # Add a newline in the Geometry prompt
 GEOMETRY_PROMPT=(geometry_newline $GEOMETRY_PROMPT)
 

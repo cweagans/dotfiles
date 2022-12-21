@@ -8,8 +8,7 @@
 	<array>
 		<string>/bin/sh</string>
 		<string>-c</string>
-		<!-- We reuse SSH_AUTH_SOCK from com.openssh.ssh-agent -->
-		<string>rm $SSH_AUTH_SOCK; /usr/local/bin/ssh-agent -D -a $SSH_AUTH_SOCK</string>
+		<string>rm {{ .chezmoi.homeDir }}/.ssh/agent.sock; /usr/local/bin/ssh-agent -D -a {{ .chezmoi.homeDir }}/.ssh/agent.sock -P /usr/local/lib/opensc-pkcs11.so</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
