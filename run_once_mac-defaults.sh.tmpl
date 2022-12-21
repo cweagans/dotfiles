@@ -126,7 +126,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain AppleHighlightColor -string "0.698039 0.843137 1.000000"
 
 # Put Hammerspoon config in .config where it belongs.
-defaults write org.hammerspoon.Hammerspoon MJConfigFile -string "~/.config/hammerspoon/init.lua"
+defaults write org.hammerspoon.Hammerspoon MJConfigFile -string "{{ .chezmoi.homeDir }}/.config/hammerspoon/init.lua"
 
 echo "You may need to log out and log back in for all changes to take effect."
 
