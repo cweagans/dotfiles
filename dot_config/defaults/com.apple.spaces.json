@@ -1,0 +1,8 @@
+{
+	"label": "Spaces",
+	"restart": "true",
+	"values": {
+		// Spaces should *never* be per-display.
+		"spans-displays": true
+	}
+}
