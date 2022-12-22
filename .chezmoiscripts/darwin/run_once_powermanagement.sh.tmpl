@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+set -x
+
+# Enable lid wakeup.
+sudo pmset -a lidwake 1
+
+# Restart automatically on power loss or freezing.
+sudo pmset -a autorestart 1
+sudo systemsetup -setrestartfreeze on
+
+# Sleep the display after 30 minutes.
+sudo pmset -a displaysleep 30
+
+# Disable machine sleep while charging.
+sudo pmset -c sleep 0
+
+# Sleep after 5 min on battery.
+sudo pmset -b sleep 5
+
+# Set standby delay to 24 hours.
+sudo pmset -a standbydelay 86400
+
+# Disable hibernation.
+sudo pmset -a hibernatemode 0
+
+# Replace the sleep image with a zero byte file and make sure it can't be rewritten.
+sudo rm /private/var/vm/sleepimage
+sudo touch /private/var/vm/sleepimage
+sudo chflags uchg /private/var/vm/sleepimage
