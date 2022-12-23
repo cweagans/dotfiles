@@ -8,12 +8,12 @@ sleep 2
 
 # This is dumb, but all of the hashes need to be included to make Chezmoi pick
 # up changes to any of the JSON files.
-{{ range (glob (joinPath .chezmoi.homeDir ".config/defaults/*.json")) -}}
+{{ range (glob (joinPath .chezmoi.homeDir ".config/macos/*.json")) -}}
 # {{ . }} hash: {{ include . | sha256sum }}
 {{ end -}}
 
-for f in {{ .chezmoi.homeDir }}/.config/defaults/*.json; do
-	if [ ! -e "{{ .chezmoi.homeDir }}/.config/defaults/.lastupdate" ] || [ "$f" -nt "{{ .chezmoi.homeDir }}/.config/defaults/.lastupdate" ]; then
+for f in {{ .chezmoi.homeDir }}/.config/macos/*.json; do
+	if [ ! -e "{{ .chezmoi.homeDir }}/.config/macos/.lastupdate" ] || [ "$f" -nt "{{ .chezmoi.homeDir }}/.config/macos/.lastupdate" ]; then
 
 		domain=$(basename $f .json)
 		label=$(cat "$f" | grep -v "//" | jq -r '.label')
@@ -50,6 +50,6 @@ for f in {{ .chezmoi.homeDir }}/.config/defaults/*.json; do
 	fi
 done
 
-touch {{ .chezmoi.homeDir }}/.config/defaults/.lastupdate
+touch {{ .chezmoi.homeDir }}/.config/macos/.lastupdate
 
 echo "You may need to log out and log back in for all changes to take effect."

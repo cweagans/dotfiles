@@ -6,5 +6,6 @@ remote_install.sh
 .chezmoiscripts/darwin/**
 dot_config/hammerspoon/**
 dot_config/iterm/**
+dot_config/macos/**
 private_Library/**
 {{ end }}
