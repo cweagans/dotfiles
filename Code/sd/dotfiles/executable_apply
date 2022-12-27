@@ -13,10 +13,14 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-echo "Unlock Bitwarden vault:"
-export BW_SESSION=`bw unlock --raw`
+if [ -z ${BW_SESSION+x} ]; then
+	echo "Unlock Bitwarden vault:"
+	export BW_SESSION=`bw unlock --raw`
+else
+	echo "Bitwarden vault is unlocked by BW_SESSION envvar"
+fi
 
-echo "Syncing vault"
+echo -n "Syncing vault..."
 bw sync
 
 echo "Applying Chezmoi configuration"
