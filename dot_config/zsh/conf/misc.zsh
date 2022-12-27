@@ -32,3 +32,10 @@ setopt INTERACTIVECOMMENTS
 
 # Enable asdf-installed packages.
 . /usr/local/opt/asdf/libexec/asdf.sh
+
+# Make Homebrew completions available.
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  autoload -Uz compinit
+  compinit
+fi
