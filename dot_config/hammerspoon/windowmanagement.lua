@@ -1,7 +1,6 @@
 hs.grid.setGrid('12x12')
 hs.window.animationDuration = 0
 
-
 -- Desktop is my 49" super ultrawide.
 -- Laptop is my MBP display.
 local grid_positions = {
@@ -35,13 +34,13 @@ local grid_positions = {
 	},
 	floating = {
 		desktop = '4,1 4x10',
-		laptop = '2,2 10x10',
+		laptop = '1,1 10x10',
 	},
 }
 
 function moveFocusedWindow(where)
 	return function()
-		local currentwindow = hs.window.focusedWindow()
+		local currentwindow = hs.window.frontmostWindow()
 		if not currentwindow:isStandard() then
 			hs.logger.i("Cannot manipulate current window")
 			return nil
@@ -51,7 +50,7 @@ function moveFocusedWindow(where)
 		if screen:frame().w > (screen:frame().h * 2) then
 			hs.grid.set(currentwindow, where.desktop, screen)
 		else
-			hs.grid.set(currentWindow, where.laptop, screen)
+			hs.grid.set(currentwindow, where.laptop, screen)
 		end
 	end
 end
