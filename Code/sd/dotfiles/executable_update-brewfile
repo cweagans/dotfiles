@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Update the Brewfile packaged by Chezmoi.
+#
+# Dump the currently installed Homebrew packages to a Brewfile, move it to
+# the right place in the Chezmoi root, and add it to Git.
+#
+# Example usage:
+#   sd dotfiles update-brewfile
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+brew bundle dump --force --global
+chezmoi add ~/.Brewfile
+
+pushd $(chezmoi source-path) > /dev/null
+	git add Brewfile
+popd > /dev/null
+
+echo "Brewfile updates have been staged in the chezmoi source dir ($(chezmoi source-path))"

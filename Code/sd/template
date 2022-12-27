@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# One line description of command goes here.
+#
+# A longer description of what this command does and any details about how
+# somebody might use it. This text will be included in the output when the
+# command is invoked via sd with the --help argument.
+#
+# Spacing and formatting are preserved as well, so paragraph breaks, indents,
+# etc are included in the output.
+#
+# Available options:
+#   -e, --example             An example flag that can be passed to this script.
+#
+# Example usage:
+#   sd foo bar
+#   sd foo bar -e example
+#   sd foo bar --example example
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+# your script here
