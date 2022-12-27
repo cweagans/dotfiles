@@ -25,3 +25,7 @@ export HOMEBREW_CELLAR="/usr/local/Cellar"
 export HOMEBREW_REPOSITORY="/usr/local/Homebrew"
 export MANPATH="/usr/local/share/man${MANPATH+:$MANPATH}:"
 export INFOPATH="/usr/local/share/info:${INFOPATH:-}"
+
+# asdf vars
+export ASDF_CONFIG_FILE="$HOME/.config/asdf/config"
+export ASDF_DATA_DIR="$HOME/.local/share/asdf"
