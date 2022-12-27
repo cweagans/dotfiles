@@ -1,0 +1,10 @@
+{
+	"label": "Itsycal",
+	"restart": "killall Itsycal",
+	"values": {
+		"ShowWeeks": true,
+		"SizePreference": 1,
+		"UseOutlineIcon": true,
+		"ShowLocation": true
+ 	}
+}
