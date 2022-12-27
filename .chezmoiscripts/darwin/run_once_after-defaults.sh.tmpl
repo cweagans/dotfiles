@@ -1,11 +1,5 @@
 #!/bin/zsh
 
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
-
-sleep 2
-
 # This is dumb, but all of the hashes need to be included to make Chezmoi pick
 # up changes to any of the JSON files.
 {{ range (glob (joinPath .chezmoi.homeDir ".config/macos/*.json")) -}}

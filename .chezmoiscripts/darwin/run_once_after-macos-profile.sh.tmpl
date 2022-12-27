@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+# profile hash: {{ includeTemplate "dot_config/macos/private_profiles/private_macos.mobileconfig.tmpl" . | sha256sum }}
+
+cat << EOF > {{ .chezmoi.homeDir }}/.config/macos/profiles/macos.mobileconfig
+{{ includeTemplate "dot_config/macos/private_profiles/private_macos.mobileconfig.tmpl" . }}
+EOF
+
+# Open System Settings
+open /System/Applications/System\ Settings.app
+sleep 2
+
+# Open the profile with the specific prefpane.
+# Not sure why I have to do this twice, but the first time doesn't actually open the profiles prefpane for some reason.
+open /System/Library/PreferencePanes/Profiles.prefPane {{ .chezmoi.homeDir }}/.config/macos/profiles/macos.mobileconfig
+sleep 1
+open /System/Library/PreferencePanes/Profiles.prefPane {{ .chezmoi.homeDir }}/.config/macos/profiles/macos.mobileconfig
+
+echo "Import the configuration profile in System Settings, come back here, and press Enter to continue."
+echo "Don't forget to re-enable the calendars in Calendar.app and Itsycal.app"
+read
+
+rm ~/.config/macos/profiles/macos.mobileconfig

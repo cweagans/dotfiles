@@ -4,8 +4,13 @@ remote_install.sh
 
 {{ if ne .chezmoi.os "darwin" }}
 .chezmoiscripts/darwin/**
-dot_config/hammerspoon/**
-dot_config/iterm/**
-dot_config/macos/**
-private_Library/**
+.config/hammerspoon/**
+.config/iterm/**
+.config/macos/**
+Library/**
+{{ else }}
+{{- /* Still don't want this file to exist permanently since it has passwords in it */ -}}
+{{- /* Will be created temporarily when needed, imported, then deleted. */ -}}
+.config/macos/profiles/macos.mobileconfig
 {{ end }}
+

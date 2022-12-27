@@ -4,17 +4,13 @@
 	"values": {
 		// Show me the full URL.
 		"ShowFullURLInSmartSearchField": true,
-		// Don't auto-open downloaded files.
-		"AutoOpenSafeDownloads": false,
-		// Show the develop menu and web inspector.
-		"IncludeDevelopMenu": true,
 		"WebKitDeveloperExtrasEnabledPreferenceKey": true,
 		// Enable continuous spellchecking.
 		"WebContinuousSpellCheckingEnabled": true,
 		// Disable autocorrect.
 		"WebAutomaticSpellingCorrectionEnabled": false,
 		// Autofill my personal information, but nothing else.
-		"AutoFillFromAddressBook": false,
+		"AutoFillFromAddressBook": true,
 		"AutoFillPasswords": false,
 		"AutoFillCreditCardData": false,
 		"AutoFillMiscellaneousForms": false,
