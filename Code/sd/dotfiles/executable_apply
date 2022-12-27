@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Apply Chezmoi configuration to system.
+#
+# Login to Bitwarden, sync the bw vault, and then apply Chezmoi changes.
+#
+# Example usage:
+#   sd dotfiles apply
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+echo "Unlock Bitwarden vault:"
+export BW_SESSION=`bw unlock --raw`
+
+echo "Syncing vault"
+bw sync
+
+echo "Applying Chezmoi configuration"
+chezmoi apply
