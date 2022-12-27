@@ -46,7 +46,7 @@ function moveFocusedWindow(where)
 			hs.logger.i("Cannot manipulate current window")
 			return nil
 		end
-		
+
 		local screen = currentwindow:screen()
 		if screen:frame().w > (screen:frame().h * 2) then
 			hs.grid.set(currentwindow, where.desktop, screen)
@@ -61,18 +61,27 @@ function toggleTerminalVisibility()
 		local app = hs.application.get("iTerm2")
 		if app then
 			if not app:mainWindow() then
-				app:selectMenuItem({"iTerm2", "New OS window"})
-				moveFocusedWindow(grid_positions.floating)()
+				app:selectMenuItem({"Shell", "New Window"})
 			elseif app:isFrontmost() then
 				app:hide()
+				return
 			else
 				app:activate()
-				moveFocusedWindow(grid_positions.floating)()
 			end
 		else
-			hs.application.launchOrFocus("iTerm2")
-			moveFocusedWindow(grid_positions.floating)()
+			hs.application.launchOrFocus("iTerm")
 		end
+
+		hs.timer.waitUntil(function()
+			local isRunning = not not hs.application.find("iTerm")
+			local isFront = hs.application.frontmostApplication():name() == "iTerm2"
+			return isRunning and isFront
+		end, function()
+			xpcall(moveFocusedWindow(grid_positions.floating), function()
+				-- just try again in a sec
+				hs.timer.doAfter(1, moveFocusedWindow(grid_positions.floating))
+			end)
+		end, 0.25)
 	end
 end
 
