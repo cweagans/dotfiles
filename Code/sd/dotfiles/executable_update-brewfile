@@ -18,7 +18,7 @@ brew bundle dump --force --global
 chezmoi add ~/.Brewfile
 
 pushd $(chezmoi source-path) > /dev/null
-	git add Brewfile
+	git add dot_Brewfile
 popd > /dev/null
 
 echo "Brewfile updates have been staged in the chezmoi source dir ($(chezmoi source-path))"
