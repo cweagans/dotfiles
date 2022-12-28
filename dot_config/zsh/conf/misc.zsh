@@ -39,3 +39,6 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+# Enable direnv.
+eval "$(direnv hook zsh)"
