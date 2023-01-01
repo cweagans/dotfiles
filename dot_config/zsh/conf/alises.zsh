@@ -10,5 +10,4 @@ alias stdcat='/bin/cat'
 alias cat='bat'
 
 # Add yubikey to ssh-agent.
-alias yk="ssh-add -s /usr/local/lib/opensc-pkcs11.so"
-alias yk!='launchctl stop com.homebrew.ssh-agent && sleep 1 && launchctl start com.homebrew.ssh-agent && sleep 1 && ssh-add -s /usr/local/lib/opensc-pkcs11.so'
+alias yk="sd yk"
