@@ -55,6 +55,7 @@ cask "opensc"
 cask "saleae-logic"
 cask "scrivener"
 cask "steam"
+cask "typora"
 cask "vlc"
 cask "zoom"
 mas "Affinity Designer", id: 824171161
