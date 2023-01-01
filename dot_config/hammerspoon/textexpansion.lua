@@ -1,6 +1,6 @@
---[[ 
+--[[
 	*************
-	
+
 	Text Expander v0.1
 	Based on: https://github.com/Hammerspoon/hammerspoon/issues/1042
 
@@ -39,6 +39,10 @@ keywords = {
 	["..unixtime"] = function()
 		return tostring(os.time())
 	end,
+	["..uuid"] = function()
+		output, status, type, rc = hs.execute("uuidgen")
+		return tostring(output)
+	end,
 }
 
 expander = (function()
@@ -51,7 +55,7 @@ expander = (function()
 	keyWatcher = hs.eventtap.new({ hs.eventtap.event.types.keyDown }, function(ev)
 		local keyCode = ev:getKeyCode()
 		local char = ev:getCharacters()
-		
+
 		-- if "delete" key is pressed
 		if keyCode == keyMap["delete"] then
 			if #word > 0 then
@@ -80,14 +84,14 @@ expander = (function()
 		end
 
 		if DEBUG then print("Word to check if hotstring:", word) end
-		
+
 		-- finally, if "word" is a hotstring
 		if keywords[word] then
 			for i = 1, utf8.len(word), 1 do hs.eventtap.keyStroke({}, "delete", 0) end -- delete the abbreviation
-			
-			if type(keywords[word]) == "function" then 
+
+			if type(keywords[word]) == "function" then
 				hs.eventtap.keyStrokes(keywords[word]())
-			else            
+			else
 				hs.eventtap.keyStrokes(keywords[word]) -- expand the word
 			end
 			word = "" -- clear the buffer
