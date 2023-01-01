@@ -1,51 +1,13 @@
-[user]
-email = {{ .email }}
-name = Cameron Eagans
-signingkey = "key::ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJzYuWMD/bf+ZvMLM47oeW2Z1tBZu5QK4Z9jpOkeDCORMy2UaoQCV89JBVcpCrTD3sYYJWirep2d3vFRTTNSRwQ= PIV AUTH pubkey"
-
-[github]
-user = {{ .github_username }}
-
-[gpg]
-format = ssh
-
-[gpg "ssh"]
-allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
-
-[core]
-ignorecase = false
-compression = 9
-excludesfile = {{ .chezmoi.homeDir }}/.config/git/ignore
-pager = less -FRSX
-whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-
-[init]
-defaultBranch = main
-
-[branch]
-autosetuprebase = always
-
-[diff]
-algorithm = patience
-tool = default-difftool
-
-[commit]
-gpgsign = true
-
-[push]
-default = current
+[advice]
+addEmptyPathspec = false
+statusHints = false
 
 [apply]
 whitespace = nowarn
 
-[rebase]
-autostash = true
-
-[tag]
-gpgsign = true
-
-[color "interactive"]
-error = red bold
+[branch]
+autosetuprebase = always[github]
+user = {{ .github_username }}
 
 [color "branch"]
 current = yellow reverse
@@ -59,11 +21,42 @@ new = green
 old = red
 whitespace = white reverse
 
+[color "interactive"]
+error = red bold
+
 [color "status"]
 added = yellow
 branch = magenta
 changed = green
 untracked = cyan
+
+[commit]
+gpgsign = true
+
+[core]
+ignorecase = false
+compression = 9
+excludesfile = {{ .chezmoi.homeDir }}/.config/git/ignore
+pager = less -FRSX
+whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+{{- $ghPath := lookPath "gh" }}
+{{- if $ghPath }}
+[credential "https://github.com"]
+	helper = !{{ $ghPath }} auth git-credential
+[credential "https://gist.github.com"]
+	helper = !{{ $ghPath }} auth git-credential
+{{- end }}
+
+[diff]
+algorithm = patience
+tool = default-difftool
+
+[ghq]
+root = {{ .chezmoi.homeDir }}/Code
+
+[ghq "gitea.internal.cweagans.net"]
+vcs = git
 
 [gitflow "branch"]
 master = main
@@ -76,20 +69,25 @@ hotfix = hotfix-
 support = support-
 versiontag = v
 
-[ghq]
-root = {{ .chezmoi.homeDir }}/Code
+[gpg]
+format = ssh
 
-[ghq "gitea.internal.cweagans.net"]
-vcs = git
+[gpg "ssh"]
+allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
 
-[advice]
-addEmptyPathspec = false
-statusHints = false
+[init]
+defaultBranch = main
 
-{{- $ghPath := lookPath "gh" }}
-{{- if $ghPath }}
-[credential "https://github.com"]
-	helper = !{{ $ghPath }} auth git-credential
-[credential "https://gist.github.com"]
-	helper = !{{ $ghPath }} auth git-credential
-{{- end }}
+[push]
+default = current
+
+[rebase]
+autostash = true
+
+[tag]
+gpgsign = true
+
+[user]
+email = {{ .email }}
+name = Cameron Eagans
+signingkey = "key::ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJzYuWMD/bf+ZvMLM47oeW2Z1tBZu5QK4Z9jpOkeDCORMy2UaoQCV89JBVcpCrTD3sYYJWirep2d3vFRTTNSRwQ= PIV AUTH pubkey"
