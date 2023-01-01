@@ -15,11 +15,7 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-set +e
-ssh-add -s /usr/local/lib/opensc-pkcs11.so
-set -e
-
-if [[ $? -eq 1 ]]; then
+if ! ssh-add -s /usr/local/lib/opensc-pkcs11.so; then
 	echo "Restarting ssh-agent and trying again"
 	launchctl stop com.homebrew.ssh-agent
 	sleep 1
