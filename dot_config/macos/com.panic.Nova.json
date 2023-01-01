@@ -15,6 +15,7 @@
 		"FontSize": 14,
 		"IsFirstRun": false,
 		"ShowCodeStructureHeaders": false,
+		"ShowFoldersAboveFiles": true,
 		"ShowFoldingBar": false,
 		"ShowHiddenFiles": true,
 		"ShowIndentationGuides": true,
