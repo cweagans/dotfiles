@@ -6,7 +6,7 @@ statusHints = false
 whitespace = nowarn
 
 [branch]
-autosetuprebase = always
+autoSetupRebase = always
 
 [github]
 user = {{ .github_username }}
@@ -37,7 +37,6 @@ gpgsign = true
 
 [core]
 compression = 9
-excludesfile = {{ .chezmoi.homeDir }}/.config/git/ignore
 ignorecase = false
 pager = delta
 whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -72,6 +71,10 @@ zero-style = dim syntax
 algorithm = histogram
 colorMoved = default
 
+[fetch]
+fsckobjects = false
+prune = true
+
 [ghq]
 root = {{ .chezmoi.homeDir }}/Code
 
@@ -104,11 +107,24 @@ diffFilter = delta --color-only
 [merge]
 conflictstyle = diff3
 
+[pager]
+branch = false
+grep = false
+
 [push]
 default = current
 
 [rebase]
 autostash = true
+
+[receive]
+fsckobjects = true
+
+[status]
+submoduleSummary = true
+
+[transfer]
+fsckobjects = true
 
 [tag]
 gpgsign = true
