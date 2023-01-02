@@ -36,9 +36,9 @@ untracked = cyan
 gpgsign = true
 
 [core]
-ignorecase = false
 compression = 9
 excludesfile = {{ .chezmoi.homeDir }}/.config/git/ignore
+ignorecase = false
 pager = delta
 whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
@@ -84,8 +84,8 @@ develop = develop
 
 [gitflow "prefix"]
 feature = feature-
-release = release-
 hotfix = hotfix-
+release = release-
 support = support-
 versiontag = v
 
