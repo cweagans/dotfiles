@@ -6,7 +6,9 @@ statusHints = false
 whitespace = nowarn
 
 [branch]
-autosetuprebase = always[github]
+autosetuprebase = always
+
+[github]
 user = {{ .github_username }}
 
 [color "branch"]
@@ -37,7 +39,7 @@ gpgsign = true
 ignorecase = false
 compression = 9
 excludesfile = {{ .chezmoi.homeDir }}/.config/git/ignore
-pager = less -FRSX
+pager = delta
 whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 {{- $ghPath := lookPath "gh" }}
@@ -48,9 +50,27 @@ whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	helper = !{{ $ghPath }} auth git-credential
 {{- end }}
 
+[delta]
+features = unobtrusive-line-numbers my-nord
+navigate = true
+side-by-side = true
+
+[delta "my-nord"]
+blame-palette = "#2E3440" "#3B4252" "#434C5E" "#4C566A"
+blame-format = "{timestamp:<15} {author:<15.14} {commit:<8} "
+blame-separator-format = "│ {n:>4} │"
+dark = true
+hunk-header-style = omit
+hyperlinks = true
+line-numbers = true
+line-numbers-left-format = " {nm:>4} │"
+line-numbers-right-format = " {np:>4} │"
+syntax-theme = Nord
+zero-style = dim syntax
+
 [diff]
 algorithm = histogram
-tool = default-difftool
+colorMoved = default
 
 [ghq]
 root = {{ .chezmoi.homeDir }}/Code
@@ -77,6 +97,12 @@ allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
 
 [init]
 defaultBranch = main
+
+[interactive]
+diffFilter = delta --color-only
+
+[merge]
+conflictstyle = diff3
 
 [push]
 default = current
