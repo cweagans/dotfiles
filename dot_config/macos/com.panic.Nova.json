@@ -5,7 +5,7 @@
 		"AllowCrashReportCollection": true,
 		"AllowDataCollection": true,
 		"AppIcon": "Galaxy",
-		"CompletionsAcceptWithReturn": false,
+		"CompletionsAcceptWithReturn": true,
 		"EditorDarkTheme": "Panic Dark",
 		"EditorLightTheme": "Panic Dark",
 		"EnsureTrailingNewline": true,
