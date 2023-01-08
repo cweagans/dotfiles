@@ -30,9 +30,6 @@ export GEOMETRY_PROMPT_PLUGINS=(exec_time git kube hostname)
 # Comments should work as expected in interactive mode.
 setopt INTERACTIVECOMMENTS
 
-# Enable asdf-installed packages.
-. /usr/local/opt/asdf/libexec/asdf.sh
-
 # Make Homebrew completions available.
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
