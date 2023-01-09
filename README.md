@@ -9,6 +9,13 @@ This is how I set up a system to my liking. I mostly run macOS, but there will b
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/cweagans/dotfiles/HEAD/remote_install.sh)"
 ```
 
+### Manual steps
+
+There are a couple of manual steps that need to be performed that I haven't gotten around to automating yet:
+
+* `mkcert -install` for ddev https support (probably easy to automate, since invoking it a separate time doesn't change anything)
+* Update `~/.ddev/global_config.yaml` -- always omit the `dba` container and set `use_traefik: true` (harder to automate because of the `project_info` key. Can't just commit this file.)
+
 
 ## Support
 
