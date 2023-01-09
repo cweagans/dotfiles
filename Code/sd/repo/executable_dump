@@ -11,5 +11,5 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-ghq list > ~/Code/.Repofile
+ghq list | grep -v unversioned > ~/Code/.Repofile
 chezmoi add ~/Code/.Repofile
