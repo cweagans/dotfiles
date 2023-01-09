@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Run git gc in all managed repo dirs.
+#
+# Example usage:
+#   sd repo gc
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+cat ~/Code/.Repofile | xargs -I@ git -C ~/Code/@ gc --aggressive
