@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Dump a list of all ghq repos to ~/Code/.Repofile
+#
+# Example usage:
+#   sd repo dump
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+ghq list > ~/Code/.Repofile
+chezmoi add ~/Code/.Repofile
