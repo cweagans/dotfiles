@@ -1,6 +1,12 @@
+gitea.internal.cweagans.net/cweagans/tailscale-proxy
+gitea.internal.cweagans.net/pineconegrove/dory
 gitea.internal.cweagans.net/pineconegrove/drone-secretstash
+gitea.internal.cweagans.net/pineconegrove/itsychannel
+gitea.internal.cweagans.net/pineconegrove/routescript
 gitea.internal.cweagans.net/pineconegrove/secretstash
 gitea.internal.cweagans.net/pineconegrove/support
+gitea.internal.cweagans.net/pineconegrove/wordpress
 github.com/cweagans/composer-configurable-plugin
 github.com/cweagans/composer-patches
+github.com/cweagans/ddev-mysql-proxy
 github.com/cweagans/go-chip8
