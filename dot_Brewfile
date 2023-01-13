@@ -63,6 +63,7 @@ cask "steam"
 cask "typora"
 cask "vlc"
 cask "zoom"
+mas "AdGuard for Safari", id: 1440147259
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
