@@ -11,7 +11,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 
 # sd configuration options
 export SD_CAT=bat
-export SD_ROOT=~/Code/sd
+export SD_ROOT=~/.config/sd
 
 # Set up SSH agent
 export SSH_AUTH_SOCK=~/.ssh/agent.sock

@@ -8,6 +8,6 @@ bwinit() {
 		echo "Bitwarden vault is unlocked by BW_SESSION envvar"
 	fi
 
-	echo -n "Syncing vault..."
+	echo -n "Syncing vault... "
 	bw sync
 }
