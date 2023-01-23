@@ -105,6 +105,10 @@ M.nvimtree = {
 			},
 		},
 	},
+	view = {
+		width = 40,
+		side = "right",
+	},
 }
 
 M.telescope = {
