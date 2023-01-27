@@ -15,11 +15,8 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-if ! ssh-add -s /usr/local/lib/opensc-pkcs11.so; then
-	echo "Restarting ssh-agent and trying again"
-	launchctl stop com.homebrew.ssh-agent
-	sleep 1
-	launchctl start com.homebrew.ssh-agent
-	sleep 1
-	ssh-add -s /usr/local/lib/opensc-pkcs11.so
-fi
+launchctl stop com.homebrew.ssh-agent
+sleep 1
+launchctl start com.homebrew.ssh-agent
+sleep 1
+ssh-add -s /usr/local/lib/opensc-pkcs11.so
