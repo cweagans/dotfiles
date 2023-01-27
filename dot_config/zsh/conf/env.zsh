@@ -1,7 +1,7 @@
 # $PATH shouldn't be set in this file. See ~/.config/yadm/scripts/mac-paths.sh
 
 # The basics.
-export EDITOR=(nova open --wait)
+export EDITOR=vim
 export GOPATH=~/Code/go
 
 # Standard XDG stuff since it's not set on macOS.
