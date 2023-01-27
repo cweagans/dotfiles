@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# Create a Tailpress theme.
+#
+# This mostly replaces the Tailpress installer Composer package.
+#
+# Example usage:
+#   sd wp create-tailpress mytheme
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+if [[ "$1" == "" ]]; then
+	echo "You must specify the name of the theme to create"
+	exit 1
+fi
+
+THEMENAME=$1
+
+git clone https://github.com/jeffreyvr/tailpress "$THEMENAME"
+
+pushd $THEMENAME > /dev/null
+
+	cat style.css | sed "s/TailPress/$THEMENAME/g" > style.css.new && mv style.css.new style.css
+	cat style.css | sed "s/tailpress/$THEMENAME/g" > style.css.new && mv style.css.new style.css
+
+	cat functions.php | sed "s/tailpress_/${THEMENAME}_/g" > functions.php.new && mv functions.php.new functions.php
+	cat header.php | sed "s/tailpress_/${THEMENAME}_/g" > header.php.new && mv header.php.new header.php
+	cat footer.php | sed "s/tailpress_/${THEMENAME}_/g" > footer.php.new && mv footer.php.new footer.php
+
+	jq --arg THEMENAME "pg2022" '.name = $THEMENAME | .text_domain = $THEMENAME' package.json > package.json.new && mv package.json.new package.json
+
+	rm -rf .git
+
+	npm install --q
+
+popd > /dev/null
