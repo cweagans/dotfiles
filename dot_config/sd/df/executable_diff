@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-# Apply Chezmoi configuration to system.
-#
-# Login to Bitwarden, sync the bw vault, and then apply Chezmoi changes.
+# Find differences between the system config and what Chezmoi says it should be.
 #
 # Example usage:
-#   sd dotfiles apply
+#   sd df diff
 
 # Common script header stuff lives in the preamble. This makes it easy to update
 # options, includes, etc. Do not remove this line.

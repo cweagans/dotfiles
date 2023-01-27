@@ -5,7 +5,7 @@
 # Login to Bitwarden, sync the bw vault, and then apply Chezmoi changes.
 #
 # Example usage:
-#   sd dotfiles apply
+#   sd df apply
 
 # Common script header stuff lives in the preamble. This makes it easy to update
 # options, includes, etc. Do not remove this line.

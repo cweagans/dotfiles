@@ -6,7 +6,7 @@
 # the right place in the Chezmoi root, and add it to Git.
 #
 # Example usage:
-#   sd dotfiles update-brewfile
+#   sd df update-brewfile
 
 # Common script header stuff lives in the preamble. This makes it easy to update
 # options, includes, etc. Do not remove this line.
