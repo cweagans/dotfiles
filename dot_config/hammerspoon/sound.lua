@@ -1,6 +1,14 @@
 -- These are ordered by priority. The first one found wins (top to bottom).
 local presets = {
 	{
+		name = "Home Office (Headphones)",
+		input = "Producer USB",
+		output = "Soundcore Life Q20",
+		detect = function()
+			return (hs.audiodevice.findOutputByName('TX-384Khz Hifi Type-C Audio') ~= nil) and (hs.audiodevice.findOutputByName('Soundcore Life Q20') ~= nil)
+		end,
+	},
+	{
 		name = "Home Office",
 		input = "Producer USB",
 		output = "TX-384Khz Hifi Type-C Audio",
