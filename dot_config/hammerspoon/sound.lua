@@ -74,18 +74,3 @@ sleepWatcher:start()
 -- Finally, detect audio settings once when Hammerspoon starts.
 detectAudio()
 
--- Toggle mic state.
-function toggleInputMute()
-	return function()
-		if hs.audiodevice.defaultInputDevice():inputMuted() == true or hs.audiodevice.defaultInputDevice():inputVolume() == 0 then
-			hs.audiodevice.defaultInputDevice():setInputMuted(false)
-			hs.audiodevice.defaultInputDevice():setInputVolume(100)
-			hs.alert.show("Input unmuted")
-		else
-			hs.audiodevice.defaultInputDevice():setInputMuted(true)
-			hs.audiodevice.defaultInputDevice():setInputVolume(0)
-			hs.alert.show("Input muted")
-		end
-	end
-end
-hs.hotkey.bind({"cmd", "shift"}, "a", toggleInputMute())
