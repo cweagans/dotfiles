@@ -95,3 +95,9 @@ mas "Motion", id: 434290957
 mas "Pixelmator", id: 407963104
 mas "Vectornator Pro", id: 1470168007
 {{ end }}
+
+{{ if eq .mode "work" }}
+brew "awscli"
+brew "azure-cli"
+cask "google-cloud-sdk"
+{{ end }}
