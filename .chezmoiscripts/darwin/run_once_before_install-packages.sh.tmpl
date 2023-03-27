@@ -1,4 +1,9 @@
 #!/bin/zsh
 
 # Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
+
+if [[ ! -e "~/.Brewfile" ]]; then
+	cp $(chezmoi source-path)/dot_Brewfile ~/.Brewfile
+fi
+
 brew bundle --global --no-lock
