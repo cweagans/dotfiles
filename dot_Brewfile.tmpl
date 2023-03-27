@@ -1,4 +1,3 @@
-tap "drud/ddev"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -12,8 +11,6 @@ brew "bitwarden-cli"
 brew "chezmoi"
 brew "choose"
 brew "colima"
-brew "php"
-brew "composer"
 brew "coreutils"
 brew "direnv"
 brew "docker"
@@ -28,7 +25,6 @@ brew "go-task"
 brew "gopls"
 brew "grpcurl"
 brew "httpie"
-brew "hugo"
 brew "jq"
 brew "lua"
 brew "luacheck"
@@ -47,10 +43,7 @@ brew "watch"
 brew "watchexec"
 brew "wget"
 brew "yq"
-brew "yubico-piv-tool"
-brew "drud/ddev/ddev"
 cask "chromium"
-cask "discord"
 cask "elgato-camera-hub"
 cask "elgato-stream-deck"
 cask "hammerspoon"
@@ -59,36 +52,46 @@ cask "iterm2"
 cask "itsycal"
 cask "logi-options-plus"
 cask "ngrok"
+cask "opensc"
+cask "typora"
+cask "zoom"
+mas "AdGuard for Safari", id: 1440147259
+mas "Bitwarden", id: 1352778147
+mas "GoodNotes", id: 1444383602
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Slack", id: 803453959
+mas "Tailscale", id: 1475387142
+mas "Things", id: 904280696
+mas "Xcode", id: 497799835
+
+{{ if eq .mode "personal" }}
+tap "drud/ddev"
+brew "php"
+brew "composer"
+brew "drud/ddev/ddev"
+brew "hugo"
+brew "yubico-piv-tool"
+cask "discord"
 cask "nvidia-geforce-now"
 cask "obs"
-cask "opensc"
 cask "saleae-logic"
 cask "scrivener"
 cask "signal"
 cask "steam"
 cask "transmit"
-cask "typora"
 cask "vlc"
-cask "zoom"
-mas "AdGuard for Safari", id: 1440147259
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
-mas "Bitwarden", id: 1352778147
 mas "Compressor", id: 424390742
 mas "Final Cut Pro", id: 424389933
 mas "GarageBand", id: 682658836
-mas "GoodNotes", id: 1444383602
 mas "iMazing Profile Editor", id: 1487860882
-mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
 mas "MainStage", id: 634159523
 mas "Motion", id: 434290957
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
-mas "Slack", id: 803453959
-mas "Tailscale", id: 1475387142
-mas "Things", id: 904280696
 mas "Vectornator Pro", id: 1470168007
-mas "Xcode", id: 497799835
+{{ end }}
