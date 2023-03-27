@@ -20,8 +20,7 @@ export SSH_AUTH_SOCK=~/.ssh/agent.sock
 GEOMETRY_PROMPT=(geometry_newline $GEOMETRY_PROMPT)
 
 # Homebrew vars
-export HOMEBREW_PREFIX="/usr/local"
-export HOMEBREW_CELLAR="/usr/local/Cellar"
-export HOMEBREW_REPOSITORY="/usr/local/Homebrew"
-export MANPATH="/usr/local/share/man${MANPATH+:$MANPATH}:"
-export INFOPATH="/usr/local/share/info:${INFOPATH:-}"
+export HOMEBREW_PREFIX="$(brew --prefix)"
+export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar"
+export MANPATH="$HOMEBREW_PREFIX/share/man${MANPATH+:$MANPATH}:"
+export INFOPATH="$HOMEBREW_PREFIX/share/info:${INFOPATH:-}"

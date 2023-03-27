@@ -12,5 +12,11 @@ function ensurePath {
 
 [ -f "/etc/paths.d/200-{{ .chezmoi.username }}" ] || sudo touch /etc/paths.d/200-{{ .chezmoi.username }}
 
+{{ if eq .chezmoi.arch "arm64" }}
+ensurePath {{ output "/opt/homebrew/bin/brew" "--prefix" | trim }}/bin
+{{ end }}
+{{ if eq .chezmoi.arch "amd64" }}
 ensurePath {{ output "/usr/local/bin/brew" "--prefix" | trim }}/bin
+{{ end }}
+
 ensurePath {{ .chezmoi.homeDir }}/bin

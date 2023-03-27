@@ -5,7 +5,12 @@ if [[ "$(uname)" == "Darwin" ]]; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 	# Setup Homebrew envvars.
-	eval $(/usr/local/bin/brew shellenv)
+	if [[ $(arch) == "arm64" ]]; then
+		eval $(/opt/homebrew/bin/brew shellenv)
+	fi
+	if [[ $(arch) == "i386" ]]; then
+		eval $(/usr/local/bin/brew shellenv)
+	fi
 
 	# Install chezmoi and Bitwarden CLI (for secret storage).
 	brew install bitwarden-cli chezmoi

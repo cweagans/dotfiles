@@ -2,7 +2,12 @@
 
 Host *
     # Use Yubikey for auth.
+    {{ if eq .chezmoi.arch "arm64" }}
+    PKCS11Provider /opt/homebrew/lib/opensc-pkcs11.so
+    {{ end }}
+    {{ if eq .chezmoi.arch "amd64" }}
     PKCS11Provider /usr/local/lib/opensc-pkcs11.so
+    {{ end }}
 
     # Speed up reconnects.
     ControlPath ~/.ssh/control/%C

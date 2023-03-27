@@ -19,4 +19,4 @@ launchctl stop com.homebrew.ssh-agent
 sleep 1
 launchctl start com.homebrew.ssh-agent
 sleep 1
-ssh-add -s /usr/local/lib/opensc-pkcs11.so
+ssh-add -s $HOMEBREW_PREFIX/lib/opensc-pkcs11.so
