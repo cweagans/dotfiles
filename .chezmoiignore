@@ -3,14 +3,26 @@ notes.md
 remote_install.sh
 
 {{ if ne .chezmoi.os "darwin" }}
+
 .chezmoiscripts/darwin/**
 .config/hammerspoon/**
 .config/iterm/**
 .config/macos/**
 Library/**
+
 {{ else }}
+
 {{- /* Still don't want this file to exist permanently since it has passwords in it */ -}}
 {{- /* Will be created temporarily when needed, imported, then deleted. */ -}}
 .config/macos/profiles/macos.mobileconfig
+
+{{ end }}
+
+{{ if eq .mode "work" }}
+.config/sd/wp
+.ddev/**
+.ssh/id_rsa.pub
+.ssh/id_rsa
+Code/.Repofile
 {{ end }}
 
