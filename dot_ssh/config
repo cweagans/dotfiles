@@ -1,0 +1,10 @@
+# vi:syntax=sshconfig
+
+Host *
+    # Use Yubikey for auth.
+    PKCS11Provider /Library/OpenSC/lib/opensc-pkcs11.so
+
+    # Speed up reconnects.
+    ControlPath ~/.ssh/control/%C
+    ControlMaster auto
+    ControlPersist 1h
