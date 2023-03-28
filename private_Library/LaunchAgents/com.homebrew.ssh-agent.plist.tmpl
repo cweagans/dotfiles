@@ -9,10 +9,10 @@
 		<string>/bin/sh</string>
 		<string>-c</string>
 		{{ if eq .chezmoi.arch "arm64" }}
-		<string>rm {{ .chezmoi.homeDir }}/.ssh/agent.sock; /opt/homebrew/bin/ssh-agent -D -a {{ .chezmoi.homeDir }}/.ssh/agent.sock -P /Library/OpenSC/lib/opensc-pkcs11.so</string>
+		<string>rm {{ .chezmoi.homeDir }}/.ssh/agent.sock; /opt/homebrew/bin/ssh-agent -D -a {{ .chezmoi.homeDir }}/.ssh/agent.sock -P /usr/local/lib/opensc-pkcs11.so</string>
 		{{ end }}
 		{{ if eq .chezmoi.arch "amd64" }}
-		<string>rm {{ .chezmoi.homeDir }}/.ssh/agent.sock; /usr/local/bin/ssh-agent -D -a {{ .chezmoi.homeDir }}/.ssh/agent.sock -P /Library/OpenSC/lib/opensc-pkcs11.so</string>
+		<string>rm {{ .chezmoi.homeDir }}/.ssh/agent.sock; /usr/local/bin/ssh-agent -D -a {{ .chezmoi.homeDir }}/.ssh/agent.sock -P /usr/local/lib/opensc-pkcs11.so</string>
 		{{ end }}
 	</array>
 	<key>RunAtLoad</key>

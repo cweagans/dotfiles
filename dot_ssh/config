@@ -2,7 +2,7 @@
 
 Host *
     # Use Yubikey for auth.
-    PKCS11Provider /Library/OpenSC/lib/opensc-pkcs11.so
+    PKCS11Provider /usr/local/lib/opensc-pkcs11.so
 
     # Speed up reconnects.
     ControlPath ~/.ssh/control/%C
