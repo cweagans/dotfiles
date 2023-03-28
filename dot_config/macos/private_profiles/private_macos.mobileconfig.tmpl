@@ -4,6 +4,7 @@
 <dict>
 	<key>PayloadContent</key>
 	<array>
+		{{ if eq .mode "personal" }}
 		<dict>
 			<key>EmailAccountDescription</key>
 			<string>Gmail</string>
@@ -271,6 +272,51 @@
 			<integer>1</integer>
 			<key>PreventAppSheet</key>
 			<true/>
+		</dict>
+		{{ end }}
+		<dict>
+			<key>EmailAccountDescription</key>
+			<string>Swirlds Labs</string>
+			<key>EmailAccountName</key>
+			<string>Cameron Eagans</string>
+			<key>EmailAccountType</key>
+			<string>EmailTypeIMAP</string>
+			<key>EmailAddress</key>
+			<string>cameron@swirldslabs.com</string>
+			<key>IncomingMailServerAuthentication</key>
+			<string>EmailAuthPassword</string>
+			<key>IncomingMailServerHostName</key>
+			<string>imap.gmail.com</string>
+			<key>IncomingMailServerPortNumber</key>
+			<integer>993</integer>
+			<key>IncomingMailServerUseSSL</key>
+			<true/>
+			<key>IncomingMailServerUsername</key>
+			<string>cameron@swirldslabs.com</string>
+			<key>IncomingPassword</key>
+			<string>{{ (bitwarden "item" "macos - swirldslabs app password").login.password }}</string>
+			<key>OutgoingMailServerAuthentication</key>
+			<string>EmailAuthPassword</string>
+			<key>OutgoingMailServerHostName</key>
+			<string>smtp.gmail.com</string>
+			<key>OutgoingMailServerPortNumber</key>
+			<integer>587</integer>
+			<key>OutgoingMailServerUseSSL</key>
+			<true/>
+			<key>OutgoingMailServerUsername</key>
+			<string>cameron@swirldslabs.com</string>
+			<key>OutgoingPassword</key>
+			<string>{{ (bitwarden "item" "macos - swirldslabs app password").login.password }}</string>
+			<key>PayloadDisplayName</key>
+			<string>Swirlds Labs</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.mail.managed.C7C5107D-96A4-48D0-B7EE-D1AF6AEE93ED</string>
+			<key>PayloadType</key>
+			<string>com.apple.mail.managed</string>
+			<key>PayloadUUID</key>
+			<string>C7C5107D-96A4-48D0-B7EE-D1AF6AEE93ED</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>PayloadDisplayName</key>
@@ -1041,6 +1087,32 @@
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>CalDAVAccountDescription</key>
+			<string>Swirlds Labs</string>
+			<key>CalDAVHostName</key>
+			<string>calendar.google.com</string>
+			<key>CalDAVPassword</key>
+			<string>{{ (bitwarden "item" "macos - swirldslabs app password").login.password }}</string>
+			<key>CalDAVPort</key>
+			<integer>443</integer>
+			<key>CalDAVPrincipalURL</key>
+			<string>https://calendar.google.com/calendar/dav/cameron@swirldslabs.com/user/</string>
+			<key>CalDAVUseSSL</key>
+			<true/>
+			<key>CalDAVUsername</key>
+			<string>cameron@swirldslabs.com</string>
+			<key>PayloadDisplayName</key>
+			<string>Swirlds Labs</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.caldav.account.F211E16A-C5C9-48CC-8EDC-D89EDCEF0185</string>
+			<key>PayloadType</key>
+			<string>com.apple.caldav.account</string>
+			<key>PayloadUUID</key>
+			<string>F211E16A-C5C9-48CC-8EDC-D89EDCEF0185</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>CardDAVAccountDescription</key>
 			<string>Gmail</string>
 			<key>CardDAVHostName</key>
@@ -1061,6 +1133,30 @@
 			<string>com.apple.carddav.account</string>
 			<key>PayloadUUID</key>
 			<string>30622F9D-2283-4B3E-BAF5-F76CB2EE8865</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>CardDAVAccountDescription</key>
+			<string>Swirlds Labs</string>
+			<key>CardDAVHostName</key>
+			<string>www.googleapis.com</string>
+			<key>CardDAVPassword</key>
+			<string>{{ (bitwarden "item" "macos - swirldslabs app password").login.password }}</string>
+			<key>CardDAVPort</key>
+			<integer>443</integer>
+			<key>CardDAVPrincipalURL</key>
+			<string>https://www.googleapis.com/carddav/v1/principals/cameron@swirldslabs.com/lists/default/</string>
+			<key>CardDAVUsername</key>
+			<string>cameron@swirldslabs.com</string>
+			<key>PayloadDisplayName</key>
+			<string>Swirlds Labs</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.carddav.account.B8573C43-E06E-4FBA-9C81-0C63FC5BA5FB</string>
+			<key>PayloadType</key>
+			<string>com.apple.carddav.account</string>
+			<key>PayloadUUID</key>
+			<string>B8573C43-E06E-4FBA-9C81-0C63FC5BA5FB</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
