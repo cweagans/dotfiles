@@ -129,8 +129,18 @@ fsckobjects = true
 [tag]
 gpgsign = true
 
+{{ if eq .mode "personal" }}
 [url "ssh://git@gitea.internal.cweagans.net:2222"]
 insteadOf = https://gitea.internal.cweagans.net
+{{ end }}
+{{ if eq .mode "work" }}
+[url "git@github.com:hashgraph"]
+insteadOf = https://github.com/hashgraph
+[url "git@github.com:swirlds"]
+insteadOf = https://github.com/swirlds
+[url "git@github.com:swirldslabs"]
+insteadOf = https://github.com/swirldslabs
+{{ end }}
 
 [user]
 email = {{ .email }}
