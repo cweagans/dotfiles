@@ -1,6 +1,9 @@
+hs.loadSpoon("EmmyLua")
+
 require "sound"
-require "windowmanagement"
 require "textexpansion"
+require "windowmanagement"
+require "hbar"
 
 -- Screen lock
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'L', function()
