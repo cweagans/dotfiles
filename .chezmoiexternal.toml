@@ -1,0 +1,6 @@
+[".config/hammerspoon/Spoons/EmmyLua.spoon"]
+type = "archive"
+url = "https://github.com/Hammerspoon/Spoons/raw/master/Spoons/EmmyLua.spoon.zip"
+refreshPeriod = "168h"
+format = "zip"
+stripComponents = 1
