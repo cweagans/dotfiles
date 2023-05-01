@@ -1,0 +1,8 @@
+{
+    "label": "Siri",
+    "restart": "true",
+    "values": {
+        // Enable siri.
+        "Assistant Enabled": true
+    }
+}

@@ -8,16 +8,18 @@
 		"KeyRepeat": 2,
 		"InitialKeyRepeat": 10,
 		// Show a context menu item for showing the web inspector in web views.
-		"WebKitDeveloperExtras": true,
+		"WebKitDeveloperExtras": 1,
 		// Do *NOT* change what I type.
-		"NSAutomaticCapitalizationEnabled": false,
-		"NSAutomaticDashSubstitutionEnabled": false,
-		"NSAutomaticPeriodSubstitutionEnabled": false,
-		"NSAutomaticQuoteSubstitutionEnabled": false,
-		"NSAutomaticSpellingCorrectionEnabled": false,
+		"NSAutomaticCapitalizationEnabled": 0,
+		"NSAutomaticDashSubstitutionEnabled": 0,
+		"NSAutomaticPeriodSubstitutionEnabled": 0,
+		"NSAutomaticQuoteSubstitutionEnabled": 0,
+		"NSAutomaticSpellingCorrectionEnabled": 0,
 		// Expand save panel by default.
 		"NSNavPanelExpandedStateForSaveMode": true,
 		// Set highlight color to blue.
-		"AppleHighlightColor": "0.698039 0.843137 1.000000"
+		"AppleHighlightColor": "0.698039 0.843137 1.000000",
+		// Disable shake to locate cursor.
+		"CGDisableCursorLocationMagnification": 1
 	}
 }
