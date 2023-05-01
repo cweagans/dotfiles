@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Dump a list of all ghq repos to ~/Code/.Repofile
+# Dump a list of all ghq repos to ~/Developer/.Repofile
 #
 # Example usage:
 #   sd repo dump
@@ -11,5 +11,5 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-ghq list | grep -v unversioned > ~/Code/.Repofile
-chezmoi add ~/Code/.Repofile
+ghq list | grep -v unversioned > ~/Developer/.Repofile
+chezmoi add ~/Developer/.Repofile

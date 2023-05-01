@@ -2,7 +2,7 @@
 
 # The basics.
 export EDITOR=vim
-export GOPATH=~/Code/go
+export GOPATH=~/Developer/go
 
 # Standard XDG stuff since it's not set on macOS.
 export XDG_CACHE_HOME=$HOME/.cache

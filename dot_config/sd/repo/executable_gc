@@ -11,4 +11,4 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-cat ~/Code/.Repofile | xargs -I@ git -C ~/Code/@ gc --aggressive
+cat ~/Developer/.Repofile | xargs -I@ git -C ~/Developer/@ gc --aggressive
