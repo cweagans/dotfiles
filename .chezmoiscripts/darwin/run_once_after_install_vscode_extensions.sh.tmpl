@@ -1,0 +1,45 @@
+#!/bin/zsh
+
+code --install-extension anweber.httpbook
+code --install-extension anweber.vscode-httpyac
+code --install-extension arcticicestudio.nord-visual-studio-code
+code --install-extension bierner.markdown-mermaid
+code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension Dart-Code.dart-code
+code --install-extension Dart-Code.flutter
+code --install-extension EditorConfig.EditorConfig
+code --install-extension GitHub.copilot
+code --install-extension github.vscode-github-actions
+code --install-extension GitHub.vscode-pull-request-github
+code --install-extension golang.go
+code --install-extension hashicorp.hcl
+code --install-extension hashicorp.terraform
+code --install-extension mikestead.dotenv
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-vscode-remote.remote-containers
+code --install-extension ms-vscode.cpptools
+code --install-extension ms-vscode.hexeditor
+code --install-extension ms-vscode.makefile-tools
+code --install-extension platformio.platformio-ide
+code --install-extension quillaja.goasm
+code --install-extension redhat.ansible
+code --install-extension redhat.vscode-yaml
+code --install-extension Rubymaniac.vscode-direnv
+code --install-extension rust-lang.rust-analyzer
+code --install-extension sumneko.lua
+code --install-extension tinygo.vscode-tinygo
+code --install-extension virgilsisoe.hammerspoon
+code --install-extension vscodevim.vim
+code --install-extension xdebug.php-debug
+
+echo "VS Code Extensions installed"
+echo "Disable the following extensions (they are enabled only in workspaces where they are needed), then come back here and press enter:"
+echo "C/C++\nDart\nFlutter\nGo Asm\nHammerspoon\nHashiCorp HCL\nHashiCorp Terraform\nLua\nPHP Debug\nPHP Intelephense\nPlatformIO IDE\nrust-analyzer\nTinyGo"
+read
+
+echo "VS Code post install tasks:"
+echo "1. Log in to all GitHub extensions"
+echo "2. Temporarily enable Intelephense and enter the license key (use command pallete)"
+read
