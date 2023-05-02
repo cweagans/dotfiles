@@ -16,6 +16,9 @@ export SD_ROOT=~/.config/sd
 # Set up SSH agent
 export SSH_AUTH_SOCK=~/.ssh/agent.sock
 
+# Configure cweagans/c
+export PROJECTS=~/Developer
+
 # Add a newline in the Geometry prompt
 GEOMETRY_PROMPT=(geometry_newline $GEOMETRY_PROMPT)
 
