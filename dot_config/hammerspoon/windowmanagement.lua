@@ -1,4 +1,4 @@
-hs.grid.setGrid('12x12')
+hs.grid.setGrid('12x12').setMargins('0x0')
 hs.window.animationDuration = 0
 
 -- Desktop is my 49" super ultrawide.
