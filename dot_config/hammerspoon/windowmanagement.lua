@@ -4,24 +4,9 @@ hs.window.animationDuration = 0
 -- Desktop is my 49" super ultrawide.
 -- Laptop is my MBP display.
 local grid_positions = {
+	-- Universal behaviors
 	fullscreen = {
 		desktop = '3,0 6x12',
-		laptop = '0,0 12x12',
-	},
-	left = {
-		desktop = '3,0 3x12',
-		laptop = '0,0 6x12',
-	},
-	right = {
-		desktop = '6,0 3x12',
-		laptop = '6,0 6x12',
-	},
-	farleft = {
-		desktop = '0,0 3x12',
-		laptop = '0,0 6x12',
-	},
-	farright = {
-		desktop = '9,0 3x12',
 		laptop = '0,0 12x12',
 	},
 	halfleft = {
@@ -35,6 +20,31 @@ local grid_positions = {
 	floating = {
 		desktop = '4,1 4x10',
 		laptop = '1,1 10x10',
+	},
+	-- Desktop-specific behaviors. Laptop behaviors are duplicates of universal behaviors.
+	left = {
+		desktop = '3,0 3x12',
+		laptop = '0,0 6x12',
+	},
+	right = {
+		desktop = '6,0 3x12',
+		laptop = '6,0 6x12',
+	},
+	wideleft = {
+		desktop = '2,0 4x12',
+		laptop = '0,0 6x12',
+	},
+	wideright = {
+		desktop = '6,0 4x12',
+		laptop = '6,0 6x12',
+	},
+	farleft = {
+		desktop = '0,0 3x12',
+		laptop = '0,0 6x12',
+	},
+	farright = {
+		desktop = '9,0 3x12',
+		laptop = '0,0 12x12',
 	},
 }
 
@@ -91,8 +101,10 @@ end
 -- Ctrl + Alt + C, B should position a window such that it's taking up half of the
 -- screen (left or right respectively). Mostly useful for desktop.
 hs.hotkey.bind({"ctrl", "alt"}, "d", moveFocusedWindow(grid_positions.left))
+hs.hotkey.bind({"ctrl", "alt", "shift"}, "d", moveFocusedWindow(grid_positions.wideleft))
 hs.hotkey.bind({"ctrl", "alt"}, "f", moveFocusedWindow(grid_positions.fullscreen))
 hs.hotkey.bind({"ctrl", "alt"}, "g", moveFocusedWindow(grid_positions.right))
+hs.hotkey.bind({"ctrl", "alt", "shift"}, "g", moveFocusedWindow(grid_positions.wideright))
 hs.hotkey.bind({"ctrl", "alt"}, "e", moveFocusedWindow(grid_positions.farleft))
 hs.hotkey.bind({"ctrl", "alt"}, "t", moveFocusedWindow(grid_positions.farright))
 hs.hotkey.bind({"ctrl", "alt"}, "c", moveFocusedWindow(grid_positions.halfleft))
