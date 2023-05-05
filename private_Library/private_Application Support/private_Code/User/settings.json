@@ -13,6 +13,7 @@
     "editor.fontSize": 14,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
+    "editor.inlineSuggest.enabled": true,
     "editor.lineHeight": 24,
     "editor.minimap.enabled": false,
     "editor.quickSuggestions": {
@@ -30,76 +31,6 @@
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "on",
     "editor.wordBasedSuggestions": false,
-    "extension-profiles.profiles": {
-        "Arduino": {
-            "extensions": [
-                "platformio.platformio-ide",
-            ],
-        },
-        "C/C++": {
-            "extensions": [
-                "ms-vscode.cpptools",
-                "ms-vscode.hexeditor",
-                "ms-vscode.makefile-tools",
-            ],
-        },
-        "DevOps": {
-            "extensions": [
-                "hashicorp.hcl",
-                "hashicorp.terraform",
-                "redhat.ansible",
-            ],
-        },
-        "Docker": {
-            "extensions": [
-                "ms-azuretools.vscode-docker",
-                "ms-vscode-remote.remote-containers",
-            ],
-        },
-        "Flutter": {
-            "extensions": [
-                "Dart-Code.dart-code",
-                "Dart-Code.flutter",
-            ],
-        },
-        "GitHub": {
-            "extensions": [
-                "github.vscode-github-actions",
-                "GitHub.copilot",
-                "GitHub.vscode-pull-request-github",
-            ],
-        },
-        "Go": {
-            "extensions": [
-                "golang.go",
-                "quillaja.goasm",
-                "tinygo.vscode-tinygo",
-            ],
-        },
-        "PHP": {
-            "extensions": [
-                "xdebug.php-debug",
-                "bmewburn.vscode-intelephense-client",
-            ],
-        },
-        "Python": {
-            "extensions": [
-                "ms-python.python",
-                "ms-python.vscode-pylance",
-            ],
-        },
-        "Remote APIs": {
-            "extensions": [
-                "anweber.httpbook",
-                "anweber.vscode-httpyac",
-            ],
-        },
-        "Rust": {
-            "extensions": [
-                "rust-lang.rust-analyzer",
-            ],
-        },
-    },
     "files.autoSave": "onWindowChange",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -138,5 +69,4 @@
         "editor.tabCompletion": "onlySnippets",
     },
     "workbench.colorTheme": "Nord",
-    "editor.inlineSuggest.enabled": true,
 }
