@@ -2,8 +2,6 @@
 
 # Apply Chezmoi configuration to system.
 #
-# Login to Bitwarden, sync the bw vault, and then apply Chezmoi changes.
-#
 # Example usage:
 #   sd df apply
 
@@ -12,8 +10,6 @@
 source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
-
-bwinit
 
 echo "Applying Chezmoi configuration"
 chezmoi apply

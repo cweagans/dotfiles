@@ -14,21 +14,15 @@ if [[ "$(uname)" == "Darwin" ]]; then
 		eval $(/usr/local/bin/brew shellenv)
 	fi
 
-	# If needed, install chezmoi and Bitwarden CLI (for secret storage).
-	if ! type "bw" > /dev/null 2>&1; then
-		brew install bitwarden-cli
-	fi
-	if ! type "chezmoi" > /dev/null 2>&1; then
-		brew install chezmoi
-	fi
+	# If needed, install chezmoi, 1Password, and 1Password CLI (for secret storage).
+	brew install --cask 1password 1password-cli
+	brew install chezmoi
 
-	# Login to Bitwarden
-	if [ -z ${BW_SESSION+x} ]; then
-		echo "Login to Bitwarden:"
-		export BW_SESSION=`bw login --raw`
-	else
-		echo "Bitwarden vault is unlocked by BW_SESSION envvar"
-	fi
+	echo "Open 1Password, log in, and unlock the Cameron and Alli vault."
+	echo "In Settings -> Developer, check 'Connect with 1Password CLI'."
+	echo "In another Terminal window, make sure you can run \"op read 'op://Chezmoi/Home WiFi/username'\" before continuing."
+	echo "Press enter to continue."
+	read
 
 	# Bootstrap environment (will prompt for values in chezmoi config).
 	chezmoi init --apply --verbose https://github.com/cweagans/dotfiles.git

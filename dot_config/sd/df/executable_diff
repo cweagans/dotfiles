@@ -11,7 +11,5 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-bwinit
-
 echo "Configuration differences:"
 chezmoi diff
