@@ -4,6 +4,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/core"
 tap "homebrew/services"
+
 brew "act"
 brew "actionlint"
 brew "age"
@@ -11,7 +12,6 @@ brew "ansible"
 brew "ansible-lint"
 brew "bat"
 brew "black"
-brew "node"
 brew "chezmoi"
 brew "choose"
 brew "colima"
@@ -38,11 +38,16 @@ brew "luarocks"
 brew "mas"
 brew "mkcert"
 brew "mysql-client"
+brew "node"
 brew "nss"
 brew "openssh"
 brew "pre-commit"
+brew "protobuf"
+brew "protobuf-gen-go"
+brew "protobuf-gen-go-grpc"
 brew "pygments"
 brew "python@3.10"
+brew "qemu"
 brew "ripgrep"
 brew "rustup-init"
 brew "svim"
@@ -55,6 +60,7 @@ brew "watch"
 brew "watchexec"
 brew "wget"
 brew "yq"
+
 cask "1password"
 cask "1password-cli"
 cask "chromium"
@@ -71,6 +77,8 @@ cask "setapp"
 cask "typora"
 cask "visual-studio-code"
 cask "zoom"
+
+mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "GoodNotes", id: 1444383602
 mas "Keynote", id: 409183694
@@ -81,14 +89,44 @@ mas "Tailscale", id: 1475387142
 mas "Things", id: 904280696
 mas "Xcode", id: 497799835
 
+vscode "anweber.httpbook"
+vscode "anweber.vscode-httpyac"
+vscode "arcticicestudio.nord-visual-studio-code"
+vscode "bierner.markdown-mermaid"
+vscode "EditorConfig.EditorConfig"
+vscode "GitHub.copilot"
+vscode "github.vscode-github-actions"
+vscode "GitHub.vscode-pull-request-github"
+vscode "golang.go"
+vscode "hashicorp.hcl"
+vscode "hashicorp.terraform"
+vscode "mikestead.dotenv"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.hexeditor"
+vscode "ms-vscode.makefile-tools"
+vscode "redhat.ansible"
+vscode "redhat.vscode-yaml"
+vscode "Rubymaniac.vscode-direnv"
+vscode "rust-lang.rust-analyzer"
+vscode "sumneko.lua"
+vscode "virgilsisoe.hammerspoon"
+vscode "vscodevim.vim"
+
 {{ if eq .mode "personal" }}
 tap "drud/ddev"
+
 brew "php"
 brew "composer"
 brew "drud/ddev/ddev"
 brew "hugo"
 brew "yubico-piv-tool"
+
 cask "discord"
+cask "musescore"
 cask "nvidia-geforce-now"
 cask "obs"
 cask "saleae-logic"
@@ -97,6 +135,7 @@ cask "signal"
 cask "steam"
 cask "transmit"
 cask "vlc"
+
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
@@ -109,10 +148,19 @@ mas "MainStage", id: 634159523
 mas "Motion", id: 434290957
 mas "Pixelmator", id: 407963104
 mas "Vectornator Pro", id: 1470168007
+
+vscode "bmewburn.vscode-intelephense-client"
+vscode "Dart-Code.dart-code"
+vscode "Dart-Code.flutter"
+vscode "platformio.platformio-ide"
+vscode "quillaja.goasm"
+vscode "tinygo.vscode-tinygo"
+vscode "xdebug.php-debug"
 {{ end }}
 
 {{ if eq .mode "work" }}
 brew "awscli"
 brew "azure-cli"
+
 cask "google-cloud-sdk"
 {{ end }}
