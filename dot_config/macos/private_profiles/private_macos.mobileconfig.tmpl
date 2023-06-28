@@ -13,7 +13,7 @@
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>cweagans@gmail.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/username" }}</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -23,9 +23,9 @@
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>cweagans@gmail.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/username" }}</string>
 			<key>IncomingPassword</key>
-			<string>{{ (bitwarden "item" "macos - gmail app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/password" }}</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -35,9 +35,9 @@
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>cweagans@gmail.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/username" }}</string>
 			<key>OutgoingPassword</key>
-			<string>{{ (bitwarden "item" "macos - gmail app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/password" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Gmail</string>
 			<key>PayloadIdentifier</key>
@@ -57,7 +57,7 @@
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>me@cweagans.net</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - personal/username" }}</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -67,9 +67,9 @@
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>me@cweagans.net</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - personal/username" }}</string>
 			<key>IncomingPassword</key>
-			<string>{{ (bitwarden "item" "migadu - me@cweagans.net").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - personal/password" }}</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -79,9 +79,9 @@
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>me@cweagans.net</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - personal/username" }}</string>
 			<key>OutgoingPassword</key>
-			<string>{{ (bitwarden "item" "migadu - me@cweagans.net").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - personal/password" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Personal</string>
 			<key>PayloadIdentifier</key>
@@ -101,7 +101,7 @@
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>cameron@pineconegrove.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - pinecone grove/username" }}</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -111,9 +111,9 @@
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>cameron@pineconegrove.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - pinecone grove/username" }}</string>
 			<key>IncomingPassword</key>
-			<string>{{ (bitwarden "item" "migadu - cameron@pineconegrove.com").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - pinecone grove/password" }}</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -123,9 +123,9 @@
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>cameron@pineconegrove.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - pinecone grove/username" }}</string>
 			<key>OutgoingPassword</key>
-			<string>{{ (bitwarden "item" "migadu - cameron@pineconegrove.com").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - pinecone grove/password" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Pinecone Grove</string>
 			<key>PayloadIdentifier</key>
@@ -139,57 +139,13 @@
 		</dict>
 		<dict>
 			<key>EmailAccountDescription</key>
-			<string>Caven Ridge HOA</string>
-			<key>EmailAccountName</key>
-			<string>Cameron Eagans</string>
-			<key>EmailAccountType</key>
-			<string>EmailTypeIMAP</string>
-			<key>EmailAddress</key>
-			<string>secretary@cavenridgehoa.com</string>
-			<key>IncomingMailServerAuthentication</key>
-			<string>EmailAuthPassword</string>
-			<key>IncomingMailServerHostName</key>
-			<string>imappro.zoho.com</string>
-			<key>IncomingMailServerPortNumber</key>
-			<integer>993</integer>
-			<key>IncomingMailServerUseSSL</key>
-			<true/>
-			<key>IncomingMailServerUsername</key>
-			<string>secretary@cavenridgehoa.com</string>
-			<key>IncomingPassword</key>
-			<string>{{ (bitwarden "item" "macos - hoa app password").login.password }}</string>
-			<key>OutgoingMailServerAuthentication</key>
-			<string>EmailAuthPassword</string>
-			<key>OutgoingMailServerHostName</key>
-			<string>smtppro.zoho.com</string>
-			<key>OutgoingMailServerPortNumber</key>
-			<integer>587</integer>
-			<key>OutgoingMailServerUseSSL</key>
-			<true/>
-			<key>OutgoingMailServerUsername</key>
-			<string>secretary@cavenridgehoa.com</string>
-			<key>OutgoingPassword</key>
-			<string>{{ (bitwarden "item" "macos - hoa app password").login.password }}</string>
-			<key>PayloadDisplayName</key>
-			<string>Caven Ridge HOA</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.mail.managed.4F96F471-3CDF-4966-AED1-76E483BE7059</string>
-			<key>PayloadType</key>
-			<string>com.apple.mail.managed</string>
-			<key>PayloadUUID</key>
-			<string>563B0F42-42F8-4414-B455-D87F8351346E</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>EmailAccountDescription</key>
 			<string>Eagans Foundation</string>
 			<key>EmailAccountName</key>
 			<string>Cameron Eagans</string>
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>cameron@eagans.foundation</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - eagans foundation/username" }}</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -199,9 +155,9 @@
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>cameron@eagans.foundation</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - eagans foundation/username" }}</string>
 			<key>IncomingPassword</key>
-			<string>{{ (bitwarden "item" "migadu - cameron@eagans.foundation").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - eagans foundation/password" }}</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -211,9 +167,9 @@
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>cameron@eagans.foundation</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - eagans foundation/username" }}</string>
 			<key>OutgoingPassword</key>
-			<string>{{ (bitwarden "item" "migadu - cameron@eagans.foundation").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - eagans foundation/password" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Eagans Foundation</string>
 			<key>PayloadIdentifier</key>
@@ -235,7 +191,7 @@
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>cameron@boiseweddingsigns.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - boise wedding signs/username" }}</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -245,9 +201,9 @@
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>cameron@boiseweddingsigns.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - boise wedding signs/username" }}</string>
 			<key>IncomingPassword</key>
-			<string>{{ (bitwarden "item" "migadu - cameron@boiseweddingsigns.com").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - boise wedding signs/password" }}</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -257,9 +213,9 @@
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>cameron@boiseweddingsigns.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - boise wedding signs/username" }}</string>
 			<key>OutgoingPassword</key>
-			<string>{{ (bitwarden "item" "migadu - cameron@boiseweddingsigns.com").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/migadu - boise wedding signs/password" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Boise Wedding Signs</string>
 			<key>PayloadIdentifier</key>
@@ -282,7 +238,7 @@
 			<key>EmailAccountType</key>
 			<string>EmailTypeIMAP</string>
 			<key>EmailAddress</key>
-			<string>cameron@swirldslabs.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/username" }}</string>
 			<key>IncomingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>IncomingMailServerHostName</key>
@@ -292,9 +248,9 @@
 			<key>IncomingMailServerUseSSL</key>
 			<true/>
 			<key>IncomingMailServerUsername</key>
-			<string>cameron@swirldslabs.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/username" }}</string>
 			<key>IncomingPassword</key>
-			<string>{{ (bitwarden "item" "macos - swirldslabs app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/password" }}</string>
 			<key>OutgoingMailServerAuthentication</key>
 			<string>EmailAuthPassword</string>
 			<key>OutgoingMailServerHostName</key>
@@ -304,9 +260,9 @@
 			<key>OutgoingMailServerUseSSL</key>
 			<true/>
 			<key>OutgoingMailServerUsername</key>
-			<string>cameron@swirldslabs.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/username" }}</string>
 			<key>OutgoingPassword</key>
-			<string>{{ (bitwarden "item" "macos - swirldslabs app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/password" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Swirlds Labs</string>
 			<key>PayloadIdentifier</key>
@@ -350,7 +306,7 @@
 			<key>EncryptionType</key>
 			<string>Any</string>
 			<key>Password</key>
-			<string>{{ (bitwarden "item" "Home WiFi").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/Home WiFi/password" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Home</string>
 			<key>PayloadIdentifier</key>
@@ -362,7 +318,7 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>SSID_STR</key>
-			<string>{{ (bitwarden "item" "Home WiFi").login.username }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/Home WiFi/username" }}</string>
 		</dict>
 		<dict>
 			<key>AirPrint</key>
@@ -1040,15 +996,15 @@
 			<key>CalDAVHostName</key>
 			<string>calendar.google.com</string>
 			<key>CalDAVPassword</key>
-			<string>{{ (bitwarden "item" "macos - gmail app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/password" }}</string>
 			<key>CalDAVPort</key>
 			<integer>443</integer>
 			<key>CalDAVPrincipalURL</key>
-			<string>https://calendar.google.com/calendar/dav/cweagans@gmail.com/user/</string>
+			<string>https://calendar.google.com/calendar/dav/{{ onepasswordRead "op://Chezmoi/macos - gmail app password/username" }}/user/</string>
 			<key>CalDAVUseSSL</key>
 			<true/>
 			<key>CalDAVUsername</key>
-			<string>cweagans@gmail.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/username" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Gmail</string>
 			<key>PayloadIdentifier</key>
@@ -1066,15 +1022,15 @@
 			<key>CalDAVHostName</key>
 			<string>calendar.google.com</string>
 			<key>CalDAVPassword</key>
-			<string>{{ (bitwarden "item" "macos - personal app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - personal app password/password" }}</string>
 			<key>CalDAVPort</key>
 			<integer>443</integer>
 			<key>CalDAVPrincipalURL</key>
-			<string>https://calendar.google.com/calendar/dav/me@cweagans.net/user/</string>
+			<string>https://calendar.google.com/calendar/dav/{{ onepasswordRead "op://Chezmoi/macos - personal app password/username" }}/user/</string>
 			<key>CalDAVUseSSL</key>
 			<true/>
 			<key>CalDAVUsername</key>
-			<string>me@cweagans.net</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - personal app password/username" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Personal</string>
 			<key>PayloadIdentifier</key>
@@ -1092,15 +1048,15 @@
 			<key>CalDAVHostName</key>
 			<string>calendar.google.com</string>
 			<key>CalDAVPassword</key>
-			<string>{{ (bitwarden "item" "macos - swirldslabs app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/password" }}</string>
 			<key>CalDAVPort</key>
 			<integer>443</integer>
 			<key>CalDAVPrincipalURL</key>
-			<string>https://calendar.google.com/calendar/dav/cameron@swirldslabs.com/user/</string>
+			<string>https://calendar.google.com/calendar/dav/{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/username" }}/user/</string>
 			<key>CalDAVUseSSL</key>
 			<true/>
 			<key>CalDAVUsername</key>
-			<string>cameron@swirldslabs.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/username" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Swirlds Labs</string>
 			<key>PayloadIdentifier</key>
@@ -1118,13 +1074,13 @@
 			<key>CardDAVHostName</key>
 			<string>www.googleapis.com</string>
 			<key>CardDAVPassword</key>
-			<string>{{ (bitwarden "item" "macos - gmail app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/password" }}</string>
 			<key>CardDAVPort</key>
 			<integer>443</integer>
 			<key>CardDAVPrincipalURL</key>
-			<string>https://www.googleapis.com/carddav/v1/principals/cweagans@gmail.com/lists/default/</string>
+			<string>https://www.googleapis.com/carddav/v1/principals/{{ onepasswordRead "op://Chezmoi/macos - gmail app password/username" }}/lists/default/</string>
 			<key>CardDAVUsername</key>
-			<string>cweagans@gmail.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - gmail app password/username" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Gmail</string>
 			<key>PayloadIdentifier</key>
@@ -1142,13 +1098,13 @@
 			<key>CardDAVHostName</key>
 			<string>www.googleapis.com</string>
 			<key>CardDAVPassword</key>
-			<string>{{ (bitwarden "item" "macos - swirldslabs app password").login.password }}</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/password" }}</string>
 			<key>CardDAVPort</key>
 			<integer>443</integer>
 			<key>CardDAVPrincipalURL</key>
-			<string>https://www.googleapis.com/carddav/v1/principals/cameron@swirldslabs.com/lists/default/</string>
+			<string>https://www.googleapis.com/carddav/v1/principals/{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/username" }}/lists/default/</string>
 			<key>CardDAVUsername</key>
-			<string>cameron@swirldslabs.com</string>
+			<string>{{ onepasswordRead "op://Chezmoi/macos - swirldslabs app password/username" }}</string>
 			<key>PayloadDisplayName</key>
 			<string>Swirlds Labs</string>
 			<key>PayloadIdentifier</key>
