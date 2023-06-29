@@ -19,15 +19,3 @@ if launchctl print gui/$UID/com.homebrew.ssh-agent > /dev/null; then
 	echo "Tearing down ssh-agent service so it can be re-added"
 	launchctl bootout gui/$UID/com.homebrew.ssh-agent
 fi
-
-# If the service hasn't been bootstrapped, do that.
-if ! launchctl print gui/$UID/com.homebrew.ssh-agent > /dev/null; then
-	echo "Bootstrapping Homebrew ssh-agent service"
-	pushd ~/Library/LaunchAgents > /dev/null
-		launchctl bootstrap gui/$UID com.homebrew.ssh-agent.plist
-	popd
-fi
-
-# Restart the service (just to make sure things are appropriately picked up)
-launchctl stop com.homebrew.ssh-agent
-launchctl start com.homebrew.ssh-agent
