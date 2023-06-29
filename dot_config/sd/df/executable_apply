@@ -11,5 +11,4 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-echo "Applying Chezmoi configuration"
 chezmoi apply

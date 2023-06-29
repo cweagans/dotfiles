@@ -11,5 +11,4 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-echo "Configuration differences:"
 chezmoi diff
