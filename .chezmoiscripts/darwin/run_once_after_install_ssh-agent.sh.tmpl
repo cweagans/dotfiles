@@ -19,3 +19,19 @@ if launchctl print gui/$UID/com.homebrew.ssh-agent > /dev/null; then
 	echo "Tearing down ssh-agent service so it can be re-added"
 	launchctl bootout gui/$UID/com.homebrew.ssh-agent
 fi
+
+## The stuff below probably shouldn't live here, but it's here for now.
+
+# Make sure old keys are not present on disk.
+if [ -f ~/.ssh/id_rsa ]; then
+	echo "Removing old ssh private key"
+	rm ~/.ssh/id_rsa
+fi
+if [ -f ~/.ssh/id_rsa.pub ]; then
+	echo "Removing old ssh public key"
+	rm ~/.ssh/id_rsa.pub
+fi
+
+# Remove some unneeded dependencies.
+brew uninstall opensc || true
+brew uninstall yubico-piv-tool || true
