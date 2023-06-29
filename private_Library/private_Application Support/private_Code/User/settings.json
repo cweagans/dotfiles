@@ -31,12 +31,15 @@
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "on",
     "editor.wordBasedSuggestions": false,
+    "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onWindowChange",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.watcherExclude": {
+        "**/node_modules/**": true,
         "**/vendor/**": true
     },
+    "git.openRepositoryInParentFolders": "never",
     "go.formatTool": "goimports",
     "hammerspoon.spoons.path": "~/.config/hammerspoon/Spoons",
     "intelephense.files.exclude": [
@@ -51,6 +54,10 @@
     "redhat.telemetry.enabled": false,
     "terraform.experimentalFeatures.validateOnSave": true,
     "terraform.languageServer.path": "terraform-ls",
+    "todo-tree.filtering.excludeGlobs": [
+        "**/node_modules/*/**",
+        "**/vendor/*/**"
+    ],
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
     "vim.hlsearch": true,
@@ -59,6 +66,7 @@
     "vim.useCtrlKeys": false,
     "vim.useSystemClipboard": true,
     "window.titleBarStyle": "native",
+    "workbench.colorTheme": "Nord",
     "workbench.editor.tabCloseButton": "left",
     "workbench.editor.showTabs": true,
     "workbench.settings.editor": "json",
@@ -68,5 +76,4 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.tabCompletion": "onlySnippets",
     },
-    "workbench.colorTheme": "Nord",
 }
