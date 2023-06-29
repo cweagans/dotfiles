@@ -1,0 +1,10 @@
+account = "Cameron and Alli"
+
+[[ssh-keys]]
+item = "SSH Key"
+vault = "Private"
+
+# Generally, this key shouldn't be used. It can be available in the agent if needed though.
+#[[ssh-keys]]
+#item = "Old SSH Key (RSA)"
+#vault = "Private"
