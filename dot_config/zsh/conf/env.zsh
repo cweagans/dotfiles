@@ -13,8 +13,8 @@ export XDG_DATA_HOME=$HOME/.local/share
 export SD_CAT=bat
 export SD_ROOT=~/.config/sd
 
-# Set up SSH agent
-export SSH_AUTH_SOCK=~/.ssh/agent.sock
+# Set up 1Password SSH agent
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 # Configure cweagans/c
 export PROJECTS=~/Developer

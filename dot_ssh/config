@@ -1,8 +1,8 @@
 # vi:syntax=sshconfig
 
 Host *
-    # Use Yubikey for auth.
-    PKCS11Provider /usr/local/lib/opensc-pkcs11.so
+    # Use 1password SSH agent.
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
     # Speed up reconnects.
     ControlPath ~/.ssh/control/%C

@@ -15,7 +15,6 @@ There are a couple of manual steps that need to be performed that I haven't gott
 
 * `mkcert -install` for ddev https support (probably easy to automate, since invoking it a separate time doesn't change anything)
 * Update `~/.ddev/global_config.yaml` -- always omit the `dba` container and set `use_traefik: true` (harder to automate because of the `project_info` key. Can't just commit this file.)
-* `sudo cp /Library/OpenSC/lib/opensc-pkcs11.so /usr/local/lib` -- it *must* be a copy. Linking won't work. `ssh-agent` has a hardcoded list of paths that it will accept for pkcs11 plugins.
 
 
 ## Support
@@ -36,4 +35,3 @@ Things I probably can't/won't do:
 ## Uninstall
 
 idk reload your machine or something.
-

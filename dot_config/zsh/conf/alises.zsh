@@ -8,6 +8,3 @@ alias rm='trash'
 # Use bat instead of cat
 alias stdcat='/bin/cat'
 alias cat='bat'
-
-# Add yubikey to ssh-agent.
-alias yk="sd yk"

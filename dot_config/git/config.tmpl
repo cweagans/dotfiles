@@ -8,9 +8,6 @@ whitespace = nowarn
 [branch]
 autoSetupRebase = always
 
-[github]
-user = {{ .github_username }}
-
 [color "branch"]
 current = yellow reverse
 local = yellow
@@ -92,11 +89,15 @@ release = release-
 support = support-
 versiontag = v
 
+[github]
+user = {{ .github_username }}
+
 [gpg]
 format = ssh
 
 [gpg "ssh"]
 allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
+program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [init]
 defaultBranch = main
@@ -145,4 +146,4 @@ insteadOf = https://github.com/swirldslabs
 [user]
 email = {{ .email }}
 name = Cameron Eagans
-signingkey = "key::ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJzYuWMD/bf+ZvMLM47oeW2Z1tBZu5QK4Z9jpOkeDCORMy2UaoQCV89JBVcpCrTD3sYYJWirep2d3vFRTTNSRwQ= PIV AUTH pubkey"
+signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGr2cDfG36H8g3vAQJhu9G7l+fKasiiBtNMIBzWYiwsq"
