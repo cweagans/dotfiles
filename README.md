@@ -15,7 +15,8 @@ There are a couple of manual steps that need to be performed that I haven't gott
 
 * `mkcert -install` for ddev https support (probably easy to automate, since invoking it a separate time doesn't change anything)
 * Update `~/.ddev/global_config.yaml` -- always omit the `dba` container and set `use_traefik: true` (harder to automate because of the `project_info` key. Can't just commit this file.)
-
+* Enable Safari extensions
+* Run Tamperish and set tampers path to `~/.config/tamperish`
 
 ## Support
 
