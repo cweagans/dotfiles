@@ -1,4 +1,4 @@
-# $PATH shouldn't be set in this file. See ~/.config/yadm/scripts/mac-paths.sh
+# $PATH shouldn't be set in this file. See ~/.local/share/chezmoi/.chezmoiscripts/darwin/run_once_paths.sh.tmpl
 
 # The basics.
 export EDITOR=vim
