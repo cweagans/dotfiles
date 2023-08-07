@@ -1,4 +1,8 @@
-hs.loadSpoon("EmmyLua")
+-- TODO: This makes reloading config take forever. Figure out why and/or only run it when necessary.
+-- hs.loadSpoon("EmmyLua")
+
+-- Enable IPC so that the Hammerspoon CLI will work.
+require("hs.ipc")
 
 require "sound"
 require "textexpansion"
