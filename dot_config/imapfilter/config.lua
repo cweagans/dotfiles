@@ -6,12 +6,17 @@ options.info = true
 options.create = true
 options.subscribe = true
 
+-- Helper to find script path
+function script_path()
+    local str = debug.getinfo(2, "S").source:sub(2)
+    return str:match("(.*/)")
+end
 
 -- Load util and filter functions.
-dofile('functions.lua')
+dofile(script_path() .. '/functions.lua')
 
 -- Import all of the account configuration.
-dofile('accounts.lua')
+dofile(script_path() .. '/accounts.lua')
 
 -- Run configured filters on all accounts
 for name, account in pairs(accounts) do
