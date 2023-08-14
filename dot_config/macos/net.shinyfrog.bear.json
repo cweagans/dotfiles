@@ -1,0 +1,9 @@
+{
+    "label": "Bear",
+    "restart": "killall Bear",
+    "values": {
+        // Set theme and icon.
+        "SFAppDarkThemeName": "Nord",
+        "SFAppIconName": "Vader"
+    }
+}
