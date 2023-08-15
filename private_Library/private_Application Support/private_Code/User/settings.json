@@ -35,6 +35,7 @@
     "files.autoSave": "onWindowChange",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
         "**/node_modules/**": true,
         "**/vendor/**": true
