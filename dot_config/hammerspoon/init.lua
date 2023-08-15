@@ -9,6 +9,7 @@ require "textexpansion"
 require "windowmanagement"
 require "hbar"
 require "urls"
+require "bear"
 
 -- Screen lock
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'L', function()
