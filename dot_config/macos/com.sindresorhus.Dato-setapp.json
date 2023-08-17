@@ -1,0 +1,19 @@
+{
+    "label": "Dato",
+    "restart": "killall Dato",
+    "values": {
+        "calendarEventsDayCount": 1,
+        "hourlyChimeSound": "hero",
+        "iconInMenuBar": "dateWithBorder",
+        "indicateEventsInCalendar": "maxThree",
+        "maxCalendarEventsInMenu": 15,
+        "notifyWhenVideoCallStarts": true,
+        "remindersDaysInThePastCount": 1,
+        "showDateInMenuBar": true,
+        "showMonthInMenuBar": false,
+        "showReminders": true,
+        "showTimeInMenuBar": false,
+        "showWeekDayInMenuBar": false,
+        "showWeekNumbersInCalendar": true
+    }
+}
