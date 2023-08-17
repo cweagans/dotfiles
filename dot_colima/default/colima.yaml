@@ -5,7 +5,7 @@ cpu: 4
 # Size of the disk in GiB to be allocated to the virtual machine.
 # NOTE: changing this has no effect after the virtual machine has been created.
 # Default: 60
-disk: 100
+disk: 60
 
 # Size of the memory in GiB to be allocated to the virtual machine.
 # Default: 2
@@ -13,7 +13,7 @@ memory: 8
 
 # Architecture of the virtual machine (x86_64, aarch64, host).
 # Default: host
-arch: x86_64
+arch: amd64
 
 # Container runtime to be used (docker, containerd).
 # Default: docker
@@ -28,17 +28,12 @@ kubernetes:
   # Kubernetes version to use.
   # This needs to exactly match a k3s version https://github.com/k3s-io/k3s/releases
   # Default: latest stable release
-  version: v1.25.4+k3s1
+  version: v1.27.1+k3s1
   
-  # Disable k3s features [coredns servicelb traefik local-storage metrics-server].
-  # All features are enabled unless disabled.
-  #
-  # EXAMPLE - disable traefik and metrics-server
-  # disable: [traefik, metrics-server]
-  #
-  # Default: [traefik]
-  disable:
-    - traefik
+  # Additional args to pass to k3s https://docs.k3s.io/cli/server
+  # Default: traefik is disabled
+  k3sArgs:
+    - --disable=traefik
 
 # Auto-activate on the Host for client access.
 # Setting to true does the following on startup
@@ -60,8 +55,7 @@ network:
   # dns: [8.8.8.8, 1.1.1.1]
   #
   # Default: []
-  dns:
-    - 1.1.1.1
+  dns: []
   
   # DNS hostnames to resolve to custom targets using the internal resolver.
   # This setting has no effect if a custom DNS resolver list is supplied above.
@@ -114,6 +108,10 @@ docker: {}
 # Default: qemu
 vmType: vz
 
+# Utilise rosetta for amd64 emulation (requires m1 mac and vmType `vz`)
+# Default: false
+rosetta: true
+
 # Volume mount driver for the virtual machine (virtiofs, 9p, sshfs).
 #
 # virtiofs is limited to macOS and vmType `vz`. It is the fastest of the options.
@@ -125,6 +123,10 @@ vmType: vz
 #
 # Default: virtiofs (for vz), sshfs (for qemu)
 mountType: virtiofs
+
+# Propagate inotify file events to the VM.
+# NOTE: this is experimental.
+mountInotify: false
 
 # The CPU type for the virtual machine (requires vmType `qemu`).
 # Options available for host emulation can be checked with: `qemu-system-$(arch) -cpu help`.
