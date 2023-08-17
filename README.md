@@ -14,7 +14,7 @@ This is how I set up a system to my liking. I mostly run macOS, but there will b
 There are a couple of manual steps that need to be performed that I haven't gotten around to automating yet:
 
 * `mkcert -install` for ddev https support (probably easy to automate, since invoking it a separate time doesn't change anything)
-* Update `~/.ddev/global_config.yaml` -- always omit the `dba` container and set `use_traefik: true` (harder to automate because of the `project_info` key. Can't just commit this file.)
+* Update `~/.ddev/global_config.yaml` (may have to run `ddev` first to generate the file) -- always omit the `dba` container (harder to automate because of the `project_info` key. Can't just commit this file.)
 * Enable Safari extensions
 * Run Tamperish and set tampers path to `~/.config/tamperish`
 
