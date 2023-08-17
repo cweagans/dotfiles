@@ -17,6 +17,13 @@ There are a couple of manual steps that need to be performed that I haven't gott
 * Update `~/.ddev/global_config.yaml` (may have to run `ddev` first to generate the file) -- always omit the `dba` container (harder to automate because of the `project_info` key. Can't just commit this file.)
 * Enable Safari extensions
 * Run Tamperish and set tampers path to `~/.config/tamperish`
+* Open Setapp and install all favorited apps
+* Run apps, allow accessibility api/screen recording access as needed, configure if needed:
+    * Bartender (permissions, arrange menu bar)
+    * Cleanshot (permissions, auth with share service)
+    * Elephas (permissions, click through onboarding)
+    * Lungo (permissions)
+    * Dato (permissions, launch at startup, probably configure)
 
 ## Support
 
