@@ -67,7 +67,8 @@ end
 
 function toggleTerminalVisibility()
 	return function()
-		local app = hs.application.get("iTerm2")
+		local app = hs.application.find("WezTerm", true, true)
+		print(app)
 		if app then
 			if not app:mainWindow() then
 				app:selectMenuItem({"Shell", "New Window"})
@@ -78,12 +79,12 @@ function toggleTerminalVisibility()
 				app:activate()
 			end
 		else
-			hs.application.launchOrFocus("iTerm")
+			hs.application.launchOrFocus("WezTerm")
 		end
 
 		hs.timer.waitUntil(function()
-			local isRunning = not not hs.application.find("iTerm")
-			local isFront = hs.application.frontmostApplication():name() == "iTerm2"
+			local isRunning = not not hs.application.find("WezTerm")
+			local isFront = hs.application.frontmostApplication():name() == "WezTerm"
 			return isRunning and isFront
 		end, function()
 			xpcall(moveFocusedWindow(grid_positions.floating), function()
