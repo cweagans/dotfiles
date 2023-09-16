@@ -38,7 +38,7 @@
 		<key>WEZTERM_IS_AST</key>
 		<string>true</string>
 		<key>WEZTERM_AST_COMMAND</key>
-		<string>vim</string>
+		<string>nvim</string>
 	</dict>
 </dict>
 </plist>
