@@ -231,7 +231,7 @@ end
 
 -- If this *is* an ast, run the requested command instead of $SHELL.
 if is_ast and not not os.getenv('WEZTERM_AST_COMMAND') then
-    config.default_prog = { os.getenv('WEZTERM_AST_COMMAND') }
+    config.default_prog = { os.getenv('SHELL'), '-c', os.getenv('WEZTERM_AST_COMMAND') }
 end
 
 return config
