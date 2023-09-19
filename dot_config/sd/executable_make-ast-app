@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+
+# Generate an applicaion-specific terminal app bundle.
+#
+# Build an app bundle in ~/Applications that launches a terminal with the
+# specified command line tool running inside. This is useful for creating
+# standalone apps that run e.g. Neovim or Mutt. The first parameter is the
+# human-readable name of the application. The second parameter is the first part
+# of the bundle identifier (e.g. 'org.neovim'). The third parameter is the
+# command string that should be run inside the terminal. The fourth parameter is
+# a path to an image that will be used to generate the app bundle icon (the
+# image should be square and be at least 192x192 pixels)
+#
+# Example usage:
+#   sd make-ast-app Neovim org.neovim nvim neovim.png
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+# Make sure we have makeicns before proceeding.
+require_program "makeicns"
+
+# Make sure there isn't an existing app.
+[ -d ~/Applications/"$1".app ] && format_error "App bundle already exists"
+
+format_message "Scaffolding app bundle"
+mkdir -p ~/Applications/"$1".app/Contents/{MacOS,Resources}
+
+format_message "Generating executable"
+ln -s /Applications/WezTerm.app/Contents/MacOS/wezterm-gui ~/Applications/"$1".app/Contents/MacOS/$1
+
+format_message "Generating icon"
+makeicns -in "$4" -out ~/Applications/"$1".app/Contents/Resources/AppIcon.icns
+
+format_message "Generating Info.plist"
+cat > ~/Applications/"$1".app/Contents/Info.plist <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>$1</string>
+	<key>CFBundleExecutable</key>
+	<string>$1</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>$2.$1</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$1</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.11.0</string>
+	<key>LSUIElement</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>LSEnvironment</key>
+	<dict>
+		<key>WEZTERM_IS_AST</key>
+		<string>true</string>
+		<key>WEZTERM_AST_COMMAND</key>
+		<string>$3</string>
+	</dict>
+</dict>
+</plist>
+EOF
+
+format_message "Done"
