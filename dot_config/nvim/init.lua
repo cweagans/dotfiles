@@ -29,6 +29,29 @@ require('lazy').setup({
 		end,
 	},
 
+	{
+		'yamatsum/nvim-cursorline',
+		config = function()
+			require('nvim-cursorline').setup({
+				cursorline = {
+					enable = false,
+				},
+				cursorword = {
+					enable = true,
+				},
+			})
+		end,
+	},
+
+	{
+		'lukas-reineke/virt-column.nvim',
+		config = function()
+			require('virt-column').setup({
+                                virtcolumn = "80,120",
+                        })
+		end,
+	},
+
 	{ import = 'cweagans.plugins' }
 }, {})
 
