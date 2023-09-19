@@ -20,3 +20,15 @@ ensurePath {{ output "/usr/local/bin/brew" "--prefix" | trim }}/bin
 {{ end }}
 
 ensurePath {{ .chezmoi.homeDir }}/bin
+
+# Re-evaluate /etc/paths rules, then tell launchctl to use the new path.
+eval $(/usr/libexec/path_helper -s)
+launchctl setenv PATH $PATH
+sudo launchctl config user path $PATH
+echo
+echo "You don't actually need to reboot. Ignore the message above"
+echo
+
+# Finally, restart Finder and Spotlight to pick up the new paths for launching GUI apps.
+killall Finder
+killall Spotlight
