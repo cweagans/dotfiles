@@ -18,6 +18,18 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Register plugins.
 require('lazy').setup({
+	{
+		'shaunsingh/nord.nvim',
+		priority = 1000,
+		config = function()
+			vim.g.nord_contrast = true
+			vim.g.nord_borders = true
+			vim.g.nord_italic = false
+			require('nord').set()
+		end,
+	},
+
 	{ import = 'cweagans.plugins' }
 }, {})
 
+require('cweagans.options')
