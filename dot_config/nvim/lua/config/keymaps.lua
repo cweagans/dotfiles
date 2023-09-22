@@ -9,3 +9,16 @@ vim.keymap.set("n", "<Esc>", '<cmd>let @/ = ""<cr><esc>')
 
 -- Better goto mark mapping.
 vim.keymap.set("n", "gm", "g'")
+
+-- Visual shifting (does not exit visual mode).
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+-- For when you forget to sudo. *Really* write the file.
+vim.keymap.set("c", "w!!", "w !sudo tee % >/dev/null")
+
+-- Resize windows
+vim.keymap.set("n", "<C-s>", ":resize -2<cr>", { silent = true })
+vim.keymap.set("n", "<C-t>", ":resize +2<cr>", { silent = true })
+vim.keymap.set("n", "<C-n>", ":vertical resize -2<cr>", { silent = true })
+vim.keymap.set("n", "<C-w>", ":vertical resize +2<cr>", { silent = true })

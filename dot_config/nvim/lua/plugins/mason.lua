@@ -20,19 +20,6 @@ return {
       "bash-language-server",
       "bash-debug-adapter",
       "shfmt",
-
-      -- TODO: Open a PR against lazyvim to add a PHP language plugin.
-      -- "intelephense",
-      -- "php-debug-adapter",
-      -- "phpcs",
-      -- "phpstan",
-      -- "twigcs",
-      -- "php-cs-fixer",
-      -- "phpcbf",
-
-      -- TODO: Open a PR against lazyvim to add some extra stuff to the Git functionality.
-      "commitlint",
-      "gitlint",
     })
   end,
 }
