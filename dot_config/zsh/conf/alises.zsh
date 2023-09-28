@@ -7,7 +7,7 @@ alias rm='trash'
 
 # Use bat instead of cat
 alias stdcat='/bin/cat'
-alias cat='bat'
+alias cat='bat --theme=Dracula'
 
 # Run homebrew updates.
 alias brewup='brew update && brew upgrade && brew cleanup'
