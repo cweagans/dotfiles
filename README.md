@@ -24,6 +24,7 @@ There are a couple of manual steps that need to be performed that I haven't gott
     * Elephas (permissions, click through onboarding)
     * Lungo (permissions)
     * Dato (permissions, launch at startup, probably configure)
+* Set wallpaper to ~/.wallpaper.png
 
 ## Support
 
