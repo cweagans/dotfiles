@@ -3,7 +3,7 @@
     "restart": "killall Bear",
     "values": {
         // Set theme and icon.
-        "SFAppDarkThemeName": "Nord",
+        "SFAppDarkThemeName": "Dracula",
         "SFAppIconName": "Vader"
     }
 }
