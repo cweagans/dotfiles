@@ -1,5 +1,5 @@
 {
-    "label": "Bear",
+    "label": "Elephas",
     "restart": "killall Elephas",
     "values": {
         // Set keyboard shortcuts.

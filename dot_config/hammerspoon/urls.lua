@@ -40,9 +40,6 @@ function urlHandler(_, _, params, fullURL)
     url = prepareURL(fullURL, params)
     openerBundle = findOpenerBundle(fullURL)
 
-    print('Opening URL: ' .. fullURL)
-    print('Opener bundle: ' .. openerBundle)
-
     hs.urlevent.openURLWithBundle(fullURL, openerBundle)
 end
 

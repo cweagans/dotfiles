@@ -1,7 +1,7 @@
 # $PATH shouldn't be set in this file. See ~/.local/share/chezmoi/.chezmoiscripts/darwin/run_once_paths.sh.tmpl
 
 # The basics.
-export EDITOR=vim
+export EDITOR=nvim
 export GOPATH=~/Developer/go
 
 # Standard XDG stuff since it's not set on macOS.
