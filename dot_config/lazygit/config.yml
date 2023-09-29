@@ -1,0 +1,11 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --syntax-theme "Dracula" --paging=never
+gui:
+  theme:
+    activeBorderColor:
+      - blue
+      - bold
+    unstagedChangesColor:
+      - default
