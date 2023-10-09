@@ -1,3 +1,8 @@
+-- If PHP is not installed, don't add anything to the installation.
+if vim.fn.executable("php") ~= 1 then
+  return {}
+end
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -18,7 +23,7 @@ return {
     },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     opts = function(_, opts)
       if type(opts.sources) == "table" then
         local nls = require("null-ls")

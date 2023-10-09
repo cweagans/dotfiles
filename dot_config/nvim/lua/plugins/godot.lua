@@ -1,3 +1,9 @@
+-- If Godot is not installed, don't add anything to the installation.
+local gdpath = "/Applications/Godot.app"
+if not vim.loop.fs_stat(gdpath) then
+  return {}
+end
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -17,7 +23,7 @@ return {
     },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     opts = function(_, opts)
       if type(opts.sources) == "table" then
         local nls = require("null-ls")

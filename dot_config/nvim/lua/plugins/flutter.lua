@@ -1,3 +1,8 @@
+-- If Flutter is not installed, don't add anything to the installation.
+if vim.fn.executable("flutter") ~= 1 then
+  return {}
+end
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
