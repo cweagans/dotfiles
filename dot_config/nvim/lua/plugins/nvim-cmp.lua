@@ -1,8 +1,12 @@
 return {
   "hrsh7th/nvim-cmp",
   opts = function(_, opts)
-    -- Disable completion in comments (except for in command mode).
+    -- Disable completion in comments (except for in command mode) and in neo-tree popups.
     opts.enabled = function()
+      if vim.bo.filetype == "neo-tree-popup" then
+        return false
+      end
+
       local context = require("cmp.config.context")
       if vim.api.nvim_get_mode().mode == "c" then
         return true
