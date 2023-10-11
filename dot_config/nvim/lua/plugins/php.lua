@@ -23,19 +23,20 @@ return {
     },
   },
   {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      if type(opts.sources) == "table" then
-        local nls = require("null-ls")
-        vim.list_extend(opts.sources, {
-          nls.builtins.diagnostics.phpcs,
-          nls.builtins.diagnostics.phpmd,
-          nls.builtins.diagnostics.phpstan,
-          nls.builtins.formatting.phpcbf,
-          nls.builtins.formatting.phpcsfixer,
-        })
-      end
-    end,
+    "stevearc/conform.nvim",
+    opts = {
+      formatters = {
+        php = { "php_cs_fixer", "phpcbf" },
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters = {
+        gdscript = { "php", "phpcs", "phpmd", "phpstan" },
+      },
+    },
   },
   {
     "mfussenegger/nvim-dap",

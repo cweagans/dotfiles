@@ -23,16 +23,20 @@ return {
     },
   },
   {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      if type(opts.sources) == "table" then
-        local nls = require("null-ls")
-        vim.list_extend(opts.sources, {
-          nls.builtins.diagnostics.gdlint,
-          nls.builtins.diagnostics.gdformat,
-        })
-      end
-    end,
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        gdscript = { "gdformat" },
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        gdscript = { "gdlint" },
+      },
+    },
   },
   -- TODO: Looks like Godot itself exposes a debug port? Can we use that?
 }
