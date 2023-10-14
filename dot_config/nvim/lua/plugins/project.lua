@@ -9,5 +9,7 @@ return {
       "go.mod",
       ".neoconf.json",
     },
+    scope_chdir = "tab",
+    open_file_finder = false,
   },
 }

@@ -22,3 +22,7 @@ vim.keymap.set("n", "<C-s>", ":resize -2<cr>", { silent = true })
 vim.keymap.set("n", "<C-t>", ":resize +2<cr>", { silent = true })
 vim.keymap.set("n", "<C-n>", ":vertical resize -2<cr>", { silent = true })
 vim.keymap.set("n", "<C-w>", ":vertical resize +2<cr>", { silent = true })
+
+-- Disable lazyvim and add mapping for Neogit.
+vim.keymap.del("n", "<Leader>gG")
+vim.keymap.set("n", "<Leader>gg", "<cmd>Neogit<cr>")

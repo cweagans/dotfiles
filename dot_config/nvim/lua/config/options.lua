@@ -11,6 +11,6 @@ vim.o.colorcolumn = "80,120"
 -- Show maching brackets/parens.
 vim.o.showmatch = true
 
--- Seet split behavior.
+-- Set split behavior.
 vim.o.splitright = true --vsplit opens to the right
 vim.o.splitbelow = true --split opens below

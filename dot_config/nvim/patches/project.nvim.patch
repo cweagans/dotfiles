@@ -1,0 +1,41 @@
+diff --git a/README.md b/README.md
+index 69594fc..9b4de44 100644
+--- a/README.md
++++ b/README.md
+@@ -124,6 +124,9 @@ use {
+   -- Path where project.nvim will store the project history for use in
+   -- telescope
+   datapath = vim.fn.stdpath("data"),
++
++  -- Open a file finder after selecting a project.
++  open_file_finder = true,
+ }
+ ```
+ 
+diff --git a/lua/project_nvim/config.lua b/lua/project_nvim/config.lua
+index 36e3027..453f844 100644
+--- a/lua/project_nvim/config.lua
++++ b/lua/project_nvim/config.lua
+@@ -40,6 +40,9 @@ M.defaults = {
+   -- Path where project.nvim will store the project history for use in
+   -- telescope
+   datapath = vim.fn.stdpath("data"),
++
++  -- Open a file finder after selecting a project.
++  open_file_finder = true,
+ }
+ 
+ ---@type ProjectOptions
+diff --git a/lua/telescope/_extensions/projects.lua b/lua/telescope/_extensions/projects.lua
+index be35f4f..5b18415 100644
+--- a/lua/telescope/_extensions/projects.lua
++++ b/lua/telescope/_extensions/projects.lua
+@@ -82,7 +82,7 @@ local function find_project_files(prompt_bufnr)
+     hidden = config.options.show_hidden,
+     mode = "insert",
+   }
+-  if cd_successful then
++  if cd_successful and config.options.open_file_finder then
+     builtin.find_files(opt)
+   end
+ end
