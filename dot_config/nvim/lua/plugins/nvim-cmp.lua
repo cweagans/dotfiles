@@ -3,7 +3,7 @@ return {
   opts = function(_, opts)
     -- Disable completion in comments (except for in command mode) and in neo-tree popups.
     opts.enabled = function()
-      if vim.bo.filetype == "neo-tree-popup" then
+      if vim.bo.filetype == "neo-tree-popup" or vim.bo.filetype == "TelescopePrompt" then
         return false
       end
 
