@@ -26,3 +26,8 @@ vim.keymap.set("n", "<C-w>", ":vertical resize +2<cr>", { silent = true })
 -- Disable lazyvim and add mapping for Neogit.
 vim.keymap.del("n", "<Leader>gG")
 vim.keymap.set("n", "<Leader>gg", "<cmd>Neogit<cr>")
+
+-- Move Lazy keymap to L instead of l
+vim.keymap.del("n", "<Leader>L")
+vim.keymap.del("n", "<Leader>l")
+vim.keymap.set("n", "<Leader>L", "<cmd>Lazy<cr>")

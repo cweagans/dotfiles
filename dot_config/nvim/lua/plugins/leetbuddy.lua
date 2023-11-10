@@ -20,7 +20,6 @@ return {
     "folke/which-key.nvim",
     opts = {
       defaults = {
-        ["g"] = { name = "+goto" },
         ["<leader>l"] = { name = "+leetcode" },
       },
     },
