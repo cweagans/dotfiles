@@ -30,13 +30,13 @@ format_message "Scaffolding app bundle"
 mkdir -p ~/Applications/"$1".app/Contents/{MacOS,Resources}
 
 format_message "Generating executable"
-ln -s /Applications/WezTerm.app/Contents/MacOS/wezterm-gui ~/Applications/"$1".app/Contents/MacOS/$1
+cp /Applications/WezTerm.app/Contents/MacOS/wezterm-gui ~/Applications/"$1".app/Contents/MacOS/$1
 
 format_message "Generating icon"
 makeicns -in "$4" -out ~/Applications/"$1".app/Contents/Resources/AppIcon.icns
 
 format_message "Generating Info.plist"
-cat > ~/Applications/"$1".app/Contents/Info.plist <<EOF
+cat >~/Applications/"$1".app/Contents/Info.plist <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -78,5 +78,16 @@ cat > ~/Applications/"$1".app/Contents/Info.plist <<EOF
 </dict>
 </plist>
 EOF
+
+format_message "Generating entitlements.plist and merging into Info.plist"
+codesign -d --xml --entitlements - ~/Applications/"$1".app >entitlements.plist
+/usr/libexec/PlistBuddy -x -c "Merge entitlements.plist" ~/Applications/"$1".app/Contents/Info.plist
+rm entitlements.plist
+
+format_message "Signing app bundle (no signing identity)"
+codesign --force --deep -s - ~/Applications/"$1".app
+
+format_message "Registering with launch services"
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister ~/Applications/"$1".app
 
 format_message "Done"
