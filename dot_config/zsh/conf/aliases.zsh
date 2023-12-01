@@ -14,3 +14,8 @@ alias brewup='brew update && brew upgrade && brew cleanup'
 
 # Play a sound.
 alias boop='echo -e "\a\a\a"'
+
+# lsd aliases
+alias stdls='/bin/ls'
+alias ls='lsd'
+alias ll='lsd -la'
