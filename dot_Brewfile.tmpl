@@ -72,7 +72,6 @@ cask "ledger-live"
 cask "logi-options-plus"
 cask "ngrok"
 cask "setapp"
-cask "visual-studio-code"
 cask "wezterm"
 cask "zoom"
 
@@ -88,33 +87,6 @@ mas "Slack", id: 803453959
 mas "Tailscale", id: 1475387142
 mas "Tamperish", id: 1516885392
 mas "Xcode", id: 497799835
-
-vscode "anweber.httpbook"
-vscode "anweber.vscode-httpyac"
-vscode "arcticicestudio.nord-visual-studio-code"
-vscode "bierner.markdown-mermaid"
-vscode "EditorConfig.EditorConfig"
-vscode "GitHub.copilot"
-vscode "github.vscode-github-actions"
-vscode "GitHub.vscode-pull-request-github"
-vscode "golang.go"
-vscode "hashicorp.hcl"
-vscode "hashicorp.terraform"
-vscode "mikestead.dotenv"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.hexeditor"
-vscode "ms-vscode.makefile-tools"
-vscode "redhat.ansible"
-vscode "redhat.vscode-yaml"
-vscode "Rubymaniac.vscode-direnv"
-vscode "rust-lang.rust-analyzer"
-vscode "sumneko.lua"
-vscode "virgilsisoe.hammerspoon"
-vscode "vscodevim.vim"
 
 {{ if eq .mode "personal" }}
 tap "drud/ddev"
@@ -146,14 +118,6 @@ mas "MainStage", id: 634159523
 mas "Motion", id: 434290957
 mas "Pixelmator", id: 407963104
 mas "Vectornator Pro", id: 1470168007
-
-vscode "bmewburn.vscode-intelephense-client"
-vscode "Dart-Code.dart-code"
-vscode "Dart-Code.flutter"
-vscode "platformio.platformio-ide"
-vscode "quillaja.goasm"
-vscode "tinygo.vscode-tinygo"
-vscode "xdebug.php-debug"
 {{ end }}
 
 {{ if eq .mode "work" }}
