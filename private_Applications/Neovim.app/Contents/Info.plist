@@ -20,6 +20,13 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>LSEnvironment</key>
+	<dict>
+		<key>WEZTERM_AST_COMMAND</key>
+		<string>nvim</string>
+		<key>WEZTERM_IS_AST</key>
+		<string>true</string>
+	</dict>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.11.0</string>
 	<key>LSUIElement</key>
@@ -29,16 +36,21 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSHumanReadableCopyright</key>
-	<string>©2023 Neovim Contributors</string>
-	<key>LSApplicationCategoryType</key>
-	<string>public.app-category.developer-tools</string>
-	<key>LSEnvironment</key>
-	<dict>
-		<key>WEZTERM_IS_AST</key>
-		<string>true</string>
-		<key>WEZTERM_AST_COMMAND</key>
-		<string>nvim</string>
-	</dict>
+	<key>com.apple.security.automation.apple-events</key>
+	<true/>
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+	<key>com.apple.security.device.bluetooth</key>
+	<true/>
+	<key>com.apple.security.device.camera</key>
+	<true/>
+	<key>com.apple.security.personal-information.addressbook</key>
+	<true/>
+	<key>com.apple.security.personal-information.calendars</key>
+	<true/>
+	<key>com.apple.security.personal-information.location</key>
+	<true/>
+	<key>com.apple.security.personal-information.photos-library</key>
+	<true/>
 </dict>
 </plist>
