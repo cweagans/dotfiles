@@ -18,17 +18,17 @@ return {
     "nvimdev/dashboard-nvim",
     optional = true,
     opts = function(_, opts)
-      local projects = {
+      local zoxide = {
         action = "Telescope zoxide list",
         desc = " Jump to directory",
         icon = "",
         key = "z",
       }
 
-      projects.desc = projects.desc .. string.rep(" ", 43 - #projects.desc)
-      projects.key_format = "  %s"
+      zoxide.desc = zoxide.desc .. string.rep(" ", 43 - #zoxide.desc)
+      zoxide.key_format = "  %s"
 
-      table.insert(opts.config.center, 3, projects)
+      table.insert(opts.config.center, 3, zoxide)
     end,
   },
 }
