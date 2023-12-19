@@ -19,17 +19,11 @@ export IMAPFILTER_HOME=~/.config/imapfilter
 # Set up 1Password SSH agent
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
-# Configure cweagans/c
-export PROJECTS=~/Developer
-
 # Add a newline in the Geometry prompt
 GEOMETRY_PROMPT=(geometry_newline $GEOMETRY_PROMPT)
 
 # Homebrew vars
-export HOMEBREW_PREFIX="$(brew --prefix)"
-export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar"
-export MANPATH="$HOMEBREW_PREFIX/share/man${MANPATH+:$MANPATH}:"
-export INFOPATH="$HOMEBREW_PREFIX/share/info:${INFOPATH:-}"
+znap eval brew "brew shellenv | grep -v ' PATH='"
 
 # Dracula colors for man pages
 export MANPAGER="/usr/bin/less -s -M +Gg"

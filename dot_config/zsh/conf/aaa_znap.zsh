@@ -1,0 +1,35 @@
+# Install znap if it's not already present.
+if [[ ! -e ~/.config/zsh/znap ]]; then
+  git clone https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh/znap
+fi
+
+source ~/.config/zsh/znap/znap.zsh
+zstyle ':znap:*' repos-dir ~/.config/zsh/plugins
+
+# Git flow completions
+znap source bobthecow/git-flow-completion
+
+# Tab titles
+znap source jreese/zsh-titles
+
+# Geometry prompt
+znap prompt geometry-zsh/geometry
+
+# Tailscale CLI completions
+znap source HeroesLament/zsh-tailscale-plugin
+
+# Ian Henry's "script directory" tool
+znap source ianthehenry/sd
+
+# 1password op cli completions
+znap source unixorn/1password-op.plugin.zsh
+
+# Misc completions
+znap source zsh-users/zsh-completions
+
+# Syntax highlighting
+znap source zsh-users/zsh-syntax-highlighting
+
+# TODO: Look into other plugins:
+#         * https://github.com/larkery/zsh-histdb (maybe with auto-sync to Gitea and/or a warning when sync hasn't been done in a while)
+#         * https://github.com/jeffreytse/zsh-vi-mode

@@ -38,4 +38,7 @@ if type brew &>/dev/null; then
 fi
 
 # Enable direnv.
-eval "$(direnv hook zsh)"
+znap eval direnv "$(direnv hook zsh)"
+
+# Set up zoxide.
+znap eval zoxide "$(zoxide init zsh --cmd cd)"
