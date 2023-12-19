@@ -1,7 +1,3 @@
-local function foo()
-  print("foo")
-end
-
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
