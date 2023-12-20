@@ -9,6 +9,9 @@ zstyle ':znap:*' repos-dir ~/.config/zsh/plugins
 # Git flow completions
 znap source bobthecow/git-flow-completion
 
+# vi mode
+znap source jeffreytse/zsh-vi-mode
+
 # Tab titles
 znap source jreese/zsh-titles
 
@@ -30,6 +33,3 @@ znap source zsh-users/zsh-completions
 # Syntax highlighting
 znap source zsh-users/zsh-syntax-highlighting
 
-# TODO: Look into other plugins:
-#         * https://github.com/larkery/zsh-histdb (maybe with auto-sync to Gitea and/or a warning when sync hasn't been done in a while)
-#         * https://github.com/jeffreytse/zsh-vi-mode
