@@ -27,9 +27,13 @@ bindkey "^[3;5~" delete-char
 # Comments should work as expected in interactive mode.
 setopt INTERACTIVECOMMENTS
 
+# Set up atuin (needs to happen after vi mode loads)
+#znap eval atuin "atuin init zsh --disable-up-arrow"
+zvm_after_init_commands+=(eval "$(atuin init zsh --disable-up-arrow)")
+
 # Enable direnv.
 znap eval direnv "direnv hook zsh"
 
 # Set up zoxide.
-# eval $(zoxide init zsh --cmd cd)
 znap eval zoxide "zoxide init zsh --cmd cd"
+
