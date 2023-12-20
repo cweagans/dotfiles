@@ -20,7 +20,10 @@ export IMAPFILTER_HOME=~/.config/imapfilter
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 # Add a newline in the Geometry prompt
-GEOMETRY_PROMPT=(geometry_newline $GEOMETRY_PROMPT)
+export GEOMETRY_PROMPT=(geometry_newline $GEOMETRY_PROMPT)
+
+# Configure the Geometry prompt
+export GEOMETRY_PROMPT_PLUGINS=(exec_time git kube hostname)
 
 # Homebrew vars
 znap eval brew "brew shellenv | grep -v ' PATH='"
@@ -36,3 +39,7 @@ export LESS_TERMCAP_se=$'\e[0m'         # reset reverse video
 export LESS_TERMCAP_ue=$'\e[0m'         # reset underline
 export GROFF_NO_SGR=1                   # for konsole
 
+# Make homebrew zsh completions available.
+if type brew &>/dev/null; then
+  export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi

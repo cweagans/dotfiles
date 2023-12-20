@@ -24,21 +24,12 @@ setopt COMPLETE_ALIASES
 bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
 
-# Configure the Geometry prompt
-export GEOMETRY_PROMPT_PLUGINS=(exec_time git kube hostname)
-
 # Comments should work as expected in interactive mode.
 setopt INTERACTIVECOMMENTS
 
-# Make Homebrew completions available.
-if type brew &>/dev/null; then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-  autoload -Uz compinit
-  compinit
-fi
-
 # Enable direnv.
-znap eval direnv "$(direnv hook zsh)"
+znap eval direnv "direnv hook zsh"
 
 # Set up zoxide.
-znap eval zoxide "$(zoxide init zsh --cmd cd)"
+# eval $(zoxide init zsh --cmd cd)
+znap eval zoxide "zoxide init zsh --cmd cd"
