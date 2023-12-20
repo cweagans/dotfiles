@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Run mail filters against all configured accounts.
+#
+# Example usage:
+#   sd mail-filter
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+imapfilter -v
