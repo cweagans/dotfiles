@@ -14,3 +14,11 @@ vim.o.showmatch = true
 -- Set split behavior.
 vim.o.splitright = true --vsplit opens to the right
 vim.o.splitbelow = true --split opens below
+
+-- *.Jenkinsfile should also be groovy.
+-- TODO: Report this upstream.
+vim.filetype.add({
+  extension = {
+    Jenkinsfile = "groovy",
+  },
+})
