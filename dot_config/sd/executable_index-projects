@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Make sure all project directories are indexed in zoxide.
+#
+# Running this command more than once won't bump the score of any individual
+# project. Any project that is missing from the zoxide index will be added for
+# easy jumping.
+#
+# Example usage:
+#   sd index-projects
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+for project in $(ghq list --full-path); do
+	format_heading "Checking $project"
+	if ! zoxide query "$project" >/dev/null 2>&1; then
+		format_message "Adding $project to zoxide index"
+		zoxide add "$project"
+	else
+		format_message "Skipping $project - already in index"
+	fi
+done
