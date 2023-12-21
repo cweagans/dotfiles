@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# Update a repo from the right upstream.
+#
+# This command will figure out the right branch and upstream to update from and
+# also update the fork main/master branch as well if necessary.
+#
+# Example usage:
+#   sd git update-repo
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+if [ ! -d .git ]; then
+	format_error "Must run from the root of the git repo"
+fi
+
+if git status --porcelain | grep "M"; then
+	format_error "Must not have local changes."
+fi
+
+main_branch="main"
+if git branch | grep "master" >/dev/null; then
+	main_branch="master"
+fi
+
+is_fork=false
+if git remote -v | grep "upstream" >/dev/null; then
+	is_fork=true
+fi
+
+format_message "Checking out ${main_branch}"
+git checkout "${main_branch}"
+
+if [ "${is_fork}" = true ]; then
+	format_message "Pulling from upstream"
+	git pull upstream "${main_branch}"
+	format_message "Pushing to origin"
+	git push origin "${main_branch}"
+else
+	format_message "Pulling from origin"
+	git pull origin "${main_branch}"
+fi
+
+format_message "Done"
