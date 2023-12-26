@@ -19,3 +19,11 @@ alias boop='echo -e "\a\a\a"'
 alias stdls='/bin/ls'
 alias ls='lsd'
 alias ll='lsd -la'
+
+# Automatically register sd command aliases defined in sd scripts.
+# Credit: https://github.com/ianthehenry/sd/issues/20#issuecomment-1867261771
+if command -v rg > /dev/null; then
+  pushd $SD_ROOT > /dev/null
+  eval $(rg '^# Alias:' --with-filename --no-heading --no-line-number | sed -E -e 's|/| |g' -e 's/([^:]+):# Alias: (.+)/alias \2="sd \1"/')
+  popd > /dev/null
+fi

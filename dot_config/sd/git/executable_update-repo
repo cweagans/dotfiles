@@ -5,6 +5,8 @@
 # This command will figure out the right branch and upstream to update from and
 # also update the fork main/master branch as well if necessary.
 #
+# Alias: gup
+#
 # Example usage:
 #   sd git update-repo
 
