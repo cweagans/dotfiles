@@ -6,4 +6,4 @@ if [[ ! -e "~/.Brewfile" ]]; then
 	chezmoi execute-template < $(chezmoi source-path)/dot_Brewfile.tmpl > ~/.Brewfile
 fi
 
-brew bundle --global --no-lock
+brew bundle --global --no-lock --no-upgrade
