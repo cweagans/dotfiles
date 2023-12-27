@@ -1,4 +1,4 @@
-hs.grid.setGrid('12x12').setMargins('0x0')
+hs.grid.setGrid("12x12").setMargins("0x0")
 hs.window.animationDuration = 0
 
 -- Desktop is my 49" super ultrawide.
@@ -6,45 +6,45 @@ hs.window.animationDuration = 0
 local grid_positions = {
 	-- Universal behaviors
 	fullscreen = {
-		desktop = '3,0 6x12',
-		laptop = '0,0 12x12',
+		desktop = "3,0 6x12",
+		laptop = "0,0 12x12",
 	},
 	halfleft = {
-		desktop = '0,0 6x12',
-		laptop = '0,0 6x12',
+		desktop = "0,0 6x12",
+		laptop = "0,0 6x12",
 	},
 	halfright = {
-		desktop = '6,0 6x12',
-		laptop = '6,0 6x12',
+		desktop = "6,0 6x12",
+		laptop = "6,0 6x12",
 	},
 	floating = {
-		desktop = '4,1 4x10',
-		laptop = '1,1 10x10',
+		desktop = "4,1 4x10",
+		laptop = "1,1 10x10",
 	},
 	-- Desktop-specific behaviors. Laptop behaviors are duplicates of universal behaviors.
 	left = {
-		desktop = '3,0 3x12',
-		laptop = '0,0 6x12',
+		desktop = "3,0 3x12",
+		laptop = "0,0 6x12",
 	},
 	right = {
-		desktop = '6,0 3x12',
-		laptop = '6,0 6x12',
+		desktop = "6,0 3x12",
+		laptop = "6,0 6x12",
 	},
 	wideleft = {
-		desktop = '2,0 4x12',
-		laptop = '0,0 6x12',
+		desktop = "2,0 4x12",
+		laptop = "0,0 6x12",
 	},
 	wideright = {
-		desktop = '6,0 4x12',
-		laptop = '6,0 6x12',
+		desktop = "6,0 4x12",
+		laptop = "6,0 6x12",
 	},
 	farleft = {
-		desktop = '0,0 3x12',
-		laptop = '0,0 6x12',
+		desktop = "0,0 3x12",
+		laptop = "0,0 6x12",
 	},
 	farright = {
-		desktop = '9,0 3x12',
-		laptop = '0,0 12x12',
+		desktop = "9,0 3x12",
+		laptop = "0,0 12x12",
 	},
 }
 
@@ -65,13 +65,12 @@ function moveFocusedWindow(where)
 	end
 end
 
-function toggleTerminalVisibility()
+function toggleAppVisibility(app_name, new_window_menu_item)
 	return function()
-		local app = hs.application.find("WezTerm", true, true)
-		print(app)
+		local app = hs.application.find(app_name, true, true)
 		if app then
 			if not app:mainWindow() then
-				app:selectMenuItem({"Shell", "New Window"})
+				app:selectMenuItem(new_window_menu_item)
 			elseif app:isFrontmost() then
 				app:hide()
 				return
@@ -79,12 +78,11 @@ function toggleTerminalVisibility()
 				app:activate()
 			end
 		else
-			hs.application.launchOrFocus("WezTerm")
+			hs.application.launchOrFocus(app_name)
 		end
-
 		hs.timer.waitUntil(function()
-			local isRunning = not not hs.application.find("WezTerm")
-			local isFront = hs.application.frontmostApplication():name() == "WezTerm"
+			local isRunning = not not hs.application.find(app_name)
+			local isFront = hs.application.frontmostApplication():name() == app_name
 			return isRunning and isFront
 		end, function()
 			xpcall(moveFocusedWindow(grid_positions.floating), function()
@@ -101,16 +99,19 @@ end
 -- Ctrl + Alt + V should move a window to the "floating" position
 -- Ctrl + Alt + C, B should position a window such that it's taking up half of the
 -- screen (left or right respectively). Mostly useful for desktop.
-hs.hotkey.bind({"ctrl", "alt"}, "d", moveFocusedWindow(grid_positions.left))
-hs.hotkey.bind({"ctrl", "alt", "shift"}, "d", moveFocusedWindow(grid_positions.wideleft))
-hs.hotkey.bind({"ctrl", "alt"}, "f", moveFocusedWindow(grid_positions.fullscreen))
-hs.hotkey.bind({"ctrl", "alt"}, "g", moveFocusedWindow(grid_positions.right))
-hs.hotkey.bind({"ctrl", "alt", "shift"}, "g", moveFocusedWindow(grid_positions.wideright))
-hs.hotkey.bind({"ctrl", "alt"}, "e", moveFocusedWindow(grid_positions.farleft))
-hs.hotkey.bind({"ctrl", "alt"}, "t", moveFocusedWindow(grid_positions.farright))
-hs.hotkey.bind({"ctrl", "alt"}, "c", moveFocusedWindow(grid_positions.halfleft))
-hs.hotkey.bind({"ctrl", "alt"}, "b", moveFocusedWindow(grid_positions.halfright))
-hs.hotkey.bind({"ctrl", "alt"}, "v", moveFocusedWindow(grid_positions.floating))
+hs.hotkey.bind({ "ctrl", "alt" }, "d", moveFocusedWindow(grid_positions.left))
+hs.hotkey.bind({ "ctrl", "alt", "shift" }, "d", moveFocusedWindow(grid_positions.wideleft))
+hs.hotkey.bind({ "ctrl", "alt" }, "f", moveFocusedWindow(grid_positions.fullscreen))
+hs.hotkey.bind({ "ctrl", "alt" }, "g", moveFocusedWindow(grid_positions.right))
+hs.hotkey.bind({ "ctrl", "alt", "shift" }, "g", moveFocusedWindow(grid_positions.wideright))
+hs.hotkey.bind({ "ctrl", "alt" }, "e", moveFocusedWindow(grid_positions.farleft))
+hs.hotkey.bind({ "ctrl", "alt" }, "t", moveFocusedWindow(grid_positions.farright))
+hs.hotkey.bind({ "ctrl", "alt" }, "c", moveFocusedWindow(grid_positions.halfleft))
+hs.hotkey.bind({ "ctrl", "alt" }, "b", moveFocusedWindow(grid_positions.halfright))
+hs.hotkey.bind({ "ctrl", "alt" }, "v", moveFocusedWindow(grid_positions.floating))
 
 -- Ctrl + Space should toggle terminal visibility.
-hs.hotkey.bind({"ctrl"}, "space", toggleTerminalVisibility())
+hs.hotkey.bind({ "ctrl" }, "space", toggleAppVisibility("WezTerm", { "Shell", "New Window" }))
+
+-- Ctrl + Shift + Space should toggle Bear visibility.
+hs.hotkey.bind({ "ctrl", "shift" }, "space", toggleAppVisibility("Bear", { "Window", "Main Window" }))
