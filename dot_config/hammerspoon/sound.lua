@@ -1,66 +1,67 @@
 -- These are ordered by priority. The first one found wins (top to bottom).
 local presets = {
-	{
-		name = "Home Office (Headphones)",
-		input = "Producer USB",
-		output = "Soundcore Life Q20",
-		detect = function()
-			return (hs.audiodevice.findOutputByName('TX-384Khz Hifi Type-C Audio') ~= nil) and (hs.audiodevice.findOutputByName('Soundcore Life Q20') ~= nil)
-		end,
-	},
-	{
-		name = "Home Office",
-		input = "Producer USB",
-		output = "TX-384Khz Hifi Type-C Audio",
-		detect = function()
-			return (hs.audiodevice.findOutputByName('TX-384Khz Hifi Type-C Audio') ~= nil)
-		end,
-	},
-	{
-		name = "Built-in hardware",
-		input = "MacBook Pro Microphone",
-		output = "MacBook Pro Speakers",
-		detect = function()
-			return true
-		end,
-	},
+  {
+    name = "Home Office (Headphones)",
+    input = "Producer USB",
+    output = "Soundcore Life Q20",
+    detect = function()
+      return (hs.audiodevice.findOutputByName("TX-384Khz Hifi Type-C Audio") ~= nil)
+        and (hs.audiodevice.findOutputByName("Soundcore Life Q20") ~= nil)
+    end,
+  },
+  {
+    name = "Home Office",
+    input = "Producer USB",
+    output = "TX-384Khz Hifi Type-C Audio",
+    detect = function()
+      return (hs.audiodevice.findOutputByName("TX-384Khz Hifi Type-C Audio") ~= nil)
+    end,
+  },
+  {
+    name = "Built-in hardware",
+    input = "MacBook Pro Microphone",
+    output = "MacBook Pro Speakers",
+    detect = function()
+      return true
+    end,
+  },
 }
 
 function handleDeviceConnectDisconnect(event)
-	-- Only device connect/disconnect is of interest so that manual device changes are possible.
-	if event ~= "dev#" then
-		return
-	end
-	
-	detectAudio()
+  -- Only device connect/disconnect is of interest so that manual device changes are possible.
+  if event ~= "dev#" then
+    return
+  end
+
+  detectAudio()
 end
 
 function handleWakeFromSleep(event)
-	if eventtype ~= hs.caffeinate.watcher.systemDidWake then
-		return
-	end
-	
-	detectAudio()
+  if eventtype ~= hs.caffeinate.watcher.systemDidWake then
+    return
+  end
+
+  detectAudio()
 end
 
 function detectAudio()
-	for i, deviceinfo in ipairs(presets) do
-		if deviceinfo.detect() then
-			hs.notify.show("Updated sound settings", "", deviceinfo.name .. ' sound preset now in use.')
-			if hs.audiodevice.findInputByName(deviceinfo.input):name() ~= hs.audiodevice.defaultInputDevice():name() then
-				hs.audiodevice.findInputByName(deviceinfo.input):setDefaultInputDevice()
-				hs.audiodevice.defaultInputDevice():setInputVolume(100)
-			end
-			
-			if hs.audiodevice.findOutputByName(deviceinfo.output):name() ~= hs.audiodevice.defaultOutputDevice():name() then
-				hs.audiodevice.findOutputByName(deviceinfo.output):setDefaultOutputDevice()
-				hs.audiodevice.findOutputByName(deviceinfo.output):setDefaultEffectDevice()
-				hs.audiodevice.defaultOutputDevice():setOutputVolume(20)
-				hs.audiodevice.defaultOutputDevice():setBalance(0.5)
-			end
-			return
-		end
-	end
+  for i, deviceinfo in ipairs(presets) do
+    if deviceinfo.detect() then
+      hs.notify.show("Updated sound settings", "", deviceinfo.name .. " sound preset now in use.")
+      if hs.audiodevice.findInputByName(deviceinfo.input):name() ~= hs.audiodevice.defaultInputDevice():name() then
+        hs.audiodevice.findInputByName(deviceinfo.input):setDefaultInputDevice()
+        hs.audiodevice.defaultInputDevice():setInputVolume(100)
+      end
+
+      if hs.audiodevice.findOutputByName(deviceinfo.output):name() ~= hs.audiodevice.defaultOutputDevice():name() then
+        hs.audiodevice.findOutputByName(deviceinfo.output):setDefaultOutputDevice()
+        hs.audiodevice.findOutputByName(deviceinfo.output):setDefaultEffectDevice()
+        hs.audiodevice.defaultOutputDevice():setOutputVolume(20)
+        hs.audiodevice.defaultOutputDevice():setBalance(0.5)
+      end
+      return
+    end
+  end
 end
 
 -- Any time audio devices are connected/disconnected, detect audio settings.
@@ -73,4 +74,3 @@ sleepWatcher:start()
 
 -- Finally, detect audio settings once when Hammerspoon starts.
 detectAudio()
-
