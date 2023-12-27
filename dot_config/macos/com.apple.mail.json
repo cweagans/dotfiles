@@ -1,0 +1,8 @@
+{
+  "label": "Mail",
+  "restart": "killall Mail",
+  "values": {
+    // Fetch mail every 60 minutes.
+    "PollTime": 60
+  }
+}
