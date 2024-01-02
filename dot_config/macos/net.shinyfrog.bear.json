@@ -1,9 +1,9 @@
 {
-    "label": "Bear",
-    "restart": "killall Bear",
-    "values": {
-        // Set theme and icon.
-        "SFAppDarkThemeName": "Dracula",
-        "SFAppIconName": "Vader"
-    }
+  "label": "Bear",
+  "restart": "killall Bear",
+  "values": {
+    // Set theme and icon.
+    "SFAppDarkThemeName": "Dracula",
+    "SFAppIconName": "Vader"
+  }
 }

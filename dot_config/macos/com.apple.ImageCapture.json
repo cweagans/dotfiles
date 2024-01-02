@@ -1,8 +1,8 @@
 {
-	"label": "Photos",
-	"restart": "true",
-	"values": {
-		// Don't ask to import photos when devices are plugged in.
-		"disableHotPlug": true
-	}
+  "label": "Photos",
+  "restart": "true",
+  "values": {
+    // Don't ask to import photos when devices are plugged in.
+    "disableHotPlug": true
+  }
 }

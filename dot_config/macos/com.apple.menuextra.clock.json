@@ -1,9 +1,9 @@
 {
-	"label": "Clock",
-	"restart": "killall SystemUIServer",
-	"values": {
-		// 24-hour time with seconds in menu bar.
-		"Show24Hour": true,
-		"ShowSeconds": true
-	}
+  "label": "Clock",
+  "restart": "killall SystemUIServer",
+  "values": {
+    // 24-hour time with seconds in menu bar.
+    "Show24Hour": true,
+    "ShowSeconds": true
+  }
 }

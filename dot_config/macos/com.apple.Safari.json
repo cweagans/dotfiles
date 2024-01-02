@@ -1,24 +1,24 @@
 {
-	"label": "Safari",
-	"restart": "killall Safari",
-	"values": {
-		// Show me the full URL.
-		"ShowFullURLInSmartSearchField": true,
-		"WebKitDeveloperExtrasEnabledPreferenceKey": true,
-		// Enable continuous spellchecking.
-		"WebContinuousSpellCheckingEnabled": true,
-		// Disable autocorrect.
-		"WebAutomaticSpellingCorrectionEnabled": false,
-		// Autofill my personal information, but nothing else.
-		"AutoFillFromAddressBook": true,
-		"AutoFillPasswords": false,
-		"AutoFillCreditCardData": false,
-		"AutoFillMiscellaneousForms": false,
-		// Warn about fraudulent websites.
-		"WarnAboutFraudulentWebsites": true,
-		// Enable "Do Not Track"
-		"SendDoNotTrackHTTPHeader": true,
-		// Update extensions automatically.
-		"InstallExtensionUpdatesAutomatically": true
-	}
+  "label": "Safari",
+  "restart": "killall Safari",
+  "values": {
+    // Show me the full URL.
+    "ShowFullURLInSmartSearchField": true,
+    "WebKitDeveloperExtrasEnabledPreferenceKey": true,
+    // Enable continuous spellchecking.
+    "WebContinuousSpellCheckingEnabled": true,
+    // Disable autocorrect.
+    "WebAutomaticSpellingCorrectionEnabled": false,
+    // Autofill my personal information, but nothing else.
+    "AutoFillFromAddressBook": true,
+    "AutoFillPasswords": false,
+    "AutoFillCreditCardData": false,
+    "AutoFillMiscellaneousForms": false,
+    // Warn about fraudulent websites.
+    "WarnAboutFraudulentWebsites": true,
+    // Enable "Do Not Track"
+    "SendDoNotTrackHTTPHeader": true,
+    // Update extensions automatically.
+    "InstallExtensionUpdatesAutomatically": true
+  }
 }

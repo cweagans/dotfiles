@@ -1,10 +1,10 @@
 {
-	"label": "Finder",
-	"restart": "killall Finder",
-	"values": {
-		// Auto-purge trash.
-		"FXRemoveOldTrashItems": true,
-		// Don't put any real files on the desktop.
-		"CreateDesktop": false
-	}
+  "label": "Finder",
+  "restart": "killall Finder",
+  "values": {
+    // Auto-purge trash.
+    "FXRemoveOldTrashItems": true,
+    // Don't put any real files on the desktop.
+    "CreateDesktop": false
+  }
 }

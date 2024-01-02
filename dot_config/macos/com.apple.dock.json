@@ -1,10 +1,10 @@
 {
-	"label": "Dock",
-	"restart": "killall Dock",
-	"values": {
-		// Mission control shoudn't rearrange itself
-		"mru-spaces": false,
-		// Don't show a separate recently used apps section.
-		"show-recents": false
-	}
+  "label": "Dock",
+  "restart": "killall Dock",
+  "values": {
+    // Mission control shoudn't rearrange itself
+    "mru-spaces": false,
+    // Don't show a separate recently used apps section.
+    "show-recents": false
+  }
 }

@@ -1,8 +1,8 @@
 {
-	"label": "Print preferences",
-	"restart": "true",
-	"values": {
-		// Automatically quit printer app once print jobs complete.
-		"Quit When Finished": true
-	}
+  "label": "Print preferences",
+  "restart": "true",
+  "values": {
+    // Automatically quit printer app once print jobs complete.
+    "Quit When Finished": true
+  }
 }

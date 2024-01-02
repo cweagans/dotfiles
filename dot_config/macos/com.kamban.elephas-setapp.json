@@ -1,30 +1,30 @@
 {
-    "label": "Elephas",
-    "restart": "killall Elephas",
-    "values": {
-        // Set keyboard shortcuts.
-        "KeyboardShortcuts_floaterCmdShortcut": "{\"carbonModifiers\":2048,\"carbonKeyCode\":49}",
-        "KeyboardShortcuts_hotKeyBlog": 0,
-        "KeyboardShortcuts_hotKeyContinue": 0,
-        "KeyboardShortcuts_hotKeyEmail": 0,
-        "KeyboardShortcuts_hotKeyEmailReply": "{\"carbonModifiers\":4352,\"carbonKeyCode\":15}",
-        "KeyboardShortcuts_hotKeyGrammar": 0,
-        "KeyboardShortcuts_hotKeyProf": 0,
-        "KeyboardShortcuts_hotKeyRepurpose": 0,
-        "KeyboardShortcuts_hotKeySmart": 0,
-        "KeyboardShortcuts_hotKeyViral": 0,
-        "KeyboardShortcuts_hotKeyZinsser": 0,
-        "KeyboardShortcuts_superChatShortcut": "{\"carbonModifiers\":2816,\"carbonKeyCode\":49}",
-        "KeyboardShortcuts_superCmdShortcutDefault": "{\"carbonModifiers\":2560,\"carbonKeyCode\":49}",
-        // Use bigger, better models for different things.
-        "accuracyContent": "GPT-3.5 Turbo",
-        "accuracyContinue": "GPT-3.5 Turbo",
-        "accuracyGrammar": "GPT-3.5 Turbo",
-        "accuracyRewrite": "GPT-3.5 Turbo",
-        "accuracySmart": "GPT-3.5 Turbo",
-        "accuracySnippet": "GPT-3.5 Turbo",
-        "accuracySuperChat": "GPT-3.5 Turbo",
-        "accuracyTranslate": "GPT-3.5 Turbo",
-        "accuracyUtility": "GPT-3.5 Turbo"
-    }
+  "label": "Elephas",
+  "restart": "killall Elephas",
+  "values": {
+    // Set keyboard shortcuts.
+    "KeyboardShortcuts_floaterCmdShortcut": "{\"carbonModifiers\":2048,\"carbonKeyCode\":49}",
+    "KeyboardShortcuts_hotKeyBlog": 0,
+    "KeyboardShortcuts_hotKeyContinue": 0,
+    "KeyboardShortcuts_hotKeyEmail": 0,
+    "KeyboardShortcuts_hotKeyEmailReply": "{\"carbonModifiers\":4352,\"carbonKeyCode\":15}",
+    "KeyboardShortcuts_hotKeyGrammar": 0,
+    "KeyboardShortcuts_hotKeyProf": 0,
+    "KeyboardShortcuts_hotKeyRepurpose": 0,
+    "KeyboardShortcuts_hotKeySmart": 0,
+    "KeyboardShortcuts_hotKeyViral": 0,
+    "KeyboardShortcuts_hotKeyZinsser": 0,
+    "KeyboardShortcuts_superChatShortcut": "{\"carbonModifiers\":2816,\"carbonKeyCode\":49}",
+    "KeyboardShortcuts_superCmdShortcutDefault": "{\"carbonModifiers\":2560,\"carbonKeyCode\":49}",
+    // Use bigger, better models for different things.
+    "accuracyContent": "GPT-3.5 Turbo",
+    "accuracyContinue": "GPT-3.5 Turbo",
+    "accuracyGrammar": "GPT-3.5 Turbo",
+    "accuracyRewrite": "GPT-3.5 Turbo",
+    "accuracySmart": "GPT-3.5 Turbo",
+    "accuracySnippet": "GPT-3.5 Turbo",
+    "accuracySuperChat": "GPT-3.5 Turbo",
+    "accuracyTranslate": "GPT-3.5 Turbo",
+    "accuracyUtility": "GPT-3.5 Turbo"
+  }
 }
