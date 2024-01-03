@@ -6,7 +6,15 @@ return {
     },
     opts = {
       extensions = {
-        zoxide = {},
+        zoxide = {
+          mappings = {
+            default = {
+              action = function(selection)
+                vim.cmd.tcd(selection.path)
+              end,
+            },
+          },
+        },
       },
     },
     config = function(_, opts)
