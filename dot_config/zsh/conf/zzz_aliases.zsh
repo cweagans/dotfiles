@@ -20,8 +20,8 @@ alias stdls='/bin/ls'
 alias ls='lsd'
 alias ll='lsd -la'
 
-# dokku alias
-alias dokku='ssh -t dokku@dokku.pineconegrove.com'
+# Why waste time say lot word when few word do trick
+alias c='cd'
 
 # Automatically register sd command aliases defined in sd scripts.
 # Credit: https://github.com/ianthehenry/sd/issues/20#issuecomment-1867261771
