@@ -1,15 +1,15 @@
 #!/bin/zsh
 
 # This is dumb, but all of the hashes need to be included to make Chezmoi pick
-# up changes to any of the JSON files.
-{{ range (glob (joinPath .chezmoi.homeDir ".config/macos/*.json")) -}}
+# up changes to any of the JSONC files.
+{{ range (glob (joinPath .chezmoi.homeDir ".config/macos/*.jsonc")) -}}
 # {{ . }} hash: {{ include . | sha256sum }}
 {{ end -}}
 
-for f in {{ .chezmoi.homeDir }}/.config/macos/*.json; do
+for f in {{ .chezmoi.homeDir }}/.config/macos/*.jsonc; do
 	if [ ! -e "{{ .chezmoi.homeDir }}/.config/macos/.lastupdate" ] || [ "$f" -nt "{{ .chezmoi.homeDir }}/.config/macos/.lastupdate" ]; then
 
-		domain=$(basename $f .json)
+		domain=$(basename $f .jsonc)
 		label=$(cat "$f" | grep -v "//" | jq -r '.label')
 		restart_cmd=$(cat "$f" | grep -v "//" | jq -r '.restart')
 		values=$(cat "$f" | grep -v "//" | jq -r '.values | to_entries | map({"key": .key, "value": .value, "typ": (.value | type)})')
