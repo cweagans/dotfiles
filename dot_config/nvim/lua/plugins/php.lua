@@ -18,7 +18,9 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        phpactor = {},
+        intelephense = {
+          licence_key = "/Users/cweagans/.config/nvim/intelephense.txt",
+        },
       },
     },
   },
