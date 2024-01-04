@@ -4,38 +4,35 @@ format = """
 $username\
 $hostname\
 $directory\
-$git_branch\
-$git_state\
-$git_status\
 $line_break\
 $character"""
 
 right_format = """
+$cmd_duration\
 $git_status\
-$cmd_duration"""
+$git_branch"""
+
+continuation_prompt = "▶▶ "
 
 [directory]
 style = "blue"
 truncate_to_repo = false
 
 [character]
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
+success_symbol = "[❯](green bold)"
+error_symbol = "[❯](red bold)"
+vimcmd_symbol = "[❮](green bold)"
 
 [git_branch]
 symbol = " "
-style = "bright-black"
-
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
+format = " [$symbol$branch]($style)"
 style = "bright-black"
 
 [git_status]
-format = "[$ahead_behind]($style)"
+format = " [$ahead_behind]($style)"
 
 [cmd_duration]
-format = "[$duration]($style) "
+format = "[$duration]($style)"
 style = "yellow"
 
 [palettes.catppuccin_mocha]
