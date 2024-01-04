@@ -15,9 +15,6 @@ znap source jeffreytse/zsh-vi-mode
 # Tab titles
 znap source jreese/zsh-titles
 
-# Geometry prompt
-znap prompt geometry-zsh/geometry
-
 # Tailscale CLI completions
 znap source HeroesLament/zsh-tailscale-plugin
 
