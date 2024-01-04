@@ -5,7 +5,7 @@ return {
   config = function()
     require("tabby.tabline").use_preset("tab_only", {
       nerdfont = false,
-      lualine_theme = "dracula",
+      lualine_theme = "catppuccin",
     })
   end,
   keys = {

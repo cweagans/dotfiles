@@ -3,7 +3,7 @@ return {
   opts = function(_, opts)
     local icons = require("lazyvim.config").icons
     opts.extensions = { "nvim-tree", "lazy", "trouble" }
-    opts.theme = "nord"
+    opts.theme = "catppuccin"
     opts.sections = {
       lualine_a = {
         "mode",

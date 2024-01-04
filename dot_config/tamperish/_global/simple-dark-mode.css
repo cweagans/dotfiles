@@ -1,7 +1,0 @@
-html {
-    filter: invert(1);
-}
-img {
-    /** invert some things back to normal */
-    filter: invert(1);
-}

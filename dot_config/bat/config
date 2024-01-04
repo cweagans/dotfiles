@@ -1,5 +1,5 @@
-# Set theme to Nord.
---theme="Nord"
+# Set theme to Catppuccin Mocha.
+--theme="Catppuccin-mocha"
 
 # Syntax mappings: map a certain filename pattern to a language.
 #   Example 1: use the C++ syntax for Arduino .ino files
