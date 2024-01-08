@@ -1,0 +1,77 @@
+#!/bin/zsh
+
+brew bundle --no-lock --no-upgrade --file=/dev/stdin <<EOF
+{{- if .packages.global.darwin.taps }}
+# Global taps
+{{ range .packages.global.darwin.taps -}}
+tap "{{ . }}"
+{{ end }}
+{{ end }}
+
+{{- if index .packages .mode "darwin" "taps" }}
+# {{ .mode }} taps
+{{ range index .packages .mode "darwin" "taps" -}}
+tap "{{ . }}"
+{{ end }}
+{{ end }}
+
+{{- if .packages.global.darwin.brews }}
+# Global packages
+{{ range .packages.global.darwin.brews -}}
+brew "{{ . }}"
+{{ end }}
+{{ end }}
+
+{{- if index .packages .mode "darwin" "brews" }}
+# {{ .mode }} packages
+{{ range index .packages .mode "darwin" "brews" -}}
+brew "{{ . }}"
+{{ end }}
+{{ end }}
+
+{{- if .packages.global.darwin.casks }}
+# Global casks
+{{ range .packages.global.darwin.casks -}}
+cask "{{ . }}"
+{{ end }}
+{{ end }}
+
+{{- if index .packages .mode "darwin" "casks" }}
+# {{ .mode }} casks
+{{ range index .packages .mode "darwin" "casks" -}}
+cask "{{ . }}"
+{{ end }}
+{{ end }}
+
+{{- if .packages.global.darwin.mas }}
+# Global app store apps
+{{ range .packages.global.darwin.mas -}}
+mas "{{ .name }}", id: {{ .id }}
+{{ end }}
+{{ end }}
+
+{{- if index .packages .mode "darwin" "mas" }}
+# {{ .mode }} app store apps
+{{ range index .packages .mode "darwin" "mas" -}}
+mas "{{ .name }}", id: {{ .id }}
+{{ end }}
+{{ end }}
+EOF
+
+cat <<EOF | zsh
+{{- if .uninstall_packages.darwin.brews }}
+{{- range .uninstall_packages.darwin.brews }}
+brew uninstall --force {{ . }}
+{{- end }}
+{{- end }}
+{{- if .uninstall_packages.darwin.casks }}
+{{- range .uninstall_packages.darwin.casks }}
+brew uninstall --force {{ . }}
+{{- end }}
+{{- end }}
+{{- if .uninstall_packages.darwin.mas }}
+{{- range .uninstall_packages.darwin.mas }}
+sudo rm -r "/Applications/{{ .name }}.app"
+{{- end }}
+{{- end }}
+EOF

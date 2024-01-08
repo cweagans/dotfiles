@@ -1,0 +1,178 @@
+packages:
+  global:
+    darwin:
+      taps:
+        - "homebrew/bundle"
+        - "homebrew/services"
+      brews:
+        - "act"
+        - "actionlint"
+        - "age"
+        - "ansible-lint"
+        - "ansible"
+        - "atuin"
+        - "bat"
+        - "black"
+        - "chezmoi"
+        - "choose"
+        - "coreutils"
+        - "dasel"
+        - "direnv"
+        - "docker-compose"
+        - "docker"
+        - "fzf"
+        - "gh"
+        - "ghq"
+        - "git-delta"
+        - "git-flow"
+        - "git"
+        - "glow"
+        - "go-task"
+        - "go"
+        - "gopls"
+        - "grpcurl"
+        - "httpie"
+        - "imapfilter"
+        - "jq"
+        - "lazygit"
+        - "lsd"
+        - "lua-language-server"
+        - "lua"
+        - "luacheck"
+        - "luarocks"
+        - "mas"
+        - "mkcert"
+        - "mysql-client"
+        - "neovim"
+        - "node"
+        - "nss"
+        - "openssh"
+        - "pre-commit"
+        - "protobuf"
+        - "protoc-gen-go-grpc"
+        - "protoc-gen-go"
+        - "pygments"
+        - "python@3.10"
+        - "qemu"
+        - "ripgrep"
+        - "rustup-init"
+        - "starship"
+        - "telnet"
+        - "terraform-ls"
+        - "terraform"
+        - "trash"
+        - "tree"
+        - "watch"
+        - "watchexec"
+        - "wget"
+        - "yq"
+        - "zoxide"
+      casks:
+        - "1password"
+        - "1password-cli"
+        - "chromium"
+        - "elgato-camera-hub"
+        - "elgato-stream-deck"
+        - "hammerspoon"
+        - "hex-fiend"
+        - "ledger-live"
+        - "logi-options-plus"
+        - "ngrok"
+        - "orbstack"
+        - "setapp"
+        - "wezterm"
+        - "zoom"
+      mas:
+        - name: "1Password for Safari"
+          id: 1569813296
+        - name: "AdGuard for Safari"
+          id: 1440147259
+        - name: "Bear"
+          id: 1091189122
+        - name: "GoodNotes"
+          id: 1444383602
+        - name: "iMazing Profile Editor"
+          id: 1487860882
+        - name: "Keynote"
+          id: 409183694
+        - name: "Noir"
+          id: 1592917505
+        - name: "Numbers"
+          id: 409203825
+        - name: "Pages"
+          id: 409201541
+        - name: "Slack"
+          id: 803453959
+        - name: "Things"
+          id: 904280696
+        - name: "Tailscale"
+          id: 1475387142
+        - name: "virtualOS"
+          id: 1614659226
+        - name: "Xcode"
+          id: 497799835
+  personal:
+    darwin:
+      taps:
+        - "drud/ddev"
+      brews:
+        - "php"
+        - "composer"
+        - "drud/ddev/ddev"
+        - "hugo"
+      casks:
+        - "discord"
+        - "ghidra"
+        - "musescore"
+        - "nvidia-geforce-now"
+        - "obs"
+        - "saleae-logic"
+        - "scrivener"
+        - "signal"
+        - "steam"
+        - "transmit"
+        - "vlc"
+      mas:
+        - name: "Affinity Designer"
+          id: 824171161
+        - name: "Affinity Photo"
+          id: 824183456
+        - name: "Affinity Publisher"
+          id: 881418622
+        - name: "Compressor"
+          id: 424390742
+        - name: "Final Cut Pro"
+          id: 424389933
+        - name: "GarageBand"
+          id: 682658836
+        - name: "Logic Pro"
+          id: 634148309
+        - name: "MainStage"
+          id: 634159523
+        - name: "Motion"
+          id: 434290957
+        - name: "Pixelmator"
+          id: 407963104
+        - name: "Steam Link"
+          id: 1246969117
+        - name: "Vectornator Pro"
+          id: 1470168007
+  work:
+    darwin:
+      taps: []
+      brews:
+        - "awscli"
+        - "azure-cli"
+      casks:
+        - "google-cloud-sdk"
+        - "temurin"
+      mas: []
+
+uninstall_packages:
+  darwin:
+    taps: []
+    brews:
+      - "colima"
+    casks:
+      - "visual-studio-code"
+    mas: []

@@ -1,9 +1,0 @@
-#!/bin/zsh
-
-# Brewfile hash: {{ include "dot_Brewfile.tmpl" | sha256sum }}
-
-if [[ ! -e "~/.Brewfile" ]]; then
-	chezmoi execute-template < $(chezmoi source-path)/dot_Brewfile.tmpl > ~/.Brewfile
-fi
-
-brew bundle --global --no-lock --no-upgrade
