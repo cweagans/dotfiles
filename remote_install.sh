@@ -18,7 +18,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 	brew install --cask 1password 1password-cli
 	brew install chezmoi
 
-	echo "Open 1Password, log in, and unlock the Cameron and Alli vault."
+	echo "Open 1Password, log in, and unlock the Eagans vault."
 	echo "In Settings -> Developer, check 'Connect with 1Password CLI'."
 	echo "In another Terminal window, make sure you can run \"op read 'op://Chezmoi/Home WiFi/username'\" before continuing."
 	echo "Press enter to continue."
