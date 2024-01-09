@@ -14,6 +14,9 @@ source "${SD_ROOT}/.preamble.bash"
 
 # ------------------------------------------------------------------------------
 
-brew bundle dump --force --global
+echo "This script needs to be updated to append packages to ~/.local/share/chezmoi/.chezmoidata/packages.yaml instead"
+exit 1
 
-echo "Brewfile updates have been dumped to ~/.Brewfile. Differences will need to be merged into Chezmoi template manually."
+# brew bundle dump --force --global
+
+# echo "Brewfile updates have been dumped to ~/.Brewfile. Differences will need to be merged into Chezmoi template manually."
