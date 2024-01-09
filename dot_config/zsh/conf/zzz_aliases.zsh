@@ -23,6 +23,9 @@ alias ll='lsd -la'
 # Why waste time say lot word when few word do trick
 alias c='cd'
 
+# Use the homebrew sqlite3
+alias sqlite3='/opt/homebrew/opt/sqlite/bin/sqlite3'
+
 # Automatically register sd command aliases defined in sd scripts.
 # Credit: https://github.com/ianthehenry/sd/issues/20#issuecomment-1867261771
 if command -v rg > /dev/null; then
