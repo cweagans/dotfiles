@@ -13,12 +13,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
--- Open the dashboard for new tabs.
--- TODO: This will also trigger the dashboard when `:tabnew filename.txt` is used. Make it not do that.
-vim.api.nvim_create_autocmd("TabNewEntered", {
-  command = "Dashboard",
-})
-
 -- Apply and restore local patches on plugin update/install
 -- Credit: @Bekaboo in Bekaboo/nvim
 vim.api.nvim_create_autocmd("User", {
