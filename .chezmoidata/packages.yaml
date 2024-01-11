@@ -127,6 +127,7 @@ packages:
         - "musescore"
         - "nvidia-geforce-now"
         - "obs"
+        - "prusaslicer"
         - "saleae-logic"
         - "scrivener"
         - "signal"
