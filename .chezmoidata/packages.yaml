@@ -134,6 +134,7 @@ packages:
         - "steam"
         - "transmit"
         - "vlc"
+        - "whisky"
       mas:
         - name: "Affinity Designer"
           id: 824171161
