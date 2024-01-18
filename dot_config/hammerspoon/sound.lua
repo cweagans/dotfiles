@@ -10,11 +10,36 @@ local presets = {
     end,
   },
   {
+    name = "Home Office (AirPods Max)",
+    input = "Producer USB",
+    output = "Cameron's AirPods Max",
+    detect = function()
+      return (hs.audiodevice.findOutputByName("TX-384Khz Hifi Type-C Audio") ~= nil)
+        and (hs.audiodevice.findOutputByName("Cameron's AirPods Max") ~= nil)
+    end,
+  },
+  {
     name = "Home Office",
     input = "Producer USB",
     output = "TX-384Khz Hifi Type-C Audio",
     detect = function()
       return (hs.audiodevice.findOutputByName("TX-384Khz Hifi Type-C Audio") ~= nil)
+    end,
+  },
+  {
+    name = "Mobile (Headphones)",
+    input = "MacBook Pro Microphone",
+    output = "Soundcore Life Q20",
+    detect = function()
+      return (hs.audiodevice.findOutputByName("Soundcore Life Q20") ~= nil)
+    end,
+  },
+  {
+    name = "Mobile (AirPods Max)",
+    input = "MacBook Pro Microphone",
+    output = "Cameron's AirPods Max",
+    detect = function()
+      return (hs.audiodevice.findOutputByName("Cameron's AirPods Max") ~= nil)
     end,
   },
   {
