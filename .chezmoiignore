@@ -1,6 +1,7 @@
 README.md
 notes.md
 remote_install.sh
+.config/zsh/conf/*.zwc
 
 {{ if ne .chezmoi.os "darwin" }}
 
