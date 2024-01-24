@@ -21,6 +21,9 @@ znap source HeroesLament/zsh-tailscale-plugin
 # Ian Henry's "script directory" tool
 znap source ianthehenry/sd
 
+# Powerlevel10k prompt
+znap source romkatv/powerlevel10k
+
 # 1password op cli completions
 znap source unixorn/1password-op.plugin.zsh
 

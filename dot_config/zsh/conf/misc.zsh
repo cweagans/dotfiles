@@ -34,10 +34,6 @@ zvm_after_init_commands+=(eval "$(atuin init zsh --disable-up-arrow)")
 # Enable direnv.
 znap eval direnv "direnv hook zsh"
 
-# Set up starship.
-znap eval starship 'starship init zsh --print-full-init'
-znap prompt
-
 # Set up zoxide.
 znap eval zoxide "zoxide init zsh --cmd cd"
 

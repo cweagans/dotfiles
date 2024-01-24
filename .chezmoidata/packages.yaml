@@ -56,7 +56,6 @@ packages:
         - "qemu"
         - "ripgrep"
         - "rustup-init"
-        - "starship"
         - "step"
         - "telnet"
         - "terraform-ls"
@@ -176,6 +175,7 @@ uninstall_packages:
     taps: []
     brews:
       - "colima"
+      - "starship"
     casks:
       - "visual-studio-code"
     mas: []
