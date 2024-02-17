@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Start SICP Scheme interpreter.
+#
+# Alias: scheme
+#
+# Example usage:
+#   sd sicp-scheme
+#   scheme
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+if [ ! -d "/Users/cweagans/Library/Racket/8.12/pkgs/sicp/sicp" ]; then
+  echo raco setup
+  echo raco pkg install sicp
+fi
+
+racket -l sicp --repl

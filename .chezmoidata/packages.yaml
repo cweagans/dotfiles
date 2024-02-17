@@ -127,6 +127,7 @@ packages:
         - "nvidia-geforce-now"
         - "obs"
         - "prusaslicer"
+        - "racket"
         - "saleae-logic"
         - "scrivener"
         - "signal"
