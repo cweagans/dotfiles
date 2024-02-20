@@ -5,6 +5,13 @@ refreshPeriod = "168h"
 format = "zip"
 stripComponents = 1
 
+[".config/hammerspoon/Spoons/Seal.spoon"]
+type = "archive"
+url = "https://github.com/Hammerspoon/Spoons/raw/master/Spoons/Seal.spoon.zip"
+refreshPeriod = "168h"
+format = "zip"
+stripComponents = 1
+
 ["bin/pkl"]
 type = "file"
 url = "https://github.com/apple/pkl/releases/latest/download/pkl-macos-aarch64"
