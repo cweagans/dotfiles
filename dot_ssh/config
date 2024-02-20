@@ -1,6 +1,7 @@
 # vi:syntax=sshconfig
 
 Include ~/.orbstack/ssh/config
+Include ~/.ssh/config_local
 
 Host *
     # Use 1password SSH agent.
