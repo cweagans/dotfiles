@@ -24,5 +24,7 @@ return {
       "ssh_config",
       "toml",
     })
+    opts.highlight.enable = true
+    opts.indent.enable = true
   end,
 }
