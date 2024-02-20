@@ -25,6 +25,11 @@ spoon.Seal.plugins.useractions.actions = {
     icon = "favicon",
     keyword = "http",
   },
+  ["TLDR pages"] = {
+    url = "https://tldr.inbrowser.app/pages/common/${query}",
+    icon = "favicon",
+    keyword = "tldr",
+  },
   ["Toggle pasteboard history recording"] = {
     keyword = "pbt",
     fn = function()
