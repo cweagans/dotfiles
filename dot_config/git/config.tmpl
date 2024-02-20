@@ -11,6 +11,7 @@ tag = tag -s
 
 [branch]
 autoSetupRebase = always
+sort = -committerdate
 
 [color]
 ui = auto
@@ -58,7 +59,9 @@ untracked = red
 updated = green bold
 
 [commit]
+cleanup = scissors
 gpgsign = true
+verbose = true
 
 [core]
 compression = 9
@@ -95,11 +98,14 @@ zero-style = dim syntax
 
 [diff]
 algorithm = histogram
+context = 10
 colorMoved = default
+colorMovedWS = allow-indentation-change
 
 [fetch]
-fsckobjects = false
+fsckobjects = true
 prune = true
+prunetags = true
 
 [ghq]
 root = {{ .chezmoi.homeDir }}/Developer
@@ -134,21 +140,33 @@ defaultBranch = main
 [interactive]
 diffFilter = delta --color-only
 
+[log]
+date = iso
+
 [merge]
-conflictstyle = diff3
+conflictstyle = zdiff3
+keepbackup = false
 
 [pager]
 branch = false
 grep = false
 
+[pull]
+rebase = true
+
 [push]
 default = current
+followTags = true
 
 [rebase]
 autostash = true
+missingCommitsCheck = error
 
 [receive]
 fsckobjects = true
+
+[rerere]
+enabled = true
 
 [status]
 submoduleSummary = true
