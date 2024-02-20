@@ -33,6 +33,7 @@ packages:
         - "grpcurl"
         - "httpie"
         - "imapfilter"
+        - "jc"
         - "jq"
         - "lazygit"
         - "lsd"
