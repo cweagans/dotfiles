@@ -1,3 +1,5 @@
+require("console")
+
 -- TODO: This makes reloading config take forever. Figure out why and/or only run it when necessary.
 -- hs.loadSpoon("EmmyLua")
 
