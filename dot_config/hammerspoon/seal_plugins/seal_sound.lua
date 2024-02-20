@@ -84,16 +84,23 @@ function obj.completionCallback(rowInfo)
   if rowInfo["type"] == "sound" then
     for i, deviceinfo in ipairs(obj.presets) do
       if rowInfo["uuid"] == obj.__name .. "__" .. deviceinfo.name then
-        if
-          not hs.audiodevice.findInputByName(deviceinfo.input) or not hs.audiodevice.findOutputByName(deviceinfo.output)
-        then
-          hs.notify.show(
-            "Required audio devices not found",
-            "",
-            "The required audio devices for " .. deviceinfo.name .. " are not connected."
-          )
-          return
-        end
+        print(deviceinfo.input)
+        print(deviceinfo.output)
+        print(hs.audiodevice.findDeviceByName(deviceinfo.input))
+        print(hs.audiodevice.findDeviceByName(deviceinfo.output))
+        print(hs.audiodevice.allInputDevices())
+        print(hs.audiodevice.allOutputDevices())
+
+        -- if
+        --   not hs.audiodevice.findInputByName(deviceinfo.input) or not hs.audiodevice.findOutputByName(deviceinfo.output)
+        -- then
+        --   hs.notify.show(
+        --     "Required audio devices not found",
+        --     "",
+        --     "The required audio devices for " .. deviceinfo.name .. " are not connected."
+        --   )
+        --   return
+        -- end
 
         if hs.audiodevice.findInputByName(deviceinfo.input):name() ~= hs.audiodevice.defaultInputDevice():name() then
           hs.audiodevice.findInputByName(deviceinfo.input):setDefaultInputDevice()
