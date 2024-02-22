@@ -12,9 +12,3 @@ refreshPeriod = "168h"
 format = "zip"
 stripComponents = 1
 
-["bin/pkl"]
-type = "file"
-url = "https://github.com/apple/pkl/releases/latest/download/pkl-macos-aarch64"
-refreshPeriod = "168h"
-executable = true
-
