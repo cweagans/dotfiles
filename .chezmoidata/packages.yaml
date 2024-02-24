@@ -27,6 +27,7 @@ packages:
         - "git-flow"
         - "git"
         - "glow"
+        - "gnu-sed"
         - "go-task"
         - "go"
         - "gopls"
