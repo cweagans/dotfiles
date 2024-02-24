@@ -19,7 +19,9 @@ return {
     opts = {
       servers = {
         intelephense = {
-          licence_key = "/Users/cweagans/.config/nvim/intelephense.txt",
+          init_options = {
+            licenceKey = "/Users/cweagans/.config/nvim/intelephense.txt",
+          },
         },
       },
     },
