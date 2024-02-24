@@ -130,6 +130,7 @@ packages:
         - "obs"
         - "prusaslicer"
         - "racket"
+        - "responsively"
         - "saleae-logic"
         - "scrivener"
         - "signal"
