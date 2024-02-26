@@ -2,65 +2,108 @@
 
 # Configuration values.
 LOCK_ROOT="$HOME/.local/lock"
+CACHE_ROOT="$HOME/.cache/sdcache"
 
 # Make sure sd can be called from inside other sd scripts.
 sd() {
-	$HOME/.config/zsh/zgenom/sources/ianthehenry/sd/___/sd $@
+  $HOME/.config/zsh/zgenom/sources/ianthehenry/sd/___/sd $@
 }
 
 # Common functions
 format_heading() {
-	echo
-	echo -e "${BPurple}==> ${1}${Color_Off}"
+  echo
+  echo -e "${BPurple}==> ${1}${Color_Off}"
 }
 
 format_message() {
-	echo -e "${BCyan}====> ${1}${Color_Off}"
+  echo -e "${BCyan}====> ${1}${Color_Off}"
 }
 
 format_detail() {
-	echo -e "${BCyan}    > ${1}${Color_Off}"
+  echo -e "${BCyan}    > ${1}${Color_Off}"
 }
 
 format_error() {
-	echo -e "${BRed}[!]${Color_Off} ${*}"
-	return 1
+  echo -e "${BRed}[!]${Color_Off} ${*}"
+  return 1
 }
 
 require_program() {
-	if ! type "$1" >/dev/null 2>&1; then
-		format_error "Program $1 is required. Please install it and try again."
-	fi
+  if ! type "$1" >/dev/null 2>&1; then
+    format_error "Program $1 is required. Please install it and try again."
+  fi
 }
 
 require_arg() {
-	if [ -z "$2" ]; then
-		format_error "Arg $1 is required."
-	fi
+  if [ -z "$2" ]; then
+    format_error "Arg $1 is required."
+  fi
 }
 
 check_connection() {
-	ping -q -c 1 -W 1 example.com &>/dev/null
-	return $?
+  ping -q -c 1 -W 1 example.com &>/dev/null
+  return $?
 }
 
 acquire_lock() {
-	# Ensure a lock dir exists.
-	[ -d "$LOCK_ROOT" ] || mkdir -p "$LOCK_ROOT"
+  # Ensure a lock dir exists.
+  [ -d "$LOCK_ROOT" ] || mkdir -p "$LOCK_ROOT"
 
-	# See if the lock already exists.
-	[ ! -e "$LOCK_ROOT/$1.lock" ] || format_error "Cannot acquire lock for $1"
+  # See if the lock already exists.
+  [ ! -e "$LOCK_ROOT/$1.lock" ] || format_error "Cannot acquire lock for $1"
 
-	# Touch the file to acquire the lock.
-	touch "$LOCK_ROOT/$1.lock"
+  # Touch the file to acquire the lock.
+  touch "$LOCK_ROOT/$1.lock"
 }
 
 clear_lock() {
-	# See if the lock already exists.
-	[ -e "$LOCK_ROOT/$1.lock" ] || format_error "Lock for $1 does not exist"
+  # See if the lock already exists.
+  [ -e "$LOCK_ROOT/$1.lock" ] || format_error "Lock for $1 does not exist"
 
-	# Clear the lock.
-	rm "$LOCK_ROOT/$1.lock"
+  # Clear the lock.
+  rm "$LOCK_ROOT/$1.lock"
+}
+
+cache() {
+  require_program "shasum"
+  require_program "awk"
+
+  _SDCACHE_FORCE_EXEC="${SDCACHE_FORCE_EXEC+false}"
+
+  # First, check that this script isn't called without arguments.
+  args="${1+noargs}"
+  if [[ "$args" = "" ]]; then
+    format_error "This script requires command output to cache. See sd cache --help for more information"
+  fi
+
+  # Get the name of the command that we're running and shift it off of the args list.
+  cmd=$1
+  shift 1
+
+  # Make sure that we have a place to store the data.
+  [ -d "${CACHE_ROOT}/${cmd}" ] || mkdir -p "${CACHE_ROOT}/${cmd}"
+
+  # Delete cache files older than three hours.
+  find "$CACHE_ROOT" -mindepth 1 -mmin +180 -delete
+
+  # Generate a cache filename.
+  filename=$(echo -n "$cmd $@" | shasum | awk '{print $1}')
+
+  # If the file doesn't exist, run the requested command to generate a new cache entry.
+  if [ ! -f "${CACHE_ROOT}/${cmd}/${filename}" ] || [ "$_SDCACHE_FORCE_EXEC" == "true" ]; then
+    eval "${cmd} $@" >"${CACHE_ROOT}/${cmd}/${filename}"
+
+    # If the command wasn't successful, delete the cache entry and exist with the
+    # same exit code.
+    exitcode="$?"
+    if [ "$exitcode" != 0 ]; then
+      rm "${CACHE_ROOT}/${cmd}/${filename}"
+      exit $exitcode
+    fi
+  fi
+
+  # Either way, the contents of the cache file are now valid, so we can emit them.
+  cat "${CACHE_ROOT}/${cmd}/${filename}"
 }
 
 ##########################################################
