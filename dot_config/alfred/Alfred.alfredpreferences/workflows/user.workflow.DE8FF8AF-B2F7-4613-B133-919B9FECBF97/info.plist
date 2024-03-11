@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>net.cweagans.sound-switcher</string>
+	<key>connections</key>
+	<dict>
+		<key>3ED6D1BD-E9EF-4403-8230-D5DC4BCF973B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>530AFEC7-7FDC-4449-A16F-A95203827F7A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Cameron Eagans</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Sound switcher</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"Autodetect","arg":"Autodetect"},{"title":"Home Office","arg":"Home Office"},{"title":"Home Office (AirPods Max)","arg":"Home Office (AirPods Max)"},{"title":"Mobile (AirPods Max)","arg":"Mobile (AirPods Max)"},{"title":"Built-in hardware","arg":"Built-in hardware"}]</string>
+				<key>keyword</key>
+				<string>sound</string>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Switch to sound preset</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>3ED6D1BD-E9EF-4403-8230-D5DC4BCF973B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+if [[ "$query" == "Autodetect" ]]; then
+	echo "AlfredDetectAudioPreset()" | ~/bin/hs
+else
+	echo "AlfredSwitchToPreset('$query')" | ~/bin/hs
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>530AFEC7-7FDC-4449-A16F-A95203827F7A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>3ED6D1BD-E9EF-4403-8230-D5DC4BCF973B</key>
+		<dict>
+			<key>xpos</key>
+			<real>220</real>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>530AFEC7-7FDC-4449-A16F-A95203827F7A</key>
+		<dict>
+			<key>xpos</key>
+			<real>410</real>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string>https://www.cweagans.net</string>
+</dict>
+</plist>

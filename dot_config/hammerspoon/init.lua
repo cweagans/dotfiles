@@ -11,7 +11,7 @@ require("windowmanagement")
 require("hbar")
 require("urls")
 require("bear")
-require("sealconfig")
+--require("sealconfig")
 
 -- Screen lock
 hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "L", function()

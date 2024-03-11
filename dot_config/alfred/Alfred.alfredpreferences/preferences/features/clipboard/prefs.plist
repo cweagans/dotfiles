@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoExpandRestoreClipboardAfter</key>
+	<real>6</real>
+	<key>autoExpandSimulatedKeyEventPadding</key>
+	<real>2</real>
+	<key>autoExpandSnippetPlaySound</key>
+	<false/>
+	<key>autoExpandSnippetTriggerPlaySound</key>
+	<false/>
+	<key>fastAppend</key>
+	<true/>
+	<key>fastAppendBackToClipboard</key>
+	<true/>
+	<key>snippetKeywordEnabled</key>
+	<false/>
+	<key>snippetKeywordInResult</key>
+	<false/>
+	<key>viewerKeyword</key>
+	<string>pb</string>
+</dict>
+</plist>

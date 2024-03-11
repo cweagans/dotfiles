@@ -1,0 +1,3044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.vitor.1password</string>
+	<key>connections</key>
+	<dict>
+		<key>06513BCB-0261-45C2-BE12-AEC0021E9E8E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3EFD35DD-0984-4561-BB69-91541E75325E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>070215AC-79E9-494E-8B68-94CD5C80FBE5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CFF178E5-E80D-498F-AE8A-6F701B4A1961</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2032CDC0-7BD4-4671-8A03-2BEB9F84B3D3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B974DC8F-2F5C-4E0A-A866-1693C7C525A2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2166D3DB-EF96-4C03-B95A-77D5068615D7</key>
+		<array/>
+		<key>2BBDFBE4-FBBC-4506-9269-3CFB4017932C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D775FDBF-FDA2-4FDE-9007-02111D660392</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2D9E5CE1-5C0C-40B1-A0CD-91753D9F27FB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F98E7ED2-C99B-4242-A40F-8F2EFA9FE6B8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>2F8580A4-1C3B-48E7-90B5-3545382DE3C4</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9FB513DD-70CB-4714-90C0-60C64D8A8784</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>307581EE-EB83-4CF4-BC49-E738E98841A5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3EFD35DD-0984-4561-BB69-91541E75325E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>39FC6428-F956-4D05-9D2D-255398F8F5E3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F05CEA7B-4FBA-430E-8B03-B94BB32A68DD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3C6D1460-731F-4A4A-8836-8AD03743EE23</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AADC9859-4CF2-43B3-831D-940B6BCBC278</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4AFED243-84FB-4005-B115-FFD8635E6737</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9562EC35-C446-47D7-8269-52EF42A02CC0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>60128803-7491-4D16-8ADE-FB406F888A2D</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>666D7BDE-787B-44BD-A535-3F76541B7F8C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>C84F022F-832E-431C-8EBE-74DB981EEFB8</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9E56D02A-13BF-43CF-819E-6836C62FB87B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>C8F2743C-1389-4043-83D1-7C2750A807F8</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>72EE2185-F8D8-43A9-949D-57337E125256</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5530C4BB-8C53-4878-B87F-7F37F1554B91</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4BCC494E-5F93-4DF4-88C6-04C59B1DB3E2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>06513BCB-0261-45C2-BE12-AEC0021E9E8E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>307581EE-EB83-4CF4-BC49-E738E98841A5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button2</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4FEB803E-78D2-4DAA-A493-0C499D3B3415</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ACCDC3AA-BCFF-4406-B851-9DF07B65D2DD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5526B8BB-14D0-4271-94CE-0C7C2A1DC4E7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C6542F9B-7628-484C-8E6B-E87E5291D5BA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5B779377-8A0B-4819-9840-611C663A1004</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E0E63366-C846-4EB6-8625-9CCDD1637737</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>60128803-7491-4D16-8ADE-FB406F888A2D</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A8711759-B066-4A18-BB55-8A825C6FC01E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5D3655AA-08CC-45D8-8B7B-ED639939DF1F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EEBA1F86-6CE0-4427-892D-A52955A980D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5F00C180-A092-46F1-96FB-DD891562A2A8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5D3655AA-08CC-45D8-8B7B-ED639939DF1F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>60128803-7491-4D16-8ADE-FB406F888A2D</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>2BBDFBE4-FBBC-4506-9269-3CFB4017932C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>608EC08C-E2FB-4A53-B92A-DEAA5E177DAD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BB2058EE-BD2F-4858-9421-D44A3319E9E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>66052526-8BC3-4DC3-B7B7-D2C2EF591CB7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4BCC494E-5F93-4DF4-88C6-04C59B1DB3E2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>666D7BDE-787B-44BD-A535-3F76541B7F8C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5B779377-8A0B-4819-9840-611C663A1004</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>6D36998C-56B3-4569-B0BB-26BBEFE8DE1C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ECAFD427-940F-4963-801C-B096E45A9695</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7277B529-365D-4D92-B874-22C6E407F47E</key>
+		<array/>
+		<key>72EE2185-F8D8-43A9-949D-57337E125256</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BB2058EE-BD2F-4858-9421-D44A3319E9E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7AF55FB7-58E3-49FB-B771-94EC70BF73CC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CFF178E5-E80D-498F-AE8A-6F701B4A1961</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>900A2A3E-D5CB-475C-996A-C6A8207DB171</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4FEB803E-78D2-4DAA-A493-0C499D3B3415</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9562EC35-C446-47D7-8269-52EF42A02CC0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6D36998C-56B3-4569-B0BB-26BBEFE8DE1C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>985CB791-EA4E-4B3E-A04E-37A481C33035</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4AFED243-84FB-4005-B115-FFD8635E6737</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9E56D02A-13BF-43CF-819E-6836C62FB87B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5F00C180-A092-46F1-96FB-DD891562A2A8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>9FB513DD-70CB-4714-90C0-60C64D8A8784</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>05ACE926-EBA9-4EA1-856D-F95AE9437802</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A8711759-B066-4A18-BB55-8A825C6FC01E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D775FDBF-FDA2-4FDE-9007-02111D660392</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AADC9859-4CF2-43B3-831D-940B6BCBC278</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2166D3DB-EF96-4C03-B95A-77D5068615D7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AB4202F0-D40C-43BF-B596-C9F1B44B6DB7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C6542F9B-7628-484C-8E6B-E87E5291D5BA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B2F40960-56D8-4D9B-B474-148F395AE6EE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2032CDC0-7BD4-4671-8A03-2BEB9F84B3D3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B974DC8F-2F5C-4E0A-A866-1693C7C525A2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D9E5CE1-5C0C-40B1-A0CD-91753D9F27FB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BB2058EE-BD2F-4858-9421-D44A3319E9E3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>39FC6428-F956-4D05-9D2D-255398F8F5E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CFF178E5-E80D-498F-AE8A-6F701B4A1961</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>66052526-8BC3-4DC3-B7B7-D2C2EF591CB7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D631D0FB-3B6B-497A-AB5C-B80971C006E0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E66CAF69-6370-4360-A348-8F43397D64B1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E0E63366-C846-4EB6-8625-9CCDD1637737</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EEBA1F86-6CE0-4427-892D-A52955A980D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E227802D-3D56-41B9-BB5B-8A7B7AB45631</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D631D0FB-3B6B-497A-AB5C-B80971C006E0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5A8BFFAE-6BF4-46B6-A1E5-B7E1069ABB07</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3C6D1460-731F-4A4A-8836-8AD03743EE23</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F1CF862E-E104-486B-8775-4242FA08480D</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7277B529-365D-4D92-B874-22C6E407F47E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5B2D7299-0030-4015-B21A-A88AEF72B12A</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>91D809BB-5106-4221-89E8-F3CB113F026E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>640D4BEC-29E1-4562-ABB4-289B61C5F44C</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6DE384FF-FDAF-4607-9281-254FAF291EB7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>78844A0F-A50E-4945-B008-118FFED81DC1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A62C2C3E-C332-4A12-93D8-C534D7C0EA15</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F572CB2A-7A72-4D91-9BCB-D6D37C3FEE2C</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E66CAF69-6370-4360-A348-8F43397D64B1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B2F40960-56D8-4D9B-B474-148F395AE6EE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>2F8580A4-1C3B-48E7-90B5-3545382DE3C4</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B974DC8F-2F5C-4E0A-A866-1693C7C525A2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EBEF9CF8-D92F-4323-B607-03923C841506</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0E210220-60D9-4839-9C97-071BAEB7C0B5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>ECAFD427-940F-4963-801C-B096E45A9695</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ACCDC3AA-BCFF-4406-B851-9DF07B65D2DD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EEBA1F86-6CE0-4427-892D-A52955A980D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>39FC6428-F956-4D05-9D2D-255398F8F5E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F05CEA7B-4FBA-430E-8B03-B94BB32A68DD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EBEF9CF8-D92F-4323-B607-03923C841506</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>2F8580A4-1C3B-48E7-90B5-3545382DE3C4</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E227802D-3D56-41B9-BB5B-8A7B7AB45631</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F98E7ED2-C99B-4242-A40F-8F2EFA9FE6B8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2C4443B4-B3E5-4C06-8444-48F2E3E040F8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>_button1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Vítor Galvão</string>
+	<key>description</key>
+	<string>Search and open 1Password items</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>1Password</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Checks
+if [[ -z "${alfred_workflow_bundleid}" ]]; then
+  echo 'Workflow is missing bundle identifier!' &gt;&amp;2
+  exit 1
+fi
+
+# Plist contents
+read -r -d '' plist_contents &lt;&lt;ENDPLIST
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;${alfred_workflow_bundleid}&lt;/string&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;/usr/bin/osascript&lt;/string&gt;
+        &lt;string&gt;-l&lt;/string&gt;
+        &lt;string&gt;JavaScript&lt;/string&gt;
+        &lt;string&gt;-e&lt;/string&gt;
+        &lt;string&gt;
+          function run(argv) {
+            try {
+              const alfred = Application(&amp;quot;com.runningwithcrayons.Alfred&amp;quot;)
+              if (alfred.running()) alfred.runTrigger(argv[1], { inWorkflow: argv[0] })
+            } catch {
+              const fileManager = $.NSFileManager.defaultManager
+              const plistFile = fileManager.homeDirectoryForCurrentUser.path.js + &amp;quot;/Library/LaunchAgents/&amp;quot; + argv[0] + &amp;quot;.plist&amp;quot;
+              fileManager.removeItemAtPathError(plistFile, undefined)
+            }
+          }
+        &lt;/string&gt;
+        &lt;string&gt;${alfred_workflow_bundleid}&lt;/string&gt;
+        &lt;string&gt;data_update_detected&lt;/string&gt;
+    &lt;/array&gt;
+    &lt;key&gt;WatchPaths&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;~/Library/Group Containers/2BUA8C4S2C.com.1password/Library/Application Support/1Password/Data/&lt;/string&gt;
+    &lt;/array&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+ENDPLIST
+
+# Main
+readonly launchagents_dir="${HOME}/Library/LaunchAgents"
+readonly plist_file="${launchagents_dir}/${alfred_workflow_bundleid}.plist"
+
+if [[ "${auto_refresh}" -eq 0 ]]; then
+  # Exit early if plist does not exist
+  [[ -f "${plist_file}" ]] || exit 0
+
+  # Uninstall agent
+  launchctl bootout "gui/$(id -u "${USER}")" "${plist_file}"
+  rm "${plist_file}"
+else
+  # Exit early if plist exists
+  [[ -f "${plist_file}" ]] &amp;&amp; exit 0
+
+  # Install agent
+  mkdir -p "${launchagents_dir}"
+  echo "${plist_contents}" &gt; "${plist_file}"
+  launchctl bootstrap "gui/$(id -u "${USER}")" "${plist_file}"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>ACCDC3AA-BCFF-4406-B851-9DF07B65D2DD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>readonly items_hash_file="${alfred_workflow_data}/items_hash.txt"
+readonly old_items_hash="$(/bin/cat "${items_hash_file}")"
+readonly new_items_hash="$(/usr/bin/sqlite3 "${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/Library/Application Support/1Password/Data/1password.sqlite" 'SELECT * FROM item_overviews;' | md5)"
+
+[[ -n "${items_hash_file}" ]] || exit 1
+[[ "${old_items_hash}" == "${new_items_hash}" ]] &amp;&amp; exit 0
+
+./1password.js 'data_update_detected'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4FEB803E-78D2-4DAA-A493-0C499D3B3415</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>data_update_detected</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>900A2A3E-D5CB-475C-996A-C6A8207DB171</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>tasksettings</key>
+				<dict/>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/files-and-folders/path.trash</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>6D36998C-56B3-4569-B0BB-26BBEFE8DE1C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>json</key>
+				<string>{
+  "alfredworkflow" : {
+    "arg" : [
+      "{const:alfred_workflow_data}",
+      "{const:alfred_workflow_cache}"
+    ]
+  }
+}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.json</string>
+			<key>uid</key>
+			<string>9562EC35-C446-47D7-8269-52EF42A02CC0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>auto_refresh</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>ECAFD427-940F-4963-801C-B096E45A9695</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Getting vaults…</string>
+				<key>script</key>
+				<string>readonly file="${alfred_workflow_data}/vaults.json"
+
+if [[ -f "${file}" ]]; then
+  cat "${file}"
+  exit 0
+fi
+
+echo '{
+  "rerun": 0.1,
+  "items": [{
+    "title": "Sign in and update items",
+    "arg": "update_items"
+  }]
+}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Include or exclude vaults from results</string>
+				<key>title</key>
+				<string>Manage vaults</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>usecustominputarg</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>666D7BDE-787B-44BD-A535-3F76541B7F8C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict/>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>E0E63366-C846-4EB6-8625-9CCDD1637737</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./1password.js "${flip_type}" "${1}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D775FDBF-FDA2-4FDE-9007-02111D660392</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>update_items</string>
+						<key>outputlabel</key>
+						<string>Update items</string>
+						<key>uid</key>
+						<string>60128803-7491-4D16-8ADE-FB406F888A2D</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Flip vault exclusion</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>5B779377-8A0B-4819-9840-611C663A1004</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>reset_workflow</string>
+						<key>outputlabel</key>
+						<string>Reset workflow</string>
+						<key>uid</key>
+						<string>60128803-7491-4D16-8ADE-FB406F888A2D</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>manage_vaults</string>
+						<key>outputlabel</key>
+						<string>Manage vaults</string>
+						<key>uid</key>
+						<string>C84F022F-832E-431C-8EBE-74DB981EEFB8</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>manage_accounts</string>
+						<key>outputlabel</key>
+						<string>Manage accounts</string>
+						<key>uid</key>
+						<string>C8F2743C-1389-4043-83D1-7C2750A807F8</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>update_items</string>
+						<key>outputlabel</key>
+						<string>Update items</string>
+						<key>uid</key>
+						<string>5530C4BB-8C53-4878-B87F-7F37F1554B91</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string></string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>4AFED243-84FB-4005-B115-FFD8635E6737</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"title":"Manage Vaults","arg":"manage_vaults","subtitle":"Include or exclude vaults from results"},{"title":"Manage Accounts","arg":"manage_accounts","subtitle":"Include or exclude accounts from results"},{"title":"Force Update Items","arg":"update_items","subtitle":"Rebuild Workflow data"},{"title":"Reset Workflow","arg":"reset_workflow","subtitle":"Delete Workflow data"}]</string>
+				<key>keyword</key>
+				<string>:1pextras</string>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Uncommon but useful actions</string>
+				<key>title</key>
+				<string>1Password Extras</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>985CB791-EA4E-4B3E-A04E-37A481C33035</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>flip_type</key>
+					<string>flip_vault_exclusion</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A8711759-B066-4A18-BB55-8A825C6FC01E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Getting accounts…</string>
+				<key>script</key>
+				<string>readonly file="${alfred_workflow_data}/users.json"
+
+# If we detect active users
+if [[ -n "$(op account list)" ]]; then
+  # Create users JSON if it does not exist
+  [[ -f "${file}" ]] || ./1password.js 'write_user_json'
+
+  # Show self-updating users JSON
+  ./1password.js 'print_user_json'
+
+  exit 0
+fi
+
+echo '{
+  "rerun": 0.1,
+  "items": [{
+    "title": "Sign in and update items",
+    "arg": "update_items"
+  }]
+}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Include or exclude accounts from results</string>
+				<key>title</key>
+				<string>Manage accounts</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>usecustominputarg</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9E56D02A-13BF-43CF-819E-6836C62FB87B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>tasksettings</key>
+				<dict>
+					<key>app_list</key>
+					<string>com.1password.1password</string>
+				</dict>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/macOS/app.open</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>0E210220-60D9-4839-9C97-071BAEB7C0B5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict/>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>5D3655AA-08CC-45D8-8B7B-ED639939DF1F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>action</key>
+					<string>update_items</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>EEBA1F86-6CE0-4427-892D-A52955A980D5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>6</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>App Not Running</string>
+						<key>uid</key>
+						<string>2F8580A4-1C3B-48E7-90B5-3545382DE3C4</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Continue</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>F05CEA7B-4FBA-430E-8B03-B94BB32A68DD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>update_items</string>
+						<key>outputlabel</key>
+						<string>Update items</string>
+						<key>uid</key>
+						<string>60128803-7491-4D16-8ADE-FB406F888A2D</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Flip account exclusion</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>5F00C180-A092-46F1-96FB-DD891562A2A8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Open 1Password</string>
+				<key>button2</key>
+				<string>Cancel</string>
+				<key>button3</key>
+				<string></string>
+				<key>description</key>
+				<string>Open 1Password and unlock it.
+Keep it running and try again.</string>
+				<key>title</key>
+				<string>1Password Is Not Running</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>EBEF9CF8-D92F-4323-B607-03923C841506</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>flip_type</key>
+					<string>flip_user_exclusion</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>2BBDFBE4-FBBC-4506-9269-3CFB4017932C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>onepassword://settings/developers</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>2032CDC0-7BD4-4671-8A03-2BEB9F84B3D3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>action</key>
+					<string>update_items</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>72EE2185-F8D8-43A9-949D-57337E125256</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Open 1Password Preferences</string>
+				<key>button2</key>
+				<string>Cancel</string>
+				<key>button3</key>
+				<string></string>
+				<key>description</key>
+				<string>To connect with 1Password, the CLI unlock has to be enabled in 1Password Preferences → Developer → Connect with 1Password CLI.</string>
+				<key>title</key>
+				<string>CLI Unlock is Disabled</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>B2F40960-56D8-4D9B-B474-148F395AE6EE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>tasksettings</key>
+				<dict>
+					<key>target_app</key>
+					<string>com.1password.1password</string>
+				</dict>
+				<key>taskuid</key>
+				<string>com.alfredapp.automation.core/macOS/app.running</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.automation.task</string>
+			<key>uid</key>
+			<string>39FC6428-F956-4D05-9D2D-255398F8F5E3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:items_search_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Getting items…</string>
+				<key>script</key>
+				<string>readonly file="${alfred_workflow_data}/items.json"
+
+if [[ -f "${file}" ]]; then
+  cat "${file}"
+  exit 0
+fi
+
+# Disable 1Password 7 feature
+readonly prefs_file="${alfred_preferences}/preferences/local/${alfred_preferences_localhash}/features/1password/prefs.plist"
+
+if [[ -f "${prefs_file}" ]]; then
+  /usr/libexec/PlistBuddy -c 'Delete :enabled' "${prefs_file}" 2&gt; /dev/null
+fi
+
+echo '{
+  "rerun": 0.1,
+  "items": [{
+    "variables": { "action": "update_items" },
+    "title": "Sign in and update items",
+    "arg": "update_items",
+    "icon": { "path": "composite_icon.png" }
+  }]
+}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Show your 1Password items</string>
+				<key>title</key>
+				<string>1Password</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>externalid</key>
+				<string>search_items</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>608EC08C-E2FB-4A53-B92A-DEAA5E177DAD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict/>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>BB2058EE-BD2F-4858-9421-D44A3319E9E3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./1password.js 'sanity_checks'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B974DC8F-2F5C-4E0A-A866-1693C7C525A2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://1password.com/downloads/command-line/</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>2C4443B4-B3E5-4C06-8444-48F2E3E040F8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./1password.js 'sanity_checks'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D631D0FB-3B6B-497A-AB5C-B80971C006E0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>MISSING_CLI_APP_UNLOCK</string>
+						<key>outputlabel</key>
+						<string>Missing CLI App Unlock</string>
+						<key>uid</key>
+						<string>2F8580A4-1C3B-48E7-90B5-3545382DE3C4</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Continue</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>E66CAF69-6370-4360-A348-8F43397D64B1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>MISSING_OP_PATH</string>
+						<key>outputlabel</key>
+						<string>Missing CLI</string>
+						<key>uid</key>
+						<string>2F8580A4-1C3B-48E7-90B5-3545382DE3C4</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Continue</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>2D9E5CE1-5C0C-40B1-A0CD-91753D9F27FB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Open Download Page</string>
+				<key>button2</key>
+				<string>Cancel</string>
+				<key>button3</key>
+				<string></string>
+				<key>description</key>
+				<string>To enable third-party integration, the 1Password command-line tool needs to be installed.</string>
+				<key>title</key>
+				<string>Missing the CLI Tool</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>F98E7ED2-C99B-4242-A40F-8F2EFA9FE6B8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>update_items</string>
+						<key>outputlabel</key>
+						<string>Update Items</string>
+						<key>uid</key>
+						<string>5A8BFFAE-6BF4-46B6-A1E5-B7E1069ABB07</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>open_and_fill</string>
+						<key>outputlabel</key>
+						<string>Open and Fill</string>
+						<key>uid</key>
+						<string>F1CF862E-E104-486B-8775-4242FA08480D</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>view_in_1password</string>
+						<key>outputlabel</key>
+						<string>View in 1Password</string>
+						<key>uid</key>
+						<string>5B2D7299-0030-4015-B21A-A88AEF72B12A</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>copy_username</string>
+						<key>outputlabel</key>
+						<string>Copy Username</string>
+						<key>uid</key>
+						<string>640D4BEC-29E1-4562-ABB4-289B61C5F44C</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>copy_password</string>
+						<key>outputlabel</key>
+						<string>Copy Password</string>
+						<key>uid</key>
+						<string>78844A0F-A50E-4945-B008-118FFED81DC1</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>copy_otp</string>
+						<key>outputlabel</key>
+						<string>Copy OTP</string>
+						<key>uid</key>
+						<string>F572CB2A-7A72-4D91-9BCB-D6D37C3FEE2C</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>E227802D-3D56-41B9-BB5B-8A7B7AB45631</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>function run() {
+  const itemID = $.NSProcessInfo.processInfo.environment.objectForKey("itemID").js
+  const query = itemID + "=" + itemID
+
+  const url = $.NSProcessInfo.processInfo.environment.objectForKey("url").js
+  const urlObject = $.NSURL.URLWithString(url)
+
+  if (urlObject.query.js === undefined) return url + "?" + query
+  return url + "&amp;" + query
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3C6D1460-731F-4A4A-8836-8AD03743EE23</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>2166D3DB-EF96-4C03-B95A-77D5068615D7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>data_update_detected</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>05ACE926-EBA9-4EA1-856D-F95AE9437802</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Constants
+readonly user_ids=("${(f)$(./1password.js 'print_user_ids')}")
+
+# Sign in
+for user_id in "${user_ids[@]}"; do
+  op signin --account "${user_id}"
+done
+
+# Update items list
+./1password.js 'update_items'
+
+# Verify items list
+if [[ "$(&lt; "${alfred_workflow_data}/items.json")" == '{"items":[]}' ]]; then
+  echo 'ERROR: Unable to get any items.' &gt;&amp;2
+  rm "${alfred_workflow_data}/"{items.json,vaults.json}
+  exit 1
+fi
+
+# Create hash of items
+readonly items_hash_file="${alfred_workflow_data}/items_hash.txt"
+readonly new_items_hash="$(/usr/bin/sqlite3 "${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/Library/Application Support/1Password/Data/1password.sqlite" 'SELECT * FROM item_overviews;' | md5)"
+
+mkdir -p "$(dirname "${items_hash_file}")"
+echo "${new_items_hash}" &gt; "${items_hash_file}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9FB513DD-70CB-4714-90C0-60C64D8A8784</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>AADC9859-4CF2-43B3-831D-940B6BCBC278</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>search_items</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>C6542F9B-7628-484C-8E6B-E87E5291D5BA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>5526B8BB-14D0-4271-94CE-0C7C2A1DC4E7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>text</key>
+				<string>Search 1Password for '{query}'</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.fallback</string>
+			<key>uid</key>
+			<string>AB4202F0-D40C-43BF-B596-C9F1B44B6DB7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>onepassword://view-item/?a={var:accountID}&amp;v={var:vaultID}&amp;i={var:itemID}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>7277B529-365D-4D92-B874-22C6E407F47E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./1password.js 'copy_by_label' 'username' "${itemID}" "${vaultID}" "${accountID}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>91D809BB-5106-4221-89E8-F3CB113F026E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>66052526-8BC3-4DC3-B7B7-D2C2EF591CB7</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>!1pdiagnostic</string>
+				<key>subtext</key>
+				<string>Result will be copied to the clipboard</string>
+				<key>text</key>
+				<string>Diagnose 1Password Issues</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>7AF55FB7-58E3-49FB-B771-94EC70BF73CC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>3EFD35DD-0984-4561-BB69-91541E75325E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo '### Workflow version'
+/usr/libexec/PlistBuddy -c 'Print :version' info.plist
+
+echo
+echo '### Alfred version'
+/usr/bin/osascript -e 'tell application id "com.runningwithcrayons.Alfred" to return version'
+
+echo
+echo '### macOS version'
+/usr/bin/sw_vers -productVersion
+
+echo
+echo '### Architecture'
+/usr/bin/arch
+echo
+
+echo
+echo '### Preferences'
+
+if [[ -f 'prefs.plist' ]]; then
+  /usr/libexec/PlistBuddy -c 'Print' prefs.plist
+else
+  echo 'Default'
+fi
+
+echo
+echo '### 1Password version'
+/usr/bin/osascript -e 'tell application id "com.1password.1password" to return version'
+/usr/bin/osascript -e 'tell application id "com.agilebits.onepassword7" to return version'
+
+echo
+echo '### op version'
+
+if hash 'op' 2&gt; /dev/null; then
+  op --version
+else
+  echo 'NOT installed'
+fi
+
+echo
+echo '### Launchd job'
+
+if launchctl list | grep -q "${alfred_workflow_bundleid}"; then
+  echo -n 'Loaded: '
+  launchctl list | grep "${alfred_workflow_bundleid}"
+else
+  echo 'NOT loaded'
+fi
+
+if [[ -f "${HOME}/Library/LaunchAgents/${alfred_workflow_bundleid}.plist" ]]; then
+  echo 'Installed'
+else
+  echo 'NOT installed'
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CFF178E5-E80D-498F-AE8A-6F701B4A1961</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>https://www.alfredforum.com/topic/18275-1password-—-search-and-open-1password-items/</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>06513BCB-0261-45C2-BE12-AEC0021E9E8E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>button1</key>
+				<string>Open Alfred Forum</string>
+				<key>button2</key>
+				<string>Open GitHub Issues</string>
+				<key>button3</key>
+				<string>Close Dialog</string>
+				<key>description</key>
+				<string>A diagnostic has been copied to your clipboard. Please include it when describing the issue.</string>
+				<key>title</key>
+				<string>Report a Problem</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.dialog</string>
+			<key>uid</key>
+			<string>4BCC494E-5F93-4DF4-88C6-04C59B1DB3E2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>https://github.com/alfredapp/1password-workflow/issues/</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>307581EE-EB83-4CF4-BC49-E738E98841A5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./1password.js 'copy_by_label' 'password' "${itemID}" "${vaultID}" "${accountID}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6DE384FF-FDAF-4607-9281-254FAF291EB7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>diagnostic</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>070215AC-79E9-494E-8B68-94CD5C80FBE5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./1password.js 'copy_otp' "${itemID}" "${vaultID}" "${accountID}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A62C2C3E-C332-4A12-93D8-C534D7C0EA15</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## Setup
+
+[Install the 1Password CLI](https://1password.com/downloads/command-line/) and turn on the integration in 1Password Preferences → Developer → Connect with 1Password CLI.
+
+![1Password preferences](images/about/1password_preferences.png)
+
+## Usage
+
+Interact with your 1Password items via the `1p` keyword.
+
+![Alfred search for 1p](images/about/1p.png)
+
+* &lt;kbd&gt;↩&lt;/kbd&gt;: Open and Fill.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: View in 1Password.
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Copy Username.
+* &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Copy Password.
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt;: Copy One-Time Password
+
+Uncommon but useful actions, such as toggling vaults, can be accessed with `:1pextras`.
+
+![Alfred search for :1pextras](images/about/1pextras.png)
+
+![Results for managing vaults](images/about/vaults.png)
+
+A [Fallback Search](https://www.alfredapp.com/help/features/default-results/fallback-searches/) is included.
+
+To report a problem, run `!1pdiagnostic`.</string>
+	<key>uidata</key>
+	<dict>
+		<key>05ACE926-EBA9-4EA1-856D-F95AE9437802</key>
+		<dict>
+			<key>xpos</key>
+			<real>3130</real>
+			<key>ypos</key>
+			<real>780</real>
+		</dict>
+		<key>06513BCB-0261-45C2-BE12-AEC0021E9E8E</key>
+		<dict>
+			<key>xpos</key>
+			<real>865</real>
+			<key>ypos</key>
+			<real>1060</real>
+		</dict>
+		<key>070215AC-79E9-494E-8B68-94CD5C80FBE5</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>1185</real>
+		</dict>
+		<key>0E210220-60D9-4839-9C97-071BAEB7C0B5</key>
+		<dict>
+			<key>xpos</key>
+			<real>1830</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
+		<key>2032CDC0-7BD4-4671-8A03-2BEB9F84B3D3</key>
+		<dict>
+			<key>xpos</key>
+			<real>2395</real>
+			<key>ypos</key>
+			<real>505</real>
+		</dict>
+		<key>2166D3DB-EF96-4C03-B95A-77D5068615D7</key>
+		<dict>
+			<key>note</key>
+			<string>Open and fill in web browser</string>
+			<key>xpos</key>
+			<real>2210</real>
+			<key>ypos</key>
+			<real>775</real>
+		</dict>
+		<key>2BBDFBE4-FBBC-4506-9269-3CFB4017932C</key>
+		<dict>
+			<key>xpos</key>
+			<real>865</real>
+			<key>ypos</key>
+			<real>500</real>
+		</dict>
+		<key>2C4443B4-B3E5-4C06-8444-48F2E3E040F8</key>
+		<dict>
+			<key>xpos</key>
+			<real>3130</real>
+			<key>ypos</key>
+			<real>610</real>
+		</dict>
+		<key>2D9E5CE1-5C0C-40B1-A0CD-91753D9F27FB</key>
+		<dict>
+			<key>xpos</key>
+			<real>2795</real>
+			<key>ypos</key>
+			<real>630</real>
+		</dict>
+		<key>307581EE-EB83-4CF4-BC49-E738E98841A5</key>
+		<dict>
+			<key>xpos</key>
+			<real>865</real>
+			<key>ypos</key>
+			<real>1120</real>
+		</dict>
+		<key>39FC6428-F956-4D05-9D2D-255398F8F5E3</key>
+		<dict>
+			<key>xpos</key>
+			<real>1260</real>
+			<key>ypos</key>
+			<real>545</real>
+		</dict>
+		<key>3C6D1460-731F-4A4A-8836-8AD03743EE23</key>
+		<dict>
+			<key>note</key>
+			<string>Add parameter to URL for open and fill</string>
+			<key>xpos</key>
+			<real>1830</real>
+			<key>ypos</key>
+			<real>775</real>
+		</dict>
+		<key>3EFD35DD-0984-4561-BB69-91541E75325E</key>
+		<dict>
+			<key>xpos</key>
+			<real>1070</real>
+			<key>ypos</key>
+			<real>1060</real>
+		</dict>
+		<key>4AFED243-84FB-4005-B115-FFD8635E6737</key>
+		<dict>
+			<key>xpos</key>
+			<real>230</real>
+			<key>ypos</key>
+			<real>355</real>
+		</dict>
+		<key>4BCC494E-5F93-4DF4-88C6-04C59B1DB3E2</key>
+		<dict>
+			<key>xpos</key>
+			<real>670</real>
+			<key>ypos</key>
+			<real>1065</real>
+		</dict>
+		<key>4FEB803E-78D2-4DAA-A493-0C499D3B3415</key>
+		<dict>
+			<key>xpos</key>
+			<real>490</real>
+			<key>ypos</key>
+			<real>55</real>
+		</dict>
+		<key>5526B8BB-14D0-4271-94CE-0C7C2A1DC4E7</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>805</real>
+		</dict>
+		<key>5B779377-8A0B-4819-9840-611C663A1004</key>
+		<dict>
+			<key>xpos</key>
+			<real>670</real>
+			<key>ypos</key>
+			<real>330</real>
+		</dict>
+		<key>5D3655AA-08CC-45D8-8B7B-ED639939DF1F</key>
+		<dict>
+			<key>xpos</key>
+			<real>865</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
+		<key>5F00C180-A092-46F1-96FB-DD891562A2A8</key>
+		<dict>
+			<key>xpos</key>
+			<real>670</real>
+			<key>ypos</key>
+			<real>460</real>
+		</dict>
+		<key>608EC08C-E2FB-4A53-B92A-DEAA5E177DAD</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>545</real>
+		</dict>
+		<key>66052526-8BC3-4DC3-B7B7-D2C2EF591CB7</key>
+		<dict>
+			<key>xpos</key>
+			<real>490</real>
+			<key>ypos</key>
+			<real>1060</real>
+		</dict>
+		<key>666D7BDE-787B-44BD-A535-3F76541B7F8C</key>
+		<dict>
+			<key>xpos</key>
+			<real>490</real>
+			<key>ypos</key>
+			<real>310</real>
+		</dict>
+		<key>6D36998C-56B3-4569-B0BB-26BBEFE8DE1C</key>
+		<dict>
+			<key>xpos</key>
+			<real>490</real>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>6DE384FF-FDAF-4607-9281-254FAF291EB7</key>
+		<dict>
+			<key>xpos</key>
+			<real>1830</real>
+			<key>ypos</key>
+			<real>1185</real>
+		</dict>
+		<key>7277B529-365D-4D92-B874-22C6E407F47E</key>
+		<dict>
+			<key>xpos</key>
+			<real>1830</real>
+			<key>ypos</key>
+			<real>935</real>
+		</dict>
+		<key>72EE2185-F8D8-43A9-949D-57337E125256</key>
+		<dict>
+			<key>xpos</key>
+			<real>405</real>
+			<key>ypos</key>
+			<real>520</real>
+		</dict>
+		<key>7AF55FB7-58E3-49FB-B771-94EC70BF73CC</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>1060</real>
+		</dict>
+		<key>900A2A3E-D5CB-475C-996A-C6A8207DB171</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>55</real>
+		</dict>
+		<key>91D809BB-5106-4221-89E8-F3CB113F026E</key>
+		<dict>
+			<key>xpos</key>
+			<real>1830</real>
+			<key>ypos</key>
+			<real>1060</real>
+		</dict>
+		<key>9562EC35-C446-47D7-8269-52EF42A02CC0</key>
+		<dict>
+			<key>note</key>
+			<string>Workflow data and cache folders</string>
+			<key>xpos</key>
+			<real>405</real>
+			<key>ypos</key>
+			<real>210</real>
+		</dict>
+		<key>985CB791-EA4E-4B3E-A04E-37A481C33035</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>365</real>
+		</dict>
+		<key>9E56D02A-13BF-43CF-819E-6836C62FB87B</key>
+		<dict>
+			<key>xpos</key>
+			<real>490</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
+		<key>9FB513DD-70CB-4714-90C0-60C64D8A8784</key>
+		<dict>
+			<key>note</key>
+			<string>Update items</string>
+			<key>xpos</key>
+			<real>2930</real>
+			<key>ypos</key>
+			<real>780</real>
+		</dict>
+		<key>A62C2C3E-C332-4A12-93D8-C534D7C0EA15</key>
+		<dict>
+			<key>xpos</key>
+			<real>1830</real>
+			<key>ypos</key>
+			<real>1310</real>
+		</dict>
+		<key>A8711759-B066-4A18-BB55-8A825C6FC01E</key>
+		<dict>
+			<key>xpos</key>
+			<real>865</real>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
+		<key>AADC9859-4CF2-43B3-831D-940B6BCBC278</key>
+		<dict>
+			<key>xpos</key>
+			<real>2060</real>
+			<key>ypos</key>
+			<real>805</real>
+		</dict>
+		<key>AB4202F0-D40C-43BF-B596-C9F1B44B6DB7</key>
+		<dict>
+			<key>xpos</key>
+			<real>60</real>
+			<key>ypos</key>
+			<real>930</real>
+		</dict>
+		<key>ACCDC3AA-BCFF-4406-B851-9DF07B65D2DD</key>
+		<dict>
+			<key>note</key>
+			<string>launchd agent</string>
+			<key>xpos</key>
+			<real>1070</real>
+			<key>ypos</key>
+			<real>55</real>
+		</dict>
+		<key>B2F40960-56D8-4D9B-B474-148F395AE6EE</key>
+		<dict>
+			<key>xpos</key>
+			<real>2205</real>
+			<key>ypos</key>
+			<real>525</real>
+		</dict>
+		<key>B974DC8F-2F5C-4E0A-A866-1693C7C525A2</key>
+		<dict>
+			<key>note</key>
+			<string>Check for valid CLI</string>
+			<key>xpos</key>
+			<real>2610</real>
+			<key>ypos</key>
+			<real>610</real>
+		</dict>
+		<key>BB2058EE-BD2F-4858-9421-D44A3319E9E3</key>
+		<dict>
+			<key>xpos</key>
+			<real>530</real>
+			<key>ypos</key>
+			<real>575</real>
+		</dict>
+		<key>C6542F9B-7628-484C-8E6B-E87E5291D5BA</key>
+		<dict>
+			<key>xpos</key>
+			<real>225</real>
+			<key>ypos</key>
+			<real>805</real>
+		</dict>
+		<key>CFF178E5-E80D-498F-AE8A-6F701B4A1961</key>
+		<dict>
+			<key>note</key>
+			<string>Diagnose Workflow</string>
+			<key>xpos</key>
+			<real>230</real>
+			<key>ypos</key>
+			<real>1060</real>
+		</dict>
+		<key>D631D0FB-3B6B-497A-AB5C-B80971C006E0</key>
+		<dict>
+			<key>note</key>
+			<string>Check for CLI App Unlock</string>
+			<key>xpos</key>
+			<real>1830</real>
+			<key>ypos</key>
+			<real>610</real>
+		</dict>
+		<key>D775FDBF-FDA2-4FDE-9007-02111D660392</key>
+		<dict>
+			<key>xpos</key>
+			<real>1070</real>
+			<key>ypos</key>
+			<real>310</real>
+		</dict>
+		<key>E0E63366-C846-4EB6-8625-9CCDD1637737</key>
+		<dict>
+			<key>xpos</key>
+			<real>865</real>
+			<key>ypos</key>
+			<real>310</real>
+		</dict>
+		<key>E227802D-3D56-41B9-BB5B-8A7B7AB45631</key>
+		<dict>
+			<key>xpos</key>
+			<real>1640</real>
+			<key>ypos</key>
+			<real>645</real>
+		</dict>
+		<key>E66CAF69-6370-4360-A348-8F43397D64B1</key>
+		<dict>
+			<key>xpos</key>
+			<real>2010</real>
+			<key>ypos</key>
+			<real>630</real>
+		</dict>
+		<key>EBEF9CF8-D92F-4323-B607-03923C841506</key>
+		<dict>
+			<key>xpos</key>
+			<real>1640</real>
+			<key>ypos</key>
+			<real>460</real>
+		</dict>
+		<key>ECAFD427-940F-4963-801C-B096E45A9695</key>
+		<dict>
+			<key>note</key>
+			<string>Disable auto_refresh</string>
+			<key>xpos</key>
+			<real>715</real>
+			<key>ypos</key>
+			<real>210</real>
+		</dict>
+		<key>EEBA1F86-6CE0-4427-892D-A52955A980D5</key>
+		<dict>
+			<key>xpos</key>
+			<real>1110</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
+		<key>F05CEA7B-4FBA-430E-8B03-B94BB32A68DD</key>
+		<dict>
+			<key>xpos</key>
+			<real>1425</real>
+			<key>ypos</key>
+			<real>460</real>
+		</dict>
+		<key>F98E7ED2-C99B-4242-A40F-8F2EFA9FE6B8</key>
+		<dict>
+			<key>xpos</key>
+			<real>2935</real>
+			<key>ypos</key>
+			<real>630</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>1p</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Search Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>items_search_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>open_and_fill</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Open and Fill</string>
+						<string>open_and_fill</string>
+					</array>
+					<array>
+						<string>View in 1Password</string>
+						<string>view_in_1password</string>
+					</array>
+					<array>
+						<string>Copy Username</string>
+						<string>copy_username</string>
+					</array>
+					<array>
+						<string>Copy Password</string>
+						<string>copy_password</string>
+					</array>
+					<array>
+						<string>Copy One-Time Password</string>
+						<string>copy_otp</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>↩</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>mod_none</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>view_in_1password</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Open and Fill</string>
+						<string>open_and_fill</string>
+					</array>
+					<array>
+						<string>View in 1Password</string>
+						<string>view_in_1password</string>
+					</array>
+					<array>
+						<string>Copy Username</string>
+						<string>copy_username</string>
+					</array>
+					<array>
+						<string>Copy Password</string>
+						<string>copy_password</string>
+					</array>
+					<array>
+						<string>Copy One-Time Password</string>
+						<string>copy_otp</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>⌘↩</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>mod_cmd</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>copy_username</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Open and Fill</string>
+						<string>open_and_fill</string>
+					</array>
+					<array>
+						<string>View in 1Password</string>
+						<string>view_in_1password</string>
+					</array>
+					<array>
+						<string>Copy Username</string>
+						<string>copy_username</string>
+					</array>
+					<array>
+						<string>Copy Password</string>
+						<string>copy_password</string>
+					</array>
+					<array>
+						<string>Copy One-Time Password</string>
+						<string>copy_otp</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>⌥↩</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>mod_alt</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>copy_password</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Open and Fill</string>
+						<string>open_and_fill</string>
+					</array>
+					<array>
+						<string>View in 1Password</string>
+						<string>view_in_1password</string>
+					</array>
+					<array>
+						<string>Copy Username</string>
+						<string>copy_username</string>
+					</array>
+					<array>
+						<string>Copy Password</string>
+						<string>copy_password</string>
+					</array>
+					<array>
+						<string>Copy One-Time Password</string>
+						<string>copy_otp</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>⌃↩</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>mod_ctrl</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>copy_otp</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Open and Fill</string>
+						<string>open_and_fill</string>
+					</array>
+					<array>
+						<string>View in 1Password</string>
+						<string>view_in_1password</string>
+					</array>
+					<array>
+						<string>Copy Username</string>
+						<string>copy_username</string>
+					</array>
+					<array>
+						<string>Copy Password</string>
+						<string>copy_password</string>
+					</array>
+					<array>
+						<string>Copy One-Time Password</string>
+						<string>copy_otp</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Actions to perform when pressing modifier keys.
+Changes come into effect on next cache update.</string>
+			<key>label</key>
+			<string>⇧↩</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>mod_shift</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Only show Login items</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Item Structure</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>logins_only</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Truncate website address to the hostname</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>hostnames_only</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Repeat entries with multiple websites</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>multiple_entries</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Check for 1Password modifications and offer to update data</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Detect Changes</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>auto_refresh</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>2023.12</string>
+	<key>webaddress</key>
+	<string>https://github.com/alfredapp/1password-workflow/</string>
+</dict>
+</plist>
