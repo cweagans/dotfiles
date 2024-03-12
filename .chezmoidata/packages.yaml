@@ -72,6 +72,7 @@ packages:
       casks:
         - "1password"
         - "1password-cli"
+        - "alfred"
         - "chromium"
         - "elgato-camera-hub"
         - "elgato-stream-deck"
@@ -82,6 +83,7 @@ packages:
         - "ngrok"
         - "orbstack"
         - "setapp"
+        - "visual-studio-code"
         - "wezterm"
         - "zoom"
       mas:
@@ -179,6 +181,4 @@ uninstall_packages:
     brews:
       - "colima"
       - "starship"
-    casks:
-      - "visual-studio-code"
     mas: []
