@@ -178,7 +178,8 @@ packages:
 uninstall_packages:
   darwin:
     taps: []
+    mas: []
+    casks: []
     brews:
       - "colima"
       - "starship"
-    mas: []
