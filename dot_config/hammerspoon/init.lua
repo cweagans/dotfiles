@@ -6,12 +6,10 @@ require("console")
 -- Enable IPC so that the Hammerspoon CLI will work.
 require("hs.ipc")
 
-require("textexpansion")
 require("windowmanagement")
 require("hbar")
 require("urls")
 require("bear")
---require("sealconfig")
 
 -- Screen lock
 hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "L", function()
