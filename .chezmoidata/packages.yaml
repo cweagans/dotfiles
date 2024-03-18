@@ -67,6 +67,7 @@ packages:
         - "watch"
         - "watchexec"
         - "wget"
+        - "yt-dlp"
         - "yq"
         - "zoxide"
       casks:
@@ -183,3 +184,4 @@ uninstall_packages:
     brews:
       - "colima"
       - "starship"
+      - "youtube-dl"
