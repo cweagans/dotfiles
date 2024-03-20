@@ -5,6 +5,11 @@
 # This command will figure out the right branch and upstream to update from and
 # also update the fork main/master branch as well if necessary.
 #
+# The following assumptions are made:
+# - The main branch is called "main" or "master"
+# - The remote for where you cloned the repo from is called "origin"
+# - If you're working from a fork, the upstream remote is called "upstream"
+#
 # Alias: gup
 #
 # Example usage:
