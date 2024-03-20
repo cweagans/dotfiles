@@ -25,4 +25,5 @@ function reloadConfig(files)
     end
   end
 end
+
 hs.pathwatcher.new(os.getenv("HOME") .. "/.config/hammerspoon", reloadConfig):start()
