@@ -127,6 +127,7 @@ packages:
         - "hugo"
       casks:
         - "discord"
+        - "flutter"
         - "ghidra"
         - "musescore"
         - "nvidia-geforce-now"
