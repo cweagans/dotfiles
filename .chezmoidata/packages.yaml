@@ -58,6 +58,7 @@ packages:
         - "qemu"
         - "ripgrep"
         - "rustup-init"
+        - "shellcheck"
         - "step"
         - "telnet"
         - "terraform-ls"
