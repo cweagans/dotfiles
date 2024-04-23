@@ -13,6 +13,7 @@ packages:
         - "atuin"
         - "bat"
         - "black"
+        - "caddy"
         - "chezmoi"
         - "choose"
         - "coreutils"
