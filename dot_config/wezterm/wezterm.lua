@@ -67,9 +67,9 @@ function apply_settings(config)
   ---
   -- Text options.
   ---
-  config.font = wezterm.font("Monaco", { weight = "Bold" })
-  config.font_size = 13
-  config.line_height = 1.35
+  config.font = wezterm.font("Cascadia Code")
+  config.font_size = 15
+  config.line_height = 1.5
   -- config.cell_width = 1
   -- Makes font rendering look a little more macOS-like.
   config.freetype_load_target = "Light"

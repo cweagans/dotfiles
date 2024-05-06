@@ -121,7 +121,7 @@ Time = function(date)
 end
 
 local darkMode = true
-local fontStyle = { name = "Monaco", size = 13 }
+local fontStyle = { name = "Cascadia Code", size = 15 }
 
 -- console styling
 

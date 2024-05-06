@@ -4,6 +4,7 @@ packages:
       taps:
         - "homebrew/bundle"
         - "homebrew/services"
+        - "homebrew/cask-fonts"
       brews:
         - "act"
         - "actionlint"
@@ -79,6 +80,8 @@ packages:
         - "chromium"
         - "elgato-camera-hub"
         - "elgato-stream-deck"
+        - "font-cascadia-code"
+        - "font-cascadia-mono"
         - "hammerspoon"
         - "hex-fiend"
         - "ledger-live"
