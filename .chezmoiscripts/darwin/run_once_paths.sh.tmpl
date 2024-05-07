@@ -21,6 +21,10 @@ ensurePath {{ output "/usr/local/bin/brew" "--prefix" | trim }}/bin
 
 ensurePath {{ .chezmoi.homeDir }}/bin
 
+{{ if eq .mode "work" }}
+ensurePath /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin
+{{ end }}
+
 # Re-evaluate /etc/paths rules, then tell launchctl to use the new path.
 eval $(/usr/libexec/path_helper -s)
 launchctl setenv PATH $PATH
