@@ -35,6 +35,7 @@ packages:
         - "gopls"
         - "grpcurl"
         - "httpie"
+        - "ijq"
         - "imapfilter"
         - "jc"
         - "jq"
