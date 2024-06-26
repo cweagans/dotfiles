@@ -20,6 +20,10 @@ alias stdls='/bin/ls'
 alias ls='lsd'
 alias ll='lsd -la'
 
+# date aliases
+alias stddate='/bin/date'
+alias date='/opt/homebrew/opt/coreutils/libexec/gnubin/date'
+
 # Why waste time say lot word when few word do trick
 alias c='cd'
 
