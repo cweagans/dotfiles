@@ -86,6 +86,7 @@ packages:
         - "font-cascadia-mono"
         - "hammerspoon"
         - "hex-fiend"
+        - "imhex"
         - "ledger-live"
         - "logi-options-plus"
         - "ngrok"
