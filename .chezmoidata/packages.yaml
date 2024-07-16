@@ -114,6 +114,8 @@ packages:
           id: 409203825
         - name: "Pages"
           id: 409201541
+        - name: "Refined GitHub"
+          id: 1519867270
         - name: "Slack"
           id: 803453959
         - name: "Things"
