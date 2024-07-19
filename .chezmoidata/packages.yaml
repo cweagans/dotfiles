@@ -61,6 +61,7 @@ packages:
         - "python@3.10"
         - "qemu"
         - "ripgrep"
+        - "rsync"
         - "rustup-init"
         - "shellcheck"
         - "step"
