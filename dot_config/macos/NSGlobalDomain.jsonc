@@ -21,6 +21,6 @@
     // Set highlight color to blue.
     "AppleHighlightColor": "0.698039 0.843137 1.000000",
     // Disable shake to locate cursor.
-    "CGDisableCursorLocationMagnification": 1
+    "CGDisableCursorLocationMagnification": true
   }
 }
