@@ -1,0 +1,41 @@
+{
+  "label": "NotePlan",
+  "restart": "killall \"NotePlan\"",
+  "values": {
+    // TODO: How should GlobalShortcut be set?
+    // Note references should get updated.
+    "alwaysUpdateNoteReferences": 1,
+    // Notes should always be markdown.
+    "defaultNoteExtension": "md",
+    // Various mention strings.
+    "cancelledMentionStr": "@cancelled",
+    "completedMentionStr": "@completed",
+    "dueMentionStr": "@due",
+    "nextReviewMentionStr": "@nextReview",
+    "reviewIntervalMentionStr": "@review",
+    "reviewedMentionStr": "@reviewed",
+    "startMentionStr": "@start",
+    // Font settings.
+    "fontFamily": "System",
+    "fontSize": 15,
+    // Misc.
+    "isAppendCompletionLinks": true,
+    "isAsteriskTodo": false,
+    "isAutomaticDashSubstitutionEnabled": false,
+    "isAutomaticDataDetectionEnabled": false,
+    "isAutomaticLinkDetectionEnabled": false,
+    "isAutomaticQuoteSubstitutionEnabled": false,
+    "isAutomaticSpellingCorrectionEnabled": false,
+    "isAutomaticTextReplacementEnabled": true,
+    "isContinuousSpellCheckingEnabled": true,
+    "isFirstTimeNote": false,
+    "isGrammarCheckingEnabled": false,
+    "isMonthlyNotes": true,
+    "isNoSync": false,
+    "isQuarterlyNotes": true,
+    "isUsingCloudKit": true,
+    "isWeeklyNotes": true,
+    "isYearlyNotes": true,
+    "launchedBefore": true
+  }
+}
