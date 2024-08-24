@@ -55,6 +55,10 @@
   "inlay_hints": {
     "enabled": true
   },
+  "journal": {
+    "hour_format": "hour24",
+    "path": "~/Library/Mobile Documents/com~apple~CloudDocs"
+  },
   "lsp": {
     "intelephense": {
       "settings": {
