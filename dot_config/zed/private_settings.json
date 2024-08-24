@@ -1,0 +1,175 @@
+{
+  "auto_install_extensions": {
+    "assembly": true,
+    "basher": true,
+    "blade": true,
+    "capnp": true,
+    "catppuccin": true,
+    "csv": true,
+    "cucumber": true,
+    "d": true,
+    "dart": true,
+    "dbml": true,
+    "docker-compose": true,
+    "dockerfile": true,
+    "gdscript": true,
+    "git-firefly": true,
+    "gosum": true,
+    "html": true,
+    "http": true,
+    "ini": true,
+    "less": true,
+    "log": true,
+    "lua": true,
+    "make": true,
+    "markdown-oxide": true,
+    "nginx": true,
+    "php": true,
+    "pkl": true,
+    "rainbow-csv": true,
+    "scss": true,
+    "sql": true,
+    "strace": true,
+    "svelte": true,
+    "swift": true,
+    "templ": true,
+    "terraform": true,
+    "toml": true,
+    "vale": true,
+    "vhs": true,
+    "vue": true,
+    "xml": true,
+    "zig": true
+  },
+  "auto_signature_help": true,
+  "autosave": "on_window_change",
+  "buffer_font_size": 16,
+  "buffer_font_family": "Cascadia Code",
+  "buffer_line_height": "comfortable",
+  "calls": {
+    "mute_on_join": true
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "lsp": {
+    "intelephense": {
+      "settings": {
+        "stubs": [
+          "apache",
+          "bcmath",
+          "bz2",
+          "calendar",
+          "com_dotnet",
+          "Core",
+          "ctype",
+          "curl",
+          "date",
+          "dba",
+          "dom",
+          "enchant",
+          "exif",
+          "FFI",
+          "fileinfo",
+          "filter",
+          "fpm",
+          "ftp",
+          "gd",
+          "gettext",
+          "gmp",
+          "hash",
+          "iconv",
+          "imap",
+          "intl",
+          "json",
+          "ldap",
+          "libxml",
+          "mbstring",
+          "meta",
+          "mysqli",
+          "oci8",
+          "odbc",
+          "openssl",
+          "pcntl",
+          "pcre",
+          "PDO",
+          "pdo_ibm",
+          "pdo_mysql",
+          "pdo_pgsql",
+          "pdo_sqlite",
+          "pgsql",
+          "Phar",
+          "posix",
+          "pspell",
+          "random",
+          "readline",
+          "Reflection",
+          "session",
+          "shmop",
+          "SimpleXML",
+          "snmp",
+          "soap",
+          "sockets",
+          "sodium",
+          "SPL",
+          "sqlite3",
+          "standard",
+          "superglobals",
+          "sysvmsg",
+          "sysvsem",
+          "sysvshm",
+          "tidy",
+          "tokenizer",
+          "xml",
+          "xmlreader",
+          "xmlrpc",
+          "xmlwriter",
+          "xsl",
+          "Zend OPcache",
+          "zip",
+          "zlib",
+          "wordpress"
+        ],
+        "files": {}
+      }
+    }
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "preferred_line_length": 120,
+  "project_panel": {
+    "dock": "right"
+  },
+  "restore_on_startup": "none",
+  "redact_private_values": true,
+  "relative_line_numbers": true,
+  "slash_commands": {
+    "docs": {
+      "enabled": true
+    },
+    "project": {
+      "enabled": true
+    }
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+  "tabs": {
+    "close_position": "left",
+    "file_icons": true,
+    "git_status": true
+  },
+  "theme": {
+    "dark": "Catppuccin Mocha - No Italics",
+    "light": "Catppuccin Latte - No Italics",
+    "mode": "system"
+  },
+  "ui_font_size": 16,
+  "vim_mode": true,
+  "wrap_guides": [80, 120]
+}
