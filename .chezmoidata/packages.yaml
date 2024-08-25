@@ -95,6 +95,7 @@ packages:
         - "setapp"
         - "visual-studio-code"
         - "wezterm"
+        - "zed"
         - "zoom"
       mas:
         - name: "1Password for Safari"
