@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
 
-# Set bash options.
-set -Eeo pipefail
+# Exit immediately if a command fails.
+set -o errexit
+
+# Exit immediately if a variable is used but not defined.
+set -o nounset
+
+# Exit when any command in a pipeline fails.
+set -o pipefail
+
+# Allow people to `export TRACE=1` to enable bash tracing.
+if [[ "${TRACE-0}" == "1" ]]; then
+    set -o xtrace
+fi
 
 # Include common vars and functions.
 source "${SD_ROOT}/.lib.bash"
