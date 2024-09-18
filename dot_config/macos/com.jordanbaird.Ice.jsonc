@@ -1,0 +1,17 @@
+{
+  "label": "Ice",
+  "restart": "killall Ice",
+  "values": {
+    "AutoRehide": true,
+    "CanToggleAlwaysHiddenSection": true,
+    "HideApplicationMenus": true,
+    "RehideStrategy": 0,
+    "SUAutomaticallyUpdate": true,
+    "SUEnableAutomaticChecks": true,
+    "ShowIceIcon": true,
+    "ShowOnClick": true,
+    "ShowOnHover": false,
+    "ShowOnScroll": true,
+    "UseIceBar": true
+  }
+}

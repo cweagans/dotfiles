@@ -25,7 +25,7 @@ There are a couple of manual steps that need to be performed that I haven't gott
   * Run on launch
   * Set sync dir to `~/.config/dash`
 * Run apps, allow accessibility api/screen recording access as needed, configure if needed:
-  * Bartender (permissions, arrange menu bar)
+  * Ice (permissions, arrange menu bar)
   * Cleanshot (permissions, auth with share service)
   * Elephas (permissions, click through onboarding)
   * Lungo (permissions)
