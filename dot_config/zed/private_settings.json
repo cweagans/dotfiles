@@ -1,4 +1,11 @@
 {
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2"
+  },
   "auto_install_extensions": {
     "assembly": true,
     "basher": true,
@@ -52,6 +59,10 @@
   },
   "collaboration_panel": {
     "dock": "right"
+  },
+  "cursor_shape": "block",
+  "indent_guides": {
+    "coloring": "indent_aware"
   },
   "inlay_hints": {
     "enabled": true
@@ -150,8 +161,8 @@
     "dock": "right"
   },
   "restore_on_startup": "none",
-  "redact_private_values": true,
-  "relative_line_numbers": true,
+  // "redact_private_values": true,
+  "seed_search_query_from_cursor": "selection",
   "slash_commands": {
     "docs": {
       "enabled": true
@@ -175,6 +186,7 @@
     "mode": "system"
   },
   "ui_font_size": 16,
+  "use_smartcase_search": true,
   "vim_mode": true,
   "wrap_guides": [80, 120]
 }
