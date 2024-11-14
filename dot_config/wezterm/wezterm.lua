@@ -67,7 +67,7 @@ function apply_settings(config)
   ---
   -- Text options.
   ---
-  config.font = wezterm.font("Cascadia Code")
+  config.font = wezterm.font("Berkeley Mono")
   config.font_size = 15
   config.line_height = 1.5
   -- config.cell_width = 1

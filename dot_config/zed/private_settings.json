@@ -1,8 +1,8 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
     },
     "version": "2"
   },
@@ -52,7 +52,7 @@
   "auto_signature_help": true,
   "autosave": "on_window_change",
   "buffer_font_size": 16,
-  "buffer_font_family": "Cascadia Code",
+  "buffer_font_family": "Berkeley Mono",
   "buffer_line_height": "comfortable",
   "calls": {
     "mute_on_join": true
@@ -188,5 +188,8 @@
   "ui_font_size": 16,
   "use_smartcase_search": true,
   "vim_mode": true,
-  "wrap_guides": [80, 120]
+  "wrap_guides": [
+    80,
+    120
+  ]
 }

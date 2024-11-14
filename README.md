@@ -35,6 +35,7 @@ There are a couple of manual steps that need to be performed that I haven't gott
 * Load duckduckgo settings from cloud sync
 * Set Slack colors as needed: <https://github.com/catppuccin/slack>
 * Settings -> Keyboard -> Shortcuts -> Spotlight: change "Show spotlight search" to "Ctrl+Alt+Cmd+Space"
+* Install Berkeley Mono font (see email for download link, SL: "Berkeley Graphics — Order Confirmation")
 
 ## Support
 
