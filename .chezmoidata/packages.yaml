@@ -86,6 +86,7 @@ packages:
         - "font-cascadia-code"
         - "font-cascadia-mono"
         - "hammerspoon"
+        - "headlamp"
         - "hex-fiend"
         - "imhex"
         - "jordanbaird-ice"
