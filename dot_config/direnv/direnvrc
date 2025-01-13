@@ -1,0 +1,3 @@
+# Silence the warning that the "instant" prompt emits when direnv does
+# console I/O prior to the prompt being ready.
+export POWERLEVEL9K_INSTANT_PROMPT=quiet
