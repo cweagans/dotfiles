@@ -140,6 +140,7 @@ packages:
         - "drud/ddev/ddev"
         - "hugo"
       casks:
+        - "defold"
         - "discord"
         - "flutter"
         - "ghidra"
