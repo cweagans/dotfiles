@@ -5,6 +5,7 @@ packages:
         - "homebrew/bundle"
         - "homebrew/services"
         - "homebrew/cask-fonts"
+        - "oven-sh/bun"
       brews:
         - "act"
         - "actionlint"
@@ -14,6 +15,7 @@ packages:
         - "atuin"
         - "bat"
         - "black"
+        - "bun"
         - "caddy"
         - "chezmoi"
         - "choose"
