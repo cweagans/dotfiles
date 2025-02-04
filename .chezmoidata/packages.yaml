@@ -81,6 +81,7 @@ packages:
       casks:
         - "1password"
         - "1password-cli"
+        - "acorn"
         - "alfred"
         - "chromium"
         - "elgato-camera-hub"
@@ -151,6 +152,7 @@ packages:
         - "obs"
         - "prusaslicer"
         - "racket"
+        - "retrobatch"
         - "saleae-logic"
         - "scrivener"
         - "signal"
@@ -177,8 +179,8 @@ packages:
           id: 634159523
         - name: "Motion"
           id: 434290957
-        - name: "Pixelmator"
-          id: 407963104
+        # - name: "Pixelmator"
+        #   id: 407963104
         - name: "Steam Link"
           id: 1246969117
         - name: "Vectornator Pro"
