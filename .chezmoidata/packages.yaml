@@ -194,6 +194,7 @@ packages:
       casks:
         - "google-cloud-sdk"
         - "temurin"
+        - "vagrant"
       mas: []
 
 uninstall_packages:
@@ -201,7 +202,4 @@ uninstall_packages:
     taps: []
     mas: []
     casks: []
-    brews:
-      - "colima"
-      - "starship"
-      - "youtube-dl"
+    brews: []
