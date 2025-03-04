@@ -58,6 +58,9 @@ unmerged = magenta bold reverse
 untracked = red
 updated = green bold
 
+[column]
+ui = auto
+
 [commit]
 cleanup = scissors
 gpgsign = true
@@ -68,6 +71,7 @@ compression = 9
 ignorecase = false
 pager = delta
 whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+untrackedCache = true
 
 {{- $ghPath := lookPath "gh" }}
 {{- if $ghPath }}
@@ -117,11 +121,14 @@ syntax-theme = Catppuccin-mocha
 
 [diff]
 algorithm = histogram
-context = 10
-colorMoved = default
+colorMoved = plain
 colorMovedWS = allow-indentation-change
+context = 10
+mnemonicPrefix = true
+renames = true
 
 [fetch]
+all = true
 fsckobjects = true
 prune = true
 prunetags = true
@@ -153,6 +160,9 @@ format = ssh
 allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
 program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
+[help]
+autocorrect = prompt
+
 [init]
 defaultBranch = main
 
@@ -179,13 +189,16 @@ default = current
 followTags = true
 
 [rebase]
-autostash = true
+autoSquash = true
+autoStash = true
 missingCommitsCheck = error
+updateRefs = true
 
 [receive]
 fsckobjects = true
 
 [rerere]
+autoupdate = true
 enabled = true
 
 [status]
@@ -196,6 +209,7 @@ fsckobjects = true
 
 [tag]
 gpgsign = true
+sort = version:refname
 
 {{ if eq .mode "personal" }}
 [url "ssh://git@gitea.internal.cweagans.net:2222"]
