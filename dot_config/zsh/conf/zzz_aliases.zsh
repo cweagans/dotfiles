@@ -3,7 +3,7 @@ alias reload!='. ~/.zshrc'
 
 # Never actually delete anything. Move it to the Trash first.
 alias stdrm='/usr/bin/rm'
-alias rm='/opt/homebrew/bin/trash'
+alias rm='/opt/homebrew/opt/trash/bin/trash'
 
 # Use bat instead of cat
 alias stdcat='/bin/cat'
