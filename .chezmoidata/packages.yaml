@@ -62,6 +62,7 @@ packages:
         - "pygments"
         - "python@3.10"
         - "qemu"
+        - "rclone"
         - "ripgrep"
         - "rsync"
         - "rustup-init"
