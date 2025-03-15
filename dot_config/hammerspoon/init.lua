@@ -10,7 +10,6 @@ require("windowmanagement")
 require("hbar")
 require("urls")
 require("bear")
-require("share")
 
 -- Screen lock
 hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "L", function()
