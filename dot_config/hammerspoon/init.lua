@@ -10,6 +10,7 @@ require("windowmanagement")
 require("hbar")
 require("urls")
 require("bear")
+require("share")
 
 -- Screen lock
 hs.hotkey.bind({ "ctrl", "alt", "cmd" }, "L", function()
@@ -26,4 +27,5 @@ function reloadConfig(files)
   end
 end
 
-hs.pathwatcher.new(os.getenv("HOME") .. "/.config/hammerspoon", reloadConfig):start()
+configPathWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.config/hammerspoon", reloadConfig)
+configPathWatcher:start()
