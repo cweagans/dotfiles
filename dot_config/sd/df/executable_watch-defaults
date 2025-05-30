@@ -1,0 +1,131 @@
+#!/usr/bin/env bash
+
+# Watch changes to the macOS system configuration.
+#
+# Behind the scenes, this script will dump a copy of the system configuration
+# to /tmp, then periodically re-dumps the configuration and creates a diff.
+#
+# Example usage:
+#   sd df watch-defaults
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+require_program gum
+require_program parallel
+require_program fswatch
+
+# Make sure we have a state tracking dir
+mkdir -p /tmp/defaults
+
+function generate_excludes() {
+  # Domains to exclude from watching (mainly state info, not preferences)
+  EXCLUDED_DOMAINS=(
+      "com.apple.DuetExpertCenter.AppPredictionExpert"
+      "com.apple.knowledge-agent"
+      "com.segment.storage.oai"
+      "com.microsoft.autoupdate.fba"
+      "ContextStoreAgent"
+      "com.apple.icloud.searchpartyuseragent"
+      "com.google.gmp.measurement.monitor"
+  )
+
+  local excludes=()
+  for domain in "${EXCLUDED_DOMAINS[@]}"; do
+    excludes+=("-not" "-name" "$domain.plist")
+  done
+  echo "${excludes[@]}"
+}
+export -f generate_excludes
+
+function get_preference_plists() {
+  find "$HOME/Library/Preferences" -type f -name "*.plist" $(generate_excludes)
+}
+export -f get_preference_plists
+
+function find_modified_plists() {
+  find "$HOME/Library/Preferences" -type f -name "*.plist" $(generate_excludes) -newer /tmp/defaults/.last-dump
+}
+export -f find_modified_plists
+
+function get_domains() {
+  get_preference_plists | while read -r file; do
+    domain=$(basename "$file" .plist)
+    echo $domain
+  done
+}
+export -f get_domains
+
+function dump_domains() {
+  get_domains | xargs -n1 -P0 -I{} sh -c 'defaults read "{}" | grep -v "$(date +%Y-%m-%d)" > "/tmp/defaults/{}.txt" 2>/dev/null || true'
+  touch /tmp/defaults/.last-dump
+}
+export -f dump_domains
+
+function diff_domains() {
+  modified_domains=$(find_modified_plists)
+  if [[ -z "$modified_domains" ]]; then
+    exit 0
+  fi
+
+  for f in $modified_domains; do
+    domain=$(basename "$f" .plist)
+
+    diff_output=$(defaults read "$domain" 2>/dev/null |
+      # Filter out keys with a date, as those are usually for state tracking.
+      grep -v "$(date +%Y-%m-%d)" | \
+      grep -v "Date \=" | \
+      grep -v "Time \=" | \
+      grep -v "\= \d{18};" | \
+      grep -v "\= \d{9}\.\d{6};" | \
+      # Filter out specific keywords that are not useful for tracking changes.
+      grep -vi "Cache" | \
+      grep -vi "Position \=" | \
+      # Filter out configuration profile information.
+      grep -v "com.apple.configurationprofiles.user" | \
+      # Filter out other weird keys that are not useful.
+      grep -v "LastPosition" | \
+      grep -v "^(\-\+) \d+,$" | \
+      # Diff the preferences against the first export
+      diff --unified "/tmp/defaults/$domain.txt" - | \
+      # Strip off the first three lines (the diff header)
+      tail -n +4 | \
+      # Narrow down to just the changed lines
+      grep -E '^\+|^-' || true)
+
+    if [[ -n "$diff_output" ]]; then
+      format_message "Detected change in domain: $domain"
+      echo "$diff_output"
+    fi
+  done
+}
+export -f diff_domains
+
+# Cleanup function to remove temp files.
+function cleanup() {
+  format_heading "Cleaning up temp files"
+  rm -r /tmp/defaults
+  format_message "Done!"
+  exit 0
+}
+
+# Other helpers
+export -f format_heading
+export -f format_message
+
+format_heading "Exporting initial state of all preferences"
+mkdir -p /tmp/defaults
+gum spin --title "Exporting preferences" -- bash -c 'dump_domains'
+format_message "✅ Initial preference state exported to /tmp/defaults"
+
+# This needs to be registered after the initial dump to avoid cleaning up too early.
+trap cleanup SIGINT SIGTERM
+
+format_heading "Watching for changes in ~/Library/Preferences (Ctrl+C to stop)"
+format_message "It can take up to 10 seconds for changes to be detected"
+format_detail "This is a macOS limitation. The OS only periodically writes changes to disk."
+
+get_preference_plists | entr bash -c 'diff_domains'
