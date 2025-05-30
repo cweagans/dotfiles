@@ -1,0 +1,8 @@
+{
+  "label": "Window Manager",
+  "restart": "true",
+  "values": {
+    // Turn off dragging windows to the top to fullscreen them.
+    "EnableTopTilingByEdgeDrag": false
+  }
+}
