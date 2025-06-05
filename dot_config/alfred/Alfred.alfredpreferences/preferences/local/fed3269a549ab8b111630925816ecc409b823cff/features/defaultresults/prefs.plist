@@ -6,6 +6,7 @@
 	<array>
 		<string>/Developer/Applications</string>
 		<string>/opt/homebrew/Cellar</string>
+		<string>/System/Library/CoreServices/Applications</string>
 		<string>/usr/local/Cellar</string>
 		<string>~/Library/Caches/Metadata</string>
 		<string>~/Library/CloudStorage</string>

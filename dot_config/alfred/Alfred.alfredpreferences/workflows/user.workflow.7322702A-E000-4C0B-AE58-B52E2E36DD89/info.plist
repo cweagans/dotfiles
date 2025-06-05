@@ -58,6 +58,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>EDA0FC1D-CC39-4655-A845-C36BACF71B22</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F4EE7702-9834-4C0B-A96F-A9AAC5C856C0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F4EE7702-9834-4C0B-A96F-A9AAC5C856C0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D629565A-44D9-4DA5-86D9-30E064EAC937</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Cameron Eagans</string>
@@ -121,6 +147,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>unixtime</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>3CC51F6A-8067-4CAC-AD88-A9F6FFC6C0D8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -149,14 +192,31 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>unixtime</string>
+				<string>lipsum</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
 			<key>uid</key>
-			<string>3CC51F6A-8067-4CAC-AD88-A9F6FFC6C0D8</string>
+			<string>EDA0FC1D-CC39-4655-A845-C36BACF71B22</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string></string>
+				<key>replacestring</key>
+				<string>Nisi lorem culpa proident irure sint. Culpa proident, irure sint in dolor magna. Sint in dolor magna ad id dolore voluptate. Dolor magna ad id dolore. Ad id dolore voluptate. Dolore voluptate ea, veniam. Veniam non, voluptate aliquip qui in ex.</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>F4EE7702-9834-4C0B-A96F-A9AAC5C856C0</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -173,7 +233,7 @@
 		<key>C59832C2-4935-487D-B08B-04B34D3155D1</key>
 		<dict>
 			<key>xpos</key>
-			<real>290</real>
+			<real>325</real>
 			<key>ypos</key>
 			<real>60</real>
 		</dict>
@@ -197,6 +257,20 @@
 			<real>85</real>
 			<key>ypos</key>
 			<real>30</real>
+		</dict>
+		<key>EDA0FC1D-CC39-4655-A845-C36BACF71B22</key>
+		<dict>
+			<key>xpos</key>
+			<real>90</real>
+			<key>ypos</key>
+			<real>295</real>
+		</dict>
+		<key>F4EE7702-9834-4C0B-A96F-A9AAC5C856C0</key>
+		<dict>
+			<key>xpos</key>
+			<real>325</real>
+			<key>ypos</key>
+			<real>325</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
