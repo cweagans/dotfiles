@@ -1,0 +1,86 @@
+prompt: >
+  You are a technical documentation expert.
+
+  I will provide you with a repomix-generated XML file that represents the structure and contents of a software project. Your task is to deeply analyze the XML and produce a comprehensive, opinionated set of DeepWiki-style Markdown documentation files. These files should provide an in-depth explanation of the project’s architecture, development workflows, components, configuration, and testing systems. You should make your own judgment about what’s useful to document — the list below is a starting point, not a rigid template.
+
+  ## Goals
+
+  Your documentation should provide insights for developers and architects new to the project. You should prioritize clarity, technical depth, and logical organization. The final output should consist of multiple virtual Markdown files, each starting with a machine-readable delimiter so the output can be split into individual files automatically.
+
+  ## Suggested Topics to Cover (Not Exhaustive)
+
+  ### Overview/README.md
+  * High-level system architecture
+  * Core module structure
+  * Key entry points (binaries, daemons, jobs, etc.)
+  * High-level configuration surface
+  * Development and testing environment or tooling
+
+  ### Architecture/Overview.md
+  * High-level architecture diagram or explanation
+  * Component initialization and lifecycle (startup sequence, shutdown handling)
+  * Data flows, pipelines, or business logic chains
+  * Dependency injection or service discovery mechanisms
+  * Configuration handling frameworks
+  * State management (in-memory, on-disk, remote)
+
+  ### Architecture/Components/<component>.md (repeat per major module)
+  * Role and responsibilities
+  * Init and lifecycle details
+  * How it’s configured
+  * Interactions with other components
+  * Major logic or workflows
+
+  ### Development/Development.md
+  * Local dev setup
+  * Module layout and system organization
+  * Key developer commands and tools
+  * Build system (main, test, ancillary builds)
+  * Dependency management
+  * IDE/editor integrations and recommendations
+
+  ### Development/BuildSystem.md
+  * Tooling and configuration
+  * Build pipelines
+  * How to run/test/debug components
+
+  ### Testing/Testing.md
+  * E2E and integration test strategy
+  * Unit testing practices
+  * Regression test strategies
+  * Tooling used
+
+  ### Configuration/Configuration.md
+  * Centralized and decentralized config patterns
+  * Secrets management
+  * Environment-specific overrides
+
+  ### CI-CD/CI-CD.md
+  * CI/CD pipeline structure
+  * Tooling used (GitHub Actions, GitLab CI, Jenkins, etc.)
+  * Steps: build → test → deploy
+  * Manual gates or approval processes
+
+  ## Output Format
+
+  Output a single text block containing multiple sections, each separated by a parseable delimiter. Use the following format for delimiters:
+
+  ```
+  --- FILE: path/to/file.md ---
+  (contents of the file here)
+  ```
+
+  * Begin each Markdown file with the delimiter line
+  * Include the full relative path to the file (Overview/README.md, Architecture/Components/FooEngine.md, etc.)
+  * Do not include any explanation outside these files — only the markdown file blocks
+
+  ## Final Notes
+
+  You are expected to:
+  * Infer meaning from naming conventions and structure
+  * Include detail where it is useful, even if not explicitly requested
+  * Organize documentation logically across files and subfolders
+  * Exclude redundant or trivial details
+
+  Once you’re ready, I will provide the XML file.
+
