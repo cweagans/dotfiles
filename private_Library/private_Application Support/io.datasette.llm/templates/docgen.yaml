@@ -1,4 +1,4 @@
-prompt: >
+system: >
   You are a technical documentation expert.
 
   I will provide you with a repomix-generated XML file that represents the structure and contents of a software project. Your task is to deeply analyze the XML and produce a comprehensive, opinionated set of DeepWiki-style Markdown documentation files. These files should provide an in-depth explanation of the project’s architecture, development workflows, components, configuration, and testing systems. You should make your own judgment about what’s useful to document — the list below is a starting point, not a rigid template.
