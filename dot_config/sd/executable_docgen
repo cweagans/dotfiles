@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+# Run a codebase through an LLM and get a pile of technical documentation back.
+#
+# Alias: docgen
+#
+# Example usage:
+#   sd docgen
+
+# Common script header stuff lives in the preamble. This makes it easy to update
+# options, includes, etc. Do not remove this line.
+source "${SD_ROOT}/.preamble.bash"
+
+# ------------------------------------------------------------------------------
+
+require_program llm
+require_program xmlstarlet
+require_program repomix
+
+ignore_pattern="${REPOMIX_IGNORE_PATTERNS:-''}"
+
+format_heading "Passing codebase to llm for analysis"
+repomix --compress --ignore "${ignore_pattern}" --remove-empty-lines --stdout | llm -t docgen --no-stream > codebase_docs.xml
+
+format_heading "Exporting docs files"
+cat codebase_docs.xml | xmlstarlet sel -t -m '/files/file' -v '@path' -o $'\x1f' -v '.' -n |
+while IFS=$'\x1f' read -r path content; do
+  (
+    # Defensive check: skip if path is empty
+    if [ -z "$path" ]; then
+      format_error "Skipping entry with empty path"
+      exit 1
+    fi
+
+    out="./generated-docs/$path"
+    dir="$(dirname "$out")"
+
+    mkdir -p "$dir" || {
+      format_error "Failed to create directory: $dir"
+      exit 1
+    }
+
+    # Sanitize content: strip null bytes and other control characters
+    clean_content=$(printf "%s" "$content" | tr -d '\000-\010\013\014\016-\037')
+
+    # Only write if content is different or file doesn't exist
+    printf "%s\n" "$clean_content" > "$out"
+    format_message "Wrote $out"
+  )
+done
+
