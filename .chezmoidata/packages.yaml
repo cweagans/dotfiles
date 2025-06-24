@@ -68,6 +68,7 @@ packages:
         - "shellcheck"
         - "step"
         - "telnet"
+        - "tabiew"
         - "terraform-ls"
         - "terraform"
         - "trash"
