@@ -138,11 +138,13 @@ packages:
     darwin:
       taps:
         - "drud/ddev"
+        - "siderolabs/tap"
       brews:
         - "php"
         - "composer"
-        - "drud/ddev/ddev"
+        - "ddev"
         - "hugo"
+        - "talosctl"
       casks:
         - "defold"
         - "discord"
