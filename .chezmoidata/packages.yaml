@@ -42,6 +42,7 @@ packages:
         - "imapfilter"
         - "jc"
         - "jq"
+        - "k9s"
         - "lazygit"
         - "lsd"
         - "lua-language-server"
