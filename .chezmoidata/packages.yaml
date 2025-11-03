@@ -96,7 +96,7 @@ packages:
         - "imhex"
         - "jordanbaird-ice"
         - "ledger-live"
-        - "logi-options-plus"
+        - "logi-options+"
         - "ngrok"
         - "orbstack"
         - "setapp"
@@ -196,7 +196,7 @@ packages:
         - "awscli"
         - "azure-cli"
       casks:
-        - "google-cloud-sdk"
+        - "gcloud-cli"
         - "temurin"
         - "vagrant"
       mas: []
