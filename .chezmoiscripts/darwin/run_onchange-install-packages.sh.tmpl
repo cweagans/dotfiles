@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-brew bundle --no-lock --no-upgrade --file=/dev/stdin <<EOF
+brew bundle --no-upgrade --file=/dev/stdin <<EOF
 {{- if .packages.global.darwin.taps }}
 # Global taps
 {{ range .packages.global.darwin.taps -}}
