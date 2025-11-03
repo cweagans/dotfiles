@@ -26,6 +26,7 @@ alias date='/opt/homebrew/opt/coreutils/libexec/gnubin/date'
 
 # Why waste time say lot word when few word do trick
 alias c='cd'
+alias k='kubectl'
 
 # Use the homebrew sqlite3
 alias sqlite3='/opt/homebrew/opt/sqlite/bin/sqlite3'
