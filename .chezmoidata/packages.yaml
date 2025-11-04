@@ -5,6 +5,7 @@ packages:
         - "homebrew/bundle"
         - "homebrew/services"
         - "homebrew/cask-fonts"
+        - "nikitabobko/tap"
         - "oven-sh/bun"
       brews:
         - "act"
@@ -84,6 +85,7 @@ packages:
         - "1password"
         - "1password-cli"
         - "acorn"
+        - "aerospace"
         - "alfred"
         - "chromium"
         - "elgato-camera-hub"
