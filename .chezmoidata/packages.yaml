@@ -97,7 +97,7 @@ packages:
         - "hex-fiend"
         - "imhex"
         - "jordanbaird-ice"
-        - "ledger-live"
+        - "ledger-wallet"
         - "logi-options+"
         - "ngrok"
         - "orbstack"
