@@ -44,11 +44,13 @@ git checkout "${main_branch}"
 
 if [ "${is_fork}" = true ]; then
 	format_message "Pulling from upstream"
+	git fetch --all
 	git pull upstream "${main_branch}"
 	format_message "Pushing to origin"
 	git push origin "${main_branch}"
 else
 	format_message "Pulling from origin"
+	git fetch --all
 	git pull origin "${main_branch}"
 fi
 
