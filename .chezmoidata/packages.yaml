@@ -57,6 +57,7 @@ packages:
         - "neovim"
         - "node"
         - "nss"
+        - "opencode"
         - "openssh"
         - "pre-commit"
         - "protobuf"
