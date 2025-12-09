@@ -70,6 +70,7 @@ packages:
         - "rsync"
         - "rust"
         - "shellcheck"
+        - "specify"
         - "step"
         - "telnet"
         - "tabiew"
