@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Use the pre-configured colors in the terminal.
+  "theme": "system",
+
+  // Allow using ChatGPT subscription with OpenCode too.
+  "plugin": [
+    "opencode-openai-codex-auth@4.1.1"
+  ]
+}
