@@ -113,8 +113,6 @@ packages:
       mas:
         - name: "1Password for Safari"
           id: 1569813296
-        - name: "AdGuard for Safari"
-          id: 1440147259
         - name: "Bear"
           id: 1091189122
         - name: "GoodNotes"
@@ -137,6 +135,8 @@ packages:
           id: 904280696
         - name: "Tailscale"
           id: 1475387142
+        - name: "uBlock Origin for Safari"
+          id: 6745342698
         - name: "virtualOS"
           id: 1614659226
         - name: "Xcode"
