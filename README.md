@@ -30,7 +30,7 @@ There are a couple of manual steps that need to be performed that I haven't gott
   * Elephas (permissions, click through onboarding)
   * Lungo (permissions)
   * Dato (permissions, launch at startup, probably configure)
-* Log in to Spark using main Gmail account (which will sync the others)
+* Start SteerMouse and add license (settings are already synced)
 * Set wallpaper to ~/.wallpaper.png
 * Load duckduckgo settings from cloud sync
 * Set Slack colors as needed: <https://github.com/catppuccin/slack>
