@@ -100,7 +100,6 @@ packages:
         - "headlamp"
         - "hex-fiend"
         - "imhex"
-        - "jordanbaird-ice"
         - "ledger-wallet"
         - "ngrok"
         - "orbstack"
