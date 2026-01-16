@@ -15,19 +15,14 @@ There are a couple of manual steps that need to be performed that I haven't gott
 * `mkcert -install` for ddev https support (probably easy to automate, since invoking it a separate time doesn't change anything)
 * Update `~/.ddev/global_config.yaml` (may have to run `ddev` first to generate the file) -- always omit the `dba` container (harder to automate because of the `project_info` key. Can't just commit this file.)
 * Enable Safari extensions
-* Open Setapp and install all favorited apps
+* Open Setapp and install and configure all favorited apps
 * Configure Alfred:
   * Disable default macOS Spotlight shortcut
   * Run Alfred and give it all the permissions/start on login
   * Set global shortcut to Cmd+Space
   * Set sync dir to `~/.config/alfred`
-* Configure Dash
-  * Run on launch
-  * Set sync dir to `~/.config/dash`
 * Run apps, allow accessibility api/screen recording access as needed, configure if needed:
-  * Ice (permissions, arrange menu bar)
   * Cleanshot (permissions, auth with share service)
-  * Elephas (permissions, click through onboarding)
   * Lungo (permissions)
   * Dato (permissions, launch at startup, probably configure)
 * Start SteerMouse and add license (settings are already synced)
@@ -36,7 +31,6 @@ There are a couple of manual steps that need to be performed that I haven't gott
 * Set Slack colors as needed: <https://github.com/catppuccin/slack>
 * Settings -> Keyboard -> Shortcuts -> Spotlight: change "Show spotlight search" to "Ctrl+Alt+Cmd+Space"
 * Install Berkeley Mono font (see email for download link, SL: "Berkeley Graphics — Order Confirmation")
-* Set up share.cweagans.net mount in CloudMounter
 
 ## Support
 
