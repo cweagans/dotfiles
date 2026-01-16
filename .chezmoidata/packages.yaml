@@ -92,6 +92,7 @@ packages:
         - "aerospace"
         - "alfred"
         - "chromium"
+        - "cold-turkey-blocker"
         - "elgato-camera-hub"
         - "elgato-stream-deck"
         - "font-cascadia-code"

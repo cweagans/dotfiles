@@ -25,6 +25,7 @@ There are a couple of manual steps that need to be performed that I haven't gott
   * Cleanshot (permissions, auth with share service)
   * Lungo (permissions)
   * Dato (permissions, launch at startup, probably configure)
+  * Cold Turkey (permissions, browser extensions, configure, )
 * Start SteerMouse and add license (settings are already synced)
 * Set wallpaper to ~/.wallpaper.png
 * Load duckduckgo settings from cloud sync
