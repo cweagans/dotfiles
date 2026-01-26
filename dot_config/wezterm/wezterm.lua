@@ -70,7 +70,7 @@ function apply_settings(config)
   config.font = wezterm.font("Berkeley Mono")
   config.font_size = 15
   config.line_height = 1.5
-  -- config.cell_width = 1
+  config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
   -- Makes font rendering look a little more macOS-like.
   config.freetype_load_target = "Light"
 
