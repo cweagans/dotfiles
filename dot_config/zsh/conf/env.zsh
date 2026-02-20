@@ -46,6 +46,9 @@ export LESS_TERMCAP_se=$'\e[0m'         # reset reverse video
 export LESS_TERMCAP_ue=$'\e[0m'         # reset underline
 export GROFF_NO_SGR=1                   # for konsole
 
+# NVM vars
+export NVM_DIR="$HOME/.nvm"
+
 # Make homebrew zsh completions available.
 if type brew &>/dev/null; then
   export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
