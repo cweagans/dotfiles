@@ -23,6 +23,8 @@ ensurePath {{ output "/usr/local/bin/brew" "--prefix" | trim }}/opt/trash/bin
 
 ensurePath {{ .chezmoi.homeDir }}/bin
 
+ensurePath {{ .chezmoi.homeDir }}/Developer/go/bin
+
 {{ if eq .mode "work" }}
 ensurePath /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin
 {{ end }}
