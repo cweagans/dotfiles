@@ -41,5 +41,13 @@ znap eval zoxide "zoxide init zsh --cmd cd"
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # NVM stuff
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+lazy_nvm() {
+  echo lazy loading nvm
+  unset -f nvm node npm npx
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+}
+nvm()  { lazy_nvm; nvm "$@"; }
+node() { lazy_nvm; node "$@"; }
+npm()  { lazy_nvm; npm "$@"; }
+npx()  { lazy_nvm; npx "$@"; }
