@@ -21,8 +21,8 @@ accounts = {
     swirldslabs = {
         connection = IMAP {
             server = 'imap.gmail.com',
-            username = getValueFromExternalProgram('op read -n "op://Chezmoi/macos - swirldslabs app password/username"'),
-            password = getValueFromExternalProgram('op read -n "op://Chezmoi/macos - swirldslabs app password/password"'),
+            username = getValueFromExternalProgram('op read -n "op://Chezmoi/macos - hashgraph app password/username"'),
+            password = getValueFromExternalProgram('op read -n "op://Chezmoi/macos - hashgraph app password/password"'),
             port = 993,
             ssl = "tls1.3"
         },
