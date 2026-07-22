@@ -18,7 +18,7 @@ accounts = {
             ["rocketbook"] = function(inbox) return inbox:contain_from("hello@news.getrocketbook.com") end,
         }),
     },
-    swirldslabs = {
+    hashgraph = {
         connection = IMAP {
             server = 'imap.gmail.com',
             username = getValueFromExternalProgram('op read -n "op://Chezmoi/macos - hashgraph app password/username"'),
