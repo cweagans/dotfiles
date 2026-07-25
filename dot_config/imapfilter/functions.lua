@@ -85,6 +85,7 @@ function getNotificationSelectors()
         ["gdrive"] = function(inbox) return inbox:contain_from("drive-shares-dm-noreply@google.com") + (inbox:contain_body('shared a spreadsheet with you from Google Sheets') + inbox:contain_body('shared a presentation with you from Google Slides') + inbox:contain_body('shared a document with you from Google Docs')) end,
         ["github"] = function(inbox) return inbox:contain_from("notifications@github.com") + inbox:contain_field("Reply-To", "notifications@github.com") + (inbox:contain_from("noreply@github.com") + inbox:contain_subject("dependabot alerts")) end,
         ["zoom personal meeting room"] = function(inbox) return inbox:contain_subject("has joined your Personal Meeting Room") end,
+        ["zoom meeting room"] = function(inbox) return inbox:contain_subject("has joined your meeting") end,
         ["zoom app approval"] = function(inbox) return inbox:contain_subject("approved to use") * inbox:contain_from("noreply-marketplace@zoom.us") end,
         ["1password new sign-in"] = function(inbox) return inbox:contain_subject("New 1Password sign-in") * inbox:contain_from("accounts@1password.com") end,
         ["yandex webmaster"] = function(inbox) return inbox:contain_from("devnull@webmaster.yandex.ru") end,
