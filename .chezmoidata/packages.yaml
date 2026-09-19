@@ -39,6 +39,7 @@ packages:
         - "go"
         - "gopls"
         - "grpcurl"
+        - "hermes-agent"
         - "httpie"
         - "ijq"
         - "imapfilter"
